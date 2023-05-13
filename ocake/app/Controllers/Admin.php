@@ -310,6 +310,7 @@ class Admin extends BaseController
     
         /*this will validate inputs */
         $val = $this->validate([
+            'product_code' => 'required',
             'occasion' => 'required',
             'product_name' => 'required',
             'flavor' => 'required',
@@ -330,6 +331,7 @@ class Admin extends BaseController
     
             if($imageFile == ""){
                 $model->insert([
+                    'product_code' => $this->request->getVar('product_code'),
                     'occasion' => $this->request->getVar('occasion'),
                     'product_name' => $this->request->getVar('product_name'),
                     'cat_id' => $this->request->getVar('cat_id'),
@@ -345,6 +347,7 @@ class Admin extends BaseController
 
                 /*this will insert data to db */
                 $insert=$model->insert([
+                    'product_code' => $this->request->getVar('product_code'),
                     'occasion' => $this->request->getVar('occasion'),
                     'product_name' => $this->request->getVar('product_name'),
                     'cat_id' => $this->request->getVar('cat_id'),
@@ -414,6 +417,7 @@ class Admin extends BaseController
 
             if($imageFile == ""){
                 $data = array(
+                    'product_code' => $this->request->getVar('product_code'),
                     'occasion' => $this->request->getVar('occasion'),
                     'cat_id' => $this->request->getVar('cat_id'),
                     'product_name' => $this->request->getVar('product_name'),
@@ -429,6 +433,7 @@ class Admin extends BaseController
 
                 /*this will insert data to db */
                 $data = array(
+                    'product_code' => $this->request->getVar('product_code'),
                     'cat_id' => $this->request->getVar('cat_id'),
                     'occasion' => $this->request->getVar('occasion'),
                     'product_name' => $this->request->getVar('product_name'),
@@ -902,12 +907,12 @@ class Admin extends BaseController
         return redirect()->to(base_url('/admin'));
     }
     //-------------SEAARCH PRODUCT IN POS -----------//
-    public function search() {
-        $category = $this->input->post('category');
-        $keyword = $this->input->post('keyword');
-        $data['results'] = $this->Category_model->search($category, $keyword); // replace with your model and method name
-        $this->load->view('search_results', $data); // create a view file for the search results
-    }
+    // public function search() {
+    //     $category = $this->input->post('category');
+    //     $keyword = $this->input->post('keyword');
+    //     $data['results'] = $this->Category_model->search($category, $keyword); // replace with your model and method name
+    //     $this->load->view('search_results', $data); // create a view file for the search results
+    // }
 
     
 }
