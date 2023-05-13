@@ -23,6 +23,29 @@
     <link rel="stylesheet" href="<?=base_url()?>/tools/admin/assets/css/style.css" />
   </head>
   <body>
+<?php
+      function createRandomPassword() {
+        $chars = "003232303232023232023456789";
+        srand((double)microtime()*1000000);
+        $i = 0;
+        $pass = '' ;
+        while ($i < 5) {
+
+          $num = rand() % 33;
+
+          $tmp = substr($chars, $num, 1);
+
+          $pass = $pass . $tmp;
+
+          $i++;
+
+        }
+        return $pass;
+      }
+    $finalcode=createRandomPassword();
+
+?>
+
     <!-- <div id="global-loader">
       <div class="whirly-loader"></div>
     </div> -->
@@ -55,29 +78,8 @@
               </ul>
               
               <div class="tabs_container">
-                <div class="row"><?php foreach($prod as $data){?>
-                  <div class="col-lg-3 col-sm-6 d-flex">
-                    <div class="tab_content active" data-tab="<?php echo $data->category_id;?>">
-                      <div class="productset flex-fill ">
-                        <div class="productsetimg">
-                          <img
-                            src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="img"/>
-                          <!-- <form id="myForm"> -->
-                            <input type="hidden" >
-                            <h6><button onclick="myFunction()" style="border:none;background-color:transparent;color:#fff"><i class="fa fa-plus"></i> BUY NOW</button></h6>
-                          <!-- </form> -->
-                          <div class="check-product">
-                            <i class="fa fa-check"></i>
-                          </div>
-                        </div>
-                        <div class="productsetcontent">
-                          <h5><?=$data->occasion?> Cake</h5>
-                          <h4><?=$data->flavor?></h4>
-                          <h6><?=$data->price?></h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div><?php }?>
+              <div class="row" id="product_container">
+                  
                 </div>
               </div>
                 
@@ -86,7 +88,8 @@
               <div class="order-list">
                 <div class="orderid">
                   <h4>Order List</h4>
-                  <h5>Transaction id : #65565</h5>
+                  <h5 id="invoiceNumber">Transaction id : #<?php echo $finalcode; ?></h5>
+                  <input type="hidden" id="invoiceNumberId" value="<?php echo $finalcode; ?>">
                 </div>
               </div>
               <div class="card card-order">
@@ -140,68 +143,13 @@
                 </div>
                 <div class="split-card"></div>
                 <div class="card-body pt-0">
-                  <div class="totalitem">
-                    <h4>Total items : 4</h4>
-                    <a href="javascript:void(0);">Clear all</a>
-                  </div>
-                  <div  class="product-table">
-
-                    <ul class="product-lists">
-                      <li>
-                        <div class="productimg">
-                          <div class="productimgs">
-                            <img
-                              src="http://localhost/ocake/tools/uploads/1_20230318_200057_0000.png"
-                              alt="img"
-                            />
-                          </div>
-                          <div class="productcontet">
-                            <h4>
-                              Vanilla
-                              <a
-                                href="javascript:void(0);"
-                                class="ms-2"
-                                data-bs-toggle="modal"
-                                data-bs-target="#edit"
-                                ><img
-                                  src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg"
-                                  alt="img"
-                              /></a>
-                            </h4>
-                            <div class="productlinkset">
-                              <h5>Valentine Cake</h5>
-                            </div>
-                            <div class="increment-decrement">
-                              <div class="input-groups">
-                                <input
-                                  type="button"
-                                  value="-"
-                                  class="button-minus dec button"
-                                />
-                                <input
-                                  type="text"
-                                  name="child"
-                                  value="1"
-                                  class="quantity-field"
-                                />
-                                <input
-                                  type="button"
-                                  value="+"
-                                  class="button-plus inc button"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li><?php echo '&#8369;'. number_format(123.00); ?></li>
-                      <li>
-                        <a class="confirm-text" href="javascript:void(0);"
-                          ><img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img"
-                        /></a>
-                      </li>
-                    </ul>
-                    
+                  <ul class="product-lists">
+                    <li>Product Name</li>
+                    <li>Unit Price</li>
+                    <li>Quantity</li>
+                    <li>Total Amount</li>
+                  </ul>
+                  <div  class="product-table" id="prod_list">
                   </div>
                 </div>
                 <div class="split-card"></div>
@@ -210,30 +158,25 @@
                     <ul>
                       <li>
                         <h5>Subtotal</h5>
-                        <h6><?php echo '&#8369;'. number_format(123.00); ?></h6>
+                        <h6 id="sub-total"> 0.00 </h6>
+                        <input type="hidden" id="subtotals">
                       </li><br>
                       <li>
                         <h5>Cash</h5>
-                        <h6><?php echo '&#8369;'. number_format(0); ?></h6>
+                        <h6 id="cashpay"> 0.00 </h6>
                       </li>
                       <li class="total-value">
                         <h5>Change</h5>
-                        <h6><?php echo '&#8369;'. number_format(0); ?></h6>
+                        <h6 id="cashchange"> 0.00 </h6>
                       </li>
                     </ul>
                   </div>
                   <div class="setvaluecash">
                     <ul>
                       <li>
-                        <a href="javascript:void(0);" class="paymentmethod">
+                        <a href="javascript:void(0);" id="paymentmethod" class="paymentmethod">
                           <img src="<?=base_url()?>/tools/admin/assets/img/icons/cash.svg" alt="img" class="me-2"/>
                           Cash
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:void(0);" class="paymentmethod">
-                          <img src="<?=base_url()?>/tools/admin/assets/img/icons/debitcard.svg" alt="img" class="me-2"/>
-                          Debit
                         </a>
                       </li>
                       <li>
@@ -244,46 +187,19 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="btn-totallabel">
-                    <h5>Checkout</h5>
-                    <h6><?php echo '&#8369;'. number_format(123); ?></h6>
-                  </div>
                   <div class="btn-pos">
                     <ul>
                       <li>
-                        <a class="btn"
+                        <a
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#calculator"
                           ><img
-                            src="<?=base_url()?>/tools/admin/assets/img/icons/pause1.svg"
+                            src="<?=base_url()?>/tools/admin/assets/img/icons/transcation.svg"
                             alt="img"
                             class="me-1"
-                          />Hold</a
-                        >
-                      </li>
-                      <li>
-                        <a class="btn"
-                          ><img
-                            src="<?=base_url()?>/tools/admin/assets/img/icons/edit-6.svg"
-                            alt="img"
-                            class="me-1"
-                          />Quotation</a
-                        >
-                      </li>
-                      <li>
-                        <a class="btn"
-                          ><img
-                            src="<?=base_url()?>/tools/admin/assets/img/icons/trash12.svg"
-                            alt="img"
-                            class="me-1"
-                          />Void</a
-                        >
-                      </li>
-                      <li>
-                        <a class="btn"
-                          ><img
-                            src="<?=base_url()?>/tools/admin/assets/img/icons/wallet1.svg"
-                            alt="img"
-                            class="me-1"
-                          />Payment</a
+                          />
+                          Calculator</a
                         >
                       </li>
                       <li>
@@ -369,224 +285,6 @@
                   /></a>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="holdsales" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Hold order</h5>
-            <button
-              type="button"
-              class="close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="hold-order">
-              <h2>4500.00</h2>
-            </div>
-            <div class="form-group">
-              <label>Order Reference</label>
-              <input type="text" />
-            </div>
-            <div class="para-set">
-              <p>
-                The current order will be set on hold. You can retreive this
-                order from the pending order button. Providing a reference to it
-                might help you to identify the order more quickly.
-              </p>
-            </div>
-            <div class="col-lg-12">
-              <a class="btn btn-submit me-2">Submit</a>
-              <a class="btn btn-cancel" data-bs-dismiss="modal">Cancel</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="edit" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Edit Order</h5>
-            <button
-              type="button"
-              class="close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Product Price</label>
-                  <input type="text" value="20" />
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Product Price</label>
-                  <select class="select">
-                    <option>Exclusive</option>
-                    <option>Inclusive</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label> Tax</label>
-                  <div class="input-group">
-                    <input type="text" />
-                    <a class="scanner-set input-group-text"> % </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Discount Type</label>
-                  <select class="select">
-                    <option>Fixed</option>
-                    <option>Percentage</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Discount</label>
-                  <input type="text" value="20" />
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Sales Unit</label>
-                  <select class="select">
-                    <option>Kilogram</option>
-                    <option>Grams</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <a class="btn btn-submit me-2">Submit</a>
-              <a class="btn btn-cancel" data-bs-dismiss="modal">Cancel</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="create"
-      tabindex="-1"
-      aria-labelledby="create"
-        aria-hidden="true"  >
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Add Customer</h5>
-            <button
-              type="button"
-              class="close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="formMain">
-            <div class="row">
-              <div class="col-lg-4 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Customer FirstName</label>
-                  <input type="text" id="customer_fname" name="customer_fname"/>
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Customer MiddleName</label>
-                  <input type="text"  id="customer_mname" name="customer_mname"/>
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Customer LastName</label>
-                  <input type="text"  id="customer_lname" name="customer_lname"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="text"  id="customer_email" name="customer_email"/>
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Phone</label>
-                  <input type="text"  id="customer_contact" name="customer_contact"/>
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Country</label>
-                  <input type="text"  id="customer_country" name="customer_country"/>
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>Address</label>
-                  <input type="text"  id="customer_address" name="customer_address"/>
-                </div>
-              </div>
-            </div>
-            </form>
-            <div class="col-lg-12">
-              <a class="btn btn-submit me-2" id="addCustomer">Submit</a>
-              <a class="btn btn-cancel" data-bs-dismiss="modal">Cancel</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="delete" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Order Deletion</h5>
-            <button
-              type="button"
-              class="close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="delete-order">
-              <img src="<?=base_url()?>/tools/admin/assets/img/icons/close-circle1.svg" alt="img" />
-            </div>
-            <div class="para-set text-center">
-              <p>
-                The current order will be deleted as no payment has been <br />
-                made so far.
-              </p>
-            </div>
-            <div class="col-lg-12 text-center">
-              <a class="btn btn-danger me-2">Yes</a>
-              <a class="btn btn-cancel" data-bs-dismiss="modal">No</a>
             </div>
           </div>
         </div>
@@ -1315,6 +1013,108 @@
         </div>
       </div>
     </div>
+    <div
+      class="modal fade"
+      id="create"
+      tabindex="-1"
+      aria-labelledby="create"
+        aria-hidden="true"  >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Customer</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="formMain">
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Customer FirstName</label>
+                  <input type="text" id="customer_fname" name="customer_fname"/>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Customer MiddleName</label>
+                  <input type="text"  id="customer_mname" name="customer_mname"/>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Customer LastName</label>
+                  <input type="text"  id="customer_lname" name="customer_lname"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="text"  id="customer_email" name="customer_email"/>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Phone</label>
+                  <input type="text"  id="customer_contact" name="customer_contact"/>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Country</label>
+                  <input type="text"  id="customer_country" name="customer_country"/>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Address</label>
+                  <input type="text"  id="customer_address" name="customer_address"/>
+                </div>
+              </div>
+            </div>
+            </form>
+            <div class="col-lg-12">
+              <a class="btn btn-submit me-2" id="addCustomer">Submit</a>
+              <a class="btn btn-cancel" data-bs-dismiss="modal">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="printReciept"
+      tabindex="-1"
+      aria-labelledby="printReciept"
+        aria-hidden="true"  >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">printReciept</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
 <?php foreach($prod as $data){?>
 <script>
@@ -1344,6 +1144,151 @@
   $(document).ready(function(){
 
     initData();
+    initProductContainer();
+
+    initTableInvoice();
+
+    function initProductContainer(){
+      $.ajax({
+            url: '<?= base_url('admin/pos/products-list') ?>',
+            method: 'get',
+            dataType: 'json',
+            success: function(response) {
+              let product_container = $("#product_container");
+              response.forEach((product) => {
+
+                product_container.append('<div class="col-lg-3 col-sm-6 d-flex" id="productAddToCart" data-id="'+product.id+'">'+
+                                          '<div class="tab_content active" data-tab="'+product.cat_id+'">'+
+                                            '<div class="productset flex-fill ">'+
+                                              '<div class="productsetimg">'+
+                                                '<img src="http://localhost/ocake/tools/uploads/'+product.image+'" alt="img"/>'+
+                                                '<div class="check-product">'+
+                                                  '<i class="fa fa-check"></i>'+
+                                                '</div>'+
+                                              '</div>'+
+                                              '<div class="productsetcontent">'+
+                                                '<h5>'+product.occasion+' Cake</h5>'+
+                                                '<h4>'+product.flavor+'</h4>'+
+                                                '<h6>'+product.price+'</h6>'+
+                                              '</div>'+
+                                            '</div>'+
+                                          '</div>'+
+                                        '</div>');
+                
+              });
+            }
+          });
+    }
+
+    var modelContainer = [];
+
+    function initTableInvoice(){
+      var subtotal = 0;
+      modelContainer=[];
+      $.ajax({
+            url: '<?= base_url('admin/pos/getInvoice') ?>',
+            method: 'get',
+            dataType: 'json',
+            data:{invoice_numbers: $("#invoiceNumberId").val()},
+            success: function(response) {
+              let product_container = $("#prod_list");
+              response.forEach((product) => {
+                modelContainer.push({product_ids:product.product_id});
+              subtotal += parseInt(product.totalAmount);
+                product_container.append('<ul class="product-lists"><li>'+
+                                        '<div class="productimg">'+
+                                          '<div class="productimgs">'+
+                                            '<img src="http://localhost/ocake/tools/uploads/'+product.image+'" alt="img" />'+
+                                          '</div>'+
+                                          '<div class="productcontet">'+
+                                            '<h4>'+product.flavor+
+                                              '<a href="javascript:void(0);" class="ms-2" data-bs-toggle="modal" data-bs-target="#edit">'+
+                                              '<img src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg" alt="img"/></a>'+
+                                            '</h4>'+
+                                            '<div class="productlinkset">'+
+                                              '<h5>'+product.occasion+' Cake</h5>'+
+                                            '</div>'+
+                                          '</div>'+
+                                        '</div>'+
+                                      '</li>'+
+                                      '<li>'+product.price+'</li>'+
+                                      '<li>'+product.quantity+'</li>'+
+                                      '<li>'+product.totalAmount+'</li>'+
+                                      '<li>'+
+                                      '<a class="confirm-text" href="javascript:void(0);">'+
+                                      '<img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img" /></a>'+
+                                    '</li></ul>');
+                $("#sub-total").html(subtotal);
+                $("#subtotals").val(subtotal);
+                
+              });
+            }
+          });
+    }
+
+    $("body").on("click", "#productAddToCart", (e) =>
+      addToCart($(e.currentTarget).data("id"))
+    );
+
+    function addToCart(product_id){
+      var invoicenum = $("#invoiceNumberId").val();
+
+      let formData = {invoicenumber: invoicenum, prod_id:product_id}
+
+      $.ajax({
+            url: '<?= base_url('admin/pos/invoiceAvailability') ?>',
+            method: 'post',
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+              if(response.length==0){
+                $.ajax({
+                    url: '<?= base_url('admin/pos/selectProd') ?>',
+                    method: 'post',
+                    data: {p_id:product_id},
+                    dataType: 'json',
+                    success: function(response) {
+                      let dataA = {invoice_number:invoicenum,product_id:product_id,quantity:1,totalAmount:response[0].price} 
+                      $.ajax({
+                          url: '<?= base_url('admin/pos/addtoinvoice') ?>',
+                          method: 'post',
+                          data: dataA,
+                          dataType: 'json',
+                          success: function(responses) {
+                            $("#prod_list").empty();
+                            initTableInvoice();
+                          }
+                        });
+                    }
+                  });
+              }else{
+                var newquantity = parseInt(response[0].quantity);
+                var newtotal = parseFloat(response[0].totalAmount);
+                var newproduct_id = parseFloat(response[0].product_id);
+                $.ajax({
+                    url: '<?= base_url('admin/pos/selectProd') ?>',
+                    method: 'post',
+                    data: {p_id:newproduct_id},
+                    dataType: 'json',
+                    success: function(responses) {
+                      let dataA = {id:response[0].id,invoice_number:invoicenum,product_id:newproduct_id,quantity: newquantity + 1,totalAmount: newtotal + parseFloat(responses[0].price)} 
+                      $.ajax({
+                          url: '<?= base_url('admin/pos/updatetoinvoice') ?>',
+                          method: 'post',
+                          data: dataA,
+                          dataType: 'json',
+                          success: function(response) {
+                            $("#prod_list").empty();
+                            initTableInvoice();
+                          }
+                        });
+                    }
+                  });
+                  }
+            }
+          });
+      
+    }
 
     function initData(){
       $.ajax({
@@ -1352,6 +1297,7 @@
             dataType: 'json',
             success: function(response) {
               let optionData = $("#customer_id");
+                optionData.append('<option>Choose Customer</option>');
 
               response.forEach((customer) => {
 
@@ -1361,6 +1307,64 @@
             }
           });
     }
+
+    $("#paymentmethod").click(async function(){
+      const { value: amountPay } = await Swal.fire({
+      title: "Input Amount to Pay",
+      input: "text",
+      inputLabel: "Payment",
+      inputPlaceholder: "Amount",
+    });
+
+    if (amountPay >= parseFloat($("#subtotals").val())) {
+      let change = amountPay - parseFloat($("#subtotals").val());
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Transaction Completed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      // modelContainer.forEach((prod_id) => {
+
+        let formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:"REMARKS TO"};
+      $.ajax({
+            url: '<?= base_url('admin/pos/store') ?>',
+            method: 'post',
+            data: formdata,
+            dataType: 'json',
+            success: function(response) {
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+              }).then(
+                $("#cashpay").html(amountPay),
+                $("#cashchange").html(change),
+                setTimeout(() => { 
+                // window.location.reload();
+                $("#printReciept").modal('show');
+                }, 1000),
+              );
+            }
+          });
+        
+      // });
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "Kulang Bayad Mo!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setTimeout(() => {
+        $("#paymentmethod").click();
+      }, 1000);
+    }
+  });
 
     $("#addCustomer").click(function(){
       let formData = $("#formMain").serializeArray();
@@ -1376,7 +1380,11 @@
                 title: 'Your work has been saved',
                 showConfirmButton: false,
                 timer: 1500
-              })
+              }).then(
+                $("#create").modal('hide'),
+                $("#customer_id").empty(),
+                initData(),
+              )
             }
           });
     })

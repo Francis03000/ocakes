@@ -95,7 +95,13 @@ $routes->get('chart-flot', 'Admin::flot');
 // NEWLY INVENTED ROUTE SIMPLIFY BY CALLING THE MOTHER PATH OR ROUTE NAME
 $routes->group('admin', static function ($routes) {
     $routes->get('pos', 'PosController::index');
-    $routes->post('purchase', 'PosController::store');
+    $routes->get('pos/products-list', 'PosController::getAllProducts');
+    $routes->get('pos/getInvoice', 'PosController::getAllInvoice');
+    $routes->post('pos/invoiceAvailability', 'PosController::invoiceProductAvailability');
+    $routes->post('pos/selectProd', 'PosController::selectProduct');
+    $routes->post('pos/addtoinvoice', 'PosController::addToInvoice');
+    $routes->post('pos/updatetoinvoice', 'PosController::updateToInvoice');
+    $routes->post('pos/store', 'PosController::storeTransaction');
 });
 
 $routes->group('customers', static function ($routes) {
