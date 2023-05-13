@@ -102,16 +102,20 @@
                       >
                     </div>
                     <div class="col-lg-12">
+                      <div class="form-group">
+                        <label>Product Code</label>
+                        <input type="text" placeholder="Scanned Product code goes here." autofocus/>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
                       <div class="select-split">
                         <div class="select-group w-100">
-                          <select class="select">
-                            <option>Walk-in Customer</option>
-                            <option>Chris Moris</option>
+                          <select class="select" id="customer_id" name="customer_id">
                           </select>
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-12">
+                    <!-- <div class="col-lg-12">
                       <div class="select-split">
                         <div class="select-group w-100">
                           <select class="select">
@@ -120,8 +124,8 @@
                           </select>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-12">
+                    </div> -->
+                    <!-- <div class="col-12">
                       <div class="text-end">
                         <a class="btn btn-scanner-set"
                           ><img
@@ -131,7 +135,7 @@
                           />Scan bardcode</a
                         >
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="split-card"></div>
@@ -141,54 +145,19 @@
                     <a href="javascript:void(0);">Clear all</a>
                   </div>
                   <div  class="product-table">
-                  
-                    <ul  class="product-lists">
-                      <li >
-                        <div class="productimg">
-                          <div class="productimgs">
-                            <img   src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="img"/>
-                          </div>
-                          <div class="productcontet">
-                            <h4>
-                              Strawberry
-                              <a href="javascript:void(0);" class="ms-2" data-bs-toggle="modal"
-                                data-bs-target="#edit">
-                                <img src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg" alt="img"/>
-                              </a>
-                            </h4>
-                            <div class="productlinkset">
-                              <h5 id="p">PT001</h5>
-                            </div>
-                            <div class="increment-decrement">
-                              <div class="input-groups">
-                                <input type="button" value="-" class="button-minus dec button"/>
-                                <input type="text" name="child" value="0" class="quantity-field"/>
-                                <input type="button"  value="+"class="button-plus inc button"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li><?php echo '&#8369;'. number_format(300); ?> </li>
-                      <li>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img"
-                        /></a>
-                      </li>
-                    </ul>
 
-                    <!--<ul class="product-lists">
+                    <ul class="product-lists">
                       <li>
                         <div class="productimg">
                           <div class="productimgs">
                             <img
-                              src="<?=base_url()?>/tools/admin/assets/img/product/product30.jpg"
+                              src="http://localhost/ocake/tools/uploads/1_20230318_200057_0000.png"
                               alt="img"
                             />
                           </div>
                           <div class="productcontet">
                             <h4>
-                              Pineapple
+                              Vanilla
                               <a
                                 href="javascript:void(0);"
                                 class="ms-2"
@@ -200,7 +169,7 @@
                               /></a>
                             </h4>
                             <div class="productlinkset">
-                              <h5>PT001</h5>
+                              <h5>Valentine Cake</h5>
                             </div>
                             <div class="increment-decrement">
                               <div class="input-groups">
@@ -212,7 +181,7 @@
                                 <input
                                   type="text"
                                   name="child"
-                                  value="0"
+                                  value="1"
                                   class="quantity-field"
                                 />
                                 <input
@@ -225,123 +194,13 @@
                           </div>
                         </div>
                       </li>
-                      <li>3000.00</li>
+                      <li><?php echo '&#8369;'. number_format(123.00); ?></li>
                       <li>
                         <a class="confirm-text" href="javascript:void(0);"
                           ><img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img"
                         /></a>
                       </li>
                     </ul>
-                    <ul class="product-lists">
-                      <li>
-                        <div class="productimg">
-                          <div class="productimgs">
-                            <img
-                              src="<?=base_url()?>/tools/admin/assets/img/product/product34.jpg"
-                              alt="img"
-                            />
-                          </div>
-                          <div class="productcontet">
-                            <h4>
-                              Green Nike
-                              <a
-                                href="javascript:void(0);"
-                                class="ms-2"
-                                data-bs-toggle="modal"
-                                data-bs-target="#edit"
-                                ><img
-                                  src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg"
-                                  alt="img"
-                              /></a>
-                            </h4>
-                            <div class="productlinkset">
-                              <h5>PT001</h5>
-                            </div>
-                            <div class="increment-decrement">
-                              <div class="input-groups">
-                                <input
-                                  type="button"
-                                  value="-"
-                                  class="button-minus dec button"
-                                />
-                                <input
-                                  type="text"
-                                  name="child"
-                                  value="0"
-                                  class="quantity-field"
-                                />
-                                <input
-                                  type="button"
-                                  value="+"
-                                  class="button-plus inc button"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>3000.00</li>
-                      <li>
-                        <a class="confirm-text" href="javascript:void(0);"
-                          ><img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img"
-                        /></a>
-                      </li>
-                    </ul>
-                    <ul class="product-lists">
-                      <li>
-                        <div class="productimg">
-                          <div class="productimgs">
-                            <img
-                              src="<?=base_url()?>/tools/admin/assets/img/product/product35.jpg"
-                              alt="img"
-                            />
-                          </div>
-                          <div class="productcontet">
-                            <h4>
-                              Banana
-                              <a
-                                href="javascript:void(0);"
-                                class="ms-2"
-                                data-bs-toggle="modal"
-                                data-bs-target="#edit"
-                                ><img
-                                  src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg"
-                                  alt="img"
-                              /></a>
-                            </h4>
-                            <div class="productlinkset">
-                              <h5>PT001</h5>
-                            </div>
-                            <div class="increment-decrement">
-                              <div class="input-groups">
-                                <input
-                                  type="button"
-                                  value="-"
-                                  class="button-minus dec button"
-                                />
-                                <input
-                                  type="text"
-                                  name="child"
-                                  value="0"
-                                  class="quantity-field"
-                                />
-                                <input
-                                  type="button"
-                                  value="+"
-                                  class="button-plus inc button"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>3000.00</li>
-                      <li>
-                        <a class="confirm-text" href="javascript:void(0);"
-                          ><img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img"
-                        /></a>
-                      </li>
-                    </ul>-->
                     
                   </div>
                 </div>
@@ -351,15 +210,15 @@
                     <ul>
                       <li>
                         <h5>Subtotal</h5>
-                        <h6><?php echo '&#8369;'. number_format(300); ?></h6>
+                        <h6><?php echo '&#8369;'. number_format(123.00); ?></h6>
                       </li><br>
                       <li>
                         <h5>Cash</h5>
-                        <h6><?php echo '&#8369;'. number_format(500); ?></h6>
+                        <h6><?php echo '&#8369;'. number_format(0); ?></h6>
                       </li>
                       <li class="total-value">
                         <h5>Change</h5>
-                        <h6><?php echo '&#8369;'. number_format(200); ?></h6>
+                        <h6><?php echo '&#8369;'. number_format(0); ?></h6>
                       </li>
                     </ul>
                   </div>
@@ -387,7 +246,7 @@
                   </div>
                   <div class="btn-totallabel">
                     <h5>Checkout</h5>
-                    <h6><?php echo '&#8369;'. number_format(300); ?></h6>
+                    <h6><?php echo '&#8369;'. number_format(123); ?></h6>
                   </div>
                   <div class="btn-pos">
                     <ul>
@@ -634,7 +493,7 @@
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Create</h5>
+            <h5 class="modal-title">Add Customer</h5>
             <button
               type="button"
               class="close"
@@ -645,46 +504,56 @@
             </button>
           </div>
           <div class="modal-body">
+            <form id="formMain">
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Customer FirstName</label>
+                  <input type="text" id="customer_fname" name="customer_fname"/>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Customer MiddleName</label>
+                  <input type="text"  id="customer_mname" name="customer_mname"/>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-12 col-12">
+                <div class="form-group">
+                  <label>Customer LastName</label>
+                  <input type="text"  id="customer_lname" name="customer_lname"/>
+                </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-lg-6 col-sm-12 col-12">
                 <div class="form-group">
-                  <label>Customer Name</label>
-                  <input type="text" />
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
                   <label>Email</label>
-                  <input type="text" />
+                  <input type="text"  id="customer_email" name="customer_email"/>
                 </div>
               </div>
               <div class="col-lg-6 col-sm-12 col-12">
                 <div class="form-group">
                   <label>Phone</label>
-                  <input type="text" />
+                  <input type="text"  id="customer_contact" name="customer_contact"/>
                 </div>
               </div>
               <div class="col-lg-6 col-sm-12 col-12">
                 <div class="form-group">
                   <label>Country</label>
-                  <input type="text" />
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="form-group">
-                  <label>City</label>
-                  <input type="text" />
+                  <input type="text"  id="customer_country" name="customer_country"/>
                 </div>
               </div>
               <div class="col-lg-6 col-sm-12 col-12">
                 <div class="form-group">
                   <label>Address</label>
-                  <input type="text" />
+                  <input type="text"  id="customer_address" name="customer_address"/>
                 </div>
               </div>
             </div>
+            </form>
             <div class="col-lg-12">
-              <a class="btn btn-submit me-2">Submit</a>
+              <a class="btn btn-submit me-2" id="addCustomer">Submit</a>
               <a class="btn btn-cancel" data-bs-dismiss="modal">Cancel</a>
             </div>
           </div>
@@ -1470,3 +1339,46 @@
     <script src="<?=base_url()?>/tools/admin/assets/js/script.js"></script>
   </body>
 </html>
+
+<script>
+  $(document).ready(function(){
+
+    initData();
+
+    function initData(){
+      $.ajax({
+            url: '<?= base_url('customers/index') ?>',
+            method: 'get',
+            dataType: 'json',
+            success: function(response) {
+              let optionData = $("#customer_id");
+
+              response.forEach((customer) => {
+
+                optionData.append('<option value='+customer.id+'>'+customer.customer_fname +" "+customer.customer_mname+" "+customer.customer_lname+'</option>');
+                
+              });
+            }
+          });
+    }
+
+    $("#addCustomer").click(function(){
+      let formData = $("#formMain").serializeArray();
+      $.ajax({
+            url: '<?= base_url('customers/save') ?>',
+            method: 'post',
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
+          });
+    })
+  })
+</script>

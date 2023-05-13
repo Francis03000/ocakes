@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost/ocake/';
+    public $baseURL = 'http://localhost/ocakes/';
 
     /**
      * --------------------------------------------------------------------------

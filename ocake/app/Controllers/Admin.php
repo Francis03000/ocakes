@@ -16,7 +16,7 @@ class Admin extends BaseController
         $this->session = \Config\Services::session();
     }
 
-    //********************************** NEW TEMPLATE **********************************************//
+    //*********s************************* NEW TEMPLATE **********************************************//
     //----------------- SIGNIN PAGE ----------------//           November 25,2022
     public function signin(){
         return view('admin/login');
@@ -415,6 +415,7 @@ class Admin extends BaseController
             if($imageFile == ""){
                 $data = array(
                     'occasion' => $this->request->getVar('occasion'),
+                    'cat_id' => $this->request->getVar('cat_id'),
                     'product_name' => $this->request->getVar('product_name'),
                     'flavor' => $this->request->getVar('flavor'),
                     'status' => $this->request->getVar('status'),
@@ -428,6 +429,7 @@ class Admin extends BaseController
 
                 /*this will insert data to db */
                 $data = array(
+                    'cat_id' => $this->request->getVar('cat_id'),
                     'occasion' => $this->request->getVar('occasion'),
                     'product_name' => $this->request->getVar('product_name'),
                     'flavor' => $this->request->getVar('flavor'),
@@ -793,8 +795,9 @@ class Admin extends BaseController
             $category_model = new Category_model();
             $data['category']= $category_model->fetchCategory();
             return view('admin/pos', $data);
-        }else
-        return redirect()->to(base_url('/admin'));
+        }else{
+            return redirect()->to(base_url('/admin'));
+        }
     }
     
     //-------------- FETCH SALESLIST --------------//

@@ -82,7 +82,6 @@ $routes->post('admin/addonslist', 'Admin::addonslist');
 $routes->get('/admin/addonslist/delete_addons/(:any)', 'Admin::delete_addons/$1/$2');
 $routes->post('/admin/addonslist/update_addons/(:any)', 'Admin::update_addons/$1/$2');
 
-$routes->get('admin/pos', 'Admin::pos');
 $routes->get('admin/saleslist', 'Admin::saleslist');
 $routes->get('/admin/saleslist/delete_sales/(:any)', 'Admin::delete_flavor/$1/$2');
 $routes->post('/admin/saleslist/update_sales/(:any)', 'Admin::update_sales/$1/$2');
@@ -92,6 +91,18 @@ $routes->get('chart-apex', 'Admin::apex');
 $routes->get('chart-morris', 'Admin::morris');
 $routes->get('chart-peity', 'Admin::peity');
 $routes->get('chart-flot', 'Admin::flot');
+
+// NEWLY INVENTED ROUTE SIMPLIFY BY CALLING THE MOTHER PATH OR ROUTE NAME
+$routes->group('admin', static function ($routes) {
+    $routes->get('pos', 'PosController::index');
+    $routes->post('purchase', 'PosController::store');
+});
+
+$routes->group('customers', static function ($routes) {
+    $routes->get('index', 'CustomersController::getAllData');
+    $routes->post('save', 'CustomersController::store');
+    $routes->post('purchase', 'PosController::store');
+});
 
 
 
