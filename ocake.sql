@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2023 at 05:51 PM
+-- Generation Time: May 14, 2023 at 01:56 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -406,7 +406,10 @@ CREATE TABLE `customers` (
 
 INSERT INTO `customers` (`id`, `customer_fname`, `customer_mname`, `customer_lname`, `customer_address`, `customer_contact`, `customer_email`, `customer_country`) VALUES
 (1, 'Kevin', 'Felix', 'Caluag', 'Bago General Tinio NE', '09261364720', 'kfc202510@gmail.com', 'Phil'),
-(2, 'asdas', 'dasd', 'asdas', 'asdasd', 'dasdas', 'dasdas', 'dasd');
+(2, 'asdas', 'dasd', 'asdas', 'asdasd', 'dasdas', 'dasdas', 'dasd'),
+(3, 'asd', '2343', '234234', '4234234', '34234', '2342', '23423'),
+(4, 'asdasd', 'asdas', 'dasdasdas', 'dasdasd', 'asdasda', 'dasd', 'sdas'),
+(5, 'adsasd', 'caluagpogi', 'asdasdasd', 'sdasdasd', 'dasdas', 'asdas', 'dasda');
 
 -- --------------------------------------------------------
 
@@ -492,12 +495,38 @@ INSERT INTO `flavor` (`flavor_id`, `flavor_image`, `flavor`, `flavor_status`) VA
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `invoice_cart`
+--
+
+CREATE TABLE `invoice_cart` (
+  `id` int(11) NOT NULL,
+  `invoice_number` varchar(10) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `totalAmount` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `invoice_cart`
+--
+
+INSERT INTO `invoice_cart` (`id`, `invoice_number`, `product_id`, `quantity`, `totalAmount`) VALUES
+(84, '022', 157, 1, 500),
+(85, '022', 158, 2, 1200),
+(86, '2994', 157, 2, 1000),
+(87, '2994', 158, 2, 1200),
+(88, '3040', 158, 1, 600),
+(89, '3040', 157, 2, 1000),
+(90, '0907', 158, 1, 600);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pos`
 --
 
 CREATE TABLE `pos` (
   `pos_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `totalAmount` double NOT NULL,
   `payable` double NOT NULL,
@@ -507,6 +536,14 @@ CREATE TABLE `pos` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pos`
+--
+
+INSERT INTO `pos` (`pos_id`, `customer_id`, `totalAmount`, `payable`, `change`, `remarks`, `status`, `created_at`, `deleted_at`) VALUES
+(5, 1, 1700, 1800, 100, 'REMARKS TO', 1, '2023-05-13 23:34:40', NULL),
+(7, 1, 600, 700, 100, 'REMARKS TO', 1, '2023-05-13 23:55:04', NULL);
 
 -- --------------------------------------------------------
 
@@ -538,8 +575,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `product_code`, `cat_id`, `image`, `occasion`, `product_name`, `flavor`, `price`, `stock`, `status`, `availability`, `is_customized`, `userid`, `message`, `created_at`, `updated_at`) VALUES
-(157, 'cakeval1', 7, 0x315f32303233303331385f3230303035375f303030302e706e67, 'Valentine', 'fgv', 'Vanilla', '123.00', 150, 'Available', 'Pre Order', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-13 15:50:18'),
-(158, 'cakegrad1', 6, 0x706578656c732d6672616e636573636f2d756e6761726f2d323332353434362e6a7067, 'Graduation', 'fgv', 'Vanilla', '123.00', 120, 'Available', 'Pre Order', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-13 15:50:27');
+(157, 'cakeval1', 7, 0x315f32303233303331385f3230303035375f303030302e706e67, 'Valentine', 'fgv', 'Vanilla', '500.00', 150, 'Available', 'Pre Order', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-13 19:29:10'),
+(158, 'cakegrad1', 6, 0x706578656c732d6672616e636573636f2d756e6761726f2d323332353434362e6a7067, 'Graduation', 'fgv', 'Vanilla', '600.00', 120, 'Available', 'Pre Order', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-13 19:29:15');
 
 -- --------------------------------------------------------
 
@@ -659,11 +696,17 @@ ALTER TABLE `flavor`
   ADD PRIMARY KEY (`flavor_id`);
 
 --
+-- Indexes for table `invoice_cart`
+--
+ALTER TABLE `invoice_cart`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `f_p_id` (`product_id`);
+
+--
 -- Indexes for table `pos`
 --
 ALTER TABLE `pos`
   ADD PRIMARY KEY (`pos_id`),
-  ADD KEY `prod_id_f` (`product_id`),
   ADD KEY `pos_cus_id_f` (`customer_id`);
 
 --
@@ -735,7 +778,7 @@ ALTER TABLE `checkout`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -750,10 +793,16 @@ ALTER TABLE `flavor`
   MODIFY `flavor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `invoice_cart`
+--
+ALTER TABLE `invoice_cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
+--
 -- AUTO_INCREMENT for table `pos`
 --
 ALTER TABLE `pos`
-  MODIFY `pos_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `pos_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -772,11 +821,16 @@ ALTER TABLE `users`
 --
 
 --
+-- Constraints for table `invoice_cart`
+--
+ALTER TABLE `invoice_cart`
+  ADD CONSTRAINT `f_p_id` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `pos`
 --
 ALTER TABLE `pos`
-  ADD CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `prod_id_f` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
