@@ -1,0 +1,357 @@
+CRITICAL - 2023-04-16 00:04:25 --> Undefined variable: model_order
+in APPPATH\Controllers\Admin.php on line 157.
+ 1 APPPATH\Controllers\Admin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: model_order', 'APPPATH\\Controllers\\Admin.php', 157, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 00:07:08 --> mysqli_sql_exception: Unknown column 'cart.product_id' in 'on clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, count...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, count...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, count...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, count...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(233): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(157): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-16 00:07:08 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 233.
+ 1 APPPATH\Controllers\Admin.php(157): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 02:04:03 --> Undefined property: stdClass::$barngay
+in APPPATH\Models\Checkout_model.php on line 248.
+ 1 APPPATH\Models\Checkout_model.php(248): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$barngay', 'APPPATH\\Models\\Checkout_model.php', 248, [...])
+ 2 APPPATH\Controllers\Admin.php(158): App\Models\Checkout_model->mostBarangay()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 02:06:16 --> Array to string conversion
+in APPPATH\Views\admin\dashboard.php on line 475.
+ 1 APPPATH\Views\admin\dashboard.php(475): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\admin\\dashboard.php', 475, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(161): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 04:51:33 --> Undefined variable: date
+in APPPATH\Controllers\User.php on line 26.
+ 1 APPPATH\Controllers\User.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: date', 'APPPATH\\Controllers\\User.php', 26, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->save()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 05:21:46 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::row()
+in APPPATH\Models\Personal_m.php on line 37.
+ 1 APPPATH\Controllers\User.php(131): App\Models\Personal_m->checkEmailVerification(29)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 05:50:04 --> The route for "user/verify_email" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('user/verify_email')
+ 2 SYSTEMPATH\Common.php(860): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\User.php(104): redirect('user/verify_email')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 05:58:42 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(134): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 05:59:15 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(136): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:01:22 --> Undefined variable: session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(136): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:04:32 --> Undefined variable: session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(136): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:05:17 --> Undefined property: App\Controllers\User::$load
+in APPPATH\Controllers\User.php on line 136.
+ 1 APPPATH\Controllers\User.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\User::$load', 'APPPATH\\Controllers\\User.php', 136, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:07:08 --> Undefined variable: config
+in APPPATH\Controllers\User.php on line 136.
+ 1 APPPATH\Controllers\User.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: config', 'APPPATH\\Controllers\\User.php', 136, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:09:17 --> Undefined variable: config
+in APPPATH\Controllers\User.php on line 136.
+ 1 APPPATH\Controllers\User.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: config', 'APPPATH\\Controllers\\User.php', 136, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:09:28 --> Undefined variable: session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(137): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:11:14 --> Undefined variable: session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(142): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:12:15 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(142): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:12:41 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(142): view('user/auth/verification')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:15:17 --> Argument 2 passed to view() must be of the type array, object given, called in C:\wamp64\www\ocake\ocake\app\Controllers\User.php on line 142
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\User.php(142): view('user/auth/verification', Object(CodeIgniter\Session\Session))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:15:56 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 APPPATH\Views\user\auth\verification.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\user\\auth\\verification.php', 21, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\verification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 5 APPPATH\Controllers\User.php(142): view('user/auth/verification', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:16:11 --> Call to undefined method CodeIgniter\Session\Session::flashdata()
+in APPPATH\Views\user\auth\verification.php on line 21.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/verification', [], true)
+ 4 APPPATH\Controllers\User.php(142): view('user/auth/verification', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify_email()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:17:02 --> Call to undefined method CodeIgniter\Session\Session::set_flashdata()
+in APPPATH\Controllers\User.php on line 168.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:19:30 --> Class 'App\Controllers\Date' not found
+in APPPATH\Controllers\User.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:22:03 --> Class 'App\Controllers\DateTime' not found
+in APPPATH\Controllers\User.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:24:28 --> Call to undefined function App\Controllers\DateTime()
+in APPPATH\Controllers\User.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:24:38 --> Class 'App\Controllers\DateTime' not found
+in APPPATH\Controllers\User.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:27:18 --> A non well formed numeric value encountered
+in APPPATH\Controllers\User.php on line 155.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well formed numeric value encountered', 'APPPATH\\Controllers\\User.php', 155, [...])
+ 2 APPPATH\Controllers\User.php(155): date('h:i:s a', '2023-04-16 07:57:33')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:32:46 --> Class 'App\Controllers\DateTime' not found
+in APPPATH\Controllers\User.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:40:52 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(1598): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\Personal_m.php(57): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\User.php(189): App\Models\Personal_m->refreshVerificationCode('29', 39342, '2023-04-16 06:45:52 am')
+ 6 APPPATH\Controllers\User.php(171): App\Controllers\User->refreshVerificationCode()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:44:32 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(1598): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\Personal_m.php(57): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\User.php(189): App\Models\Personal_m->refreshVerificationCode('29', 48729, '2023-04-16 06:49:32 am')
+ 6 APPPATH\Controllers\User.php(171): App\Controllers\User->refreshVerificationCode()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 19:52:19 --> DateTime::__construct(): Failed to parse time string (d-m-Y H:i:s) at position 1 (-): Unexpected character
+in APPPATH\Controllers\User.php on line 153.
+ 1 APPPATH\Controllers\User.php(153): DateTime->__construct('d-m-Y H:i:s')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 19:52:19 --> DateTime::__construct(): Failed to parse time string (d-m-Y H:i:s) at position 1 (-): Unexpected character
+in APPPATH\Controllers\User.php on line 153.
+ 1 APPPATH\Controllers\User.php(153): DateTime->__construct('d-m-Y H:i:s')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 19:54:16 --> strtotime() expects parameter 1 to be string, object given
+in APPPATH\Controllers\User.php on line 155.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'strtotime() expects parameter 1 to be string, object given', 'APPPATH\\Controllers\\User.php', 155, [...])
+ 2 APPPATH\Controllers\User.php(155): strtotime(Object(DateTime))
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:26:59 --> Call to undefined function App\Controllers\diff()
+in APPPATH\Controllers\User.php on line 156.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:28:04 --> Call to undefined function App\Controllers\data_diff()
+in APPPATH\Controllers\User.php on line 156.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:28:14 --> date_diff() expects parameter 1 to be DateTimeInterface, bool given
+in APPPATH\Controllers\User.php on line 156.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'date_diff() expects parameter 1 to be DateTimeInterface, bool given', 'APPPATH\\Controllers\\User.php', 156, [...])
+ 2 APPPATH\Controllers\User.php(156): date_diff(false, Object(DateTime))
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:28:55 --> Cannot use object of type DateTime as array
+in APPPATH\Controllers\User.php on line 156.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:29:11 --> Undefined property: DateTime::$date
+in APPPATH\Controllers\User.php on line 156.
+ 1 APPPATH\Controllers\User.php(156): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: DateTime::$date', 'APPPATH\\Controllers\\User.php', 156, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:29:27 --> Object of class DateTime could not be converted to string
+in APPPATH\Controllers\User.php on line 156.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:30:57 --> DateTime::createFromFormat() expects parameter 2 to be string, object given
+in APPPATH\Controllers\User.php on line 155.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'DateTime::createFromFormat() expects parameter 2 to be string, object given', 'APPPATH\\Controllers\\User.php', 155, [...])
+ 2 APPPATH\Controllers\User.php(155): DateTime::createFromFormat('d-m-Y H:i:s a', Object(DateTime))
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:31:17 --> strtotime() expects parameter 1 to be string, object given
+in APPPATH\Controllers\User.php on line 155.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'strtotime() expects parameter 1 to be string, object given', 'APPPATH\\Controllers\\User.php', 155, [...])
+ 2 APPPATH\Controllers\User.php(155): strtotime(Object(DateTime))
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:33:24 --> Call to a member function format() on bool
+in APPPATH\Controllers\User.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->verify()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

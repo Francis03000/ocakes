@@ -1,0 +1,22 @@
+CRITICAL - 2023-01-18 04:48:08 --> Undefined property: stdClass::$fname
+in APPPATH\Views\user\customized_cake.php on line 67.
+ 1 APPPATH\Views\user\customized_cake.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$fname', 'APPPATH\\Views\\user\\customized_cake.php', 67, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customized_cake.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customized_cake', [], true)
+ 5 APPPATH\Controllers\User.php(647): view('user/customized_cake')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getCustomDesign()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 04:51:27 --> Undefined property: stdClass::$firstname
+in APPPATH\Views\user\customized_cake.php on line 67.
+ 1 APPPATH\Views\user\customized_cake.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$firstname', 'APPPATH\\Views\\user\\customized_cake.php', 67, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customized_cake.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customized_cake', [], true)
+ 5 APPPATH\Controllers\User.php(647): view('user/customized_cake')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getCustomDesign()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

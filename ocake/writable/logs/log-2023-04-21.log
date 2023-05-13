@@ -1,0 +1,496 @@
+CRITICAL - 2023-04-21 17:31:29 --> Undefined variable: topBarangay
+in APPPATH\Views\admin\visualization2.php on line 129.
+ 1 APPPATH\Views\admin\visualization2.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: topBarangay', 'APPPATH\\Views\\admin\\visualization2.php', 129, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\visualization2.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/visualization2', [], true)
+ 5 APPPATH\Controllers\Admin.php(682): view('admin/visualization2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:01:41 --> mysqli_sql_exception: Column 'created_at' in group statement is ambiguous in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(263): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:01:41 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 263.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:01:51 --> mysqli_sql_exception: Column 'created_at' in group statement is ambiguous in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(263): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:01:51 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 263.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:02:00 --> mysqli_sql_exception: Column 'created_at' in group statement is ambiguous in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(263): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:02:00 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 263.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:03:11 --> mysqli_sql_exception: Unknown column 'total' in 'order clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(263): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:03:11 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 263.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:14:24 --> mysqli_sql_exception: Unknown column 'product_id' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT YEAR(cre...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT YEAR(cre...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT YEAR(cre...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT YEAR(cre...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(263): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:14:24 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 263.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:14:57 --> mysqli_sql_exception: Unknown column 'product_id' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT YEAR(cre...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT YEAR(cre...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT YEAR(cre...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT YEAR(cre...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(263): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:14:57 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 263.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:15:09 --> mysqli_sql_exception: Unknown column 'product_id' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT YEAR(che...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT YEAR(che...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT YEAR(che...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT YEAR(che...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(263): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:15:09 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 263.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 18:17:18 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(259): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 18:17:18 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 259.
+ 1 APPPATH\Controllers\Admin.php(686): App\Models\Checkout_model->monthlySales()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 18:21:20 --> Undefined index: brgy
+in APPPATH\Views\admin\visualization2.php on line 191.
+ 1 APPPATH\Views\admin\visualization2.php(191): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: brgy', 'APPPATH\\Views\\admin\\visualization2.php', 191, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\visualization2.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/visualization2', [], true)
+ 5 APPPATH\Controllers\Admin.php(688): view('admin/visualization2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 18:22:03 --> Undefined index: total
+in APPPATH\Views\admin\visualization2.php on line 191.
+ 1 APPPATH\Views\admin\visualization2.php(191): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total', 'APPPATH\\Views\\admin\\visualization2.php', 191, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\visualization2.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/visualization2', [], true)
+ 5 APPPATH\Controllers\Admin.php(688): view('admin/visualization2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 18:34:05 --> Undefined variable: monthlySold
+in APPPATH\Views\admin\visualization2.php on line 193.
+ 1 APPPATH\Views\admin\visualization2.php(193): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: monthlySold', 'APPPATH\\Views\\admin\\visualization2.php', 193, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\visualization2.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/visualization2', [], true)
+ 5 APPPATH\Controllers\Admin.php(688): view('admin/visualization2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 18:49:05 --> Undefined index: total
+in APPPATH\Views\admin\visualization2.php on line 195.
+ 1 APPPATH\Views\admin\visualization2.php(195): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total', 'APPPATH\\Views\\admin\\visualization2.php', 195, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\visualization2.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/visualization2', [], true)
+ 5 APPPATH\Controllers\Admin.php(689): view('admin/visualization2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 18:50:00 --> Undefined property: stdClass::$year
+in APPPATH\Models\Checkout_model.php on line 295.
+ 1 APPPATH\Models\Checkout_model.php(295): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$year', 'APPPATH\\Models\\Checkout_model.php', 295, [...])
+ 2 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->dailySold()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 20:35:06 --> Undefined property: stdClass::$week
+in APPPATH\Models\Checkout_model.php on line 294.
+ 1 APPPATH\Models\Checkout_model.php(294): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$week', 'APPPATH\\Models\\Checkout_model.php', 294, [...])
+ 2 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 20:35:07 --> Undefined property: stdClass::$week
+in APPPATH\Models\Checkout_model.php on line 294.
+ 1 APPPATH\Models\Checkout_model.php(294): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$week', 'APPPATH\\Models\\Checkout_model.php', 294, [...])
+ 2 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 20:47:28 --> mysqli_sql_exception: FUNCTION ocake.DATEPART does not exist in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTHNAM...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTHNAM...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTHNAM...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTHNAM...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(291): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 20:47:28 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 291.
+ 1 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 20:47:41 --> mysqli_sql_exception: FUNCTION ocake.DATEPART does not exist in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTHNAM...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTHNAM...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTHNAM...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTHNAM...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(291): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 20:47:41 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 291.
+ 1 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 20:48:23 --> mysqli_sql_exception: FUNCTION ocake.DATEPART does not exist in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTHNAM...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTHNAM...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTHNAM...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTHNAM...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(291): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 20:48:23 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 291.
+ 1 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 20:55:36 --> syntax error, unexpected '')) as first_day_of_month,' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+in APPPATH\Models\Checkout_model.php on line 291.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Checkout_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Checkout_model')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Checkout_model')
+ 4 APPPATH\Controllers\Admin.php(682): spl_autoload_call('App\\Models\\Checkout_model')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 20:56:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `checkout`' at line 3 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-21 20:56:27 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 297.
+ 1 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 20:56:39 --> Trying to get property 'week' of non-object
+in APPPATH\Models\Checkout_model.php on line 300.
+ 1 APPPATH\Models\Checkout_model.php(300): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'week\' of non-object', 'APPPATH\\Models\\Checkout_model.php', 300, [...])
+ 2 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-21 20:57:41 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Models\Checkout_model.php on line 288.
+ 1 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 20:57:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,
+                 ' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 20:58:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,
+                 ' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 20:58:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,
+                 ' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 20:58:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,
+                 ' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 20:58:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,
+                 ' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 20:59:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 20:59:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,
+                 ' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 20:59:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'checkout_id,created_at, weekday(created_at) as weekday_count,' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 21:02:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `checkout` order by created_at' at line 3 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-04-21 21:04:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `checkout` order by created_at' at line 3 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-21 21:04:20 --> Call to a member function result_array() on bool
+in APPPATH\Models\Checkout_model.php on line 304.
+ 1 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-21 21:06:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `checkout` order by created_at' at line 3 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n             ...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(288): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+#5 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-21 21:06:12 --> Call to a member function result_array() on bool
+in APPPATH\Models\Checkout_model.php on line 304.
+ 1 APPPATH\Controllers\Admin.php(687): App\Models\Checkout_model->weeklySold()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->visualization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

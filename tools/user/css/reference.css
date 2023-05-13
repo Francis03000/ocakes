@@ -1,0 +1,20 @@
+#input-wrapper * {
+position:absolute;
+}
+#input-wrapper label {
+    z-index:99;
+    line-height:25px;
+    padding: 2px;
+    margin-left:5px;
+}
+#input-wrapper input {
+    height:25px;
+    height:25px;
+    text-indent:35px;
+}
+
+label::after{
+    content:'USD';
+    display:inline-block;
+    transform: translateX(calc(-100 -5px));
+}

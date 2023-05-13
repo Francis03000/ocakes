@@ -1,0 +1,11 @@
+CRITICAL - 2023-01-04 04:30:08 --> Undefined variable: data
+in APPPATH\Views\user\customization2.php on line 15.
+ 1 APPPATH\Views\user\customization2.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\user\\customization2.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customization2.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customization2', [], true)
+ 5 APPPATH\Controllers\User.php(468): view('user/customization2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
