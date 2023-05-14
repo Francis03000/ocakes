@@ -102,7 +102,7 @@ $routes->group('admin', static function ($routes) {
     $routes->post('pos/addtoinvoice', 'PosController::addToInvoice');
     $routes->post('pos/updatetoinvoice', 'PosController::updateToInvoice');
     $routes->post('pos/store', 'PosController::storeTransaction');
-    $routes->post('pos/updateProductStocks', 'PosController::updateProductStock');
+    $routes->post('pos/updateProductStockss', 'PosController::updateProductStocks');
 });
 
 $routes->group('customers', static function ($routes) {

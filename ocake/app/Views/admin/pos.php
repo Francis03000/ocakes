@@ -1331,7 +1331,7 @@ $(document).ready(function() {
       modelContainer.forEach((prod_id) => {
         let formdatas = {product_id:prod_id.product_ids,stock: prod_id.stock};
         $.ajax({
-              url: '<?= base_url('admin/pos/updateProductStocks') ?>',
+              url: '<?= base_url('admin/pos/updateProductStockss') ?>',
               method: 'post',
               data: formdatas,
               dataType: 'json',
@@ -1358,8 +1358,8 @@ $(document).ready(function() {
                 $("#cashpay").html(amountPay),
                 $("#cashchange").html(change),
                 setTimeout(() => { 
-                window.location.reload();
-                // $("#printReciept").modal('show');
+                // window.location.reload();
+                $("#printReciept").modal('show');
                 }, 500),
               );
             }
