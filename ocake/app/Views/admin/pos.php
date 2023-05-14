@@ -1254,70 +1254,12 @@ $(document).ready(function() {
     }
 
     $("#paymentmethod").click(async function() {
-        const {
-            value: amountPay
-        } = await Swal.fire({
+        const { value: amountPay } = await Swal.fire({
             title: "Input Amount to Pay",
             input: "text",
             inputLabel: "Payment",
             inputPlaceholder: "Amount",
         });
-
-        if (amountPay >= parseFloat($("#subtotals").val())) {
-            let change = amountPay - parseFloat($("#subtotals").val());
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Transaction Completed",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            // modelContainer.forEach((prod_id) => {
-
-            let formdata = {
-                customer_id: $("#customer_id").val(),
-                totalAmount: parseFloat($("#subtotals").val()),
-                payable: parseFloat(amountPay),
-                change: parseFloat(change),
-                remarks: $("#remarks").val()
-            };
-            $.ajax({
-                url: '<?= base_url('admin/pos/store') ?>',
-                method: 'post',
-                data: formdata,
-                dataType: 'json',
-                success: function(response) {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Your work has been saved',
-                        showConfirmButton: false,
-                        timer: 1500
-                    }).then(
-                        $("#cashpay").html(amountPay),
-                        $("#cashchange").html(change),
-                        setTimeout(() => {
-                            // window.location.reload();
-                            $("#printReciept").modal('show');
-                        }, 1000),
-                    );
-                }
-            });
-
-            // });
-        } else {
-            Swal.fire({
-                position: "center",
-                icon: "warning",
-                title: "Kulang Bayad Mo!",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            setTimeout(() => {
-                $("#paymentmethod").click();
-            }, 1000);
-        }
-    });
 
     if (amountPay >= parseFloat($("#subtotals").val())) {
       let change = amountPay - parseFloat($("#subtotals").val());
