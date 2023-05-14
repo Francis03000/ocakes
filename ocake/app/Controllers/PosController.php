@@ -53,6 +53,18 @@ class PosController extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function invoiceBilling(){
+        $invoicecartModel = new InvoiceCartModel();
+        $data = $invoicecartModel->join('product as prod','prod.id=product_id')->where('invoice_number = '.$this->request->getPost('invoice_number'))->get()->getResult();
+        return $this->response->setJSON($data);
+    }
+
+    public function invoiceBillingPos(){
+        $posModel = new PosModel();
+        $data = $posModel->join('customers as cus','cus.id=customer_id')->where('inv_num = '.$this->request->getPost('invoice_number'))->get()->getResult();
+        return $this->response->setJSON($data);
+    }
+
     public function addToInvoice()
     {
         $invoicecartModel = new InvoiceCartModel();
@@ -103,6 +115,7 @@ class PosController extends BaseController
         $posModel = new PosModel();
         if($this->request->getPost('isPreOrder')==="1"){
             $data = [
+                'inv_num' => $this->request->getPost('inv_num'),
                 'customer_id' => $this->request->getPost('customer_id'),
                 'totalAmount' => $this->request->getPost('totalAmount'),
                 'payable' => $this->request->getPost('payable'),
@@ -119,6 +132,7 @@ class PosController extends BaseController
             return $this->response->setJSON($data);
         }else if($this->request->getPost('isPreOrder')==="0"){
             $data = [
+                'inv_num' => $this->request->getPost('inv_num'),
                 'customer_id' => $this->request->getPost('customer_id'),
                 'totalAmount' => $this->request->getPost('totalAmount'),
                 'payable' => $this->request->getPost('payable'),

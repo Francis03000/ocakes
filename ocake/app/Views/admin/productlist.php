@@ -153,7 +153,7 @@
                                                     <option disabled selected>Select</option>
                                                     <option>None</option>
                                                     <option>Pre Order</option>
-                                                    <option>Ready Maade</option>
+                                                    <option>Ready Made</option>
                                                 </select>
                                             </div>
                                         </div>

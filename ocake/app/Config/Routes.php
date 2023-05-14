@@ -103,6 +103,8 @@ $routes->group('admin', static function ($routes) {
     $routes->post('pos/updatetoinvoice', 'PosController::updateToInvoice');
     $routes->post('pos/store', 'PosController::storeTransaction');
     $routes->post('pos/updateProductStockss', 'PosController::updateProductStocks');
+    $routes->post('pos/invoicebill', 'PosController::invoiceBilling');
+    $routes->post('pos/invoicebillpos', 'PosController::invoiceBillingPos');
 });
 
 $routes->group('customers', static function ($routes) {

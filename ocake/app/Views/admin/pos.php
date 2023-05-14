@@ -1010,6 +1010,7 @@
         aria-labelledby="printReciept" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
+                <div id="printR">
                 <div class="modal-header bg-white">
                     <img style="height:100px; width: 100px; "
                         src="http://localhost/ocake/tools/uploads/ocake_logo2.gif/">
@@ -1025,7 +1026,7 @@
                             <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">INVOICE
                             </h2>
                             <p class="m-0">Date: </p>
-                            <p class="m-0">Invoice #: </p>
+                            <p class="m-0">Invoice #: <span id="inv"></span></p>
 
                         </div>
 
@@ -1045,7 +1046,7 @@
                                     <h3>Bill To</h3>
                                 </div>
                                 <div class="card-body">
-                                    <p>Name:</p>
+                                    <p>Name: <span id="cusname"></span></p>
 
                                 </div>
                             </div>
@@ -1065,18 +1066,7 @@
                             </tr>
                         </thead>
 
-                        <tbody id="products">
-                            <tr>
-                                <td>Wedding Cake </td>
-                                <td>2</td>
-                                <td>1000</td>
-                                <td>1000</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;" colspan="3">Subtotal: </td>
-                                <td>1000</td>
-                            </tr>
-                        </tbody>
+                        <tbody id="prod_pur"></tbody>
                         <br>
 
 
@@ -1087,9 +1077,9 @@
 
 
                 </div>
+                </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Print</button>
+                    <button type="button" class="btn btn-primary" id="printthis">Print</button>
                 </div>
             </div>
         </div>
@@ -1147,6 +1137,19 @@ $(document).ready(function() {
     $("#proc").click(function(){
         $("#preorder").modal('hide');
     });
+
+
+    $("#printthis").click(function(){
+        const printContents = document.getElementById("printR").innerHTML;
+        const originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    });
+
+    window.addEventListener("afterprint", (event) => {
+    window.location.reload();
+  });
 
 
     function initProductContainer() {
@@ -1395,9 +1398,9 @@ $(document).ready(function() {
 
 
       if($("#product_availability").val()==="0"){
-        formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),isPreOrder:"0"};
+        formdata = {inv_num:$("#invoiceNumberId").val(),customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),isPreOrder:"0"};
       }else if($("#product_availability").val()==="1"){
-        formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),pre_order_address:add,isPickup:parseInt($("#modeoftransaction").val()),time_pickup_or_deliver:$("#time_pickup_or_deliver").val(),date_pickup_or_deliver:$("#date_pickup_or_deliver").val(),isPreOrder:"1"};
+        formdata = {inv_num:$("#invoiceNumberId").val(),customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),pre_order_address:add,isPickup:parseInt($("#modeoftransaction").val()),time_pickup_or_deliver:$("#time_pickup_or_deliver").val(),date_pickup_or_deliver:$("#date_pickup_or_deliver").val(),isPreOrder:"1"};
       }
 
         $.ajax({
@@ -1417,7 +1420,7 @@ $(document).ready(function() {
                 $("#cashchange").html(change),
                 setTimeout(() => { 
                 // window.location.reload();
-                $("#printReciept").modal('show');
+                getrecieptdata();
                 }, 3000),
               );
             }
@@ -1435,6 +1438,97 @@ $(document).ready(function() {
       }, 1000);
     }
   });
+
+  let recieptAttr = [
+    "product_name",
+    "quantity",
+    "price",
+    "totalAmount",
+    "subtotal"
+  ];
+
+  function getrecieptdata(){
+    let prod_pur_body = $("#prod_pur").empty();
+    var totalamount = 0;
+    $.ajax({
+            url: '<?= base_url('admin/pos/invoicebill') ?>',
+            method: 'post',
+            data: {invoice_number:$("#invoiceNumberId").val()},
+            dataType: 'json',
+            success: function(response) {
+                $("#inv").html(response[0].invoice_number);
+                response.forEach((purchaseval) => {
+                    let tabrow = $("<tr>");
+                    const attriMap = new Map(Object.entries(purchaseval));
+                    recieptAttr.forEach((attri, i) => {
+                        if (attri != "subtotal") {
+                        $("<td>", {
+                            class: "text-wrap",
+                            html: attriMap.get(attri),
+                        }).appendTo(tabrow);
+                        }else if (attri == "subtotal") {
+                            totalamount+=parseFloat(attriMap.get("totalAmount"));
+                        } 
+                        prod_pur_body.append(tabrow);
+                    });
+                    // $("<td>", {
+                    //     class: "text-wrap",
+                    //     html: attriMap.get(attri),
+                    // }).appendTo(tableRow);
+                    // tabrow.append('<td>'+purchaseval.product_name+'<br>'+purchaseval.occasion+' Cake</td>');
+                    // tabrow.append('<td>'+purchaseval.quantity+'</td>');
+                    // tabrow.append('<td>'+purchaseval.price+'</td>');
+                    // tabrow.append('<td>'+purchaseval.totalAmount+'</td>');
+                    // prod_pur_body.append(tabrow);
+                });
+
+                let tabrow = $("<tr>");
+                var payable = 0;
+                var change = 0;
+                tabrow.append(
+                '<td colspan="3" >SubTotal:</td>'
+                );
+                tabrow.append(
+                '<td >' + totalamount + "</td>"
+                );
+                prod_pur_body.append(tabrow);
+
+
+                $.ajax({
+                    url: '<?= base_url('admin/pos/invoicebillpos') ?>',
+                    method: 'post',
+                    data: {invoice_number:$("#invoiceNumberId").val()},
+                    dataType: 'json',
+                    success: function(responses) {
+
+                        $("#cusname").html(responses[0].customer_fname +" "+responses[0].customer_mname+ " " +responses[0].customer_lname);
+                        let tabrowss = $("<tr>");
+                        tabrowss.append(
+                        '<td colspan="3" >Payable:</td>'
+                        );
+                        tabrowss.append(
+                        '<td >' + responses[0].payable + "</td>"
+                        );
+
+                        prod_pur_body.append(tabrowss);
+
+                        let tabrowsss = $("<tr>");
+
+                        tabrowsss.append(
+                        '<td colspan="3" >Change:</td>'
+                        );
+                        tabrowsss.append(
+                        '<td >' + responses[0].change + "</td>"
+                        );
+                        
+                        prod_pur_body.append(tabrowsss);
+                    }
+                });
+
+                $("#printReciept").modal('show');
+            }
+        });
+  }
 
     $("#addCustomer").click(function(){
       let formData = $("#formMain").serializeArray();
