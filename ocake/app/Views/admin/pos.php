@@ -25,12 +25,12 @@
     <link rel="stylesheet" href="<?=base_url()?>/tools/admin/assets/css/style.css" />
 
     <style>
-    .modal-content {
+    /* .modal-content {
         background-image: url('<?=base_url()?>/tools/uploads/cake-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
 
-    }
+    } */
     </style>
 </head>
 
@@ -74,6 +74,18 @@
                             <div class="page-title">
                                 <h4>Categories</h4>
                                 <h6>Manage your purchases</h6>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="col-lg-12">
+                                    <div class="select-split">
+                                        <div class="select-group w-100">
+                                            <select class="select" id="product_availability" name="product_availability">
+                                                <option value="0">Ready Made</option>
+                                                <option value="1">Pre Order</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -127,27 +139,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="col-lg-12">
-                      <div class="select-split">
-                        <div class="select-group w-100">
-                          <select class="select">
-                            <option>Product</option>
-                            <option>Barcode</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div> -->
-                                    <!-- <div class="col-12">
-                      <div class="text-end">
-                        <a class="btn btn-scanner-set"
-                          ><img
-                            src="<?=base_url()?>/tools/admin/assets/img/icons/scanner1.svg"
-                            alt="img"
-                            class="me-2"
-                          />Scan bardcode</a
-                        >
-                      </div>
-                    </div> -->
                                 </div>
                             </div>
                             <div class="split-card"></div>
@@ -198,6 +189,10 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="col-12" id="preorderprod">
+                                        <a href="javascript:void(0);" class="btn btn-adds" data-bs-toggle="modal"
+                                            data-bs-target="#preorder"><i class="fa fa-plus me-2"></i>Add Pre Order Detail</a>
+                                    </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Remarks</label>
@@ -948,6 +943,68 @@
             </div>
         </div>
     </div>
+    
+    <div class="modal fade" id="preorder" tabindex="-1" aria-labelledby="preorder" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pre Order Detail</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formMain">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Choose Mode of Transaction</label>
+                                    <select name="modeoftransaction" id="modeoftransaction" class="select">
+                                        <option value="0">Choose</option>
+                                        <option value="1">Pick Up</option>
+                                        <option value="2">Deliver</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="shop_add">
+                            <div class="col-lg-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Shop Address</label>
+                                    <input type="text" id="shop_address" name="shop_address" readonly value="General Tinio Nueva Ecija"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="deliver_add">
+                            <div class="col-lg-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Delivery Address</label>
+                                    <input type="text" id="delivery_address" name="delivery_address"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Date</label>
+                                    <input class="form-control" type="date" id="date_pickup_or_deliver" name="date_pickup_or_deliver" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Time</label>
+                                    <input class="form-control" type="time" id="time_pickup_or_deliver" name="time_pickup_or_deliver" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-lg-12">
+                        <a class="btn btn-submit me-2" id="proc">Proceed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="printReciept" tabindex="-1" aria-labelledby="printReciept" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -1061,15 +1118,36 @@
 <script>
 $(document).ready(function() {
 
+    date_pickup_or_deliver.min = new Date().toISOString().split("T")[0];
+
+    $("#shop_add").hide();
+    $("#deliver_add").hide();
+
+    $("#modeoftransaction").change(function(){
+        if($("#modeoftransaction").val()==="1"){
+            $("#deliver_add").hide();
+            $("#shop_add").show();
+        }else if($("#modeoftransaction").val()==="2"){
+            $("#shop_add").hide();
+            $("#deliver_add").show();
+        }
+    })
+
     initData();
     initProductContainer();
 
     initTableInvoice();
 
+    $("#proc").click(function(){
+        $("#preorder").modal('hide');
+    });
+
+
     function initProductContainer() {
         $.ajax({
             url: '<?= base_url('admin/pos/products-list') ?>',
             method: 'get',
+            data:{availability:$("#product_availability").val()},
             dataType: 'json',
             success: function(response) {
                 let product_container = $("#product_container");
@@ -1101,6 +1179,18 @@ $(document).ready(function() {
             }
         });
     }
+
+    $("#preorderprod").hide();
+    $("#product_availability").change(function(){
+        $("#product_container").empty();
+        initProductContainer();
+
+        if($("#product_availability").val()==="1"){
+            $("#preorderprod").show();
+        }else if($("#product_availability").val()==="0"){
+            $("#preorderprod").hide();
+        }
+    })
 
     var modelContainer = [];
 
@@ -1283,8 +1373,24 @@ $(document).ready(function() {
             });
       });
 
-        let formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val()};
-      $.ajax({
+      let formdata;
+
+
+      var add = "";
+      if ($("#modeoftransaction").val()==="1"){
+        add = $("#shop_address").val();
+      }else if ($("#modeoftransaction").val()==="2"){
+        add = $("#delivery_address").val();
+      }
+
+
+      if($("#product_availability").val()==="0"){
+        formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),isPreOrder:"0"};
+      }else if($("#product_availability").val()==="1"){
+        formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),pre_order_address:add,isPickup:parseInt($("#modeoftransaction").val()),time_pickup_or_deliver:$("#time_pickup_or_deliver").val(),date_pickup_or_deliver:$("#date_pickup_or_deliver").val(),isPreOrder:"1"};
+      }
+
+        $.ajax({
             url: '<?= base_url('admin/pos/store') ?>',
             method: 'post',
             data: formdata,

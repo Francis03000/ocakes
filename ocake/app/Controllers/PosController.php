@@ -12,10 +12,18 @@ class PosController extends BaseController
 {
 
     public function getAllProducts(){
-        $productsModel = new Product_model();
-        $data = $productsModel->findAll();
-        return $this->response->setJSON($data);
+        $avail = "";
+        if($this->request->getVar('availability')==="0"){
+            $productsModel = new Product_model();
+            $data = $productsModel->where('availability','Ready Made')->get()->getResult();
+            return $this->response->setJSON($data);
+        }else if($this->request->getVar('availability')==="1"){
+            $productsModel = new Product_model();
+            $data = $productsModel->where('availability','Pre Order')->get()->getResult();
+            return $this->response->setJSON($data);
+        }
     }
+
 
     public function updateProductStocks(){
         $id = $this->request->getPost('product_id');
@@ -23,7 +31,7 @@ class PosController extends BaseController
         $data = [
             'stock' => $this->request->getPost('stock'),
         ];
-        $productsModel->update($id,$data);
+        $productsModel->where('availability','Ready Made')->update($id,$data);
         return $this->response->setJSON($data);
     }
 
@@ -93,15 +101,34 @@ class PosController extends BaseController
 
     public function storeTransaction() {
         $posModel = new PosModel();
-        $data = [
-            'customer_id' => $this->request->getPost('customer_id'),
-            'totalAmount' => $this->request->getPost('totalAmount'),
-            'payable' => $this->request->getPost('payable'),
-            'change' => $this->request->getPost('change'),
-            'remarks' => $this->request->getPost('remarks'),
-            'status' => 1,
-        ];
-        $posModel->insert($data);
-        return $this->response->setJSON($data);
+        if($this->request->getPost('isPreOrder')==="1"){
+            $data = [
+                'customer_id' => $this->request->getPost('customer_id'),
+                'totalAmount' => $this->request->getPost('totalAmount'),
+                'payable' => $this->request->getPost('payable'),
+                'change' => $this->request->getPost('change'),
+                'remarks' => $this->request->getPost('remarks'),
+                'pre_order_address' => $this->request->getPost('pre_order_address'),
+                'isPickup' => $this->request->getPost('isPickup'),
+                'time_pickup_or_deliver' => $this->request->getPost('time_pickup_or_deliver'),
+                'date_pickup_or_deliver' => $this->request->getPost('date_pickup_or_deliver'),
+                'status' => 1,
+            ];
+            
+            $posModel->insert($data);
+            return $this->response->setJSON($data);
+        }else if($this->request->getPost('isPreOrder')==="0"){
+            $data = [
+                'customer_id' => $this->request->getPost('customer_id'),
+                'totalAmount' => $this->request->getPost('totalAmount'),
+                'payable' => $this->request->getPost('payable'),
+                'change' => $this->request->getPost('change'),
+                'remarks' => $this->request->getPost('remarks'),
+                'status' => 1,
+            ];
+            
+            $posModel->insert($data);
+            return $this->response->setJSON($data);
+        }
     }
 }
