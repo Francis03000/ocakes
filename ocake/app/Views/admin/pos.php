@@ -1302,7 +1302,7 @@ $(document).ready(function() {
                 setTimeout(() => { 
                 // window.location.reload();
                 $("#printReciept").modal('show');
-                }, 500),
+                }, 3000),
               );
             }
           });
@@ -1341,5 +1341,6 @@ $(document).ready(function() {
                 )
             }
         });
-    })
+    });
+    });
 </script>
