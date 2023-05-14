@@ -198,6 +198,12 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Remarks</label>
+                                        <textarea name="remarks" id="remarks" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
                                 <div class="btn-pos">
                                     <ul>
                                         <li>
@@ -345,7 +351,7 @@
                                     </div>
                                 </div>
                                 <div class="table-responsive">
-                                    <table class="table datanew">
+                                    <!-- <table class="table datanew">
                                         <thead>
                                             <tr>
                                                 <th>Date</th>
@@ -497,7 +503,7 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> -->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="payment" role="tabpanel">
@@ -1236,7 +1242,7 @@ $(document).ready(function() {
                 totalAmount: parseFloat($("#subtotals").val()),
                 payable: parseFloat(amountPay),
                 change: parseFloat(change),
-                remarks: "REMARKS TO"
+                remarks: $("#remarks").val()
             };
             $.ajax({
                 url: '<?= base_url('admin/pos/store') ?>',
@@ -1298,7 +1304,7 @@ $(document).ready(function() {
             });
       });
 
-        let formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:"REMARKS TO"};
+        let formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val()};
       $.ajax({
             url: '<?= base_url('admin/pos/store') ?>',
             method: 'post',
@@ -1315,9 +1321,9 @@ $(document).ready(function() {
                 $("#cashpay").html(amountPay),
                 $("#cashchange").html(change),
                 setTimeout(() => { 
-                // window.location.reload();
-                $("#printReciept").modal('show');
-                }, 1000),
+                window.location.reload();
+                // $("#printReciept").modal('show');
+                }, 500),
               );
             }
           });
