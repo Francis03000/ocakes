@@ -198,6 +198,12 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Remarks</label>
+                                        <textarea name="remarks" id="remarks" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
                                 <div class="btn-pos">
                                     <ul>
                                         <li>
@@ -345,7 +351,7 @@
                                     </div>
                                 </div>
                                 <div class="table-responsive">
-                                    <table class="table datanew">
+                                    <!-- <table class="table datanew">
                                         <thead>
                                             <tr>
                                                 <th>Date</th>
@@ -497,7 +503,7 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> -->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="payment" role="tabpanel">
@@ -1109,40 +1115,37 @@ $(document).ready(function() {
                 invoice_numbers: $("#invoiceNumberId").val()
             },
             success: function(response) {
-                let product_container = $("#prod_list");
-                response.forEach((product) => {
-                    modelContainer.push({
-                        product_ids: product.product_id
-                    });
-                    subtotal += parseInt(product.totalAmount);
-                    product_container.append('<ul class="product-lists"><li>' +
-                        '<div class="productimg">' +
-                        '<div class="productimgs">' +
-                        '<img src="http://localhost/ocake/tools/uploads/' + product
-                        .image + '" alt="img" />' +
-                        '</div>' +
-                        '<div class="productcontet">' +
-                        '<h4>' + product.flavor +
-                        '<a href="javascript:void(0);" class="ms-2" data-bs-toggle="modal" data-bs-target="#edit">' +
-                        '<img src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg" alt="img"/></a>' +
-                        '</h4>' +
-                        '<div class="productlinkset">' +
-                        '<h5>' + product.occasion + ' Cake</h5>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</li>' +
-                        '<li>' + product.price + '</li>' +
-                        '<li>' + product.quantity + '</li>' +
-                        '<li>' + product.totalAmount + '</li>' +
-                        '<li>' +
-                        '<a class="confirm-text" href="javascript:void(0);">' +
-                        '<img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img" /></a>' +
-                        '</li></ul>');
-                    $("#sub-total").html(subtotal);
-                    $("#subtotals").val(subtotal);
-
-                });
+              let product_container = $("#prod_list");
+              response.forEach((product) => {
+                modelContainer.push({product_ids:product.product_id,stock:parseInt(product.stock)-parseInt(product.quantity)});
+              subtotal += parseInt(product.totalAmount);
+                product_container.append('<ul class="product-lists"><li>'+
+                                        '<div class="productimg">'+
+                                          '<div class="productimgs">'+
+                                            '<img src="http://localhost/ocake/tools/uploads/'+product.image+'" alt="img" />'+
+                                          '</div>'+
+                                          '<div class="productcontet">'+
+                                            '<h4>'+product.flavor+
+                                              '<a href="javascript:void(0);" class="ms-2" data-bs-toggle="modal" data-bs-target="#edit">'+
+                                              '<img src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg" alt="img"/></a>'+
+                                            '</h4>'+
+                                            '<div class="productlinkset">'+
+                                              '<h5>'+product.occasion+' Cake</h5>'+
+                                            '</div>'+
+                                          '</div>'+
+                                        '</div>'+
+                                      '</li>'+
+                                      '<li>'+product.price+'</li>'+
+                                      '<li>'+product.quantity+'</li>'+
+                                      '<li>'+product.totalAmount+'</li>'+
+                                      '<li>'+
+                                      '<a class="confirm-text" href="javascript:void(0);">'+
+                                      '<img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img" /></a>'+
+                                    '</li></ul>');
+                $("#sub-total").html(subtotal);
+                $("#subtotals").val(subtotal);
+                
+              });
             }
         });
     }
@@ -1276,7 +1279,7 @@ $(document).ready(function() {
                 totalAmount: parseFloat($("#subtotals").val()),
                 payable: parseFloat(amountPay),
                 change: parseFloat(change),
-                remarks: "REMARKS TO"
+                remarks: $("#remarks").val()
             };
             $.ajax({
                 url: '<?= base_url('admin/pos/store') ?>',
@@ -1316,9 +1319,68 @@ $(document).ready(function() {
         }
     });
 
-    $("#addCustomer").click(function() {
-        let formData = $("#formMain").serializeArray();
+    if (amountPay >= parseFloat($("#subtotals").val())) {
+      let change = amountPay - parseFloat($("#subtotals").val());
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Transaction Completed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      modelContainer.forEach((prod_id) => {
+        let formdatas = {product_id:prod_id.product_ids,stock: prod_id.stock};
         $.ajax({
+              url: '<?= base_url('admin/pos/updateProductStocks') ?>',
+              method: 'post',
+              data: formdatas,
+              dataType: 'json',
+              success: function(response) {
+
+              }
+            });
+      });
+
+        let formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val()};
+      $.ajax({
+            url: '<?= base_url('admin/pos/store') ?>',
+            method: 'post',
+            data: formdata,
+            dataType: 'json',
+            success: function(response) {
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+              }).then(
+                $("#cashpay").html(amountPay),
+                $("#cashchange").html(change),
+                setTimeout(() => { 
+                window.location.reload();
+                // $("#printReciept").modal('show');
+                }, 500),
+              );
+            }
+          });
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "Kulang Bayad Mo!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setTimeout(() => {
+        $("#paymentmethod").click();
+      }, 1000);
+    }
+  });
+
+    $("#addCustomer").click(function(){
+      let formData = $("#formMain").serializeArray();
+      $.ajax({
             url: '<?= base_url('customers/save') ?>',
             method: 'post',
             data: formData,
@@ -1338,5 +1400,4 @@ $(document).ready(function() {
             }
         });
     })
-})
 </script>
