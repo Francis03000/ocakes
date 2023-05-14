@@ -1264,72 +1264,15 @@ $(document).ready(function() {
     }
 
     $("#paymentmethod").click(async function() {
-        const {
-            value: amountPay
-        } = await Swal.fire({
+        const { value: amountPay } = await Swal.fire({
             title: "Input Amount to Pay",
             input: "text",
             inputLabel: "Payment",
             inputPlaceholder: "Amount",
         });
 
-        if (amountPay >= parseFloat($("#subtotals").val())) {
-            let change = amountPay - parseFloat($("#subtotals").val());
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Transaction Completed",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            // modelContainer.forEach((prod_id) => {
-
-            let formdata = {
-                customer_id: $("#customer_id").val(),
-                totalAmount: parseFloat($("#subtotals").val()),
-                payable: parseFloat(amountPay),
-                change: parseFloat(change),
-                remarks: $("#remarks").val()
-            };
-            $.ajax({
-                url: '<?= base_url('admin/pos/store') ?>',
-                method: 'post',
-                data: formdata,
-                dataType: 'json',
-                success: function(response) {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Your work has been saved',
-                        showConfirmButton: false,
-                        timer: 1500
-                    }).then(
-                        $("#cashpay").html(amountPay),
-                        $("#cashchange").html(change),
-                        setTimeout(() => {
-                            // window.location.reload();
-                            $("#printReciept").modal('show');
-                        }, 1000),
-                    );
-                }
-            });
-
-            // });
-        } else {
-            Swal.fire({
-                position: "center",
-                icon: "warning",
-                title: "Kulang Bayad Mo!",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            setTimeout(() => {
-                $("#paymentmethod").click();
-            }, 1000);
-        }
-    });
-
     if (amountPay >= parseFloat($("#subtotals").val())) {
+<<<<<<< HEAD
         let change = amountPay - parseFloat($("#subtotals").val());
         Swal.fire({
             position: "center",
@@ -1349,6 +1292,24 @@ $(document).ready(function() {
                 data: formdatas,
                 dataType: 'json',
                 success: function(response) {
+=======
+      let change = amountPay - parseFloat($("#subtotals").val());
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Transaction Completed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      modelContainer.forEach((prod_id) => {
+        let formdatas = {product_id:prod_id.product_ids,stock: prod_id.stock};
+        $.ajax({
+              url: '<?= base_url('admin/pos/updateProductStockss') ?>',
+              method: 'post',
+              data: formdatas,
+              dataType: 'json',
+              success: function(response) {
+>>>>>>> 103ad0dbb35ebb0714f338562944384e7e00f489
 
                 }
             });
@@ -1367,6 +1328,47 @@ $(document).ready(function() {
             data: formdata,
             dataType: 'json',
             success: function(response) {
+<<<<<<< HEAD
+=======
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+              }).then(
+                $("#cashpay").html(amountPay),
+                $("#cashchange").html(change),
+                setTimeout(() => { 
+                // window.location.reload();
+                $("#printReciept").modal('show');
+                }, 3000),
+              );
+            }
+          });
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "Kulang Bayad Mo!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setTimeout(() => {
+        $("#paymentmethod").click();
+      }, 1000);
+    }
+  });
+
+    $("#addCustomer").click(function(){
+      let formData = $("#formMain").serializeArray();
+      $.ajax({
+            url: '<?= base_url('customers/save') ?>',
+            method: 'post',
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+>>>>>>> 103ad0dbb35ebb0714f338562944384e7e00f489
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
@@ -1383,6 +1385,7 @@ $(document).ready(function() {
                 );
             }
         });
+<<<<<<< HEAD
     } else {
         Swal.fire({
             position: "center",
@@ -1419,4 +1422,8 @@ $("#addCustomer").click(function() {
         }
     });
 })
+=======
+    });
+    });
+>>>>>>> 103ad0dbb35ebb0714f338562944384e7e00f489
 </script>

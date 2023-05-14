@@ -17,7 +17,7 @@ class PosController extends BaseController
         return $this->response->setJSON($data);
     }
 
-    public function updateProductStock(){
+    public function updateProductStocks(){
         $id = $this->request->getPost('product_id');
         $productsModel = new Product_model();
         $data = [
