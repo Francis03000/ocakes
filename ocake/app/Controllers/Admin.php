@@ -419,7 +419,7 @@ class Admin extends BaseController
                 $data = array(
                     'product_code' => $this->request->getVar('product_code'),
                     'occasion' => $this->request->getVar('occasion'),
-                    'cat_id' => $this->request->getVar('cat_id'),
+                    'cat_id' => $this->request->getVar('cat_ids'),
                     'product_name' => $this->request->getVar('product_name'),
                     'flavor' => $this->request->getVar('flavor'),
                     'status' => $this->request->getVar('status'),
@@ -434,7 +434,7 @@ class Admin extends BaseController
                 /*this will insert data to db */
                 $data = array(
                     'product_code' => $this->request->getVar('product_code'),
-                    'cat_id' => $this->request->getVar('cat_id'),
+                    'cat_id' => $this->request->getVar('cat_ids'),
                     'occasion' => $this->request->getVar('occasion'),
                     'product_name' => $this->request->getVar('product_name'),
                     'flavor' => $this->request->getVar('flavor'),

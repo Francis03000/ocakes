@@ -1193,7 +1193,7 @@
             success: function(response) {
               let product_container = $("#prod_list");
               response.forEach((product) => {
-                modelContainer.push({product_ids:product.product_id});
+                modelContainer.push({product_ids:product.product_id,stock:parseInt(product.stock)-parseInt(product.quantity)});
               subtotal += parseInt(product.totalAmount);
                 product_container.append('<ul class="product-lists"><li>'+
                                         '<div class="productimg">'+
@@ -1325,7 +1325,18 @@
         showConfirmButton: false,
         timer: 1500,
       });
-      // modelContainer.forEach((prod_id) => {
+      modelContainer.forEach((prod_id) => {
+        let formdatas = {product_id:prod_id.product_ids,stock: prod_id.stock};
+        $.ajax({
+              url: '<?= base_url('admin/pos/updateProductStocks') ?>',
+              method: 'post',
+              data: formdatas,
+              dataType: 'json',
+              success: function(response) {
+
+              }
+            });
+      });
 
         let formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:"REMARKS TO"};
       $.ajax({
@@ -1350,8 +1361,6 @@
               );
             }
           });
-        
-      // });
     } else {
       Swal.fire({
         position: "center",

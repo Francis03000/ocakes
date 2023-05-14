@@ -188,3 +188,40 @@ in APPPATH\Views\admin\productlist.php on line 448.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 08:13:11 --> Undefined property: stdClass::$category_name
+in APPPATH\Views\admin\productlist.php on line 361.
+ 1 APPPATH\Views\admin\productlist.php(361): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$category_name', 'APPPATH\\Views\\admin\\productlist.php', 361, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\productlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/productlist', [], true)
+ 5 APPPATH\Controllers\Admin.php(380): view('admin/productlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->productlist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 08:20:23 --> Undefined property: stdClass::$flavor
+in APPPATH\Views\admin\productlist.php on line 368.
+ 1 APPPATH\Views\admin\productlist.php(368): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$flavor', 'APPPATH\\Views\\admin\\productlist.php', 368, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\productlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/productlist', [], true)
+ 5 APPPATH\Controllers\Admin.php(380): view('admin/productlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->productlist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-14 08:50:40 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(104): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
