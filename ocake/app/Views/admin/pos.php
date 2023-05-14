@@ -970,19 +970,56 @@
 
                     <div class="row">
                         <div class="col">
-                            <h2>OCAKES</h2>
-                            <p>Address: </p>
-                            <p>City: </p>
-                            <p>Phone: </p>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Bill To</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Name:</p>
+
+                                </div>
+                            </div>
                         </div>
                         <div class="col">
-                            <h2>INVOICE</h2>
-                            <p>Date: </p>
-                            <p>Invoice #: </p>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Bill To</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Name:</p>
+
+                                </div>
+                            </div>
 
                         </div>
 
                     </div>
+
+                    <table class="table table-bordered table-striped table-success">
+
+                        <thead class="bg-light">
+                            <tr>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Line Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="products">
+                            <tr>
+                                <td>Wedding Cake </td>
+                                <td>2</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;" colspan="3">Subtotal: </td>
+                                <td>1000</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
 
                 </div>
             </div>
