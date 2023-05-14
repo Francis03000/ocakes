@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="<?=base_url()?>/tools/admin/assets/css/style.css" />
 
     <style>
-    .modal-content {
+    #receipt_modal {
         background-image: url('<?=base_url()?>/tools/uploads/cake-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -949,33 +949,40 @@
         </div>
     </div>
 
-    <div class="modal fade" id="printReciept" tabindex="-1" aria-labelledby="printReciept" aria-hidden="true">
+    <div class="modal fade" id="printReciept" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="printReciept" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <div class="row">
-                        <div class="col" style="padding-right: 250px;">
-                            <h2>OCAKES</h2>
-                            <p>Address: </p>
-                            <p>City: </p>
-                            <p>Phone: </p>
+                <div class="modal-header bg-white">
+                    <img style="height:100px; width: 100px; "
+                        src="http://localhost/ocake/tools/uploads/ocake_logo2.gif/">
+                    <div class="row " style="width: 70%; margin: auto">
+                        <div class="col" style="padding-right: 70px;">
+                            <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">OCAKES
+                            </h2>
+                            <p class="m-0">Address: </p>
+                            <p class="m-0">City: </p>
+                            <p class="m-0">Phone: </p>
                         </div>
                         <div class="col">
-                            <h2>INVOICE</h2>
-                            <p>Date: </p>
-                            <p>Invoice #: </p>
+                            <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">INVOICE
+                            </h2>
+                            <p class="m-0">Date: </p>
+                            <p class="m-0">Invoice #: </p>
 
                         </div>
 
                     </div>
 
+                    <img style="height:100px; width: 100px; "
+                        src="http://localhost/ocake/tools/uploads/ocake_logo2.gif/">
 
 
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="receipt_modal">
 
                     <div class="row">
-                        <div class="col">
+                        <div class="col-6">
                             <div class="card">
                                 <div class="card-header">
                                     <h3>Bill To</h3>
@@ -986,24 +993,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Bill To</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p>Name:</p>
 
-                                </div>
-                            </div>
-
-                        </div>
 
                     </div>
 
-                    <table class="table table-bordered table-striped table-success">
+                    <table class="table table-bordered bg-white">
 
-                        <thead class="bg-light">
+                        <thead class="bg-danger-subtle">
                             <tr>
                                 <th>Description</th>
                                 <th>Quantity</th>
@@ -1024,9 +1020,19 @@
                                 <td>1000</td>
                             </tr>
                         </tbody>
+                        <br>
+
 
                     </table>
 
+                    <br>
+                    <h3 class="text-center ">Thank You For Your Purchase!</h3>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Print</button>
                 </div>
             </div>
         </div>
@@ -1115,37 +1121,41 @@ $(document).ready(function() {
                 invoice_numbers: $("#invoiceNumberId").val()
             },
             success: function(response) {
-              let product_container = $("#prod_list");
-              response.forEach((product) => {
-                modelContainer.push({product_ids:product.product_id,stock:parseInt(product.stock)-parseInt(product.quantity)});
-              subtotal += parseInt(product.totalAmount);
-                product_container.append('<ul class="product-lists"><li>'+
-                                        '<div class="productimg">'+
-                                          '<div class="productimgs">'+
-                                            '<img src="http://localhost/ocake/tools/uploads/'+product.image+'" alt="img" />'+
-                                          '</div>'+
-                                          '<div class="productcontet">'+
-                                            '<h4>'+product.flavor+
-                                              '<a href="javascript:void(0);" class="ms-2" data-bs-toggle="modal" data-bs-target="#edit">'+
-                                              '<img src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg" alt="img"/></a>'+
-                                            '</h4>'+
-                                            '<div class="productlinkset">'+
-                                              '<h5>'+product.occasion+' Cake</h5>'+
-                                            '</div>'+
-                                          '</div>'+
-                                        '</div>'+
-                                      '</li>'+
-                                      '<li>'+product.price+'</li>'+
-                                      '<li>'+product.quantity+'</li>'+
-                                      '<li>'+product.totalAmount+'</li>'+
-                                      '<li>'+
-                                      '<a class="confirm-text" href="javascript:void(0);">'+
-                                      '<img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img" /></a>'+
-                                    '</li></ul>');
-                $("#sub-total").html(subtotal);
-                $("#subtotals").val(subtotal);
-                
-              });
+                let product_container = $("#prod_list");
+                response.forEach((product) => {
+                    modelContainer.push({
+                        product_ids: product.product_id,
+                        stock: parseInt(product.stock) - parseInt(product.quantity)
+                    });
+                    subtotal += parseInt(product.totalAmount);
+                    product_container.append('<ul class="product-lists"><li>' +
+                        '<div class="productimg">' +
+                        '<div class="productimgs">' +
+                        '<img src="http://localhost/ocake/tools/uploads/' + product
+                        .image + '" alt="img" />' +
+                        '</div>' +
+                        '<div class="productcontet">' +
+                        '<h4>' + product.flavor +
+                        '<a href="javascript:void(0);" class="ms-2" data-bs-toggle="modal" data-bs-target="#edit">' +
+                        '<img src="<?=base_url()?>/tools/admin/assets/img/icons/edit-5.svg" alt="img"/></a>' +
+                        '</h4>' +
+                        '<div class="productlinkset">' +
+                        '<h5>' + product.occasion + ' Cake</h5>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</li>' +
+                        '<li>' + product.price + '</li>' +
+                        '<li>' + product.quantity + '</li>' +
+                        '<li>' + product.totalAmount + '</li>' +
+                        '<li>' +
+                        '<a class="confirm-text" href="javascript:void(0);">' +
+                        '<img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img" /></a>' +
+                        '</li></ul>');
+                    $("#sub-total").html(subtotal);
+                    $("#subtotals").val(subtotal);
+
+                });
             }
         });
     }
@@ -1320,70 +1330,41 @@ $(document).ready(function() {
     });
 
     if (amountPay >= parseFloat($("#subtotals").val())) {
-      let change = amountPay - parseFloat($("#subtotals").val());
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Transaction Completed",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      modelContainer.forEach((prod_id) => {
-        let formdatas = {product_id:prod_id.product_ids,stock: prod_id.stock};
-        $.ajax({
-              url: '<?= base_url('admin/pos/updateProductStocks') ?>',
-              method: 'post',
-              data: formdatas,
-              dataType: 'json',
-              success: function(response) {
+        let change = amountPay - parseFloat($("#subtotals").val());
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Transaction Completed",
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        modelContainer.forEach((prod_id) => {
+            let formdatas = {
+                product_id: prod_id.product_ids,
+                stock: prod_id.stock
+            };
+            $.ajax({
+                url: '<?= base_url('admin/pos/updateProductStocks') ?>',
+                method: 'post',
+                data: formdatas,
+                dataType: 'json',
+                success: function(response) {
 
-              }
+                }
             });
-      });
+        });
 
-        let formdata = {customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val()};
-      $.ajax({
+        let formdata = {
+            customer_id: $("#customer_id").val(),
+            totalAmount: parseFloat($("#subtotals").val()),
+            payable: parseFloat(amountPay),
+            change: parseFloat(change),
+            remarks: $("#remarks").val()
+        };
+        $.ajax({
             url: '<?= base_url('admin/pos/store') ?>',
             method: 'post',
             data: formdata,
-            dataType: 'json',
-            success: function(response) {
-              Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Your work has been saved',
-                showConfirmButton: false,
-                timer: 1500
-              }).then(
-                $("#cashpay").html(amountPay),
-                $("#cashchange").html(change),
-                setTimeout(() => { 
-                window.location.reload();
-                // $("#printReciept").modal('show');
-                }, 500),
-              );
-            }
-          });
-    } else {
-      Swal.fire({
-        position: "center",
-        icon: "warning",
-        title: "Kulang Bayad Mo!",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      setTimeout(() => {
-        $("#paymentmethod").click();
-      }, 1000);
-    }
-  });
-
-    $("#addCustomer").click(function(){
-      let formData = $("#formMain").serializeArray();
-      $.ajax({
-            url: '<?= base_url('customers/save') ?>',
-            method: 'post',
-            data: formData,
             dataType: 'json',
             success: function(response) {
                 Swal.fire({
@@ -1393,11 +1374,49 @@ $(document).ready(function() {
                     showConfirmButton: false,
                     timer: 1500
                 }).then(
-                    $("#create").modal('hide'),
-                    $("#customer_id").empty(),
-                    initData(),
-                )
+                    $("#cashpay").html(amountPay),
+                    $("#cashchange").html(change),
+                    setTimeout(() => {
+                        window.location.reload();
+                        // $("#printReciept").modal('show');
+                    }, 500),
+                );
             }
         });
-    })
+    } else {
+        Swal.fire({
+            position: "center",
+            icon: "warning",
+            title: "Kulang Bayad Mo!",
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        setTimeout(() => {
+            $("#paymentmethod").click();
+        }, 1000);
+    }
+});
+
+$("#addCustomer").click(function() {
+    let formData = $("#formMain").serializeArray();
+    $.ajax({
+        url: '<?= base_url('customers/save') ?>',
+        method: 'post',
+        data: formData,
+        dataType: 'json',
+        success: function(response) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            }).then(
+                $("#create").modal('hide'),
+                $("#customer_id").empty(),
+                initData(),
+            )
+        }
+    });
+})
 </script>
