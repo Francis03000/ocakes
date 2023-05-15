@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2023 at 01:56 AM
+-- Generation Time: May 15, 2023 at 02:17 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -279,7 +279,8 @@ INSERT INTO `cart` (`cart_id`, `occasion`, `flavor`, `price`, `quantity`, `total
 (167, 'Christmas', 'Cookies & Cream', '300.00', 1, '300.00', 33, 20, '', '202305075EC4', '', '2023-05-07 02:44:58', '2023-05-07 02:45:29'),
 (168, 'Christening', 'Vanilla', '350.00', 1, '350.00', 22, 20, '', '20230510271D', '', '2023-05-07 07:52:14', '2023-05-10 03:12:33'),
 (169, 'Christening', 'Avocado', '450.00', 1, '450.00', 26, 20, '', '20230510497D', '', '2023-05-10 03:46:34', '2023-05-10 03:47:34'),
-(170, 'Graduation', 'Blue Velvet', '300.00', 1, '300.00', 64, 20, '', '20230510D219', '', '2023-05-10 03:56:53', '2023-05-10 03:57:56');
+(170, 'Graduation', 'Blue Velvet', '300.00', 1, '300.00', 64, 20, '', '20230510D219', '', '2023-05-10 03:56:53', '2023-05-10 03:57:56'),
+(171, 'Graduation', 'Vanilla', '600.00', 1, '600.00', 158, 20, '', '', '', '2023-05-14 02:12:37', '2023-05-14 02:12:37');
 
 -- --------------------------------------------------------
 
@@ -409,7 +410,9 @@ INSERT INTO `customers` (`id`, `customer_fname`, `customer_mname`, `customer_lna
 (2, 'asdas', 'dasd', 'asdas', 'asdasd', 'dasdas', 'dasdas', 'dasd'),
 (3, 'asd', '2343', '234234', '4234234', '34234', '2342', '23423'),
 (4, 'asdasd', 'asdas', 'dasdasdas', 'dasdasd', 'asdasda', 'dasd', 'sdas'),
-(5, 'adsasd', 'caluagpogi', 'asdasdasd', 'sdasdasd', 'dasdas', 'asdas', 'dasda');
+(5, 'adsasd', 'caluagpogi', 'asdasdasd', 'sdasdasd', 'dasdas', 'asdas', 'dasda'),
+(6, 'francis', 'secret', 'secret', 'general tinio', '234234234', 'secret@gmail.com', 'phil'),
+(7, 'asdasdasdasd', 'asda', 'sdasd', 'asdasd', 'dasdas', 'asdas', 'dasd');
 
 -- --------------------------------------------------------
 
@@ -511,13 +514,76 @@ CREATE TABLE `invoice_cart` (
 --
 
 INSERT INTO `invoice_cart` (`id`, `invoice_number`, `product_id`, `quantity`, `totalAmount`) VALUES
-(84, '022', 157, 1, 500),
-(85, '022', 158, 2, 1200),
-(86, '2994', 157, 2, 1000),
-(87, '2994', 158, 2, 1200),
-(88, '3040', 158, 1, 600),
-(89, '3040', 157, 2, 1000),
-(90, '0907', 158, 1, 600);
+(116, '60232', 158, 1, 600),
+(117, '3223', 158, 1, 600),
+(118, '92303', 158, 1, 600),
+(119, '63306', 158, 1, 600),
+(120, '330', 158, 1, 600),
+(121, '3333', 160, 1, 1000),
+(122, '3333', 159, 1, 1000),
+(123, '3333', 158, 1, 600),
+(124, '88538', 160, 2, 2000),
+(125, '88538', 159, 1, 1000),
+(126, '88538', 158, 1, 600),
+(127, '329', 158, 2, 1200),
+(128, '329', 159, 2, 2000),
+(129, '329', 160, 2, 2000),
+(130, '3330', 160, 2, 2000),
+(131, '3330', 159, 2, 2000),
+(132, '3330', 158, 2, 1200),
+(133, '4932', 159, 1, 1000),
+(134, '4932', 160, 1, 1000),
+(135, '5008', 159, 1, 1000),
+(136, '5008', 158, 1, 600),
+(137, '5008', 160, 1, 1000),
+(138, '0340', 158, 1, 600),
+(139, '0340', 159, 1, 1000),
+(140, '0340', 160, 1, 1000),
+(141, '3803', 158, 1, 600),
+(142, '3803', 159, 1, 1000),
+(143, '3803', 160, 2, 2000),
+(144, '2303', 158, 2, 1200),
+(145, '2303', 159, 2, 2000),
+(146, '2303', 160, 2, 2000),
+(147, '62260', 159, 1, 1000),
+(148, '62260', 158, 1, 600),
+(149, '3303', 160, 1, 1000),
+(150, '3303', 159, 1, 1000),
+(151, '3362', 158, 2, 1200),
+(152, '3362', 159, 3, 3000),
+(153, '3362', 160, 2, 2000),
+(154, '2084', 160, 1, 1000),
+(155, '2084', 159, 1, 1000),
+(156, '2084', 158, 1, 600),
+(157, '23332', 160, 2, 2000),
+(158, '23332', 159, 2, 2000),
+(159, '23332', 158, 2, 1200),
+(160, '6022', 160, 1, 1000),
+(161, '6022', 159, 1, 1000),
+(162, '6022', 158, 1, 600),
+(163, '80', 160, 1, 1000),
+(164, '80', 159, 1, 1000),
+(165, '0323', 160, 1, 1000),
+(166, '0323', 159, 2, 2000),
+(167, '0323', 158, 1, 600),
+(168, '322', 160, 1, 1000),
+(169, '322', 159, 1, 1000),
+(170, '6023', 160, 2, 2000),
+(171, '6023', 159, 1, 1000),
+(172, '30222', 160, 2, 2000),
+(173, '30222', 159, 1, 1000),
+(174, '92005', 160, 1, 1000),
+(175, '92005', 159, 1, 1000),
+(176, '8232', 160, 1, 1000),
+(177, '8232', 159, 1, 1000),
+(178, '3205', 160, 1, 1000),
+(179, '3205', 159, 1, 1000),
+(180, '3205', 158, 1, 600),
+(181, '3320', 160, 1, 1000),
+(182, '243', 158, 1, 600),
+(183, '243', 159, 1, 1000),
+(184, '243', 160, 1, 1000),
+(185, '092', 157, 1, 500);
 
 -- --------------------------------------------------------
 
@@ -527,11 +593,16 @@ INSERT INTO `invoice_cart` (`id`, `invoice_number`, `product_id`, `quantity`, `t
 
 CREATE TABLE `pos` (
   `pos_id` int(11) NOT NULL,
+  `inv_num` varchar(255) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `totalAmount` double NOT NULL,
   `payable` double NOT NULL,
   `change` double NOT NULL,
   `remarks` longtext NOT NULL,
+  `pre_order_address` varchar(255) DEFAULT NULL,
+  `isPickup` int(11) DEFAULT 0,
+  `time_pickup_or_deliver` varchar(255) DEFAULT NULL,
+  `date_pickup_or_deliver` varchar(255) DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -541,9 +612,18 @@ CREATE TABLE `pos` (
 -- Dumping data for table `pos`
 --
 
-INSERT INTO `pos` (`pos_id`, `customer_id`, `totalAmount`, `payable`, `change`, `remarks`, `status`, `created_at`, `deleted_at`) VALUES
-(5, 1, 1700, 1800, 100, 'REMARKS TO', 1, '2023-05-13 23:34:40', NULL),
-(7, 1, 600, 700, 100, 'REMARKS TO', 1, '2023-05-13 23:55:04', NULL);
+INSERT INTO `pos` (`pos_id`, `inv_num`, `customer_id`, `totalAmount`, `payable`, `change`, `remarks`, `pre_order_address`, `isPickup`, `time_pickup_or_deliver`, `date_pickup_or_deliver`, `status`, `created_at`, `deleted_at`) VALUES
+(40, '2303', 1, 5200, 6000, 800, '', NULL, 0, NULL, NULL, 1, '2023-05-14 15:48:24', NULL),
+(41, '62260', 1, 1600, 2000, 400, '', NULL, 0, NULL, NULL, 1, '2023-05-14 15:50:27', NULL),
+(42, '3303', 1, 2000, 2300, 300, '', NULL, 0, NULL, NULL, 1, '2023-05-14 15:51:42', NULL),
+(43, '3362', 1, 6200, 7000, 800, '', NULL, 0, NULL, NULL, 1, '2023-05-14 15:55:11', NULL),
+(44, '23332', 1, 5200, 10000, 4800, 'happy birthday', NULL, 0, NULL, NULL, 1, '2023-05-14 16:00:57', NULL),
+(45, '6022', 1, 2600, 10000, 7400, '', NULL, 0, NULL, NULL, 1, '2023-05-14 16:03:07', NULL),
+(46, '80', 1, 2000, 4500, 2500, '', NULL, 0, NULL, NULL, 1, '2023-05-14 16:30:37', NULL),
+(47, '0323', 1, 3600, 4000, 400, '', NULL, 0, NULL, NULL, 1, '2023-05-14 16:39:00', NULL),
+(48, '322', 1, 2000, 2000, 0, '', NULL, 0, NULL, NULL, 1, '2023-05-14 22:47:13', NULL),
+(49, '243', 1, 2600, 2700, 100, 'sample', NULL, 0, NULL, NULL, 1, '2023-05-14 23:54:03', NULL),
+(50, '092', 1, 500, 500, 0, 'sample', 'General Tinio Nueva Ecija', 1, '08:00', '2023-05-20', 1, '2023-05-14 23:57:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -575,8 +655,10 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `product_code`, `cat_id`, `image`, `occasion`, `product_name`, `flavor`, `price`, `stock`, `status`, `availability`, `is_customized`, `userid`, `message`, `created_at`, `updated_at`) VALUES
-(157, 'cakeval1', 7, 0x315f32303233303331385f3230303035375f303030302e706e67, 'Valentine', 'fgv', 'Vanilla', '500.00', 150, 'Available', 'Pre Order', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-13 19:29:10'),
-(158, 'cakegrad1', 6, 0x706578656c732d6672616e636573636f2d756e6761726f2d323332353434362e6a7067, 'Graduation', 'fgv', 'Vanilla', '600.00', 120, 'Available', 'Pre Order', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-13 19:29:15');
+(157, 'cakeval1', 7, 0x315f32303233303331385f3230303035375f303030302e706e67, 'Valentine', 'fgv', 'Vanilla', '500.00', 50, 'Available', 'Pre Order', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-14 15:47:53'),
+(158, 'cakegrad1', 0, 0x706578656c732d6672616e636573636f2d756e6761726f2d323332353434362e6a7067, 'Graduation', 'fgv', 'Vanilla', '600.00', 40, 'Available', 'Ready Made', 0, 0, NULL, '2023-05-12 16:51:43', '2023-05-14 23:54:03'),
+(159, 'codeblocks', 4, 0x335f32303233303331385f3230303035375f332e706e67, 'Wedding', 'Kasalan', 'Chocolate', '1000.00', 35, 'Available', 'Ready Made', 0, 0, NULL, '2023-05-14 15:19:16', '2023-05-14 23:54:03'),
+(160, 'aasda', 7, 0x31322e6a7067, 'Valentine', 'Pusooo', 'Avocado', '1000.00', 38, 'Available', 'Ready Made', 0, 0, NULL, '2023-05-14 15:19:56', '2023-05-14 23:54:03');
 
 -- --------------------------------------------------------
 
@@ -760,7 +842,7 @@ ALTER TABLE `biller_details`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -778,7 +860,7 @@ ALTER TABLE `checkout`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -796,19 +878,19 @@ ALTER TABLE `flavor`
 -- AUTO_INCREMENT for table `invoice_cart`
 --
 ALTER TABLE `invoice_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
 
 --
 -- AUTO_INCREMENT for table `pos`
 --
 ALTER TABLE `pos`
-  MODIFY `pos_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pos_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -65,6 +65,12 @@ class PosController extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function invoiceBillingPosHistory(){
+        $posModel = new PosModel();
+        $data = $posModel->join('customers as cus','cus.id=customer_id')->get()->getResult();
+        return $this->response->setJSON($data);
+    }
+
     public function addToInvoice()
     {
         $invoicecartModel = new InvoiceCartModel();

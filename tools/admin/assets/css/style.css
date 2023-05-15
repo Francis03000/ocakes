@@ -6612,11 +6612,27 @@ span.select2-container.select2-container--default.select2-container--open {
   border-radius: 5px;
   padding: 10px 20px;
 }
+.setvaluecash ul li button {
+  border: 1px solid #e9ecef;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 95px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
 .setvaluecash ul li a:hover {
   border: 1px solid #7367f0;
   color: #7367f0;
 }
+.setvaluecash ul li button:hover {
+  border: 1px solid #7367f0;
+  color: #7367f0;
+}
 .setvaluecash ul li a img {
+  margin-bottom: 10px;
+}
+.setvaluecash ul li button img {
   margin-bottom: 10px;
 }
 .setvalue {
