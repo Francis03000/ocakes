@@ -1,7 +1,0 @@
-CRITICAL - 2023-02-03 22:57:46 --> Undefined index: user_id
-in APPPATH\Controllers\User.php on line 20.
- 1 APPPATH\Controllers\User.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 20, [])
- 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
- 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
- 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
