@@ -1,0 +1,66 @@
+CRITICAL - 2023-02-25 01:33:18 --> Undefined variable: category
+in APPPATH\Views\admin\addproduct.php on line 58.
+ 1 APPPATH\Views\admin\addproduct.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: category', 'APPPATH\\Views\\admin\\addproduct.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addproduct', [], true)
+ 5 APPPATH\Controllers\Admin.php(671): view('admin/addproduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addproduct1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-25 01:37:10 --> Undefined variable: category
+in APPPATH\Views\admin\addproduct.php on line 58.
+ 1 APPPATH\Views\admin\addproduct.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: category', 'APPPATH\\Views\\admin\\addproduct.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addproduct', [], true)
+ 5 APPPATH\Controllers\Admin.php(671): view('admin/addproduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addproduct1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-25 02:05:09 --> Undefined variable: category
+in APPPATH\Views\admin\addproduct.php on line 58.
+ 1 APPPATH\Views\admin\addproduct.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: category', 'APPPATH\\Views\\admin\\addproduct.php', 58, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addproduct', [], true)
+ 5 APPPATH\Controllers\Admin.php(708): view('admin/addproduct')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addproduct()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-25 02:06:49 --> Undefined variable: category
+in APPPATH\Views\admin\addproduct.php on line 58.
+ 1 APPPATH\Views\admin\addproduct.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: category', 'APPPATH\\Views\\admin\\addproduct.php', 58, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addproduct', [], true)
+ 5 APPPATH\Controllers\Admin.php(709): view('admin/addproduct')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addproduct()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-25 02:07:27 --> Undefined variable: category
+in APPPATH\Views\admin\addproduct.php on line 58.
+ 1 APPPATH\Views\admin\addproduct.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: category', 'APPPATH\\Views\\admin\\addproduct.php', 58, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addproduct', [], true)
+ 5 APPPATH\Controllers\Admin.php(709): view('admin/addproduct')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addproduct()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-25 03:10:35 --> Undefined variable: category
+in APPPATH\Views\admin\addproduct.php on line 58.
+ 1 APPPATH\Views\admin\addproduct.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: category', 'APPPATH\\Views\\admin\\addproduct.php', 58, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addproduct', [], true)
+ 5 APPPATH\Controllers\Admin.php(709): view('admin/addproduct')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addproduct()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

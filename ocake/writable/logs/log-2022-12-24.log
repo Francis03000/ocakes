@@ -1,0 +1,20 @@
+CRITICAL - 2022-12-24 06:19:51 --> Invalid file: admin/customization/design.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/design.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/design', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(139): view('admin/customization/design', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->add_design()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-24 23:56:38 --> Undefined variable: data
+in APPPATH\Views\user\customization.php on line 244.
+ 1 APPPATH\Views\user\customization.php(244): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\user\\customization.php', 244, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customization.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customization', [], true)
+ 5 APPPATH\Controllers\User.php(325): view('user/customization')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,864 @@
+CRITICAL - 2023-05-14 00:10:32 --> product_code is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 323.
+ 1 SYSTEMPATH\Validation\Validation.php(323): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('product_code')
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('product_code', 'product_code', 'awalangs14', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin.php(313): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addproduct()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-14 00:28:43 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:29:08 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:30:54 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:31:31 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:31:56 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:34:00 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:34:31 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '158')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('158', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:35:23 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '158')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('158', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:36:21 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '158')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('158', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 00:48:10 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 03:35:45 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 03:36:16 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-14 03:46:40 --> mysqli_sql_exception: Duplicate entry '' for key 'product_code' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Product_model.php(160): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(448): App\Models\Product_model->prod_update(Array, '160')
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('160', '')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-14 04:31:37 --> Undefined property: stdClass::$ocassion
+in APPPATH\Views\admin\productlist.php on line 448.
+ 1 APPPATH\Views\admin\productlist.php(448): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$ocassion', 'APPPATH\\Views\\admin\\productlist.php', 448)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\productlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/productlist', [], true)
+ 5 APPPATH\Controllers\Admin.php(380): view('admin/productlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->productlist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 08:00:08 --> Implicit conversion from float 254172.99999999997 to int loses precision
+in APPPATH\Views\admin\pos.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Implicit conversion from float 254172.99999999997 to int loses precision', 'APPPATH\\Views\\admin\\pos.php', 32)
+ 2 APPPATH\Views\admin\pos.php(32): srand(254172.99999999997)
+ 3 APPPATH\Views\admin\pos.php(48): createRandomPassword()
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 7 APPPATH\Controllers\PosController.php(78): view('admin/pos', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-14 08:00:33 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:06:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:07:39 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:08:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:12:33 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:13:17 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:15:56 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:16:32 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:17:17 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:17:43 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:18:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:18:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:21:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:23:26 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:26:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:36:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:37:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:38:18 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:38:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:39:13 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:39:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:39:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:40:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:40:17 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:40:33 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:40:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:41:12 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:52:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 08:59:07 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:02:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:07:36 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:08:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:08:17 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:08:41 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:09:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:09:46 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:10:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:11:09 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 09:11:26 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(94): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-14 20:59:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 3 in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(22): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->getAllProducts()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-14 20:59:56 --> Call to a member function getResult() on bool
+in APPPATH\Controllers\PosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->getAllProducts()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-14 22:49:39 --> mysqli_sql_exception: Unknown column 'customer_id' in 'on clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(58): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->invoiceBilling()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-14 22:49:39 --> Call to a member function getResult() on bool
+in APPPATH\Controllers\PosController.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBilling()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-14 22:51:51 --> mysqli_sql_exception: Unknown column 'customer_id' in 'on clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(58): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->invoiceBilling()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-14 22:51:51 --> Call to a member function getResult() on bool
+in APPPATH\Controllers\PosController.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBilling()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-14 23:01:10 --> mysqli_sql_exception: Unknown column 'cust.id' in 'on clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\PosController.php(64): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPos()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-14 23:01:10 --> Call to a member function getResult() on bool
+in APPPATH\Controllers\PosController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPos()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

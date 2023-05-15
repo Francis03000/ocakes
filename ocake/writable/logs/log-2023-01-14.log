@@ -1,0 +1,426 @@
+ERROR - 2023-01-14 01:00:29 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Models\Product_model.php(67): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(680): App\Models\Product_model->getCustomized('Customized', '20')
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->getCustomDesign()
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-14 01:00:29 --> Call to a member function getResult() on bool
+in APPPATH\Models\Product_model.php on line 67.
+ 1 APPPATH\Controllers\User.php(680): App\Models\Product_model->getCustomized('Customized', '20')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getCustomDesign()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 01:08:51 --> Undefined index: adminF_name
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 APPPATH\Views\admin\include\topbar.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: adminF_name', 'APPPATH\\Views\\admin\\include\\topbar.php', 171, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 5 APPPATH\Views\admin\layout.php(44): view('admin/include/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/layout', [], true)
+ 9 APPPATH\Controllers\CustomizationController.php(307): view('admin/layout', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->layout()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 01:59:15 --> Undefined variable: custom_cake
+in APPPATH\Views\user\customized_cake.php on line 213.
+ 1 APPPATH\Views\user\customized_cake.php(213): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: custom_cake', 'APPPATH\\Views\\user\\customized_cake.php', 213, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customized_cake.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customized_cake', [], true)
+ 5 APPPATH\Controllers\User.php(690): view('user/customized_cake')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getCustomDesign()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 02:00:54 --> syntax error, unexpected '<', expecting end of file
+in APPPATH\Views\user\customized_cake.php on line 213.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customized_cake', [], true)
+ 3 APPPATH\Controllers\User.php(690): view('user/customized_cake')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getCustomDesign()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 04:57:34 --> Undefined property: stdClass::$flaavor
+in APPPATH\Views\admin\flavor.php on line 136.
+ 1 APPPATH\Views\admin\flavor.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$flaavor', 'APPPATH\\Views\\admin\\flavor.php', 136, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\flavor.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/flavor', [], true)
+ 5 APPPATH\Controllers\CustomizationController.php(448): view('admin/flavor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 04:58:18 --> Undefined property: stdClass::$layout_id
+in APPPATH\Views\admin\flavor.php on line 163.
+ 1 APPPATH\Views\admin\flavor.php(163): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$layout_id', 'APPPATH\\Views\\admin\\flavor.php', 163, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\flavor.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/flavor', [], true)
+ 5 APPPATH\Controllers\CustomizationController.php(448): view('admin/flavor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:01:41 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:04:10 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(461): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:07:12 --> Invalid file: /admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('/admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:10:47 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:10:55 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:11:14 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('8', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:15:48 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:17:52 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:20:07 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('8', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:22:09 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('8', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:30:58 --> Invalid file: admin/customization/flavor.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customization/flavor.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/customization/flavor', [], true)
+ 3 APPPATH\Controllers\CustomizationController.php(462): view('admin/customization/flavor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('8', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 05:33:46 --> Undefined variable: flavor
+in APPPATH\Views\admin\flavor.php on line 132.
+ 1 APPPATH\Views\admin\flavor.php(132): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: flavor', 'APPPATH\\Views\\admin\\flavor.php', 132, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\flavor.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/flavor', [], true)
+ 5 APPPATH\Controllers\CustomizationController.php(462): view('admin/flavor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor_update('1', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 06:25:43 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 614.
+ 1 APPPATH\Controllers\User.php(614): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 614, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 06:26:26 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 20.
+ 1 APPPATH\Controllers\User.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 20, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 06:26:41 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 20.
+ 1 APPPATH\Controllers\User.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 20, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 06:42:58 --> Invalid file: signin.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signin.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signin', [], true)
+ 3 APPPATH\Controllers\Personal.php(34): view('signin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->save()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 06:49:45 --> Undefined index: adminF_name
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 APPPATH\Views\admin\include\topbar.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: adminF_name', 'APPPATH\\Views\\admin\\include\\topbar.php', 171, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 5 APPPATH\Views\admin\flavor.php(44): view('admin/include/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\flavor.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/flavor', [], true)
+ 9 APPPATH\Controllers\CustomizationController.php(448): view('admin/flavor', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CustomizationController->flavor()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomizationController))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 08:08:06 --> Call to undefined method App\Models\Personal_m::count_users
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(19): CodeIgniter\Model->__call('count_users', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-14 08:09:31 --> mysqli_sql_exception: Unknown column 'user_id' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Count(us...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Count(us...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Count(us...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Count(us...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Personal_m.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(19): App\Models\Personal_m->count_users()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-14 08:09:31 --> Call to a member function getResult() on bool
+in APPPATH\Models\Personal_m.php on line 22.
+ 1 APPPATH\Controllers\Admin.php(19): App\Models\Personal_m->count_users()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-14 08:11:49 --> mysqli_sql_exception: Unknown column 'user_id' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Count(us...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Count(us...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Count(us...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Count(us...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Personal_m.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(19): App\Models\Personal_m->count_users('21')
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-14 08:11:49 --> Call to a member function getResult() on bool
+in APPPATH\Models\Personal_m.php on line 22.
+ 1 APPPATH\Controllers\Admin.php(19): App\Models\Personal_m->count_users('21')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-14 08:12:01 --> mysqli_sql_exception: Unknown column 'user_id' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Count(us...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Count(us...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Count(us...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Count(us...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Personal_m.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(19): App\Models\Personal_m->count_users('21')
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-14 08:12:01 --> Call to a member function getResult() on bool
+in APPPATH\Models\Personal_m.php on line 22.
+ 1 APPPATH\Controllers\Admin.php(19): App\Models\Personal_m->count_users('21')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 08:13:51 --> Undefined variable: users_count
+in APPPATH\Views\admin\dashboard.php on line 60.
+ 1 APPPATH\Views\admin\dashboard.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: users_count', 'APPPATH\\Views\\admin\\dashboard.php', 60, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 08:21:37 --> Undefined variable: users_count
+in APPPATH\Views\admin\dashboard.php on line 52.
+ 1 APPPATH\Views\admin\dashboard.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: users_count', 'APPPATH\\Views\\admin\\dashboard.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 08:23:03 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\dashboard.php on line 52.
+ 1 APPPATH\Views\admin\dashboard.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\admin\\dashboard.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-14 08:40:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=="Pending") as count
+FROM `checkout`' at line 1 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Count(st...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Count(st...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Count(st...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Count(st...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(113): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(26): App\Models\Checkout_model->count_pending()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-14 08:40:21 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 113.
+ 1 APPPATH\Controllers\Admin.php(26): App\Models\Checkout_model->count_pending()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-14 08:42:17 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Count(ch...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Count(ch...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Count(ch...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Count(ch...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(113): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(26): App\Models\Checkout_model->count_pending()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-14 08:42:18 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 113.
+ 1 APPPATH\Controllers\Admin.php(26): App\Models\Checkout_model->count_pending()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 22:10:52 --> Undefined variable: product
+in APPPATH\Views\user\productdetails.php on line 27.
+ 1 APPPATH\Views\user\productdetails.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: product', 'APPPATH\\Views\\user\\productdetails.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\productdetails.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/productdetails', [], true)
+ 5 APPPATH\Controllers\User.php(562): view('user/productdetails')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->productdetails('76', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 23:15:57 --> Undefined index: adminF_name
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 APPPATH\Views\admin\include\topbar.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: adminF_name', 'APPPATH\\Views\\admin\\include\\topbar.php', 171, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 5 APPPATH\Views\admin\dashboard.php(38): view('admin/include/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\Admin.php(68): view('admin/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 23:25:56 --> The route for "http://localhost/ocake/productdetails/56" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/ocake/productdetails/56')
+ 2 SYSTEMPATH\Common.php(860): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Views\user\birthday.php(237): redirect('http://localhost/ocake/productdetails/56')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 7 APPPATH\Controllers\User.php(539): view('user/birthday')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-14 23:26:27 --> The route for "http://localhost/ocake/productdetails/17" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/ocake/productdetails/17')
+ 2 SYSTEMPATH\Common.php(860): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Views\user\birthday.php(237): redirect('http://localhost/ocake/productdetails/17')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 7 APPPATH\Controllers\User.php(395): view('user/birthday')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getChristening()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

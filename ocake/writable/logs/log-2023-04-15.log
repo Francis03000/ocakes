@@ -1,0 +1,632 @@
+CRITICAL - 2023-04-15 01:07:19 --> Call to undefined method App\Models\Checkout_model::getResult
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(150): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:07:36 --> Call to undefined method App\Models\Checkout_model::getResults
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(150): CodeIgniter\Model->__call('getResults', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:10:06 --> Call to undefined method App\Models\Checkout_model::getResults
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(150): CodeIgniter\Model->__call('getResults', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:10:46 --> Too few arguments to function App\Models\Checkout_model::get(), 0 passed in C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php on line 150 and exactly 2 expected
+in APPPATH\Models\Checkout_model.php on line 65.
+ 1 APPPATH\Controllers\Admin.php(150): App\Models\Checkout_model->get()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:19:53 --> Call to undefined method App\Models\Checkout_model::result
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(151): CodeIgniter\Model->__call('result', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:20:05 --> Undefined variable: monthly
+in APPPATH\Views\admin\dashboard.php on line 45.
+ 1 APPPATH\Views\admin\dashboard.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: monthly', 'APPPATH\\Views\\admin\\dashboard.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:21:19 --> Undefined variable: monthly
+in APPPATH\Views\admin\dashboard.php on line 45.
+ 1 APPPATH\Views\admin\dashboard.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: monthly', 'APPPATH\\Views\\admin\\dashboard.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(155): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:21:23 --> Undefined variable: monthly
+in APPPATH\Views\admin\dashboard.php on line 45.
+ 1 APPPATH\Views\admin\dashboard.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: monthly', 'APPPATH\\Views\\admin\\dashboard.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(155): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:21:26 --> Undefined variable: monthly
+in APPPATH\Views\admin\dashboard.php on line 45.
+ 1 APPPATH\Views\admin\dashboard.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: monthly', 'APPPATH\\Views\\admin\\dashboard.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(155): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 01:26:26 --> Undefined variable: monthly
+in APPPATH\Views\admin\dashboard.php on line 45.
+ 1 APPPATH\Views\admin\dashboard.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: monthly', 'APPPATH\\Views\\admin\\dashboard.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(155): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 03:25:51 --> Trying to get property 'total' of non-object
+in APPPATH\Views\admin\dashboard.php on line 46.
+ 1 APPPATH\Views\admin\dashboard.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'total\' of non-object', 'APPPATH\\Views\\admin\\dashboard.php', 46, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(155): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 03:26:05 --> Undefined index: total
+in APPPATH\Views\admin\dashboard.php on line 46.
+ 1 APPPATH\Views\admin\dashboard.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total', 'APPPATH\\Views\\admin\\dashboard.php', 46, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(155): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 03:26:30 --> Undefined index: monthly
+in APPPATH\Controllers\Admin.php on line 154.
+ 1 APPPATH\Controllers\Admin.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: monthly', 'APPPATH\\Controllers\\Admin.php', 154, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 03:30:43 --> mysqli_sql_exception: Unknown column 'total_payment' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(152): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-04-15 03:30:43 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Controllers\Admin.php(152): CodeIgniter\BaseModel->first()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 03:30:59 --> Call to undefined method App\Models\Checkout_model::getResult
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(152): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 03:31:06 --> mysqli_sql_exception: Unknown column 'total_payment' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(152): CodeIgniter\BaseModel->find()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-04-15 03:31:06 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 185.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 2 APPPATH\Controllers\Admin.php(152): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 03:31:12 --> mysqli_sql_exception: Unknown column 'total_payment' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(152): CodeIgniter\BaseModel->find()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-04-15 03:31:12 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 185.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 2 APPPATH\Controllers\Admin.php(152): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 03:31:59 --> Call to undefined method App\Models\Checkout_model::firt
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(152): CodeIgniter\Model->__call('firt', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 06:14:08 --> Call to undefined method App\Models\Checkout_model::firt
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(152): CodeIgniter\Model->__call('firt', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 06:16:14 --> mysqli_sql_exception: Unknown column 'total_payment' in 'field list' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(152): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-04-15 06:16:14 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Controllers\Admin.php(152): CodeIgniter\BaseModel->first()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 06:20:32 --> mysqli_sql_exception: Incorrect TIMESTAMP value: '04' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(150): App\Models\Checkout_model->monthly_earnings()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 06:20:32 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 197.
+ 1 APPPATH\Controllers\Admin.php(150): App\Models\Checkout_model->monthly_earnings()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 06:20:47 --> mysqli_sql_exception: Incorrect TIMESTAMP value: '04' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(150): App\Models\Checkout_model->monthly_earnings()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 06:20:47 --> Call to a member function getResults() on bool
+in APPPATH\Models\Checkout_model.php on line 197.
+ 1 APPPATH\Controllers\Admin.php(150): App\Models\Checkout_model->monthly_earnings()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 06:21:54 --> mysqli_sql_exception: Incorrect TIMESTAMP value: '04' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(150): App\Models\Checkout_model->monthly_earnings()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-04-15 06:22:18 --> mysqli_sql_exception: Incorrect TIMESTAMP value: '04' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(150): App\Models\Checkout_model->monthly_earnings()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 06:24:25 --> Undefined variable: montly
+in APPPATH\Views\admin\dashboard.php on line 46.
+ 1 APPPATH\Views\admin\dashboard.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: montly', 'APPPATH\\Views\\admin\\dashboard.php', 46, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(152): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 06:25:08 --> Undefined index: total
+in APPPATH\Views\admin\dashboard.php on line 46.
+ 1 APPPATH\Views\admin\dashboard.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total', 'APPPATH\\Views\\admin\\dashboard.php', 46, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(152): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 06:25:15 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\dashboard.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(152): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 06:45:08 --> mysqli_sql_exception: Incorrect TIMESTAMP value: '04 15, 2023' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT Sum(tota...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT Sum(tota...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Sum(tota...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Sum(tota...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(152): App\Models\Checkout_model->daily_earnings()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 06:45:08 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 213.
+ 1 APPPATH\Controllers\Admin.php(152): App\Models\Checkout_model->daily_earnings()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 07:03:07 --> Call to undefined function App\Models\YEARWEEK()
+in APPPATH\Models\Checkout_model.php on line 211.
+ 1 APPPATH\Controllers\Admin.php(152): App\Models\Checkout_model->daily_earnings()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 07:06:08 --> Class 'App\Models\DateTime' not found
+in APPPATH\Models\Checkout_model.php on line 209.
+ 1 APPPATH\Controllers\Admin.php(152): App\Models\Checkout_model->daily_earnings()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 07:10:24 --> Undefined variable: daily
+in APPPATH\Views\admin\dashboard.php on line 62.
+ 1 APPPATH\Views\admin\dashboard.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: daily', 'APPPATH\\Views\\admin\\dashboard.php', 62, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(154): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 18:57:35 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::countResult()
+in APPPATH\Models\Checkout_model.php on line 230.
+ 1 APPPATH\Controllers\Admin.php(154): App\Models\Checkout_model->customer_count()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 18:57:47 --> mysqli_sql_exception: Duplicate column name 'biller_id' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(230): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(154): App\Models\Checkout_model->customer_count()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-04-15 18:58:02 --> mysqli_sql_exception: Duplicate column name 'biller_id' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(230): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(154): App\Models\Checkout_model->customer_count()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 18:59:12 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::countAllResult()
+in APPPATH\Models\Checkout_model.php on line 230.
+ 1 APPPATH\Controllers\Admin.php(154): App\Models\Checkout_model->customer_count()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 19:00:03 --> mysqli_sql_exception: Duplicate column name 'biller_id' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(230): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(154): App\Models\Checkout_model->customer_count()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 19:04:57 --> Call to undefined method App\Models\Checkout_model::customer_count
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Admin.php(154): CodeIgniter\Model->__call('customer_count', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 19:07:54 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 87.
+ 1 APPPATH\Controllers\User.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 87, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 19:08:05 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 87.
+ 1 APPPATH\Controllers\User.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 87, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 19:09:29 --> Undefined variable: id
+in APPPATH\Controllers\User.php on line 91.
+ 1 APPPATH\Controllers\User.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'APPPATH\\Controllers\\User.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:40:14 --> mysqli_sql_exception: Unknown column 'biller_details.order_code' in 'on clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(231): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:40:14 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 231.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:41:00 --> mysqli_sql_exception: Unknown column 'biller_details.order_code' in 'on clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(231): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:41:00 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 231.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:41:48 --> mysqli_sql_exception: Unknown column 'biller_details.order_code' in 'on clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(231): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:41:48 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 231.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:41:53 --> mysqli_sql_exception: Unknown column 'biller_details.order_code' in 'on clause' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(231): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:41:53 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 231.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:46:46 --> mysqli_sql_exception: Unknown column 'cart.product_id' in 'group statement' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(ch...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(ch...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(ch...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT count(ch...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:46:46 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 232.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:47:18 --> mysqli_sql_exception: Unknown column 'cart.product_id' in 'group statement' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(ch...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(ch...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(ch...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT count(ch...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:47:18 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 232.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:47:35 --> mysqli_sql_exception: Unknown column 'cart.product_id' in 'group statement' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:47:35 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 232.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:48:19 --> mysqli_sql_exception: Unknown column 'cart.product_id' in 'group statement' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:48:19 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 232.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 23:48:59 --> mysqli_sql_exception: Unknown column 'cart.product_id' in 'group statement' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-15 23:48:59 --> Call to a member function getResult() on bool
+in APPPATH\Models\Checkout_model.php on line 232.
+ 1 APPPATH\Controllers\User.php(575): App\Models\Checkout_model->grossingProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

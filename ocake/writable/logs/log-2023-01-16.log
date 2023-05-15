@@ -1,0 +1,55 @@
+CRITICAL - 2023-01-16 01:51:47 --> Undefined property: stdClass::$occasion
+in APPPATH\Views\admin\orders.php on line 138.
+ 1 APPPATH\Views\admin\orders.php(138): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$occasion', 'APPPATH\\Views\\admin\\orders.php', 138, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(123): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-16 07:55:53 --> Undefined variable: datum
+in APPPATH\Views\user\order_details.php on line 162.
+ 1 APPPATH\Views\user\order_details.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: datum', 'APPPATH\\Views\\user\\order_details.php', 162, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/order_details', [], true)
+ 5 APPPATH\Controllers\User.php(209): view('user/order_details')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-16 07:59:25 --> Undefined variable: data
+in APPPATH\Views\user\order_details.php on line 162.
+ 1 APPPATH\Views\user\order_details.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\user\\order_details.php', 162, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/order_details', [], true)
+ 5 APPPATH\Controllers\User.php(209): view('user/order_details')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-16 08:00:46 --> Undefined variable: data
+in APPPATH\Views\user\order_details.php on line 188.
+ 1 APPPATH\Views\user\order_details.php(188): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\user\\order_details.php', 188, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/order_details', [], true)
+ 5 APPPATH\Controllers\User.php(209): view('user/order_details')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-16 08:03:59 --> Undefined variable: datum
+in APPPATH\Views\user\order_details.php on line 162.
+ 1 APPPATH\Views\user\order_details.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: datum', 'APPPATH\\Views\\user\\order_details.php', 162, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/order_details', [], true)
+ 5 APPPATH\Controllers\User.php(209): view('user/order_details')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

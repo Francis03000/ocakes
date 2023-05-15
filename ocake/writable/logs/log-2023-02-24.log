@@ -1,0 +1,47 @@
+CRITICAL - 2023-02-24 06:50:39 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(18): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->signin()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 06:51:20 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(18): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->signin()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 06:51:47 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(18): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->signin()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 08:37:30 --> unlink(C:\wamp64\www\ocake\ocake\writable\debugbar/debugbar_1677244818.740836.json): Permission denied
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\wamp64\\www\\ocake\\ocake\\writable\\debugbar/debugbar_1677244818.740836.json): Permission denied', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 76, [...])
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('FCPATH\\ocake\\writable\\debugbar/debugbar_1677244818.740836.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(500): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1677249422.122191', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(477): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(328): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 09:00:44 --> unlink(C:\wamp64\www\ocake\ocake\writable\debugbar/debugbar_1677248269.294834.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\wamp64\\www\\ocake\\ocake\\writable\\debugbar/debugbar_1677248269.294834.json): No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 76, [...])
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('FCPATH\\ocake\\writable\\debugbar/debugbar_1677248269.294834.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(500): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1677250833.139187', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(477): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(328): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

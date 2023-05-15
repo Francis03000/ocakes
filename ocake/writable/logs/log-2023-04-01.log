@@ -1,0 +1,186 @@
+CRITICAL - 2023-04-01 02:29:19 --> Undefined variable $flavor
+in APPPATH\Views\admin\addonslist.php on line 214.
+ 1 APPPATH\Views\admin\addonslist.php(214): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $flavor', 'APPPATH\\Views\\admin\\addonslist.php', 214)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(450): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 03:08:31 --> Undefined property: stdClass::$checkout_id
+in APPPATH\Views\admin\addonslist.php on line 251.
+ 1 APPPATH\Views\admin\addonslist.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$checkout_id', 'APPPATH\\Views\\admin\\addonslist.php', 251)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(450): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 03:10:05 --> Undefined property: stdClass::$checkout_id
+in APPPATH\Views\admin\addonslist.php on line 251.
+ 1 APPPATH\Views\admin\addonslist.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$checkout_id', 'APPPATH\\Views\\admin\\addonslist.php', 251)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(450): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 03:11:19 --> Undefined property: stdClass::$firstname
+in APPPATH\Views\admin\addonslist.php on line 282.
+ 1 APPPATH\Views\admin\addonslist.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$firstname', 'APPPATH\\Views\\admin\\addonslist.php', 282)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(450): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 03:22:30 --> Undefined variable $data
+in APPPATH\Views\admin\addonslist.php on line 88.
+ 1 APPPATH\Views\admin\addonslist.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\addonslist.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(450): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 03:34:10 --> Invalid file: admin/addons.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/addons.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addons', [], true)
+ 3 APPPATH\Controllers\Admin.php(1031): view('admin/addons', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->add_ons()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 03:34:29 --> Invalid file: admin/addons.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/addons.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addons', [], true)
+ 3 APPPATH\Controllers\Admin.php(1031): view('admin/addons', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->add_ons()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 05:14:46 --> Invalid file: admin/chart-apex.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/chart-apex.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/chart-apex', [], true)
+ 3 APPPATH\Controllers\Admin.php(624): view('admin/chart-apex', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->apex()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 07:41:41 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 09:19:12 --> Undefined variable $checkout_model
+in APPPATH\Controllers\User.php on line 776.
+ 1 APPPATH\Controllers\User.php(776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $checkout_model', 'APPPATH\\Controllers\\User.php', 776)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->placeorder()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 09:23:14 --> Undefined variable $datum
+in APPPATH\Controllers\User.php on line 760.
+ 1 APPPATH\Controllers\User.php(760): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datum', 'APPPATH\\Controllers\\User.php', 760)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->placeorder()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 09:31:16 --> Undefined array key "admin_id"
+in APPPATH\Controllers\Admin.php on line 570.
+ 1 APPPATH\Controllers\Admin.php(570): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "admin_id"', 'APPPATH\\Controllers\\Admin.php', 570)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->saleslist()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 09:37:59 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 285.
+ 1 APPPATH\Controllers\User.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 285)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getChristening()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 09:38:05 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:28:34 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 631.
+ 1 APPPATH\Controllers\User.php(631): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 631)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:32:59 --> Invalid file: checkout.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('checkout.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('checkout', [], true)
+ 3 APPPATH\Controllers\User.php(723): view('checkout', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->placeorder()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:34:24 --> Undefined variable $downpayment
+in APPPATH\Controllers\User.php on line 647.
+ 1 APPPATH\Controllers\User.php(647): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $downpayment', 'APPPATH\\Controllers\\User.php', 647)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:35:31 --> Invalid file: checkout.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('checkout.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('checkout', [], true)
+ 3 APPPATH\Controllers\User.php(723): view('checkout', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->placeorder()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:38:03 --> Invalid file: checkout.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('checkout.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('checkout', [], true)
+ 3 APPPATH\Controllers\User.php(723): view('checkout', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->placeorder()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:38:16 --> Undefined variable $downpayment
+in APPPATH\Controllers\User.php on line 647.
+ 1 APPPATH\Controllers\User.php(647): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $downpayment', 'APPPATH\\Controllers\\User.php', 647)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:42:47 --> Undefined variable $downpayment
+in APPPATH\Controllers\User.php on line 647.
+ 1 APPPATH\Controllers\User.php(647): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $downpayment', 'APPPATH\\Controllers\\User.php', 647)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 10:46:32 --> Undefined variable $downpayment
+in APPPATH\Controllers\User.php on line 647.
+ 1 APPPATH\Controllers\User.php(647): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $downpayment', 'APPPATH\\Controllers\\User.php', 647)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

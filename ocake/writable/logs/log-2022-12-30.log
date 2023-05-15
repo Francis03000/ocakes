@@ -1,0 +1,348 @@
+CRITICAL - 2022-12-30 02:06:32 --> Call to undefined function set_value()
+in APPPATH\Views\signup.php on line 21.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 4 APPPATH\Controllers\Personal.php(13): view('signup')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->signup()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 02:14:14 --> Call to undefined function set_value()
+in APPPATH\Views\signup.php on line 21.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 4 APPPATH\Controllers\Personal.php(13): view('signup')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->signup()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 02:18:07 --> Call to undefined function set_value()
+in APPPATH\Views\signup.php on line 22.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 4 APPPATH\Controllers\Personal.php(13): view('signup')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->signup()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 02:23:30 --> Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+in APPPATH\Controllers\SignupController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 03:00:22 --> Cannot use object of type CodeIgniter\Session\Session as array
+in APPPATH\Controllers\Personal.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 03:44:35 --> Invalid file: login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Admin.php(16): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 03:56:34 --> Cannot use object of type App\Models\Administration_m as array
+in APPPATH\Controllers\Administration.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 03:57:34 --> Cannot use object of type App\Models\Administration_m as array
+in APPPATH\Controllers\Administration.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 03:58:04 --> Cannot use object of type App\Models\Administration_m as array
+in APPPATH\Controllers\Administration.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 04:24:34 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 17.
+ 1 APPPATH\Controllers\Admin.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 17, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\Admin->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 04:36:53 --> Cannot call constructor
+in APPPATH\Controllers\Admin.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 05:32:43 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 APPPATH\Views\admin\include\topbar.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\admin\\include\\topbar.php', 171, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 5 APPPATH\Views\admin\dashboard.php(38): view('admin/include/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\Admin.php(13): view('admin/dashboard')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 05:33:53 --> syntax error, unexpected '?>'
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 3 APPPATH\Views\admin\dashboard.php(38): view('admin/include/topbar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 7 APPPATH\Controllers\Admin.php(13): view('admin/dashboard')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 05:43:23 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 APPPATH\Views\admin\include\topbar.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\admin\\include\\topbar.php', 171, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 5 APPPATH\Views\admin\dashboard.php(38): view('admin/include/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\Admin.php(14): view('admin/dashboard')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 05:44:17 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 APPPATH\Views\admin\include\topbar.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\admin\\include\\topbar.php', 171, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 5 APPPATH\Views\admin\dashboard.php(38): view('admin/include/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\Admin.php(14): view('admin/dashboard')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 06:02:16 --> Undefined index: logged_in
+in APPPATH\Views\include\header.php on line 87.
+ 1 APPPATH\Views\include\header.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: logged_in', 'APPPATH\\Views\\include\\header.php', 87, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Controllers\User.php(26): view('include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 06:05:25 --> Undefined index: logged_in
+in APPPATH\Views\include\header.php on line 88.
+ 1 APPPATH\Views\include\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: logged_in', 'APPPATH\\Views\\include\\header.php', 88, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Controllers\User.php(26): view('include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 06:07:24 --> Undefined index: logged_in
+in APPPATH\Views\include\header.php on line 88.
+ 1 APPPATH\Views\include\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: logged_in', 'APPPATH\\Views\\include\\header.php', 88, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Controllers\User.php(26): view('include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 06:56:27 --> Undefined index: user_id
+in APPPATH\Views\user\birthday.php on line 222.
+ 1 APPPATH\Views\user\birthday.php(222): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Views\\user\\birthday.php', 222, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(279): view('user/birthday')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getChristening()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 07:23:04 --> Too few arguments to function App\Models\Cart_m::getCartData(), 0 passed in C:\wamp64\www\ocake\ocake\app\Controllers\User.php on line 25 and exactly 1 expected
+in APPPATH\Models\Cart_m.php on line 15.
+ 1 APPPATH\Controllers\User.php(25): App\Models\Cart_m->getCartData()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 07:25:01 --> Too few arguments to function App\Models\Cart_m::getCartData(), 0 passed in C:\wamp64\www\ocake\ocake\app\Controllers\User.php on line 25 and exactly 1 expected
+in APPPATH\Models\Cart_m.php on line 15.
+ 1 APPPATH\Controllers\User.php(25): App\Models\Cart_m->getCartData()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 08:23:59 --> Undefined index: <?php $data->cart_id?>
+in APPPATH\Controllers\User.php on line 34.
+ 1 APPPATH\Controllers\User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: <?php $data->cart_id?>', 'APPPATH\\Controllers\\User.php', 34, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 08:25:31 --> Undefined index: cart_product
+in APPPATH\Controllers\User.php on line 34.
+ 1 APPPATH\Controllers\User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: cart_product', 'APPPATH\\Controllers\\User.php', 34, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 08:25:53 --> Undefined index: cart_product
+in APPPATH\Controllers\User.php on line 34.
+ 1 APPPATH\Controllers\User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: cart_product', 'APPPATH\\Controllers\\User.php', 34, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 08:31:57 --> Undefined index: cart_product
+in APPPATH\Controllers\User.php on line 34.
+ 1 APPPATH\Controllers\User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: cart_product', 'APPPATH\\Controllers\\User.php', 34, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 08:37:08 --> Illegal string offset 'cartData'
+in APPPATH\Controllers\User.php on line 45.
+ 1 APPPATH\Controllers\User.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'cartData\'', 'APPPATH\\Controllers\\User.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:31:48 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:33:35 --> Undefined variable: id
+in APPPATH\Controllers\User.php on line 26.
+ 1 APPPATH\Controllers\User.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'APPPATH\\Controllers\\User.php', 26, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:36:20 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:36:43 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:37:16 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:38:51 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:39:12 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:40:29 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:41:10 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 163.
+ 1 APPPATH\Controllers\User.php(163): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 163, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->cart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:42:24 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 163.
+ 1 APPPATH\Controllers\User.php(163): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 163, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->cart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 21:42:30 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 22.
+ 1 APPPATH\Controllers\User.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 22:22:19 --> Undefined index: user_id
+in APPPATH\Controllers\User.php on line 24.
+ 1 APPPATH\Controllers\User.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: user_id', 'APPPATH\\Controllers\\User.php', 24, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 22:39:02 --> syntax error, unexpected '/'
+in APPPATH\Controllers\User.php on line 34.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\User.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\User')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\User', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 22:54:52 --> Undefined index: adminF_name
+in APPPATH\Views\admin\include\topbar.php on line 171.
+ 1 APPPATH\Views\admin\include\topbar.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: adminF_name', 'APPPATH\\Views\\admin\\include\\topbar.php', 171, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/include/topbar', [], true)
+ 5 APPPATH\Views\admin\dashboard.php(38): view('admin/include/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\Admin.php(14): view('admin/dashboard')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 23:53:25 --> Object of class App\Models\Cart_m could not be converted to string
+in APPPATH\Controllers\User.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

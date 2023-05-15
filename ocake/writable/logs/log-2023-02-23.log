@@ -1,0 +1,43 @@
+CRITICAL - 2023-02-23 06:49:26 --> Undefined variable: total
+in APPPATH\Views\user\landing_page.php on line 204.
+ 1 APPPATH\Views\user\landing_page.php(204): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: total', 'APPPATH\\Views\\user\\landing_page.php', 204, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\landing_page.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/landing_page', [], true)
+ 5 APPPATH\Controllers\User.php(78): view('user/landing_page')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->landingpage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-23 07:03:57 --> Undefined variable: order_count
+in APPPATH\Views\user\landing_page.php on line 268.
+ 1 APPPATH\Views\user\landing_page.php(268): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order_count', 'APPPATH\\Views\\user\\landing_page.php', 268, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\landing_page.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/landing_page', [], true)
+ 5 APPPATH\Controllers\User.php(78): view('user/landing_page')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->landingpage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-23 07:05:49 --> Undefined variable: productData
+in APPPATH\Views\user\landing_page.php on line 408.
+ 1 APPPATH\Views\user\landing_page.php(408): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: productData', 'APPPATH\\Views\\user\\landing_page.php', 408, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\landing_page.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/landing_page', [], true)
+ 5 APPPATH\Controllers\User.php(78): view('user/landing_page')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->landingpage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-23 07:26:31 --> unlink(C:\wamp64\www\ocake\ocake\writable\debugbar/debugbar_1677155883.538134.json): Permission denied
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\wamp64\\www\\ocake\\ocake\\writable\\debugbar/debugbar_1677155883.538134.json): Permission denied', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 76, [...])
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('FCPATH\\ocake\\writable\\debugbar/debugbar_1677155883.538134.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(500): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1677158790.183987', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(477): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(328): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

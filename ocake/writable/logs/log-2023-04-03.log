@@ -1,0 +1,44 @@
+CRITICAL - 2023-04-03 08:41:33 --> Undefined variable $users_count
+in APPPATH\Views\admin\dashboard.php on line 104.
+ 1 APPPATH\Views\admin\dashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users_count', 'APPPATH\\Views\\admin\\dashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(95): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-03 08:41:47 --> Undefined variable $users_count
+in APPPATH\Views\admin\dashboard.php on line 104.
+ 1 APPPATH\Views\admin\dashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users_count', 'APPPATH\\Views\\admin\\dashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(149): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-03 08:41:58 --> Undefined variable $users_count
+in APPPATH\Views\admin\dashboard.php on line 104.
+ 1 APPPATH\Views\admin\dashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users_count', 'APPPATH\\Views\\admin\\dashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(149): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-03 08:42:04 --> Undefined variable $users_count
+in APPPATH\Views\admin\dashboard.php on line 104.
+ 1 APPPATH\Views\admin\dashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users_count', 'APPPATH\\Views\\admin\\dashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(149): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,14 @@
+CRITICAL - 2023-04-10 20:54:15 --> Undefined variable $downpayment
+in APPPATH\Controllers\User.php on line 677.
+ 1 APPPATH\Controllers\User.php(677): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $downpayment', 'APPPATH\\Controllers\\User.php', 677)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-10 21:07:43 --> Undefined variable $downpayment
+in APPPATH\Controllers\User.php on line 677.
+ 1 APPPATH\Controllers\User.php(677): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $downpayment', 'APPPATH\\Controllers\\User.php', 677)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
