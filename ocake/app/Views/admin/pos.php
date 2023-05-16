@@ -95,7 +95,7 @@
 
                         <ul class="tabs owl-carousel owl-theme owl-product border-0">
                             <?php foreach($category as $data){?>
-                            <li id="<?php echo $data->category_id;?>" name="cat">
+                            <li id="<?php echo $data->category_id;?>" name="cat" class="categ">
                                 <input hidden id="id" value="<?php echo $data->category_id;?>" />
                                 <a class="product-details">
                                     <img src="http://localhost/ocake/tools/uploads/<?php echo $data->cat_image;?>"
@@ -891,6 +891,7 @@ $(document).ready(function() {
     $("#preorderprod").hide();
 
     $("#product_availability").change(function() {
+        $(".categ").removeClass('active');
         $("#product_container").empty();
         initProductContainer();
 
