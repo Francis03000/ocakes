@@ -105,7 +105,9 @@ $routes->group('admin', static function ($routes) {
     $routes->post('pos/updateProductStockss', 'PosController::updateProductStocks');
     $routes->post('pos/invoicebill', 'PosController::invoiceBilling');
     $routes->post('pos/invoicebillpos', 'PosController::invoiceBillingPos');
+    $routes->post('pos/deleteinvoice', 'PosController::deleteData');
     $routes->get('pos/invoicebillposhistory', 'PosController::invoiceBillingPosHistory');
+    $routes->post('pos/upstatus', 'PosController::updateTransStat');
 });
 
 $routes->group('customers', static function ($routes) {

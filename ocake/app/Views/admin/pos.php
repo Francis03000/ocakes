@@ -80,8 +80,9 @@
                                     <div class="select-split">
                                         <div class="select-group w-100">
                                             <select class="select" id="product_availability" name="product_availability">
-                                                <option value="0">Ready Made</option>
-                                                <option value="1">Pre Order</option>
+                                                <option value="0">All Products</option>
+                                                <option value="1">Ready Made</option>
+                                                <option value="2">Pre Order</option>
                                             </select>
                                         </div>
                                     </div>
@@ -265,9 +266,7 @@
                                 <a href="javascript:void(0);">9</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" class="btn btn-closes"><img
-                                        src="<?=base_url()?>/tools/admin/assets/img/icons/close-circle.svg"
-                                        alt="img" /></a>
+                                <a href="javascript:void(0);" class="btn btn-closes"><i class="fas fa-arrow-circle-left"></i></a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);">0</a>
@@ -292,19 +291,48 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Invoice Number</th>
-                                    <th>Customer Fullname</th>
-                                    <th>Total Amount Purchase</th>
-                                    <th>Transaction Date</th>
-                                </tr>
-                            </thead>
-                            <tbody id="transhis"></tbody>
-                        </table>
-                    </div>         
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Ready Made</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pre Order</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Invoice Number</th>
+                                            <th>Customer Fullname</th>
+                                            <th>Total Amount Purchase</th>
+                                            <th>Transaction Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="transhis"></tbody>
+                                </table>
+                            </div>         
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Invoice Number</th>
+                                            <th>Customer Fullname</th>
+                                            <th>Total Amount Purchase</th>
+                                            <th>Status</th>
+                                            <th>Transaction Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="transhispreord"></tbody>
+                                </table>
+                            </div>       
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -451,6 +479,39 @@
                     </form>
                     <div class="col-lg-12">
                         <a class="btn btn-submit me-2" id="proc">Proceed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal fade" id="upstat" tabindex="-1" aria-labelledby="upstat" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Transaction Status</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formMain">
+                        <input type="hidden" name="transid" id="transid">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Choose Status</label>
+                                    <select name="modeoftransaction" id="transstat" class="select">
+                                        <option value="0">Choose</option>
+                                        <option value="1">Done</option>
+                                        <option value="2">Pending / OnProcess</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-lg-12">
+                        <a class="btn btn-submit me-2" id="upstatus">Update</a>
                     </div>
                 </div>
             </div>
@@ -609,7 +670,7 @@ $(document).ready(function() {
   });
 
 
-  let attriTrans = ["inv_num","fullName","totalAmount","created_at"];
+  let attriTrans = ["inv_num","fullName","totalAmount","status","created_at","act"];
 
   $("#history").click(function(){
     initTransHistory();
@@ -620,6 +681,7 @@ $(document).ready(function() {
     $.ajax({
             url: '<?= base_url('admin/pos/invoicebillposhistory') ?>',
             method: 'get',
+            data:{isPickup:0},
             dataType: 'json',
             success: function(response) {
                 response.forEach((history) => {
@@ -631,7 +693,7 @@ $(document).ready(function() {
                                 class: "text-wrap",
                                 html: attriMap.get("customer_fname") +" "+attriMap.get("customer_mname")+" "+attriMap.get("customer_lname"),
                             }).appendTo(tabrow);
-                        }else{
+                        }else if(attri!=="status" && attri!=="act"){
                             $("<td>", {
                             class: "text-wrap",
                             html: attriMap.get(attri),
@@ -643,6 +705,86 @@ $(document).ready(function() {
             }
         });
   }
+
+  $("#pills-profile-tab").click(function(){
+    initTransHistories();
+  })
+  function initTransHistories(){
+    let tablename = $("#transhispreord").empty();
+    $.ajax({
+            url: '<?= base_url('admin/pos/invoicebillposhistory') ?>',
+            method: 'get',
+            data:{isPickup:1},
+            dataType: 'json',
+            success: function(response) {
+
+                response.forEach((history) => {
+                    let tabrow = $("<tr>");
+                    const attriMap = new Map(Object.entries(history));
+                    attriTrans.forEach((attri, i) => {
+                        if(attri==="fullName"){
+                            $("<td>", {
+                                class: "text-wrap",
+                                html: attriMap.get("customer_fname") +" "+attriMap.get("customer_mname")+" "+attriMap.get("customer_lname"),
+                            }).appendTo(tabrow);
+                        }else if(attri==="status"){
+
+                            let tds = $("<td>", {
+                                class: "text-wrap",
+                            });
+
+                            if(attriMap.get("status")==="1"){
+                                
+                            tds.append('<span class="badge rounded-pill bg-success">Done</span>');
+
+                            tds.appendTo(tabrow);
+
+                            }else if(attriMap.get("status")==="2"){
+    
+                                tds.append('<span class="badge rounded-pill bg-warning">Pending / OnProcess</span>');
+
+                                tds.appendTo(tabrow);
+
+                            }
+
+                        }else if(attri==="act"){
+                            let actbtn = $("<td>", {
+                                class: "text-wrap",
+                            });
+                            actbtn.append('<button type="button" class="btn btn-primary btn-sm" id="updateStatusBtn" data-id="'+history.pos_id+'"><i class="fa fa-pencil"></i></button>');
+                            actbtn.appendTo(tabrow);
+                        }
+                        else{
+                            $("<td>", {
+                            class: "text-wrap",
+                            html: attriMap.get(attri),
+                            }).appendTo(tabrow);
+                        }
+                        tablename.append(tabrow);
+                    });
+                });
+            }
+        });
+  }
+
+
+  $("body").on("click","#updateStatusBtn", (e) =>{
+    $("#transid").val($(e.currentTarget).data("id"));
+    $("#upstat").modal('show');
+  });
+
+  $("#upstatus").click(function(){
+    $.ajax({
+        url: '<?= base_url('admin/pos/upstatus') ?>',
+        method: 'post',
+        data:{pos_id: parseInt($("#transid").val()),status: parseInt($("#transstat").val())},
+        dataType: 'json',
+        success: function(response) {
+            initTransHistories();
+            $("#upstat").modal('hide');
+        }
+    });
+  });
 
 
     function initProductContainer() {
@@ -683,22 +825,26 @@ $(document).ready(function() {
     }
 
     $("#preorderprod").hide();
+
     $("#product_availability").change(function(){
         $("#product_container").empty();
         initProductContainer();
 
-        if($("#product_availability").val()==="1"){
+        if($("#product_availability").val()==="2"){
             $("#preorderprod").show();
-        }else if($("#product_availability").val()==="0"){
+        }else if($("#product_availability").val()==="1"){
             $("#preorderprod").hide();
         }
     })
 
     var modelContainer = [];
 
+    availabilitypreord = 0;
+
     function initTableInvoice() {
         var subtotal = 0;
         modelContainer = [];
+        $("#prod_list").empty();
         $.ajax({
             url: '<?= base_url('admin/pos/getInvoice') ?>',
             method: 'get',
@@ -714,6 +860,10 @@ $(document).ready(function() {
                         stock: parseInt(product.stock) - parseInt(product.quantity)
                     });
                     subtotal += parseInt(product.totalAmount);
+
+                    if(product.availability==="Pre Order"){
+                        availabilitypreord = 1;
+                    }
                     product_container.append('<ul class="product-lists"><li>' +
                         '<div class="productimg">' +
                         '<div class="productimgs">' +
@@ -735,13 +885,22 @@ $(document).ready(function() {
                         '<li>' + product.quantity + '</li>' +
                         '<li>' + product.totalAmount + '</li>' +
                         '<li>' +
-                        '<a class="confirm-text" href="javascript:void(0);">' +
+                        '<a class="confirm-text" data-id="'+product.invid+'" id="delete-invoice">' +
                         '<img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img" /></a>' +
                         '</li></ul>');
                     $("#sub-total").html(subtotal);
                     $("#subtotals").val(subtotal);
 
+                    if(availabilitypreord===1){
+                        $("#preorderprod").show();
+                    }else{
+                        $("#preorderprod").hide();
+                    }
+
                 });
+                
+                $("#sub-total").html(subtotal);
+                $("#subtotals").val(subtotal);
                 if(modelContainer.length!=0){
                     $('#paymentmethod').prop('disabled', false);
                 }
@@ -753,6 +912,35 @@ $(document).ready(function() {
     $("body").on("click", "#productAddToCart", (e) =>
         addToCart($(e.currentTarget).data("id"))
     );
+
+    $("body").on("click","#delete-invoice",(e)=>{
+        Swal.fire({
+        title: 'Are you sure you want to remove this product on your cart ?',
+        showCancelButton: true,
+        confirmButtonText: 'OK',
+        }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: '<?= base_url('admin/pos/deleteinvoice') ?>',
+                method: 'post',
+                data: {invid:$(e.currentTarget).data("id")},
+                dataType: 'json',
+                success: function(response) {
+                    initTableInvoice();
+                }
+            });
+        } else {
+            Swal.fire({
+            position: 'center',
+            icon: 'info',
+            title: 'Changes are not saved',
+            showConfirmButton: false,
+            timer: 1000
+            })
+        }
+        });
+    }
+    )
 
     function addToCart(product_id) {
         var invoicenum = $("#invoiceNumberId").val();
@@ -894,9 +1082,9 @@ $(document).ready(function() {
       }
 
 
-      if($("#product_availability").val()==="0"){
+      if($("#product_availability").val()==="1" || availabilitypreord == 0){
         formdata = {inv_num:$("#invoiceNumberId").val(),customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),isPreOrder:"0"};
-      }else if($("#product_availability").val()==="1"){
+      }else if($("#product_availability").val()==="2"  || availabilitypreord == 1){
         formdata = {inv_num:$("#invoiceNumberId").val(),customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),pre_order_address:add,isPickup:parseInt($("#modeoftransaction").val()),time_pickup_or_deliver:$("#time_pickup_or_deliver").val(),date_pickup_or_deliver:$("#date_pickup_or_deliver").val(),isPreOrder:"1"};
       }
 

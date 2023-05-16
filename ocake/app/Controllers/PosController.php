@@ -13,15 +13,27 @@ class PosController extends BaseController
 
     public function getAllProducts(){
         $avail = "";
-        if($this->request->getVar('availability')==="0"){
+        if($this->request->getVar('availability')==="1"){
             $productsModel = new Product_model();
             $data = $productsModel->where('availability','Ready Made')->get()->getResult();
             return $this->response->setJSON($data);
-        }else if($this->request->getVar('availability')==="1"){
+        }else if($this->request->getVar('availability')==="2"){
             $productsModel = new Product_model();
             $data = $productsModel->where('availability','Pre Order')->get()->getResult();
             return $this->response->setJSON($data);
+        }else{
+            $productsModel = new Product_model();
+            $data = $productsModel->findAll();
+            return $this->response->setJSON($data);
         }
+    }
+
+    public function deleteData(){
+        $id=$this->request->getPost('invid');
+        $invoicecartModel = new InvoiceCartModel();
+        $data = $invoicecartModel->find($id);
+        $invoicecartModel->delete($id);
+        return $this->response->setJSON($data);
     }
 
 
@@ -32,6 +44,16 @@ class PosController extends BaseController
             'stock' => $this->request->getPost('stock'),
         ];
         $productsModel->where('availability','Ready Made')->update($id,$data);
+        return $this->response->setJSON($data);
+    }
+
+    public function updateTransStat(){
+        $id = $this->request->getPost('pos_id');
+        $posModel = new PosModel();
+        $data = [
+            'status' => $this->request->getPost('status'),
+        ];
+        $posModel->update($id,$data);
         return $this->response->setJSON($data);
     }
 
@@ -66,8 +88,14 @@ class PosController extends BaseController
     }
 
     public function invoiceBillingPosHistory(){
+        $preord = $this->request->getVar('isPickup');
         $posModel = new PosModel();
-        $data = $posModel->join('customers as cus','cus.id=customer_id')->get()->getResult();
+        if($preord==0){
+            $data = $posModel->join('customers as cus','cus.id=customer_id')->where('isPickup','0')->get()->getResult();
+        }else if($preord==1){
+            $data = $posModel->join('customers as cus','cus.id=customer_id')->where('isPickup','1')->get()->getResult();
+        }
+        
         return $this->response->setJSON($data);
     }
 
