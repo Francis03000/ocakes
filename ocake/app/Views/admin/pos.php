@@ -30,7 +30,9 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-    } */
+    }
+
+    */
     </style>
 </head>
 
@@ -79,7 +81,8 @@
                                 <div class="col-lg-12">
                                     <div class="select-split">
                                         <div class="select-group w-100">
-                                            <select class="select" id="product_availability" name="product_availability">
+                                            <select class="select" id="product_availability"
+                                                name="product_availability">
                                                 <option value="0">All Products</option>
                                                 <option value="1">Ready Made</option>
                                                 <option value="2">Pre Order</option>
@@ -191,9 +194,10 @@
                                     </ul>
                                 </div>
                                 <div class="col-12" id="preorderprod">
-                                        <a href="javascript:void(0);" class="btn btn-adds" data-bs-toggle="modal"
-                                            data-bs-target="#preorder"><i class="fa fa-plus me-2"></i>Add Pre Order Detail</a>
-                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-adds" data-bs-toggle="modal"
+                                        data-bs-target="#preorder"><i class="fa fa-plus me-2"></i>Add Pre Order
+                                        Detail</a>
+                                </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Remarks</label>
@@ -209,7 +213,8 @@
                                                 Calculator</a>
                                         </li>
                                         <li>
-                                            <a class="btn" data-bs-toggle="modal" data-bs-target="#recents" id="history"><img
+                                            <a class="btn" data-bs-toggle="modal" data-bs-target="#recents"
+                                                id="history"><img
                                                     src="<?=base_url()?>/tools/admin/assets/img/icons/transcation.svg"
                                                     alt="img" class="me-1" />
                                                 Transaction</a>
@@ -223,6 +228,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="calculator" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -235,27 +241,33 @@
                 <div class="modal-body">
                     <div class="calculator-set">
                         <div class="calculatortotal">
-                            <h4>0</h4>
+                            <h4></h4>
                         </div>
                         <ul>
+
                             <li>
                                 <a href="javascript:void(0);" data-id="1" id="cal">*</a>
                                 <a href="javascript:void(0);" data-id="1" id="cal">/</a>
+
                             </li>
                             <li>
                                 <a href="javascript:void(0);" data-id="1" id="cal">-</a>
+
+
                             </li>
                             <li>
                                 <a href="javascript:void(0);" data-id="1" id="cal">+</a>
                             </li>
+
                             <li>
                                 <a href="javascript:void(0);" data-id="1" id="cal">1</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);" data-id="1" id="cal">2</a>
                             </li>
+
                             <li>
-                                <a href="javascript:void(0);" data-id="1" id="cal">3</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">+</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);" data-id="1" id="cal">4</a>
@@ -276,14 +288,23 @@
                                 <a href="javascript:void(0);" data-id="1" id="cal">9</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" class="btn btn-closes"><i class="fas fa-arrow-circle-left"></i></a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">00</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);">0</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" class="btn btn-reverse"><img
-                                        src="<?=base_url()?>/tools/admin/assets/img/icons/reverse.svg" alt="img" /></a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">.</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="clear-calculator-total bg-warning">CLEAR</a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0);" class="delete-single-value bg-danger">x</a>
+                            </li>
+                            <li>
+                                <a class="equal-total bg-success"> = </a>
                             </li>
                         </ul>
                     </div>
@@ -303,14 +324,19 @@
                 <div class="modal-body">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Ready Made</button>
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Ready Made</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pre Order</button>
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Pre Order</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -323,9 +349,10 @@
                                     </thead>
                                     <tbody id="transhis"></tbody>
                                 </table>
-                            </div>         
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -340,7 +367,7 @@
                                     </thead>
                                     <tbody id="transhispreord"></tbody>
                                 </table>
-                            </div>       
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -359,9 +386,10 @@
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-body">
-                            <center><img src="<?=base_url()?>/tools/uploads/reference.jpg" alt="img" class="me-1" style="height:550px;" /></center>
+                            <center><img src="<?=base_url()?>/tools/uploads/reference.jpg" alt="img" class="me-1"
+                                    style="height:550px;" /></center>
                         </div>
-                    </div>       
+                    </div>
                 </div>
             </div>
         </div>
@@ -432,7 +460,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="modal fade" id="preorder" tabindex="-1" aria-labelledby="preorder" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -460,7 +488,8 @@
                             <div class="col-lg-12 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label>Shop Address</label>
-                                    <input type="text" id="shop_address" name="shop_address" readonly value="General Tinio Nueva Ecija"/>
+                                    <input type="text" id="shop_address" name="shop_address" readonly
+                                        value="General Tinio Nueva Ecija" />
                                 </div>
                             </div>
                         </div>
@@ -468,7 +497,7 @@
                             <div class="col-lg-12 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label>Delivery Address</label>
-                                    <input type="text" id="delivery_address" name="delivery_address"/>
+                                    <input type="text" id="delivery_address" name="delivery_address" />
                                 </div>
                             </div>
                         </div>
@@ -476,13 +505,15 @@
                             <div class="col-lg-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label>Date</label>
-                                    <input class="form-control" type="date" id="date_pickup_or_deliver" name="date_pickup_or_deliver" />
+                                    <input class="form-control" type="date" id="date_pickup_or_deliver"
+                                        name="date_pickup_or_deliver" />
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label>Time</label>
-                                    <input class="form-control" type="time" id="time_pickup_or_deliver" name="time_pickup_or_deliver" />
+                                    <input class="form-control" type="time" id="time_pickup_or_deliver"
+                                        name="time_pickup_or_deliver" />
                                 </div>
                             </div>
                         </div>
@@ -495,7 +526,7 @@
         </div>
     </div>
 
-        <div class="modal fade" id="upstat" tabindex="-1" aria-labelledby="upstat" aria-hidden="true">
+    <div class="modal fade" id="upstat" tabindex="-1" aria-labelledby="upstat" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -533,72 +564,73 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div id="printR">
-                <div class="modal-header bg-white">
-                    <img style="height:100px; width: 100px; "
-                        src="http://localhost/ocake/tools/uploads/ocake_logo2.gif/">
-                    <div class="row " style="width: 70%; margin: auto">
-                        <div class="col" style="padding-right: 70px;">
-                            <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">OCAKES
-                            </h2>
-                            <p class="m-0">Address: General Tinio Nueva Ecija </p>
-                            <p class="m-0">City: Papaya</p>
-                            <p class="m-0">Phone: 09261364720</p>
-                        </div>
-                        <div class="col">
-                            <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">INVOICE
-                            </h2>
-                            <p class="m-0">Date: <?php echo date("m/d/Y"); ?></p>
-                            <p class="m-0">Invoice #: <span id="inv"></span></p>
+                    <div class="modal-header bg-white">
+                        <img style="height:100px; width: 100px; "
+                            src="http://localhost/ocake/tools/uploads/ocake_logo2.gif/">
+                        <div class="row " style="width: 70%; margin: auto">
+                            <div class="col" style="padding-right: 70px;">
+                                <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">OCAKES
+                                </h2>
+                                <p class="m-0">Address: General Tinio Nueva Ecija </p>
+                                <p class="m-0">City: Papaya</p>
+                                <p class="m-0">Phone: 09261364720</p>
+                            </div>
+                            <div class="col">
+                                <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">
+                                    INVOICE
+                                </h2>
+                                <p class="m-0">Date: <?php echo date("m/d/Y"); ?></p>
+                                <p class="m-0">Invoice #: <span id="inv"></span></p>
+
+                            </div>
 
                         </div>
+
+                        <img style="height:100px; width: 100px; "
+                            src="http://localhost/ocake/tools/uploads/ocake_logo2.gif/">
+
 
                     </div>
+                    <div class="modal-body" id="receipt_modal">
 
-                    <img style="height:100px; width: 100px; "
-                        src="http://localhost/ocake/tools/uploads/ocake_logo2.gif/">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3>Bill To</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Name: <span id="cusname"></span></p>
 
-
-                </div>
-                <div class="modal-body" id="receipt_modal">
-
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Bill To</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p>Name: <span id="cusname"></span></p>
-
+                                    </div>
                                 </div>
                             </div>
+
+
                         </div>
+
+                        <table class="table table-bordered bg-white">
+
+                            <thead class="bg-danger-subtle">
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th>Line Total</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="prod_pur"></tbody>
+                            <br>
+
+
+                        </table>
+
+                        <br>
+                        <h3 class="text-center ">Thank You For Your Purchase!</h3>
 
 
                     </div>
-
-                    <table class="table table-bordered bg-white">
-
-                        <thead class="bg-danger-subtle">
-                            <tr>
-                                <th>Description</th>
-                                <th>Quantity</th>
-                                <th>Unit Price</th>
-                                <th>Line Total</th>
-                            </tr>
-                        </thead>
-
-                        <tbody id="prod_pur"></tbody>
-                        <br>
-
-
-                    </table>
-
-                    <br>
-                    <h3 class="text-center ">Thank You For Your Purchase!</h3>
-
-
-                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" id="printthis">Print</button>
@@ -640,7 +672,7 @@ $(document).ready(function() {
 
     $("#paymentmethod").prop('disabled', true);
 
-    $("#gcashpic").click(function(){
+    $("#gcashpic").click(function() {
         $("#gcash").modal('show');
     })
 
@@ -649,11 +681,11 @@ $(document).ready(function() {
     $("#shop_add").hide();
     $("#deliver_add").hide();
 
-    $("#modeoftransaction").change(function(){
-        if($("#modeoftransaction").val()==="1"){
+    $("#modeoftransaction").change(function() {
+        if ($("#modeoftransaction").val() === "1") {
             $("#deliver_add").hide();
             $("#shop_add").show();
-        }else if($("#modeoftransaction").val()==="2"){
+        } else if ($("#modeoftransaction").val() === "2") {
             $("#shop_add").hide();
             $("#deliver_add").show();
         }
@@ -664,12 +696,12 @@ $(document).ready(function() {
 
     initTableInvoice();
 
-    $("#proc").click(function(){
+    $("#proc").click(function() {
         $("#preorder").modal('hide');
     });
 
 
-    $("#printthis").click(function(){
+    $("#printthis").click(function() {
         const printContents = document.getElementById("printR").innerHTML;
         const originalContents = document.body.innerHTML;
         document.body.innerHTML = printContents;
@@ -678,37 +710,41 @@ $(document).ready(function() {
     });
 
     window.addEventListener("afterprint", (event) => {
-    window.location.reload();
-  });
+        window.location.reload();
+    });
 
 
-  let attriTrans = ["inv_num","fullName","totalAmount","status","created_at","act"];
+    let attriTrans = ["inv_num", "fullName", "totalAmount", "status", "created_at", "act"];
 
-  $("#history").click(function(){
-    initTransHistory();
-  });
+    $("#history").click(function() {
+        initTransHistory();
+    });
 
-  function initTransHistory(){
-    let tablename = $("#transhis").empty();
-    $.ajax({
+    function initTransHistory() {
+        let tablename = $("#transhis").empty();
+        $.ajax({
             url: '<?= base_url('admin/pos/invoicebillposhistory') ?>',
             method: 'get',
-            data:{isPickup:0},
+            data: {
+                isPickup: 0
+            },
             dataType: 'json',
             success: function(response) {
                 response.forEach((history) => {
                     let tabrow = $("<tr>");
                     const attriMap = new Map(Object.entries(history));
                     attriTrans.forEach((attri, i) => {
-                        if(attri==="fullName"){
+                        if (attri === "fullName") {
                             $("<td>", {
                                 class: "text-wrap",
-                                html: attriMap.get("customer_fname") +" "+attriMap.get("customer_mname")+" "+attriMap.get("customer_lname"),
+                                html: attriMap.get("customer_fname") + " " +
+                                    attriMap.get("customer_mname") + " " +
+                                    attriMap.get("customer_lname"),
                             }).appendTo(tabrow);
-                        }else if(attri!=="status" && attri!=="act"){
+                        } else if (attri !== "status" && attri !== "act") {
                             $("<td>", {
-                            class: "text-wrap",
-                            html: attriMap.get(attri),
+                                class: "text-wrap",
+                                html: attriMap.get(attri),
                             }).appendTo(tabrow);
                         }
                         tablename.append(tabrow);
@@ -716,17 +752,20 @@ $(document).ready(function() {
                 });
             }
         });
-  }
+    }
 
-  $("#pills-profile-tab").click(function(){
-    initTransHistories();
-  })
-  function initTransHistories(){
-    let tablename = $("#transhispreord").empty();
-    $.ajax({
+    $("#pills-profile-tab").click(function() {
+        initTransHistories();
+    })
+
+    function initTransHistories() {
+        let tablename = $("#transhispreord").empty();
+        $.ajax({
             url: '<?= base_url('admin/pos/invoicebillposhistory') ?>',
             method: 'get',
-            data:{isPickup:1},
+            data: {
+                isPickup: 1
+            },
             dataType: 'json',
             success: function(response) {
 
@@ -734,42 +773,50 @@ $(document).ready(function() {
                     let tabrow = $("<tr>");
                     const attriMap = new Map(Object.entries(history));
                     attriTrans.forEach((attri, i) => {
-                        if(attri==="fullName"){
+                        if (attri === "fullName") {
                             $("<td>", {
                                 class: "text-wrap",
-                                html: attriMap.get("customer_fname") +" "+attriMap.get("customer_mname")+" "+attriMap.get("customer_lname"),
+                                html: attriMap.get("customer_fname") + " " +
+                                    attriMap.get("customer_mname") + " " +
+                                    attriMap.get("customer_lname"),
                             }).appendTo(tabrow);
-                        }else if(attri==="status"){
+                        } else if (attri === "status") {
 
                             let tds = $("<td>", {
                                 class: "text-wrap",
                             });
 
-                            if(attriMap.get("status")==="1"){
-                                
-                            tds.append('<span class="badge rounded-pill bg-success">Done</span>');
+                            if (attriMap.get("status") === "1") {
 
-                            tds.appendTo(tabrow);
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-success">Done</span>'
+                                );
 
-                            }else if(attriMap.get("status")==="2"){
-    
-                                tds.append('<span class="badge rounded-pill bg-warning">Pending / OnProcess</span>');
+                                tds.appendTo(tabrow);
+
+                            } else if (attriMap.get("status") === "2") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-warning">Pending / OnProcess</span>'
+                                );
 
                                 tds.appendTo(tabrow);
 
                             }
 
-                        }else if(attri==="act"){
+                        } else if (attri === "act") {
                             let actbtn = $("<td>", {
                                 class: "text-wrap",
                             });
-                            actbtn.append('<button type="button" class="btn btn-primary btn-sm" id="updateStatusBtn" data-id="'+history.pos_id+'"><i class="fa fa-pencil"></i></button>');
+                            actbtn.append(
+                                '<button type="button" class="btn btn-primary btn-sm" id="updateStatusBtn" data-id="' +
+                                history.pos_id +
+                                '"><i class="fa fa-pencil"></i></button>');
                             actbtn.appendTo(tabrow);
-                        }
-                        else{
+                        } else {
                             $("<td>", {
-                            class: "text-wrap",
-                            html: attriMap.get(attri),
+                                class: "text-wrap",
+                                html: attriMap.get(attri),
                             }).appendTo(tabrow);
                         }
                         tablename.append(tabrow);
@@ -777,33 +824,38 @@ $(document).ready(function() {
                 });
             }
         });
-  }
+    }
 
 
-  $("body").on("click","#updateStatusBtn", (e) =>{
-    $("#transid").val($(e.currentTarget).data("id"));
-    $("#upstat").modal('show');
-  });
-
-  $("#upstatus").click(function(){
-    $.ajax({
-        url: '<?= base_url('admin/pos/upstatus') ?>',
-        method: 'post',
-        data:{pos_id: parseInt($("#transid").val()),status: parseInt($("#transstat").val())},
-        dataType: 'json',
-        success: function(response) {
-            initTransHistories();
-            $("#upstat").modal('hide');
-        }
+    $("body").on("click", "#updateStatusBtn", (e) => {
+        $("#transid").val($(e.currentTarget).data("id"));
+        $("#upstat").modal('show');
     });
-  });
+
+    $("#upstatus").click(function() {
+        $.ajax({
+            url: '<?= base_url('admin/pos/upstatus') ?>',
+            method: 'post',
+            data: {
+                pos_id: parseInt($("#transid").val()),
+                status: parseInt($("#transstat").val())
+            },
+            dataType: 'json',
+            success: function(response) {
+                initTransHistories();
+                $("#upstat").modal('hide');
+            }
+        });
+    });
 
 
     function initProductContainer() {
         $.ajax({
             url: '<?= base_url('admin/pos/products-list') ?>',
             method: 'get',
-            data:{availability:$("#product_availability").val()},
+            data: {
+                availability: $("#product_availability").val()
+            },
             dataType: 'json',
             success: function(response) {
                 let product_container = $("#product_container");
@@ -838,13 +890,13 @@ $(document).ready(function() {
 
     $("#preorderprod").hide();
 
-    $("#product_availability").change(function(){
+    $("#product_availability").change(function() {
         $("#product_container").empty();
         initProductContainer();
 
-        if($("#product_availability").val()==="2"){
+        if ($("#product_availability").val() === "2") {
             $("#preorderprod").show();
-        }else if($("#product_availability").val()==="1"){
+        } else if ($("#product_availability").val() === "1") {
             $("#preorderprod").hide();
         }
     })
@@ -873,7 +925,7 @@ $(document).ready(function() {
                     });
                     subtotal += parseInt(product.totalAmount);
 
-                    if(product.availability==="Pre Order"){
+                    if (product.availability === "Pre Order") {
                         availabilitypreord = 1;
                     }
                     product_container.append('<ul class="product-lists"><li>' +
@@ -897,23 +949,24 @@ $(document).ready(function() {
                         '<li>' + product.quantity + '</li>' +
                         '<li>' + product.totalAmount + '</li>' +
                         '<li>' +
-                        '<a class="confirm-text" data-id="'+product.invid+'" id="delete-invoice">' +
+                        '<a class="confirm-text" data-id="' + product.invid +
+                        '" id="delete-invoice">' +
                         '<img src="<?=base_url()?>/tools/admin/assets/img/icons/delete-2.svg" alt="img" /></a>' +
                         '</li></ul>');
                     $("#sub-total").html(subtotal);
                     $("#subtotals").val(subtotal);
 
-                    if(availabilitypreord===1){
+                    if (availabilitypreord === 1) {
                         $("#preorderprod").show();
-                    }else{
+                    } else {
                         $("#preorderprod").hide();
                     }
 
                 });
-                
+
                 $("#sub-total").html(subtotal);
                 $("#subtotals").val(subtotal);
-                if(modelContainer.length!=0){
+                if (modelContainer.length != 0) {
                     $('#paymentmethod').prop('disabled', false);
                 }
             }
@@ -925,34 +978,35 @@ $(document).ready(function() {
         addToCart($(e.currentTarget).data("id"))
     );
 
-    $("body").on("click","#delete-invoice",(e)=>{
+    $("body").on("click", "#delete-invoice", (e) => {
         Swal.fire({
-        title: 'Are you sure you want to remove this product on your cart ?',
-        showCancelButton: true,
-        confirmButtonText: 'OK',
+            title: 'Are you sure you want to remove this product on your cart ?',
+            showCancelButton: true,
+            confirmButtonText: 'OK',
         }).then((result) => {
-        if (result.isConfirmed) {
-            $.ajax({
-                url: '<?= base_url('admin/pos/deleteinvoice') ?>',
-                method: 'post',
-                data: {invid:$(e.currentTarget).data("id")},
-                dataType: 'json',
-                success: function(response) {
-                    initTableInvoice();
-                }
-            });
-        } else {
-            Swal.fire({
-            position: 'center',
-            icon: 'info',
-            title: 'Changes are not saved',
-            showConfirmButton: false,
-            timer: 1000
-            })
-        }
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: '<?= base_url('admin/pos/deleteinvoice') ?>',
+                    method: 'post',
+                    data: {
+                        invid: $(e.currentTarget).data("id")
+                    },
+                    dataType: 'json',
+                    success: function(response) {
+                        initTableInvoice();
+                    }
+                });
+            } else {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'info',
+                    title: 'Changes are not saved',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
+            }
         });
-    }
-    )
+    })
 
     function addToCart(product_id) {
         var invoicenum = $("#invoiceNumberId").val();
@@ -1054,103 +1108,130 @@ $(document).ready(function() {
     }
 
     $("#paymentmethod").click(async function() {
-        const { value: amountPay } = await Swal.fire({
+        const {
+            value: amountPay
+        } = await Swal.fire({
             title: "Input Amount to Pay",
             input: "text",
             inputLabel: "Payment",
             inputPlaceholder: "Amount",
         });
 
-    if (amountPay >= parseFloat($("#subtotals").val())) {
-      let change = amountPay - parseFloat($("#subtotals").val());
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Transaction Completed",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      modelContainer.forEach((prod_id) => {
-        let formdatas = {product_id:prod_id.product_ids,stock: prod_id.stock};
-        $.ajax({
-              url: '<?= base_url('admin/pos/updateProductStockss') ?>',
-              method: 'post',
-              data: formdatas,
-              dataType: 'json',
-              success: function(response) {
+        if (amountPay >= parseFloat($("#subtotals").val())) {
+            let change = amountPay - parseFloat($("#subtotals").val());
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Transaction Completed",
+                showConfirmButton: false,
+                timer: 1500,
+            });
+            modelContainer.forEach((prod_id) => {
+                let formdatas = {
+                    product_id: prod_id.product_ids,
+                    stock: prod_id.stock
+                };
+                $.ajax({
+                    url: '<?= base_url('admin/pos/updateProductStockss') ?>',
+                    method: 'post',
+                    data: formdatas,
+                    dataType: 'json',
+                    success: function(response) {
 
+                    }
+                });
+            });
+
+            let formdata;
+
+
+            var add = "";
+            if ($("#modeoftransaction").val() === "1") {
+                add = $("#shop_address").val();
+            } else if ($("#modeoftransaction").val() === "2") {
+                add = $("#delivery_address").val();
+            }
+
+
+            if ($("#product_availability").val() === "1" || availabilitypreord == 0) {
+                formdata = {
+                    inv_num: $("#invoiceNumberId").val(),
+                    customer_id: $("#customer_id").val(),
+                    totalAmount: parseFloat($("#subtotals").val()),
+                    payable: parseFloat(amountPay),
+                    change: parseFloat(change),
+                    remarks: $("#remarks").val(),
+                    isPreOrder: "0"
+                };
+            } else if ($("#product_availability").val() === "2" || availabilitypreord == 1) {
+                formdata = {
+                    inv_num: $("#invoiceNumberId").val(),
+                    customer_id: $("#customer_id").val(),
+                    totalAmount: parseFloat($("#subtotals").val()),
+                    payable: parseFloat(amountPay),
+                    change: parseFloat(change),
+                    remarks: $("#remarks").val(),
+                    pre_order_address: add,
+                    isPickup: parseInt($("#modeoftransaction").val()),
+                    time_pickup_or_deliver: $("#time_pickup_or_deliver").val(),
+                    date_pickup_or_deliver: $("#date_pickup_or_deliver").val(),
+                    isPreOrder: "1"
+                };
+            }
+
+            $.ajax({
+                url: '<?= base_url('admin/pos/store') ?>',
+                method: 'post',
+                data: formdata,
+                dataType: 'json',
+                success: function(response) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your work has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(
+                        $("#cashpay").html(amountPay),
+                        $("#cashchange").html(change),
+                        setTimeout(() => {
+                            // window.location.reload();
+                            getrecieptdata();
+                        }, 3000),
+                    );
                 }
             });
-        });
-
-      let formdata;
-
-
-      var add = "";
-      if ($("#modeoftransaction").val()==="1"){
-        add = $("#shop_address").val();
-      }else if ($("#modeoftransaction").val()==="2"){
-        add = $("#delivery_address").val();
-      }
-
-
-      if($("#product_availability").val()==="1" || availabilitypreord == 0){
-        formdata = {inv_num:$("#invoiceNumberId").val(),customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),isPreOrder:"0"};
-      }else if($("#product_availability").val()==="2"  || availabilitypreord == 1){
-        formdata = {inv_num:$("#invoiceNumberId").val(),customer_id:$("#customer_id").val(),totalAmount: parseFloat($("#subtotals").val()), payable: parseFloat(amountPay), change: parseFloat(change), remarks:$("#remarks").val(),pre_order_address:add,isPickup:parseInt($("#modeoftransaction").val()),time_pickup_or_deliver:$("#time_pickup_or_deliver").val(),date_pickup_or_deliver:$("#date_pickup_or_deliver").val(),isPreOrder:"1"};
-      }
-
-        $.ajax({
-            url: '<?= base_url('admin/pos/store') ?>',
-            method: 'post',
-            data: formdata,
-            dataType: 'json',
-            success: function(response) {
-              Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Your work has been saved',
+        } else {
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "Kulang Bayad Mo!",
                 showConfirmButton: false,
-                timer: 1500
-              }).then(
-                $("#cashpay").html(amountPay),
-                $("#cashchange").html(change),
-                setTimeout(() => { 
-                // window.location.reload();
-                getrecieptdata();
-                }, 3000),
-              );
-            }
-          });
-    } else {
-      Swal.fire({
-        position: "center",
-        icon: "warning",
-        title: "Kulang Bayad Mo!",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      setTimeout(() => {
-        $("#paymentmethod").click();
-      }, 1000);
-    }
-  });
+                timer: 1500,
+            });
+            setTimeout(() => {
+                $("#paymentmethod").click();
+            }, 1000);
+        }
+    });
 
-  let recieptAttr = [
-    "product_name",
-    "quantity",
-    "price",
-    "totalAmount",
-    "subtotal"
-  ];
+    let recieptAttr = [
+        "product_name",
+        "quantity",
+        "price",
+        "totalAmount",
+        "subtotal"
+    ];
 
-  function getrecieptdata(){
-    let prod_pur_body = $("#prod_pur").empty();
-    var totalamount = 0;
-    $.ajax({
+    function getrecieptdata() {
+        let prod_pur_body = $("#prod_pur").empty();
+        var totalamount = 0;
+        $.ajax({
             url: '<?= base_url('admin/pos/invoicebill') ?>',
             method: 'post',
-            data: {invoice_number:$("#invoiceNumberId").val()},
+            data: {
+                invoice_number: $("#invoiceNumberId").val()
+            },
             dataType: 'json',
             success: function(response) {
                 $("#inv").html(response[0].invoice_number);
@@ -1159,13 +1240,13 @@ $(document).ready(function() {
                     const attriMap = new Map(Object.entries(purchaseval));
                     recieptAttr.forEach((attri, i) => {
                         if (attri != "subtotal") {
-                        $("<td>", {
-                            class: "text-wrap",
-                            html: attriMap.get(attri),
-                        }).appendTo(tabrow);
-                        }else if (attri == "subtotal") {
-                            totalamount+=parseFloat(attriMap.get("totalAmount"));
-                        } 
+                            $("<td>", {
+                                class: "text-wrap",
+                                html: attriMap.get(attri),
+                            }).appendTo(tabrow);
+                        } else if (attri == "subtotal") {
+                            totalamount += parseFloat(attriMap.get("totalAmount"));
+                        }
                         prod_pur_body.append(tabrow);
                     });
                     // $("<td>", {
@@ -1183,10 +1264,10 @@ $(document).ready(function() {
                 var payable = 0;
                 var change = 0;
                 tabrow.append(
-                '<td colspan="3" >SubTotal:</td>'
+                    '<td colspan="3" >SubTotal:</td>'
                 );
                 tabrow.append(
-                '<td >' + totalamount + "</td>"
+                    '<td >' + totalamount + "</td>"
                 );
                 prod_pur_body.append(tabrow);
 
@@ -1194,17 +1275,21 @@ $(document).ready(function() {
                 $.ajax({
                     url: '<?= base_url('admin/pos/invoicebillpos') ?>',
                     method: 'post',
-                    data: {invoice_number:$("#invoiceNumberId").val()},
+                    data: {
+                        invoice_number: $("#invoiceNumberId").val()
+                    },
                     dataType: 'json',
                     success: function(responses) {
 
-                        $("#cusname").html(responses[0].customer_fname +" "+responses[0].customer_mname+ " " +responses[0].customer_lname);
+                        $("#cusname").html(responses[0].customer_fname + " " +
+                            responses[0].customer_mname + " " + responses[0]
+                            .customer_lname);
                         let tabrowss = $("<tr>");
                         tabrowss.append(
-                        '<td colspan="3" >Payable:</td>'
+                            '<td colspan="3" >Payable:</td>'
                         );
                         tabrowss.append(
-                        '<td >' + responses[0].payable + "</td>"
+                            '<td >' + responses[0].payable + "</td>"
                         );
 
                         prod_pur_body.append(tabrowss);
@@ -1212,12 +1297,12 @@ $(document).ready(function() {
                         let tabrowsss = $("<tr>");
 
                         tabrowsss.append(
-                        '<td colspan="3" >Change:</td>'
+                            '<td colspan="3" >Change:</td>'
                         );
                         tabrowsss.append(
-                        '<td >' + responses[0].change + "</td>"
+                            '<td >' + responses[0].change + "</td>"
                         );
-                        
+
                         prod_pur_body.append(tabrowsss);
                     }
                 });
@@ -1225,11 +1310,11 @@ $(document).ready(function() {
                 $("#printReciept").modal('show');
             }
         });
-  }
+    }
 
-    $("#addCustomer").click(function(){
-      let formData = $("#formMain").serializeArray();
-      $.ajax({
+    $("#addCustomer").click(function() {
+        let formData = $("#formMain").serializeArray();
+        $.ajax({
             url: '<?= base_url('customers/save') ?>',
             method: 'post',
             data: formData,
@@ -1252,5 +1337,43 @@ $(document).ready(function() {
             }
         });
     });
+
+
+    //CALCULATOR script
+
+    const display = document.querySelector(".calculatortotal h4");
+
+
+    const buttons = document.querySelectorAll(".calculator-set ul li a");
+
+
+    let total = 0;
+
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const value = button.innerText;
+
+
+            if (!isNaN(value) || value === ".") {
+                display.innerText += value;
+            } else if (value === "+" || value === "-" || value === "*" || value === "/") {
+                display.innerText += ` ${value} `;
+            } else if (value === "CLEAR") {
+                display.innerText = "";
+            } else if (value === "x") {
+                display.innerText = display.innerText.slice(0, -1);
+            } else if (value === "=") {
+                try {
+                    total = eval(display.innerText);
+                    display.innerText = total;
+                } catch (error) {
+                    display.innerText = "Error";
+                }
+            }
+        });
     });
+
+
+});
 </script>
