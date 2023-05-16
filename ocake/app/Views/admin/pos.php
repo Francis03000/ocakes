@@ -239,31 +239,41 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="javascript:void(0);">1</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">*</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">/</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">2</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">-</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">3</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">+</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">4</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">1</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">5</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">2</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">6</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">3</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">7</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">4</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">8</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">5</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">9</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">6</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-id="1" id="cal">7</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-id="1" id="cal">8</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-id="1" id="cal">9</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);" class="btn btn-closes"><i class="fas fa-arrow-circle-left"></i></a>
@@ -625,6 +635,8 @@
 
 <script>
 $(document).ready(function() {
+
+
 
     $("#paymentmethod").prop('disabled', true);
 
