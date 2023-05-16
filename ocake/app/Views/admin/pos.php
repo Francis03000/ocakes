@@ -207,7 +207,7 @@
                                 <div class="btn-pos">
                                     <ul>
                                         <li>
-                                            <a class="btn" data-bs-toggle="modal" data-bs-target="#calculator"><img
+                                            <a class="btn" data-bs-toggle="modal" id="calcuT" ><img
                                                     src="<?=base_url()?>/tools/admin/assets/img/icons/transcation.svg"
                                                     alt="img" class="me-1" />
                                                 Calculator</a>
@@ -229,11 +229,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="calculator" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="calculator" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Define Quantity</h5>
+                    <h5 class="modal-title">Calculator</h5>
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -241,7 +241,7 @@
                 <div class="modal-body">
                     <div class="calculator-set">
                         <div class="calculatortotal">
-                            <h4></h4>
+                            <h4>0</h4>
                         </div>
                         <ul>
 
@@ -267,7 +267,7 @@
                             </li>
 
                             <li>
-                                <a href="javascript:void(0);" data-id="1" id="cal">+</a>
+                                <a href="javascript:void(0);" data-id="1" id="cal">3</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);" data-id="1" id="cal">4</a>
@@ -1339,8 +1339,9 @@ $(document).ready(function() {
         });
     });
 
-
-    //CALCULATOR script
+    $("#calcuT").click(function(){
+        $("#calculator").modal('show');
+        //CALCULATOR script
 
     const display = document.querySelector(".calculatortotal h4");
 
@@ -1355,15 +1356,21 @@ $(document).ready(function() {
         button.addEventListener("click", () => {
             const value = button.innerText;
 
-
             if (!isNaN(value) || value === ".") {
                 display.innerText += value;
             } else if (value === "+" || value === "-" || value === "*" || value === "/") {
-                display.innerText += ` ${value} `;
+                display.innerText +=  value ;
             } else if (value === "CLEAR") {
+
                 display.innerText = "";
+                if (display.innerText === "") {
+                    display.innerText = "0";
+                }
             } else if (value === "x") {
                 display.innerText = display.innerText.slice(0, -1);
+                if (display.innerText === "") {
+                    display.innerText = "0";
+                }
             } else if (value === "=") {
                 try {
                     total = eval(display.innerText);
@@ -1374,6 +1381,11 @@ $(document).ready(function() {
             }
         });
     });
+    });
+
+    
+
+    
 
 
 });

@@ -163,3 +163,36 @@ Stack trace:
 #10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
 #12 {main}
+CRITICAL - 2023-05-17 03:09:12 --> Undefined variable: finalcode
+in APPPATH\Views\admin\pos.php on line 97.
+ 1 APPPATH\Views\admin\pos.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: finalcode', 'APPPATH\\Views\\admin\\pos.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 5 APPPATH\Controllers\PosController.php(142): view('admin/pos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 03:10:07 --> Undefined variable: finalcode
+in APPPATH\Views\admin\pos.php on line 97.
+ 1 APPPATH\Views\admin\pos.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: finalcode', 'APPPATH\\Views\\admin\\pos.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 5 APPPATH\Controllers\PosController.php(142): view('admin/pos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 03:11:18 --> Undefined index: finalcode
+in APPPATH\Views\admin\pos.php on line 97.
+ 1 APPPATH\Views\admin\pos.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: finalcode', 'APPPATH\\Views\\admin\\pos.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 5 APPPATH\Controllers\PosController.php(142): view('admin/pos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
