@@ -48,7 +48,7 @@
                                         <?php foreach($status as $datum){?>
                                                 <div class="w-100 text-center py-1 px-2"><span class="text-medium">Shipped Via:</span> UPS Ground</div>
                                                 <div class="w-100 text-center py-1 px-2"><span class="text-medium">Status:</span><?php echo $data->stat;?></div>
-                                                <div class="w-100 text-center py-1 px-2"><span class="text-medium">Expected Date:</span><?php echo $datum->date;?></div>
+                                                <div class="w-100 text-center py-1 px-2"><span class="text-medium">Expected Date:</span><?php echo $datum->date;?> </span><?php echo $datum->time;?></div>
                                         <?php }?>  
                                     </div>
                                     <div class="card-body">
@@ -172,7 +172,7 @@
                                         <div>
                                         <label for="Payment Method">Payment Method: <?php echo $datum->payment_method?></label><br>
                                         <label for="Delivery Method">Delivery Method: <?php echo $datum->delivery_method?></label><br>
-                                        <label for="Scheduled Delivery Date">Scheduled Delivery Date: <?php echo $datum->date?></label><br>
+                                        <label for="Scheduled Delivery Date">Scheduled Delivery Date: <?php echo $datum->date?> </span><?php echo $datum->time;?></label><br>
                                         </div>
                                         <?//php }?>
                                     </div>

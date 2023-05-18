@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 class Biller_model extends Model{
     protected $table = 'biller_details';
     //protected $primaryKey = 'biller_id';
-    protected $allowedFields = ['user_id', 'firstname', 'lastname', 'email', 'mobile','municipality', 'barangay', 'street', 'delivery_method', 'date', 'payment_method'];
+    protected $allowedFields = ['user_id', 'firstname', 'lastname', 'email', 'mobile','municipality', 'barangay', 'street', 'delivery_method', 'date','time', 'payment_method'];
 
     //---------- UPDATE BILLER'S DATA ----------//  December 27,2022
     public function biller_update($data,$id){

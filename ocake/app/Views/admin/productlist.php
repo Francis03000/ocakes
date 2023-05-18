@@ -115,13 +115,13 @@
                                                     name="occasion">
                                                     <option disabled selected>Select</option>
                                                     <!-- <option>Birthday</option>
-                                        <option>Christening</option>
-                                        <option>Wedding</a></li>
-                                        <option>Graduation</option>
-                                        <option>Valentine</option>
-                                        <option>Halloween</option>
-                                        <option>Christmas</option>
-                                        <option>New Year</option> -->
+                                                    <option>Christening</option>
+                                                    <option>Wedding</a></li>
+                                                    <option>Graduation</option>
+                                                    <option>Valentine</option>
+                                                    <option>Halloween</option>
+                                                    <option>Christmas</option>
+                                                    <option>New Year</option> -->
                                                     <?php foreach($category as $data){?>
                                                     <option
                                                         value="<?php echo $data->category_name;?>,<?php echo $data->category_id;?>">
@@ -291,7 +291,7 @@
                                 </thead>
                                 <tbody>
                                     <?php $num = 1;
-                      foreach($product as $data){?>
+                                         foreach($product as $data){?>
                                     <tr>
                                         <td>
                                             <label class="checkboxs">
@@ -314,18 +314,18 @@
                                         <td>
                                             <div style="text-align:center">
                                                 <input class="" type="button" style="justify-content:center; border-radius:5px; color:#ffffff;
-                                    <?php if($data->status=="Available"){
-                                        echo "background-color:#25b831; border-color:#25b831";
-                                    }elseif($data->status=="Unavailable"){
-                                        echo "background-color:#ed2f2f; border-color:#ed2f2f";
-                                    } ?>
-                                        " value="<?=$data->status;?>">
+                                                    <?php if($data->status=="Available"){
+                                                        echo "background-color:#25b831; border-color:#25b831";
+                                                    }elseif($data->status=="Unavailable"){
+                                                        echo "background-color:#ed2f2f; border-color:#ed2f2f";
+                                                    } ?>
+                                                        " value="<?=$data->status;?>">
                                             </div>
                                         </td>
                                         <td>
                                             <!-- <a class="me-3" type="button">
-                            <img src="<?//=base_url()?>/tools/admin/assets/img/icons/eye.svg" alt="img" data-toggle="modal" data-target="#viewModal">
-                            </a> -->
+                                            <img src="<?//=base_url()?>/tools/admin/assets/img/icons/eye.svg" alt="img" data-toggle="modal" data-target="#viewModal">
+                                            </a> -->
                                             <a class="me-3" type="button">
                                                 <img src="<?=base_url()?>/tools/admin/assets/img/icons/edit.svg"
                                                     alt="img" data-toggle="modal"
@@ -356,20 +356,24 @@
                                                                 method="post" accept-charset="utf-8"
                                                                 enctype="multipart/form-data">
                                                                 <?php if(session('success')){ echo session('success');}else{ echo session('error');}?>
+                                                                
                                                                 <div class="row">
                                                                     <input type="hidden" name="prod_id"
                                                                         value="<?php echo $data->id?>">
                                                                     <div class="col-lg-6 col-12">
                                                                         <label>Category</label>
-                                                                        <select class="select" onchange="myFunction()"
-                                                                            name="occasion">
-                                                                            <option selected>
-                                                                                <?php echo $data->occasion?></option>
-                                                                            <?php foreach($category as $c){?>
-                                                                            <option><?php echo $c->category_name;?>
+                                                                        <select class="select" id="<?php echo $data->id?>" onchange="myFunction<?php echo $data->id?>()" 
+                                                                            >
+                                                                            <option selected><?php echo $data->occasion?></option>
+                                                                                <?php foreach($category as $c){?>
+                                                                            <option value="<?php echo $c->category_name;?>,<?php echo $c->category_id;?>">
+                                                                                <?php echo $c->category_name;?>
                                                                             </option>
-                                                                            <?php }?>
+                                                                                <?php }?>
                                                                         </select>
+
+                                                                        <input type="hidden" value="" id="occasion<?php echo $data->id?>" name="occasion">
+                                                                        <input type="hidden" value="" id="cat_id<?php echo $data->id?>" name="categ_id">
 
                                                                         <label>Flavor</label>
                                                                         <select class="select" name="flavor">
@@ -451,7 +455,7 @@
                                                                             id="cat_id" name="cat_id">
                                                                     </div>
                                                                 </div>
-
+                                                                
                                                                 <div class="modal-footer" style="justify-content:right">
                                                                     <button type="button"
                                                                         class="btn btn-secondary btn-lg"
@@ -480,18 +484,21 @@
     <?php foreach($category as $data){?>
     <script>
     function myFunction() {
-        // var x = parseInt(document.getElementById("mySelect").value);
-        // document.getElementById("demo").innerHTML = '&#8369;'+ x;
-        // var y = parseInt(document.getElementById("dp").value);
-        // var z = x + y;
-        // document.getElementById("bal").innerHTML = '&#8369;'+ z;
-        // document.getElementById("payment").value = z;
-        // var y = parseInt(document.getElementById("dp").value);
-
-        var one = $('#mySelect').val().split(',')[0];
+       var one = $('#mySelect').val().split(',')[0];
         var two = parseInt($('#mySelect').val().split(',')[1]);
         document.getElementById("occasion").value = one;
         document.getElementById("cat_id").value = two;
+    }
+    </script>
+
+    <?php }?>
+    <?php foreach($product as $data){?>
+    <script>
+    function myFunction<?php echo $data->id?>() {
+       var one = $('#<?php echo $data->id?>').val().split(',')[0];
+        var two = parseInt($('#<?php echo $data->id?>').val().split(',')[1]);
+        document.getElementById("occasion<?php echo $data->id?>").value = one;
+        document.getElementById("cat_id<?php echo $data->id?>").value = two;
     }
     </script>
     <?php }?>

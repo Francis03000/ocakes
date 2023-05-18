@@ -164,9 +164,8 @@ class Product_model extends Model{
 }
 
   //---------- INSERT CUSTOMIZED DESIGN ----------//  November 29,2022
-  public function insertDesign($product_code,$user_id, $img, $message, $flavor, $price) {
+  public function insertDesign($user_id, $img, $message, $flavor, $price) {
     $data = [
-      'product_code' => $product_code,
       'image' => $img,
       'occasion' => 'Customized',
       'message' => $message,

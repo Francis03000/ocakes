@@ -505,6 +505,8 @@
                             <div class="col-lg-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label>Date</label>
+                                    <!-- <input type="date" class="form-control" id="datepicker"
+                                         name="date_pickup_or_deliver"> -->
                                     <input class="form-control" type="date" id="date_pickup_or_deliver"
                                         name="date_pickup_or_deliver" />
                                 </div>
@@ -594,7 +596,7 @@
                     <div class="modal-body" id="receipt_modal">
 
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="card">
                                     <div class="card-header">
                                         <h3>Bill To</h3>
@@ -1383,10 +1385,19 @@ $(document).ready(function() {
     });
     });
 
-    
-
-    
-
-
 });
 </script>
+
+<!-- <script>
+        let DateToday=new Date();
+        let month=DateToday.getMonth()+1;
+        let day=DateToday.getDate()+3;
+        let year=DateToday.getFullYear();
+        if(month<10)
+            month='0'+month.toString();
+        if(day<10)
+            day='0'+day.toString();
+        let Today=year+'-'+month+'-'+day;
+        let maxdate=year+1+'-'+month+'-'+day;
+        document.getElementById('datepicker').setAttribute("min",Today);
+</script> -->

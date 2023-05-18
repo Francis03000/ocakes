@@ -83,6 +83,76 @@
                             </li>
                             
                             <li>
+                                <h6 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">Shipping Address</h6>
+                                <section class="checkout-steps-form-content collapse" id="collapseFour"
+                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="single-form form-default">
+                                                <label>Delivery Method</label>
+                                                <div class="select-items">
+                                                    <select type="delivery_method" id="delivery_method" name="delivery_method" class="form-control" required>
+                                                        <option value="" disabled selected>select</option>
+                                                        <option value="Home Delivery">Home Delivery</option>
+                                                        <option value="Pickup on Demand Delivery">Pickup on Demand Delivery</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="single-form form-default">
+                                                <label>Municipality</label>
+                                                <div class="form-input form">
+                                                    <input type="text" placeholder="Municipality" name="municipality" value="Naujan" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="single-form form-default">
+                                                <label>Barangay</label>
+                                                <div class="select-items">
+                                                    <select id="mySelect" onchange="myFunction()" type="text" id="" name="" class="form-control" required>
+                                                        <!-- <?//php foreach($userData as $data){?>
+                                                            <option value="0"><?//php echo $data->barangay;?></option>
+                                                        <?//php }?> -->
+                                                        <option value="" disabled selected>select</option>
+                                                        <?php foreach($address as $data){?>
+                                                            <option value="<?php echo $data->barangay;?>,<?php echo $data->fee;?>"><?php echo $data->barangay;?></option>
+                                                        <?php }?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="single-form form-default">
+                                                <label>Street</label>
+                                                <div class="form-input form">
+                                                    <input type="text" placeholder="Street" name="street" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="single-form form-default">
+                                                <label>Delivery Date</label>
+                                                <div class="form-input form">
+                                                    <input type="date" id="datepicker" placeholder="Delivery/Pick-up Date" name="date" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="single-form form-default">
+                                                <label>Delivery Time</label>
+                                                <div class="form-input form">
+                                                    <input type="time" id="timepicker" placeholder="Delivery/Pick-up Time" name="time" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </li>
+
+                            <li>
                                 <h6 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapsefive"
                                     aria-expanded="false" aria-controls="collapsefive">Payment Info</h6>
                                 <section class="checkout-steps-form-content collapse" id="collapsefive"
@@ -134,16 +204,6 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="single-form form-default">
-                                                <label>Delivery Method</label>
-                                                <div class="select-items">
-                                                    <select type="delivery_method" id="delivery_method" name="delivery_method" class="form-control" required>
-                                                        <option value="" disabled selected>select</option>
-                                                        <option value="Home Delivery">Home Delivery</option>
-                                                        <option value="Pickup on Demand Delivery">Pickup on Demand Delivery</option>
-                                                    </select>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="single-form form-default">
@@ -199,56 +259,6 @@
                                                 </div>    -->
                                             </div>
                                         </div>
-                                    </div>
-                                </section>
-                            </li>
-
-                            <li>
-                                <h6 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                    aria-expanded="false" aria-controls="collapseFour">Shipping Address</h6>
-                                <section class="checkout-steps-form-content collapse" id="collapseFour"
-                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="single-form form-default">
-                                                <label>Municipality</label>
-                                                <div class="form-input form">
-                                                    <input type="text" placeholder="Municipality" name="municipality" value="Naujan" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="single-form form-default">
-                                                <label>Barangay</label>
-                                                <div class="select-items">
-                                                    <select id="mySelect" onchange="myFunction()" type="text" id="" name="" class="form-control" required>
-                                                        <!-- <?//php foreach($userData as $data){?>
-                                                            <option value="0"><?//php echo $data->barangay;?></option>
-                                                        <?//php }?> -->
-                                                        <option value="" disabled selected>select</option>
-                                                        <?php foreach($address as $data){?>
-                                                            <option value="<?php echo $data->barangay;?>,<?php echo $data->fee;?>"><?php echo $data->barangay;?></option>
-                                                        <?php }?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="single-form form-default">
-                                                <label>Street</label>
-                                                <div class="form-input form">
-                                                    <input type="text" placeholder="Street" name="street" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="single-form form-default">
-                                                <label>Delivery Date</label>
-                                                <div class="form-input form">
-                                                    <input type="date" id="datepicker" placeholder="Delivery/Pick-up Date" name="date" required>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <input type="hidden" value="<?php echo ($Total);?> " name="total_price">
                                         <input type="hidden" value="<?php echo ($Downpayment);?> " name="downpayment">
                                         <input type="hidden" id="payment" value="<?php echo ($Balance);?> " name="balance">
@@ -258,6 +268,7 @@
                                     </div>
                                 </section>
                             </li>
+
                         </ul>
                     </div>
                 </div>

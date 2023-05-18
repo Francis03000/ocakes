@@ -833,25 +833,6 @@ class User extends BaseController
     }
 
     //---------- UPDATE RECEIVED ORDER ----------//              December 21,2022 --> January 03,2023
-    public function _received($id){
-        $val = $this->validate([
-            'received_status' => 'required',         
-            ]);
-        
-        $model = new Checkout_model();
-        
-        if (!$val) {
-            $data['validation']  = $this->validator;
-            echo view('orders', $data);
-        }else{
-            $data = array(
-                'stat' => $this->request->getVar('received_status'),
-            ); 
-        $model->checkout_update($data,$id);
-            return redirect()->to(base_url('completedorder'));   
-       
-        }  
-    }
     public function order_received($id){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){     
         $user_id = $_SESSION['user_id']; 
@@ -1023,6 +1004,7 @@ class User extends BaseController
                         'street'          => $this->request->getVar('street'),
                         'delivery_method' => $this->request->getVar('delivery_method'),
                         'date'            => $this->request->getVar('date'),
+                        'time'            => $this->request->getVar('time'),
                         'payment_method'  => $this->request->getVar('payment_method'),
                         'user_id'         => $id,       
                     ); 

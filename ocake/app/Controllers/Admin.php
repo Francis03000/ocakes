@@ -396,6 +396,8 @@ class Admin extends BaseController
     public function update_product($id){
         /*this will validate inputs */
         $val = $this->validate([
+                'product_code' => 'required',
+                'cat_id' => 'required',
                 'occasion' => 'required',
                 'product_name' => 'required',
                 'flavor' => 'required',
@@ -419,7 +421,7 @@ class Admin extends BaseController
                 $data = array(
                     'product_code' => $this->request->getVar('product_code'),
                     'occasion' => $this->request->getVar('occasion'),
-                    'cat_id' => $this->request->getVar('cat_ids'),
+                    'cat_id' => $this->request->getVar('categ_id'),
                     'product_name' => $this->request->getVar('product_name'),
                     'flavor' => $this->request->getVar('flavor'),
                     'status' => $this->request->getVar('status'),
@@ -434,8 +436,8 @@ class Admin extends BaseController
                 /*this will insert data to db */
                 $data = array(
                     'product_code' => $this->request->getVar('product_code'),
-                    'cat_id' => $this->request->getVar('cat_ids'),
                     'occasion' => $this->request->getVar('occasion'),
+                    'cat_id' => $this->request->getVar('categ_id'),
                     'product_name' => $this->request->getVar('product_name'),
                     'flavor' => $this->request->getVar('flavor'),
                     'status' => $this->request->getVar('status'),
@@ -446,6 +448,7 @@ class Admin extends BaseController
                 );             
             }
             $insert=$model->prod_update($data,$id);
+            // var_dump($data);
                 return redirect()->to(base_url('/admin/productlist')); 
         }
     }

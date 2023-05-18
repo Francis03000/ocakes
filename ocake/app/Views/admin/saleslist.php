@@ -249,7 +249,7 @@
                                         <span><b>Balance:</b><?php echo '&#8369;' . number_format ($data->balance)?> </span><br>
                                         <span><b>Payment Method:</b> </span><?php echo $data->payment_method?><br>
                                         <span><b>Delivery Method:</b> </span><?php echo $data->delivery_method?><br>
-                                        <span><b>Scheduled Delivery Date:</b> </span><?php echo $data->date?><br>
+                                        <span><b>Scheduled Delivery Date:</b> </span><?php echo $data->date?> </span><?php echo $data->time;?><br>
                                         <span><b>Address:</b> </span><?php echo $data->street?>, <?php echo $data->barangay?>, <?php echo $data->municipality?><br>
                                     </div>                                                     
                                 </div>
