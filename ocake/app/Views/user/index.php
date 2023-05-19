@@ -1,18 +1,20 @@
  <!-- Start Hero Area -->
  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6459a2b06a9aad4bc5799e38/1gvv270de';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
+ <script type="text/javascript">
+var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+(function() {
+    var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/6459a2b06a9aad4bc5799e38/1gvv270de';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
 })();
-</script>
+ </script>
 
-<!--End of Tawk.to Script-->
+ <!--End of Tawk.to Script-->
  <section class="hero-area">
      <div class="container">
          <div class="row">
@@ -56,8 +58,7 @@ s0.parentNode.insertBefore(s1,s0);
                  <div class="row">
                      <div class="col-lg-12 col-md-6 col-12 md-custom-padding">
                          <!-- Start Small Banner -->
-                         <div class="hero-small-banner"
-                             style="background-image: url('tools/user/images/hero/1.png');">
+                         <div class="hero-small-banner" style="background-image: url('tools/user/images/hero/1.png');">
                              <div class="content">
                                  <h2>
                                      <span>Blue Velvet Flavor</span>
@@ -101,28 +102,28 @@ s0.parentNode.insertBefore(s1,s0);
              </div>
          </div>
          <div class="row">
-            <?php foreach($productData as $data){?>
+             <?php foreach($productData as $data){?>
              <div class="col-lg-3 col-md- col-12">
                  <!-- Start Single Product -->
                  <div class="single-product">
                      <div class="product-image">
-                        <?php if($data->is_customized == 0) {?>
-                         <img src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
+                         <?php if($data->is_customized == 0) {?>
+                         <img src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>"
+                             alt="<?php echo $data->flavor;?>">
                          <?php }else{?>
-                            <img src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
-                            <?php }?>
+                         <img src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
+                         <?php }?>
                          <div class="button">
-                         <form action="<?=site_url('add_cart')?>" method="POST">
-                                                        <!-- <input type="hidden" name="uid" value=""> -->
-                                                            <input type="hidden" name="occasion"
-                                                                value="<?=$data->occasion;?>">
-                                                            <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
-                                                            <input type="hidden" name="price" value="<?=$data->price;?>">
-                                                            <input type="hidden" name="pid" value="<?=$data->id;?>">
-                                                            <!-- <input type="hidden" name="img" value="<?=$data->image;?>"> -->
-                                                            <button type="submit" class="btn"><i class="lni lni-cart"></i>
-                                                                Add to Cart</button>
-                                                        </form>
+                             <form action="<?=site_url('add_cart')?>" method="POST">
+                                 <!-- <input type="hidden" name="uid" value=""> -->
+                                 <input type="hidden" name="occasion" value="<?=$data->occasion;?>">
+                                 <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
+                                 <input type="hidden" name="price" value="<?=$data->price;?>">
+                                 <input type="hidden" name="pid" value="<?=$data->id;?>">
+                                 <!-- <input type="hidden" name="img" value="<?=$data->image;?>"> -->
+                                 <button type="submit" class="btn"><i class="lni lni-cart"></i>
+                                     Add to Cart</button>
+                             </form>
                          </div>
                      </div>
                      <div class="product-info">
@@ -145,7 +146,7 @@ s0.parentNode.insertBefore(s1,s0);
                  </div>
                  <!-- End Single Product -->
              </div>
-            <?php }?>
+             <?php }?>
          </div>
      </div>
  </section>

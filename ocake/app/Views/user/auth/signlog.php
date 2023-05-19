@@ -88,7 +88,7 @@ button:hover {
                     </select>
                 </div>
                 <div class="tab">
-                    <input type="number" id="age" oninput="this.className = ''" name="age" placeholder="age" required>
+
                     <select type="text" id="gender" name="gender" placeholder="gender">
                         <option value="gender">gender</option>
                         <option value="Male">Male</option>
@@ -96,12 +96,14 @@ button:hover {
                     </select>
                     <input type="number" id="mobile" oninput="this.className = ''" name="mobile" placeholder="mobile"
                         required>
+                    Birthday <input type="date" name="birthdate" oninput="this.className = ''">
+
                 </div>
-                <div class="tab">
+                <!-- <div class="tab">
                     <input type="number" placeholder="dd" name="birthdate" oninput="this.className = ''">
                     <input type="text" placeholder="mm" name="birthdmonth" oninput="this.className = ''">
                     <input type="number" placeholder="yyyy" name="birthyear" oninput="this.className = ''">
-                </div>
+                </div> -->
                 <div class="tab">
                     <input type="email" id="email" oninput="this.className = ''" name="email" placeholder="Email"
                         required>
@@ -200,62 +202,62 @@ button:hover {
     }
 
     function nextPrev(n) {
-        
+
         var mi = document.getElementsByClassName("tab");
         var yi = mi[currentTab].getElementsByTagName("input");
         var yis = mi[currentTab].getElementsByTagName("select");
-        
-        if(n==1){
-        var valid = true;
-        var valid1 = true;
-        var message = "";
-        var message1 = "";
-        for (i = 0; i < yi.length; i++) {
-            // If a field is empty...
-            // console.log(yi[i].value=="");
-            if (yi[i].value == "") {
-                // add an "invalid" class to the field:
-                message += yi[i].name + ",";
-                yi[i].className += " invalid";
-                // and set the current valid status to false
-                valid = false;
+
+        if (n == 1) {
+            var valid = true;
+            var valid1 = true;
+            var message = "";
+            var message1 = "";
+            for (i = 0; i < yi.length; i++) {
+                // If a field is empty...
+                // console.log(yi[i].value=="");
+                if (yi[i].value == "") {
+                    // add an "invalid" class to the field:
+                    message += yi[i].name + ",";
+                    yi[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
+                }
             }
-        }
 
-        if(yis.length!=0){
-            if(yis[0].value === "barangay"){
-                message+="barangay ";
-                valid1 = false;
-            }else if(yis[0].value === "gender"){
-                message+="gender ";
-                valid1 = false;
-            } 
-        }
+            if (yis.length != 0) {
+                if (yis[0].value === "barangay") {
+                    message += "barangay ";
+                    valid1 = false;
+                } else if (yis[0].value === "gender") {
+                    message += "gender ";
+                    valid1 = false;
+                }
+            }
 
-        if(!valid || !valid1){
-            Swal.fire({
-                text: message + "is required to fill",
-                icon: 'warning',
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Ok'
+            if (!valid || !valid1) {
+                Swal.fire({
+                    text: message + "is required to fill",
+                    icon: 'warning',
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ok'
                 });
-        }else{
+            } else {
+                mi[currentTab].style.display = "none";
+                currentTab = currentTab + n;
+                if (currentTab >= 4) {
+                    // ... the form gets submitted:
+                    document.getElementById("regForm").submit();
+                    return false;
+                } else {
+                    showTab(currentTab);
+                }
+            }
+        } else {
             mi[currentTab].style.display = "none";
             currentTab = currentTab + n;
-            if (currentTab >= 4) {
-                // ... the form gets submitted:
-                document.getElementById("regForm").submit();
-                return false;
-            }else{
-                showTab(currentTab);
-            }
+            showTab(currentTab);
         }
-    }else{
-        mi[currentTab].style.display = "none";
-        currentTab = currentTab + n;
-        showTab(currentTab);
-    }
     }
 
     // function validateForm() {

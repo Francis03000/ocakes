@@ -38,7 +38,7 @@ class User extends BaseController
             'lastname' => 'required',
             'mcp' => 'required',
             'brgy' => 'required',
-            'age' => 'required',   
+            'birthdate' => 'required',   
             'gender' => 'required',   
             'mobile' => 'required|numeric|max_length[11]',    
             'email' => 'required|valid_email',
@@ -65,7 +65,7 @@ class User extends BaseController
                 'lastname' => $this->request->getVar('lastname'),
                 'mcp' => $this->request->getVar('mcp'),
                 'brgy' => $this->request->getVar('brgy'),
-                'age' => $this->request->getVar('age'),
+                'birthdate' => $this->request->getVar('birthdate'),
                 'gender' => $this->request->getVar('gender'),
                 'mobile' => $this->request->getVar('mobile'),
                 'email' => $this->request->getVar('email'),
@@ -1488,7 +1488,7 @@ class User extends BaseController
         $val = $this->validate([   
             'firstname' => 'required',
             'lastname' => 'required',
-            'age' => 'required',   
+            'birthdate' => 'required',   
             'gender' => 'required',   
             'mobile' => 'required',         
         ]);
@@ -1507,7 +1507,7 @@ class User extends BaseController
                $data = array(
                     'firstname' => $this->request->getVar('firstname'),
                     'lastname' => $this->request->getVar('lastname'),
-                    'age' => $this->request->getVar('age'),
+                    'birthdate' => $this->request->getVar('birthdate'),
                     'gender' => $this->request->getVar('gender'),
                     'mobile' => $this->request->getVar('mobile'),
                );
@@ -1519,7 +1519,7 @@ class User extends BaseController
                $data = array(
                     'firstname' => $this->request->getVar('firstname'),
                     'lastname' => $this->request->getVar('lastname'),
-                    'age' => $this->request->getVar('age'),
+                    'birthdate' => $this->request->getVar('birthdate'),
                     'gender' => $this->request->getVar('gender'),
                     'mobile' => $this->request->getVar('mobile'),
                     'profile' =>  $imageFile->getClientName(), /*this will get the name of file input */
