@@ -3,6 +3,7 @@
 
 <head>
     <title>SignUp and Login</title>
+    <link rel="stylesheet" href="<?=base_url()?>/tools/admin/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="tools/user/signlog/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
@@ -71,28 +72,6 @@ button:hover {
             <?= isset($msg)? $msg:''?>
             <form id="regForm" method="post" action="<?=site_url('save') ?>">
                 <h1 style="margin-bottom:30px">Create Account</h1>
-                <!-- <div class="social-container">
-                        <a href="#" class="social"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="social"><i class="fa fa-google"></i></a>
-                        <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                    <span>or use your email for registration</span> -->
-                <!-- <input type="text" id="firstname" name="firstname" placeholder="firstname" required>
-                <input type="text" id="lastname" name="lastname" placeholder="lastname" required>
-                <input type="text" id="mobile" name="mobile" placeholder="mobile" required> -->
-                <!-- <select type="text" id="municipality" name="municipality" placeholder="municipality">
-                        <option value="" disabled selected>municipality</option>
-                        <option>Naujan</option>
-                    </select>
-                    <select type="text" id="barangay" name="barangay" placeholder="barangay">
-                            <option value="" disabled selected>barangay</option>
-                        <?//php foreach($address as $data){?>
-                            <option><?//php echo $data->barangay;?></option>
-                        <?//php }?>
-                    </select> -->
-                <!-- <input type="email" id="email" name="email" placeholder="Email" required>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <button type="submit" style="color:#fecb00">Register</button> -->
                 <div class="tab">
                     <input type="text" id="firstname" oninput="this.className = ''" name="firstname"
                         placeholder="firstname" required>
@@ -102,18 +81,18 @@ button:hover {
                     <input type="text" id="municipality" oninput="this.className = ''" name="mcp"
                         placeholder="municipality" value="Naujan" required>
                     <select type="text" id="barangay" name="brgy" placeholder="barangay" required>
-                        <option value="" disabled selected>barangay</option>
+                        <option value="barangay">barangay</option>
                         <?php foreach($address as $data){?>
-                        <option><?php echo $data->barangay;?></option>
+                        <option value="<?php echo $data->barangay;?>"><?php echo $data->barangay;?></option>
                         <?php }?>
                     </select>
                 </div>
                 <div class="tab">
                     <input type="number" id="age" oninput="this.className = ''" name="age" placeholder="age" required>
                     <select type="text" id="gender" name="gender" placeholder="gender">
-                        <option value="" disabled selected>gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
+                        <option value="gender">gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                     <input type="number" id="mobile" oninput="this.className = ''" name="mobile" placeholder="mobile"
                         required>
@@ -181,6 +160,9 @@ button:hover {
             </div>
         </div>
     </div>
+    <script src="<?=base_url()?>/tools/admin/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
     <script type="text/javascript">
     const signUpButton = document.getElementById('signUp');
@@ -218,45 +200,85 @@ button:hover {
     }
 
     function nextPrev(n) {
-        // This function will figure out which tab to display
-        var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
-        if (n == 1 && !validateForm()) return false;
-        // Hide the current tab:
-        x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
-        // if you have reached the end of the form...
-        if (currentTab >= 4) {
-            // ... the form gets submitted:
-            document.getElementById("regForm").submit();
-            return false;
-        }
-        // Otherwise, display the correct tab:
-        showTab(currentTab);
-    }
-
-    function validateForm() {
-        // This function deals with validation of the form fields
-        var x, y, i, valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
-        // A loop that checks every input field in the current tab:
-        for (i = 0; i < y.length; i++) {
+        
+        var mi = document.getElementsByClassName("tab");
+        var yi = mi[currentTab].getElementsByTagName("input");
+        var yis = mi[currentTab].getElementsByTagName("select");
+        
+        if(n==1){
+        var valid = true;
+        var valid1 = true;
+        var message = "";
+        var message1 = "";
+        for (i = 0; i < yi.length; i++) {
             // If a field is empty...
-            if (y[i].value == "") {
+            // console.log(yi[i].value=="");
+            if (yi[i].value == "") {
                 // add an "invalid" class to the field:
-                y[i].className += " invalid";
+                message += yi[i].name + ",";
+                yi[i].className += " invalid";
                 // and set the current valid status to false
                 valid = false;
             }
         }
-        // If the valid status is true, mark the step as finished and valid:
-        if (valid) {
-            document.getElementsByClassName("step")[currentTab].className += " finish";
+
+        if(yis.length!=0){
+            if(yis[0].value === "barangay"){
+                message+="barangay ";
+                valid1 = false;
+            }else if(yis[0].value === "gender"){
+                message+="gender ";
+                valid1 = false;
+            } 
         }
-        return valid; // return the valid status
+
+        if(!valid || !valid1){
+            Swal.fire({
+                text: message + "is required to fill",
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+                });
+        }else{
+            mi[currentTab].style.display = "none";
+            currentTab = currentTab + n;
+            if (currentTab >= 4) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }else{
+                showTab(currentTab);
+            }
+        }
+    }else{
+        mi[currentTab].style.display = "none";
+        currentTab = currentTab + n;
+        showTab(currentTab);
     }
+    }
+
+    // function validateForm() {
+    //     // This function deals with validation of the form fields
+    //     var x, y, i, valid = true;
+    //     x = document.getElementsByClassName("tab");
+    //     y = x[currentTab].getElementsByTagName("input");
+    //     // A loop that checks every input field in the current tab:
+    //     for (i = 0; i < y.length; i++) {
+    //         // If a field is empty...
+    //         if (y[i].value == "") {
+    //             // add an "invalid" class to the field:
+    //             y[i].className += " invalid";
+    //             // and set the current valid status to false
+    //             valid = false;
+    //         }
+    //     }
+    //     // If the valid status is true, mark the step as finished and valid:
+    //     if (valid) {
+    //         document.getElementsByClassName("step")[currentTab].className += " finish";
+    //     }
+    //     return valid; // return the valid status
+    // }
 
     function fixStepIndicator(n) {
         // This function removes the "active" class of all steps...
