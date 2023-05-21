@@ -800,7 +800,7 @@ class User extends BaseController
         $data['subtotal'] = $totalprice;
 
         $model_order = new Checkout_model();
-        $order_code = $this->request->getVar('details');
+        $order_code = $this->request->getPost('details');
         $data['order']= $model_order->fetchCheckoutData($id,$order_code);
         $data['status']= $model_order->getCheckout($id, $order_code);
         $data['stat']= $model_order->get($id, $order_code);
@@ -975,7 +975,7 @@ class User extends BaseController
             helper(['form', 'url']);
         
             $val = $this->validate([ 
-                'total_price'     => 'required',
+                'total_prices'     => 'required',
                 'downpayment'     => 'required',
                 'balance'         => 'required',
                 'items'           => 'required',
@@ -1018,11 +1018,13 @@ class User extends BaseController
                     }else{
                         $imageFile = $this->request->getFile('image');
                         $imageFile->move('tools/uploads/');
+
+                        $isDPs = $this->request->getVar('isDP');
             
                         $datum=array(
                             'user_id'         => $id, 
                             'biller_id'       => $insert_biller,
-                            'total_price'     => $this->request->getVar('total_price'),
+                            'total_price'     => $this->request->getVar('total_prices'),
                             'downpayment'     => $this->request->getVar('downpayment'),
                             'shipping_fee'     => $this->request->getVar('shipping_fee'),
                             'balance'         => $this->request->getVar('balance'),

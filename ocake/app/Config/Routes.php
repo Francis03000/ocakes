@@ -184,8 +184,15 @@ $routes->post('/update_order', 'User::update_order');
 // new
 $routes->group('user', static function ($routes) {
     $routes->get('cart/cart-user-detail', 'CartController::index');
-    $routes->post('save', 'CustomersController::store');
-    $routes->post('purchase', 'PosController::store');
+    $routes->post('cart/cart-update', 'CartController::cartUpdate');
+    $routes->post('cart/cart-update-checkout', 'CartController::cartUpdateCheckout');
+    $routes->post('cart/cart-delete', 'CartController::deleteData');
+});
+$routes->group('check', static function ($routes) {
+    $routes->get('out/data', 'CartController::checkoutindex');
+    $routes->post('cart/cart-update', 'CartController::cartUpdate');
+    $routes->post('cart/cart-update-checkout', 'CartController::cartUpdateCheckout');
+    $routes->post('cart/cart-delete', 'CartController::deleteData');
 });
 
 

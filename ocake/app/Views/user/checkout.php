@@ -64,20 +64,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="col-md-12">
-                                            <div class="single-checkbox checkbox-style-3">
-                                                <input type="checkbox" id="checkbox-3">
-                                                <label for="checkbox-3"><span></span></label>
-                                                <p>My delivery and mailing addresses are the same.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="single-form button">
-                                                <button class="btn" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">next
-                                                    step</button>
-                                            </div>
-                                        </div> -->
                                     </div>
                                 </section>
                             </li>
@@ -93,7 +79,7 @@
                                                 <label>Delivery Method</label>
                                                 <div class="select-items">
                                                     <select type="delivery_method" id="delivery_method" name="delivery_method" class="form-control" required>
-                                                        <option value="" disabled selected>select</option>
+                                                        <option>select</option>
                                                         <option value="Home Delivery">Home Delivery</option>
                                                         <option value="Pickup on Demand Delivery">Pickup on Demand Delivery</option>
                                                     </select>
@@ -104,7 +90,7 @@
                                             <div class="single-form form-default">
                                                 <label>Municipality</label>
                                                 <div class="form-input form">
-                                                    <input type="text" placeholder="Municipality" name="municipality" value="Naujan" required>
+                                                    <input type="text" placeholder="Municipality" id="mp" name="municipality" value="Naujan" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,9 +99,6 @@
                                                 <label>Barangay</label>
                                                 <div class="select-items">
                                                     <select id="mySelect" onchange="myFunction()" type="text" id="" name="" class="form-control" required>
-                                                        <!-- <?//php foreach($userData as $data){?>
-                                                            <option value="0"><?//php echo $data->barangay;?></option>
-                                                        <?//php }?> -->
                                                         <option value="" disabled selected>select</option>
                                                         <?php foreach($address as $data){?>
                                                             <option value="<?php echo $data->barangay;?>,<?php echo $data->fee;?>"><?php echo $data->barangay;?></option>
@@ -128,7 +111,7 @@
                                             <div class="single-form form-default">
                                                 <label>Street</label>
                                                 <div class="form-input form">
-                                                    <input type="text" placeholder="Street" name="street" required>
+                                                    <input type="text" placeholder="Street" id="st" name="street" value="Maganda" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,9 +151,9 @@
                                                         <option value="Gcash">Gcash</option>
                                                     </select>
                                                     <input type="radio" name="payment" id="box1" value="Downpayment" required>
-                                                    <label for="box1">Down Paymnet</label>
+                                                    <label for="box1">Down Payment</label>
                                                     <input type="radio" name="payment" id="box2" value="Fullpayment" required>
-                                                    <label for="box2">Full Paymnet</label>
+                                                    <label for="box2">Full Payment</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -259,12 +242,12 @@
                                                 </div>    -->
                                             </div>
                                         </div>
-                                        <input type="hidden" value="<?php echo ($Total);?> " name="total_price">
-                                        <input type="hidden" value="<?php echo ($Downpayment);?> " name="downpayment">
-                                        <input type="hidden" id="payment" value="<?php echo ($Balance);?> " name="balance">
+                                        <input type="hidden" id="tp5" name="total_prices">
+                                        <input type="hidden" id="dphide" name="downpayment">
+                                        <input type="hidden" id="bl" name="balance">
                                         <input type="hidden" value="<?php echo $cart_count;?> " name="items">
-                                        <input type="hidden" value="" id="barangay" name="barangay">
-                                        <input type="hidden" value="" id="shipping_fee" name="shipping_fee">
+                                        <input type="hidden" value="Antipolo" id="barangay" name="barangay">
+                                        <input type="text"  id="shipping_fee" name="shipping_fee">
                                     </div>
                                 </section>
                             </li>
@@ -289,45 +272,34 @@
                         </div> -->
                         <div class="checkout-sidebar-price-table">
                             <h5 class="title">Pricing Table</h5>
-                            <div class="sub-total-price">
-                                <?php foreach($cartData as $data){?>
-                                    <div class="total-price">
-                                    <?php if($data->is_customized == 0) {?>
-                                        <img style="height:40px" src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
-                                            <?php }else{?>
-                                        <img style="height:40px" src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
-                                            <?php }?>
-                                            <span>
-                                                <p class="price"><?=$data->occasion. ' Cake'?></p> 
-                                                <p class="price"><?=$data->flavor?></p> 
-                                            </span>
-                                        <span>
-                                            <p class="price"><?= '&#8369;'.$data->price?></p>
-                                            <p class="price" id="pr">x<?=$data->quantity?></p>
-                                        </span>
-                                        <p class="price"><?= '&#8369;'.$data->price?></p> 
-                                    </div>
-                                <?php }?>
+                            <div class="sub-total-price" id="tocheckProduct">
+                                
                             </div>
                             <div class="total-payable">
                                 <div class="payable-price">
                                     <p class="value">Subotal Price:</p>
-                                    <p class="price" name="total_price"><?php echo '&#8369;'. number_format($Total);?></p>
+                                    <p class="price" name="total_price" id="tp">0</p>
                                 </div> 
                                 
                                 <div class="payable-price">
                                     <p class="value">Shipping Fee:</p>
-                                    <p class="price" id="demo" name="shipping_fee"><?php echo '&#8369;'. 0; ?></p>
+                                    <p class="price" id="demo">0</p>
                                 </div><br>
-                                <div class="payable-price">
+                                <div class="payable-price" id="dw">
                                     <p class="value">Downpayment:</p>
-                                    <p class="price" id="myDown" name="price"><?php echo '&#8369;'. number_format($Downpayment); ?></p>
+                                    <p class="price" id="myDown" name="price">0</p>
+                                </div>
+                                <div class="payable-price" id="fulldp">
+                                    <p class="value">Fullpayment:</p>
+                                    <p class="price" id="myFull" name="price">0</p>
                                 </div>
                                 <div class="payable-price">
                                     <p class="value">Price to Pay:</p>
-                                    <p class="price" id="bal" value="" name="price"><?php echo '&#8369;'. number_format($Balance); ?></p>
+                                    <p class="price" id="balance" name="price">0</p>
                                 </div>
                             </div>
+                            <input type="hidden" name="fullpayment" id="fullDP">
+                            <input type="hidden" name="isDP" id="isDP">
                             <input type="hidden" id="dp" value="<?=$Downpayment?>">
                             <div class="price-table-btn button">   
                                 <form>
@@ -356,30 +328,11 @@
                             </div>
                             
                         </div>
-                        <!-- <div class="checkout-sidebar-banner mt-30">
-                            <a href="product-grids.html">
-                                <img src="tools/user/images/banner/banner.jpg" alt="#">
-                            </a>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </form>
     </div>
-<!-- 
-     <div class="single-form form-default">
-                                                <label>Barangay</label>
-                                                <div class="select-items">
-                                                    <select id="mySelect" onchange="myFunction()" type="text" id="barangay" name="barangay" class="form-control" required>
-                                                    
-                                                        <option value="" disabled selected>select</option>
-                                                        <?php foreach($address as $data){?>
-                                                            <option value="<?//php echo $data->fee;?>"><?//php echo $data->barangay;?></option>
-                                                        <?php }?>
-                                                    </select>
-                                                </div>
-                                            </div>
-    <p id="demo"></p> -->
 </section>
 <?php foreach($address as $data){?>
 <script>
@@ -394,13 +347,15 @@
 
         var one = $('#mySelect').val().split(',')[0];
         var two = parseInt($('#mySelect').val().split(',')[1]);
-            document.getElementById("demo").innerHTML = '&#8369;'+ two;
+            document.getElementById("demo").innerHTML = two;
         var y = parseInt(document.getElementById("dp").value);
         var z = two + y;
-        document.getElementById("bal").innerHTML = '&#8369;'+ z;
-        document.getElementById("payment").value = z;
         document.getElementById("barangay").value = one;
-        document.getElementById("shipping_fee").value = two;
+        if($("#delivery_method").val()==="Pickup on Demand Delivery"){
+            document.getElementById("shipping_fee").value = 0;
+        }else{
+            document.getElementById("shipping_fee").value = two;
+        }
     }
 </script>
 <?php }?>
@@ -417,6 +372,118 @@
         }   
     }
 </script>
+
+<script>
+    $(document).ready(function(){
+
+        $("#fulldp").hide();
+
+        let model = [];
+        let arrayCart = ["image","occasion","quantity","totalpr"]
+        initData();
+        function initData(){
+            $("#tocheckProduct").empty();
+            model = [];
+            var totalamount = 0;
+             $.ajax({
+                url: '<?= base_url('check/out/data') ?>',
+                method: 'get',
+                dataType: 'json',
+                success: function(response) {
+                    let product_container = $("#tocheckProduct");
+                    response.forEach((product,m) => {
+                        totalamount += parseFloat(product.total_price);
+                        model.push(product);
+                        let tabrow = $("<div>",{class:"total-price",});
+                        const attriMap = new Map(Object.entries(product));
+                        arrayCart.forEach((attri, i) => {
+                            if (attri == "image") {
+                                $("<img>",{
+                                    style:"height:40px",
+                                    src:"tools/uploads/"+product.image,
+                                    alt:product.flavor,
+                                }).appendTo(tabrow);
+                            }else if (attri == "occasion") {
+                                let span1 = $("<span>");
+                                $("<p>",{
+                                    class:"price",
+                                   html:product.occasion + " Cake",
+                                }).appendTo(span1);
+                                $("<p>",{
+                                    class:"price",
+                                   html:product.flavor,
+                                }).appendTo(span1);
+                                span1.appendTo(tabrow);
+                            }else if (attri == "quantity") {
+                                let span2 = $("<span>");
+                                $("<p>",{
+                                    class:"price",
+                                   html:"₱ " + product.price,
+                                }).appendTo(span2);
+                                $("<p>",{
+                                    class:"price",
+                                   html:"QT: " +product.quantity,
+                                }).appendTo(span2);
+                                span2.appendTo(tabrow);
+                            }else if (attri == "totalpr") {
+                                $("<p>",{
+                                    class:"price",
+                                    html:"ST: " +product.total_price,
+                                }).appendTo(tabrow);
+                            }
+                        product_container.append(tabrow);
+                        });
+                    });
+
+                    $("#tp").html(totalamount);
+                    $("#myDown").html(totalamount/2);
+                }
+            });
+        }
+
+        $("#mySelect").change(function(){
+            $("#balance").html(parseFloat($("#myDown").html())+parseFloat($("#demo").html()));
+        });
+
+        $("#delivery_method").change(function(){
+            if($("#delivery_method").val()==="Pickup on Demand Delivery"){
+                $('#mySelect').val("Antipolo,90").attr("selected", "selected");
+                $('#mySelect').attr("disabled", true); 
+                $('#mp').attr("readonly", true); 
+                $('#st').attr("readonly", true); 
+                document.getElementById("shipping_fee").value = 0;
+            }else{
+                $('#mySelect').val("").attr("selected", "selected");
+                $('#mySelect').attr("disabled", false); 
+                $('#mp').removeAttr('readonly');
+                $('#st').removeAttr('readonly'); 
+            }
+        });
+        
+
+        
+        $("#box1").click(function(){
+            $("#dw").show();
+            $("#isDP").val(1);
+            $("#fulldp").hide();
+            $("#balance").html(parseFloat($("#myDown").html())+parseFloat($("#demo").html()));
+            $("#tp5").val(parseFloat($("#tp").html()));
+            $("#dphide").val(parseFloat($("#myDown").html()));
+            $("#bl").val(parseFloat($("#balance").html()));
+        });
+
+        $("#box2").click(function(){
+            $("#fulldp").show();
+            $("#dw").hide();
+            $("#isDP").val(0);
+            $("#myFull").html(parseFloat($("#tp").html())+parseFloat($("#demo").html()));
+            $("#balance").html(0);
+            $("#tp5").val(parseFloat($("#tp").html()));
+            $("#dphide").val(parseFloat($("#myFull").html()));
+            $("#bl").val(0);
+        });
+    });
+</script>
 <script>
         let DateToday=new Date();
         let month=DateToday.getMonth()+1;
@@ -431,4 +498,3 @@
         document.getElementById('datepicker').setAttribute("min",Today);
 </script>
 <?php echo view('admin/include/photo-script'); ?>
-<?//php echo view('admin/include/script'); ?>
