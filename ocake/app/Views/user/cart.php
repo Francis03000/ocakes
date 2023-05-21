@@ -156,7 +156,8 @@
                 </div>
             </div>
         </div>
-    </form>
+</div>
+</form>
 </div>
 
 <a href="#" class="scroll-top">
@@ -200,15 +201,108 @@ function decrementValue() {
 <script src="tools/user/js/tiny-slider.js"></script>
 <script src="tools/user/js/glightbox.min.js"></script>
 <script src="tools/user/js/order.js"></script>
-<!-- <script src="tools/user/js/main.js"></script>
-<script src="tools/user/js/order.js"></script>
-<script src="tools/user/bootstrap.min.js"></script>
-<script src="tools/user/owl.carousel.min.js"></script>
-<script src="tools/user/slick.min.js"></script>
-<script src="tools/user/waypoints.min.js"></script> -->
-
-<?//php echo view('admin/include/photo-script'); ?>
-<?//php echo view('admin/include/script'); ?>
 </body>
 
 </html>
+
+<script>
+$(document).ready(function() {
+
+    let arrayCart = ["checkbox", "image", "product_description", "quantity", "subtotal"]
+    initData();
+
+    function initData() {
+        var totalamount = 0;
+        $.ajax({
+            url: '<?= base_url('user/cart/cart-user-detail') ?>',
+            method: 'get',
+            dataType: 'json',
+            success: function(response) {
+                let product_container = $("#cart-bodys");
+                response.forEach((product) => {
+                    let tabrow = $("<tr>");
+                    const attriMap = new Map(Object.entries(product));
+                    arrayCart.forEach((attri, i) => {
+                        if (attri != "subtotal" && attri != "checkbox" && attri !=
+                            "image" && attri != "product_description" && attri !=
+                            "quantity") {
+                            $("<td>", {
+                                class: "text-wrap",
+                                style: "text-align: center; vertical-align: middle;",
+                                html: attriMap.get(attri),
+                            }).appendTo(tabrow);
+                        } else if (attri == "checkbox") {
+                            let td = $("<td>", {
+                                style: "text-align: center; vertical-align: middle;",
+                                class: "text-wrap",
+                            });
+                            $("<input>", {
+                                type: "checkbox",
+                                "data-id": product.cart_id,
+                                id: "selectedCartOrder",
+                            }).appendTo(td);
+                            td.appendTo(tabrow);
+                        } else if (attri == "quantity") {
+                            let td = $("<td>", {
+                                style: "text-align: center; vertical-align: middle;",
+                                class: "text-wrap",
+                            });
+                            $("<input>", {
+                                type: "number",
+                                style: "text-align: center;",
+                                "data-id": product.cart_id,
+                                value: product.quantity,
+                                id: "quantityOrder",
+                            }).appendTo(td);
+                            td.appendTo(tabrow);
+                        } else if (attri == "image") {
+                            let td = $("<td>", {
+                                style: "text-align: center; vertical-align: middle;",
+                                class: "text-wrap",
+                            });
+                            $("<img>", {
+                                style: "height:100px; width:100px",
+                                src: "tools/uploads/ocake_logo2.gif",
+                            }).appendTo(td);
+                            td.appendTo(tabrow);
+                        } else if (attri == "product_description") {
+                            let td = $("<td>", {
+                                style: "text-align: center; vertical-align: middle;",
+                                class: "text-wrap",
+                            });
+                            $("<p>", {
+                                html: "Product name : " + product
+                                    .product_name,
+                            }).appendTo(td);
+                            $("<p>", {
+                                html: "Flavor : " + product.flavor,
+                            }).appendTo(td);
+                            $("<p>", {
+                                html: "Occasions : " + product.occasion,
+                            }).appendTo(td);
+                            $("<p>", {
+                                html: "Unit Price : " + product.price,
+                            }).appendTo(td);
+                            td.appendTo(tabrow);
+                        } else if (attri == "subtotal") {
+                            $("<td>", {
+                                class: "text-wrap",
+                                style: "text-align: center; vertical-align: middle;",
+                                html: parseFloat(attriMap.get(
+                                    "total_price")),
+                            }).appendTo(tabrow);
+                            // totalamount += parseFloat(attriMap.get("total_price"));
+                        }
+                        product_container.append(tabrow);
+                    });
+                });
+            }
+        });
+    }
+
+    $("body").on("click", "#quantityOrder", function(e) {
+        alert($(e.currentTarget).data("id"));
+        alert($(e.currentTarget).val());
+    });
+})
+</script>

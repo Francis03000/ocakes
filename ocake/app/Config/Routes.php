@@ -181,6 +181,14 @@ $routes->post('/update_order', 'User::update_order');
 // $routes->post('/addphoto','User::addphoto');
 
 
+// new
+$routes->group('user', static function ($routes) {
+    $routes->get('cart/cart-user-detail', 'CartController::index');
+    $routes->post('save', 'CustomersController::store');
+    $routes->post('purchase', 'PosController::store');
+});
+
+
 
 /*
  * --------------------------------------------------------------------
