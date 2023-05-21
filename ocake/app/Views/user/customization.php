@@ -65,20 +65,16 @@
         <div class="col-md-3 tool-bars overflow-auto">
             <h3>Tools</h3>
             <div class="p-2">
-                <div class="mb-1"><p class="tool-headers">Addons</p></div>
+                <div class="mb-1">
+                    <p class="tool-headers">Addons</p>
+                    <select id="add_cat">
+                        <option value="1" selected>Fruits</option>
+                        <option value="2">Candles</option>
+                        <option value="3">Icing</option>
+                    </select>
+                </div>
                  <div class="tool-container d-flex flex-wrap" id="draggable-container">
-                    <!-- <div class="draggable">
-                        <img src="https://parspng.com/wp-content/uploads/2022/05/orangepng.parspng.com_-1-600x600.png" alt="img" height='50' width='50'>
-                    </div>
-                    <div class="draggable">
-                        <img src="https://www.pngarts.com/files/3/Cherry-PNG-Pic.png" alt="img" height='50' width='50'>
-                    </div> -->
-                    <?php foreach($custom_addons as $data){?>
-                        <div class="draggable" data-id="<?=$data->add_ons_id;?>" data-name="<?=$data->description;?>" data-price="<?=$data->price;?>" data-src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>">
-                            <img id="<?php echo "addon".$data->add_ons_id;?>" style="width:50px; height:50px" 
-                                                                            src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>"  alt="" />
-                    </div>
-                    <?php }?>
+                    
                 </div>
             </div>
            <div class="p-2">
@@ -190,6 +186,46 @@
 //   // alert user when trying to reload page. This will prevent design loss
 //   return "Data will be lost if you leave the page, are you sure?";
 // };
+</script>
+
+<script>
+    $(document).ready(function(){
+        initData();
+        function initData(){
+
+            $("#draggable-container").empty();
+            $.ajax({
+            url: '<?= base_url('customization-all-ads') ?>',
+            method: 'get',
+            dataType: 'json',
+            success: function(response) {
+                let adds_container = $("#draggable-container");
+                response.forEach((adds) => {
+                    let tabrow = $("<div>",{
+                            class:"draggable",
+                            "data-id":adds.add_ons_id,
+                            "data-name":adds.description,
+                            "data-price":adds.price,
+                            "data-src":"http://localhost/ocake/tools/uploads/"+adds.image,
+                        });
+                    if(parseInt($("#add_cat").val())==parseInt(adds.add_cat)){
+                        $("<img>",{
+                            id:"addon"+adds.add_ons_id,
+                            style:"width:50px; height:50px",
+                            src:"http://localhost/ocake/tools/uploads/"+adds.image,
+                        }).appendTo(tabrow);
+                    }
+                    adds_container.append(tabrow);
+                });
+                
+            }
+            });
+        }
+
+        $("#add_cat").change(function(){
+            initData();
+        })
+    });
 </script>
 
 

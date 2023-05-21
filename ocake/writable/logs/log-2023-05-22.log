@@ -30,3 +30,113 @@ Stack trace:
 #11 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #12 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
 #13 {main}
+CRITICAL - 2023-05-22 03:25:32 --> Undefined property: stdClass::$addons_description
+in APPPATH\Views\admin\addonslist.php on line 328.
+ 1 APPPATH\Views\admin\addonslist.php(328): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$addons_description', 'APPPATH\\Views\\admin\\addonslist.php', 328, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(669): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:26:27 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('8', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:27:34 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('8', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:28:14 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('8', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:29:32 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('8', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:32:38 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('23', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:35:29 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('24', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:36:28 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('24', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:37:22 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('24', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 03:39:23 --> Undefined variable: addons
+in APPPATH\Views\admin\addonslist.php on line 230.
+ 1 APPPATH\Views\admin\addonslist.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: addons', 'APPPATH\\Views\\admin\\addonslist.php', 230, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(738): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->update_addons('8', 'C:\\xampp\\htdocs\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

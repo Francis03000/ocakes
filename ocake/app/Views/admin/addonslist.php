@@ -96,6 +96,14 @@
                                         <option>Available</option>
                                         <option>Unavailable</option>
                                     </select>
+
+                                    <label>Add-Ons Description</label>
+                                    <select class="select" name="add_cat">
+                                      <option >Select</option>
+                                        <option value="1">Fruits</option>
+                                        <option value="2">Candles</option>
+                                        <option value="3">Icing</option>
+                                    </select>
                                 </div>
                             </div>  
                             <div class="modal-footer" style="padding-left:25%">
@@ -312,6 +320,19 @@
                                                           <option
                                                               <?php if($data->addons_status == "Unavailable"){ echo "selected"; }?>
                                                               value="Unavailable">Unavailable</option>
+                                                      </select>
+
+                                                      <label>Add-Ons Description</label>
+                                                      <select name="add_cat" class="form-control" id="add_cat">
+                                                          <option
+                                                              <?php if($data->add_cat == "1"){ echo "selected"; }?>
+                                                              value="1">Fruits</option>
+                                                          <option
+                                                              <?php if($data->add_cat == "2"){ echo "selected"; }?>
+                                                              value="2">Candles</option>
+                                                          <option
+                                                              <?php if($data->add_cat == "3"){ echo "selected"; }?>
+                                                              value="3">Icing</option>
                                                       </select>
                                                   </div>
                                               </div>

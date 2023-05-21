@@ -7,7 +7,7 @@ class AddOns_model extends Model
     //protected $primaryKey = 'add_ons_id';
     // protected $foreignKey = 'id';
 
-    protected $allowedFields = ['image', 'quantity', 'description', 'price', 'addons_status'];
+    protected $allowedFields = ['image', 'quantity', 'description', 'price', 'addons_status','add_cat'];
 
     //---------- FETCH ADDONS ----------//  December 18,2022
     public function fetchAddOns() {

@@ -1204,6 +1204,12 @@ class User extends BaseController
     
     }
 
+    public function getAllAddOns(){
+        $addonsModel = new AddOns_model();
+        $data = $addonsModel->where('addons_status','Available')->get()->getResult();
+        return $this->response->setJSON($data);
+    }
+
     //-------- FETCH CUSTOMIZATION DATA ---------//              January 06,2022
     public function customization(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
@@ -1220,7 +1226,7 @@ class User extends BaseController
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
-        #count cart items#
+        #count cart items#s
         $cart = $model_cart->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;

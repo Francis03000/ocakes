@@ -681,6 +681,7 @@ class Admin extends BaseController
             'description' => 'required',
             'price' => 'required',
             'addons_status' => 'required',
+            'add_cat' => 'required',
         ]);
 
         $model = new AddOns_model();
@@ -699,6 +700,7 @@ class Admin extends BaseController
                     'description' => $this->request->getVar('description'),
                     'price' => $this->request->getVar('price'),
                     'addons_status' => $this->request->getVar('addons_status'),
+                    'add_cat' => $this->request->getVar('add_cat'),
                 ]);
             }else{
                 /*this will upload file to folder */
@@ -710,6 +712,7 @@ class Admin extends BaseController
                     'description' => $this->request->getVar('description'),
                     'price' => $this->request->getVar('price'),
                     'addons_status' => $this->request->getVar('addons_status'),
+                    'add_cat' => $this->request->getVar('add_cat'),
                     'image' =>  $imageFile->getClientName(), /*this will get the name of file input */
                 ]);             
             }           
@@ -724,7 +727,8 @@ class Admin extends BaseController
             'quantity' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'addons_status' => 'required',           
+            'addons_status' => 'required', 
+            'add_cat' => 'required',          
         ]);
 
        $model = new AddOns_model();
@@ -743,6 +747,7 @@ class Admin extends BaseController
                     'description' => $this->request->getVar('description'),
                     'price' => $this->request->getVar('price'),
                     'addons_status' => $this->request->getVar('addons_status'),
+                    'add_cat' => $this->request->getVar('add_cat'),
                );
            }else{
                /*this will upload file to folder */
@@ -754,6 +759,7 @@ class Admin extends BaseController
                     'description' => $this->request->getVar('description'),
                     'price' => $this->request->getVar('price'),
                     'addons_status' => $this->request->getVar('addons_status'),
+                    'add_cat' => $this->request->getVar('add_cat'),
                     'image' =>  $imageFile->getClientName(), /*this will get the name of file input */
                );             
            }

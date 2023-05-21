@@ -143,6 +143,7 @@ $routes->get('/userforgotpassword', 'User::userforgotpassword');
 $routes->get('/about', 'User::about');
 $routes->get('/contact', 'User::contact');
 $routes->get('/customization', 'User::customization');
+$routes->get('/customization-all-ads', 'User::getAllAddOns');
 $routes->get('/cart', 'User::cart');
 $routes->get('/orderdetails', 'User::orderdetails');
 $routes->get('/to_rate', 'User::toRateOrder');
