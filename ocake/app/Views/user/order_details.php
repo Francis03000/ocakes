@@ -200,9 +200,9 @@
                                                   <?php }?><br></p>
                                             <p class="product-des">
                                                 <span><em></em> <?='&#8369;'.$data->price; ?></span><br>
-                                                <span><em></em>x1 <?php //echo $data->price; ?></span>
+                                                <span><em></em>x<?php echo $data->quantity; ?></span>
                                             </p>
-                                            <p class="price"><?= '&#8369;'.$data->price?></p>
+                                            <p class="price"><?= '&#8369;'.$data->total_price?></p>
                                         </div>
                                         <?php }?>
                                     </div>
