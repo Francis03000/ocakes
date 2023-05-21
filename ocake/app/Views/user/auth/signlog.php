@@ -97,7 +97,11 @@ button:hover {
                     <input type="text" id="mobile" oninput="validateInput(this, 'numbers')" name="mobile"
                         pattern="[0-9]*" title="Please input numbers only" inputmode="numeric" placeholder="mobile"
                         required>
-                    Birthday <input type="date" name="birthdate" oninput="this.className = ''">
+                    <?php
+                            $currentDate = date("Y-m-d");
+                        ?>
+                    Birthday <input type="date" name="birthdate" max="<?php echo $currentDate; ?>"
+                        oninput="this.className = ''">
 
                 </div>
                 <!-- <div class="tab">
