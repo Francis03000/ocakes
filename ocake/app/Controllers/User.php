@@ -40,7 +40,7 @@ class User extends BaseController
             'brgy' => 'required',
             'birthdate' => 'required',   
             'gender' => 'required',   
-            'mobile' => 'required|numeric|max_length[11]',    
+            'mobile' => 'required|numeric|max_length[13]',    
             'email' => 'required|valid_email',
             'password' => 'required|min_length[8]|alpha_numeric_punct',
             'confirm_password' => 'required|matches[password]',     
@@ -67,7 +67,7 @@ class User extends BaseController
                 'brgy' => $this->request->getVar('brgy'),
                 'birthdate' => $this->request->getVar('birthdate'),
                 'gender' => $this->request->getVar('gender'),
-                'mobile' => $this->request->getVar('mobile'),
+                'mobile' => "+".$this->request->getVar('mobile'),
                 'email' => $this->request->getVar('email'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
                 'confirm_password' => password_hash($this->request->getVar('confirm_password'), PASSWORD_BCRYPT),
@@ -998,7 +998,7 @@ class User extends BaseController
                         'firstname'       => $this->request->getVar('firstname'),
                         'lastname'        => $this->request->getVar('lastname'),
                         'email'           => $this->request->getVar('email'),
-                        'mobile'          => $this->request->getVar('mobile'),
+                        'mobile'          => "+".$this->request->getVar('mobile'),
                         'municipality'    => $this->request->getVar('municipality'),
                         'barangay'        => $this->request->getVar('barangay'),
                         'street'          => $this->request->getVar('street'),
@@ -1511,7 +1511,7 @@ class User extends BaseController
                     'lastname' => $this->request->getVar('lastname'),
                     'birthdate' => $this->request->getVar('birthdate'),
                     'gender' => $this->request->getVar('gender'),
-                    'mobile' => $this->request->getVar('mobile'),
+                    'mobile' => "+".$this->request->getVar('mobile'),
                );
            }else{
                /*this will upload file to folder */
@@ -1523,7 +1523,7 @@ class User extends BaseController
                     'lastname' => $this->request->getVar('lastname'),
                     'birthdate' => $this->request->getVar('birthdate'),
                     'gender' => $this->request->getVar('gender'),
-                    'mobile' => $this->request->getVar('mobile'),
+                    'mobile' => "+".$this->request->getVar('mobile'),
                     'profile' =>  $imageFile->getClientName(), /*this will get the name of file input */
                );             
            }

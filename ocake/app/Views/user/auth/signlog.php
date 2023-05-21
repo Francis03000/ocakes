@@ -95,8 +95,13 @@ button:hover {
                         <option value="Female">Female</option>
                     </select>
                     <input type="text" id="mobile" oninput="validateInput(this, 'numbers')" name="mobile"
-                        pattern="[0-9]*" title="Please input numbers only" inputmode="numeric" placeholder="mobile"
-                        required>
+                        pattern="[0-9]*" title="Please input numbers only" inputmode="numeric" maxlength="13"
+                        value="639" required
+                        onkeydown="if (this.value.length <= 3) return event.key !== 'Delete' && event.key !== 'Backspace';"
+                        onpaste="if (this.value.length <= 3) return false;"
+                        oncut="if (this.value.length <= 3) return false;">
+
+
                     <?php
                             $currentDate = date("Y-m-d");
                         ?>
@@ -110,12 +115,20 @@ button:hover {
                     <input type="number" placeholder="yyyy" name="birthyear" oninput="this.className = ''">
                 </div> -->
                 <div class="tab">
-                    <input type="email" id="email" oninput="this.className = ''" name="email" placeholder="Email"
-                        required>
-                    <input type="password" id="password" oninput="this.className = ''" name="password"
+                    <div id="error-message" style="display: none; color: red;font-style: italic;">Invalid email</div>
+
+                    <input type="email" id="email" oninput="validateEmail()" name="email" placeholder="Email" required>
+                    <div id="passError-message" style="display: none; color: red; font-style: italic;">Password should
+                        contain atleast 1 special character, 1 number, and (1 upperCase and lowercase letter )
+                    </div>
+
+
+                    <input type="password" id="password" oninput="validatePassword()" name="password"
                         placeholder="Password" required>
-                    <input type="password" id="confirm_password" oninput="this.className = ''" name="confirm_password"
-                        placeholder="Confirm Password" required>
+                    <div id="confirmPassError-message" style="display: none; color: red; font-style: italic;">Passwords
+                        do not match</div>
+                    <input type="password" id="confirm_password" oninput="validateConfirmPassword()"
+                        name="confirm_password" placeholder="Confirm Password" required>
                 </div>
                 <div style="overflow:auto; margin-top:30px">
                     <div style="float:right;">
@@ -302,6 +315,43 @@ button:hover {
             input.value = input.value.replace(/[^A-Za-z]/g, ''); // Remove any non-letter characters
         } else if (validationType === 'numbers') {
             input.value = input.value.replace(/\D/g, ''); // Remove any non-digit characters
+        }
+    }
+
+    function validateEmail() {
+        var emailInput = document.getElementById("email");
+        var errorMessage = document.getElementById("error-message");
+
+        if (!emailInput.value.endsWith("@gmail.com")) {
+            errorMessage.style.display = "block";
+        } else {
+            errorMessage.style.display = "none";
+        }
+    }
+
+
+    function validatePassword() {
+        var errorMessage = document.getElementById("passError-message");
+        var password = document.getElementById("password").value;
+        var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()]).{8,}$/;
+
+        if (regex.test(password) == false) {
+            errorMessage.style.display = "";
+        } else {
+            errorMessage.style.display = "none";
+        }
+
+    }
+
+    function validateConfirmPassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+        var confirmErrorMessage = document.getElementById("confirmPassError-message");
+
+        if (password === confirmPassword) {
+            confirmErrorMessage.style.display = "none";
+        } else {
+            confirmErrorMessage.style.display = "block";
         }
     }
     </script>
