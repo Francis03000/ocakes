@@ -73,10 +73,10 @@ button:hover {
             <form id="regForm" method="post" action="<?=site_url('save') ?>">
                 <h1 style="margin-bottom:30px">Create Account</h1>
                 <div class="tab">
-                    <input type="text" id="firstname" oninput="this.className = ''" name="firstname"
-                        placeholder="firstname" required>
-                    <input type="text" id="lastname" oninput="this.className = ''" name="lastname"
-                        placeholder="lastname" required>
+                    <input type="text" id="firstname" oninput="validateInput(this, 'letters')" name="firstname"
+                        pattern="[A-Za-z]+" placeholder="firstname" required>
+                    <input type="text" id="lastname" oninput="validateInput(this, 'letters')" name="lastname"
+                        pattern="[A-Za-z]+" placeholder="lastname" required>
 
                     <input type="text" id="municipality" oninput="this.className = ''" name="mcp"
                         placeholder="municipality" value="Naujan" required>
@@ -94,9 +94,14 @@ button:hover {
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
-                    <input type="number" id="mobile" oninput="this.className = ''" name="mobile" placeholder="mobile"
+                    <input type="text" id="mobile" oninput="validateInput(this, 'numbers')" name="mobile"
+                        pattern="[0-9]*" title="Please input numbers only" inputmode="numeric" placeholder="mobile"
                         required>
-                    Birthday <input type="date" name="birthdate" oninput="this.className = ''">
+                    <?php
+                            $currentDate = date("Y-m-d");
+                        ?>
+                    Birthday <input type="date" name="birthdate" max="<?php echo $currentDate; ?>"
+                        oninput="this.className = ''">
 
                 </div>
                 <!-- <div class="tab">
@@ -291,7 +296,16 @@ button:hover {
         //... and adds the "active" class on the current step:
         x[n].className += " active";
     }
+
+    function validateInput(input, validationType) {
+        if (validationType === 'letters') {
+            input.value = input.value.replace(/[^A-Za-z]/g, ''); // Remove any non-letter characters
+        } else if (validationType === 'numbers') {
+            input.value = input.value.replace(/\D/g, ''); // Remove any non-digit characters
+        }
+    }
     </script>
+
 
 
 </body>

@@ -289,7 +289,6 @@
 function confirmAddToCarts() {
 
     Swal.fire({
-        position: 'top',
         icon: 'success',
         title: 'Successfully added to cart!',
         showConfirmButton: false,
