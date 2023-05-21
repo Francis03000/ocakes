@@ -20,7 +20,7 @@
 <!-- <link rel="stylesheet" href="tools/user/css/reference.css" /> -->
 <section class="checkout-wrapper section">
     <div class="container">
-        <form action="<?=site_url('placeorder')?>" method="POST"  accept-charset="utf-8" enctype="multipart/form-data" style="background-color:none" >
+        <form action="<?=site_url('placeorder')?>" method="POST" id="formDataNaTo"  accept-charset="utf-8" enctype="multipart/form-data" style="background-color:none" >
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="checkout-steps-form-style-1">
@@ -151,11 +151,6 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="single-form form-default">
-                                                <label>Payment Method</label><br>
-                                                    <input type="radio" name="payment" id="box1" value="Downpayment" required>
-                                                    <label for="box1">Down Payment</label>
-                                                    <input type="radio" name="payment" id="box2" value="Fullpayment" required>
-                                                    <label for="box2">Full Payment</label>
                                                 <div class="select-items">
                                                     <select type="payment_method" id="payment_method" name="payment_method" class="form-control" required>
                                                         <option value="" disabled selected>select</option>
@@ -200,7 +195,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal" id="saradomoto">Close</button> 
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -291,7 +286,7 @@
                                         <input type="hidden" name="quantity[]" value="<?=$data->quantity?>">
                                     <?php }?>
                                     <div class="align-right">
-                                        <button type="submit" class="btn btn-alt ">Place Order</button>
+                                        <button type="submit" class="btn btn-alt" id="placemonato">Place Order</button>
                                     </div>
                                 </form>
                             </div>
@@ -334,6 +329,10 @@
 </section>
 
 <?php foreach($address as $data){?>
+
+<script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+<script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalerts.min.js"></script>
+
 <script>
     function myFunction(){
         // var x = parseInt(document.getElementById("mySelect").value);
@@ -374,6 +373,25 @@
 
 <script>
     $(document).ready(function(){
+
+        $("#placemonato").attr("disabled", true); 
+
+        $("#placemonato").click(function(e){
+            e.preventDefault();
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Your order is currently Pending, please wait for it to be Confirmed.',
+                showConfirmButton: false,
+                timer: 1500
+            }).then(()=>{
+                $("#formDataNaTo").submit();
+            })
+        })
+
+        $('#saradomoto').click(function(){
+            $("#placemonato").removeAttr("disabled");
+        });
 
         $("#fulldp").hide();
 
@@ -503,6 +521,7 @@
 
         $('#payment_method').change(function(){
             $("#Modal").modal('show');
+            $("#proof").attr("disabled", false);
         });
     });
 </script>
