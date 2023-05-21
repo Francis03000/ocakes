@@ -290,7 +290,9 @@
                 dataType: 'json',
                 success: function(response) {
                     response.forEach((totals) => {
-                        totalamount+=parseFloat(totals.total_price);
+                        if(totals.is_check==1){
+                            totalamount+=parseFloat(totals.total_price);
+                        }
                     });
                     $("#pinakatotal").html(totalamount);
                 }

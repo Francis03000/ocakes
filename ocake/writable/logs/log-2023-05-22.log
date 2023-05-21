@@ -1,0 +1,32 @@
+ERROR - 2023-05-22 00:01:44 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\ocake\ocake\app\Controllers\User.php(914): App\Models\Checkout_model->checkout_update(Array, '65')
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('65', '')
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-05-22 00:02:48 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\ocake\ocake\app\Controllers\User.php(914): App\Models\Checkout_model->checkout_update(Array, '66')
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('66', '')
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
