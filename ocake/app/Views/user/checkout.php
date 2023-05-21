@@ -451,8 +451,10 @@
                 $('#mySelect').attr("disabled", true); 
                 $('#mp').attr("readonly", true); 
                 $('#st').attr("readonly", true); 
+                $("#balance").html(parseFloat($("#myDown").html())+parseFloat($("#demo").html()));
                 document.getElementById("shipping_fee").value = 0;
             }else{
+                $("#balance").html(parseFloat($("#myDown").html())+parseFloat($("#demo").html()));
                 $('#mySelect').val("").attr("selected", "selected");
                 $('#mySelect').attr("disabled", false); 
                 $('#mp').removeAttr('readonly');
