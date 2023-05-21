@@ -114,14 +114,15 @@ var Tawk_API = Tawk_API || {},
                          <img src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
                          <?php }?>
                          <div class="button">
-                             <form action="<?=site_url('add_cart')?>" method="POST">
+                             <form id="add-to-cart-form" action="<?=site_url('add_cart')?>" method="POST">
                                  <!-- <input type="hidden" name="uid" value=""> -->
                                  <input type="hidden" name="occasion" value="<?=$data->occasion;?>">
                                  <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
                                  <input type="hidden" name="price" value="<?=$data->price;?>">
                                  <input type="hidden" name="pid" value="<?=$data->id;?>">
                                  <!-- <input type="hidden" name="img" value="<?=$data->image;?>"> -->
-                                 <button type="submit" class="btn"><i class="lni lni-cart"></i>
+                                 <button type="submit" class="btn" onclick="confirmAddToCart()"><i
+                                         class="lni lni-cart"></i>
                                      Add to Cart</button>
                              </form>
                          </div>
@@ -256,3 +257,24 @@ var Tawk_API = Tawk_API || {},
      </div>
  </section>
  <!-- End Shipping Info -->
+
+ <script src="<?=base_url()?>/tools/admin/assets/js/jquery-3.6.0.min.js"></script>
+ <script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+ <script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalerts.min.js"></script>
+
+ <script>
+function confirmAddToCart() {
+
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Successfully added to cart!',
+        showConfirmButton: false,
+
+        timer: 1500
+    })
+    document.getElementById('add-to-cart-form').submit();
+
+
+}
+ </script>

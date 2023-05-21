@@ -37,38 +37,38 @@
                      <div class="single-widget">
                          <h3>All Categories</h3>
                          <ul class="list">
-                         <li>
-                                <a href="<?=site_url('birthday')?>">Birthday </a>
-                                <!-- <span>(1138)</span> -->
-                            </li>
-                            <li>
-                                <a href="<?=site_url('christening')?>">Christening</a>
-                                <!-- <span>(2356)</span> -->
-                            </li>
-                            <li>
-                                <a href="<?=site_url('wedding')?>">Wedding</a>
-                                <!-- <span>(420)</span> -->
-                            </li>
-                            <li>
-                                <a href="<?=site_url('graduation')?>">Graduation</a>
-                                <!-- <span>(874)</span> -->
-                            </li>
-                            <li>
-                                <a href="<?=site_url('valentine')?>">Valentine</a>
-                                <!-- <span>(1239)</span> -->
-                            </li>
-                            <li>
-                                <a href="<?=site_url('halloween')?>">Halloween</a>
-                                <!-- <span>(340)</span> -->
-                            </li>
-                            <li>
-                                <a href="<?=site_url('christmas')?>">Christmas</a>
-                                <!-- <span>(512)</span> -->
-                            </li>
-                            <li>
-                                <a href="<?=site_url('newyear')?>">New Year</a>
-                                <!-- <span>(512)</span> -->
-                            </li>
+                             <li>
+                                 <a href="<?=site_url('birthday')?>">Birthday </a>
+                                 <!-- <span>(1138)</span> -->
+                             </li>
+                             <li>
+                                 <a href="<?=site_url('christening')?>">Christening</a>
+                                 <!-- <span>(2356)</span> -->
+                             </li>
+                             <li>
+                                 <a href="<?=site_url('wedding')?>">Wedding</a>
+                                 <!-- <span>(420)</span> -->
+                             </li>
+                             <li>
+                                 <a href="<?=site_url('graduation')?>">Graduation</a>
+                                 <!-- <span>(874)</span> -->
+                             </li>
+                             <li>
+                                 <a href="<?=site_url('valentine')?>">Valentine</a>
+                                 <!-- <span>(1239)</span> -->
+                             </li>
+                             <li>
+                                 <a href="<?=site_url('halloween')?>">Halloween</a>
+                                 <!-- <span>(340)</span> -->
+                             </li>
+                             <li>
+                                 <a href="<?=site_url('christmas')?>">Christmas</a>
+                                 <!-- <span>(512)</span> -->
+                             </li>
+                             <li>
+                                 <a href="<?=site_url('newyear')?>">New Year</a>
+                                 <!-- <span>(512)</span> -->
+                             </li>
                          </ul>
                      </div>
 

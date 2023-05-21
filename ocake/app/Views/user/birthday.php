@@ -1,29 +1,29 @@
  <!-- End Header Area -->
 
-    <div class="breadcrumbs">
-        <div class="container" >
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="breadcrumbs-content">
-                        <h1 class="page-title"><?php echo $occasion?> Category</h1>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <ul class="breadcrumb-nav">
-                        <li><a href="<?=site_url('home')?>"><i class="lni lni-home"></i> Home</a></li>
-                        <li><a href="javascript:void(0)">Category</a></li>
-                        <li><?php echo $occasion;?></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+ <div class="breadcrumbs">
+     <div class="container">
+         <div class="row align-items-center">
+             <div class="col-lg-6 col-md-6 col-12">
+                 <div class="breadcrumbs-content">
+                     <h1 class="page-title"><?php echo $occasion?> Category</h1>
+                 </div>
+             </div>
+             <div class="col-lg-6 col-md-6 col-12">
+                 <ul class="breadcrumb-nav">
+                     <li><a href="<?=site_url('home')?>"><i class="lni lni-home"></i> Home</a></li>
+                     <li><a href="javascript:void(0)">Category</a></li>
+                     <li><?php echo $occasion;?></li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+ </div>
 
 
-    <section class="product-grids section">
-        <div class="container">
-            <div class="row">
-                <!-- <div class="col-lg-3 col-12">
+ <section class="product-grids section">
+     <div class="container">
+         <div class="row">
+             <!-- <div class="col-lg-3 col-12">
                     <div class="product-sidebar">
                         <div class="single-widget search">
                             <h3>Search Product</h3>
@@ -154,130 +154,155 @@
                         </div>
                     </div>
                 </div> -->
-                
-                <div class="col-lg-12 col-12">
-                    <div class="product-grids-head">
-                        <div class="product-grid-topbar">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-md-8 col-12">
-                                    <div class="product-sorting">
-                                        <label for="sorting">Sort by:</label>
-                                        <select class="form-control" id="sorting">
-                                            <option>Popularity</option>
-                                            <option>Low - High Price</option>
-                                            <option>High - Low Price</option>
-                                            <option>Average Rating</option>
-                                            <option>A - Z Order</option>
-                                            <option>Z - A Order</option>
-                                        </select>
-                                        <h3 class="total-show-product">Showing: <span>1 - 12 items</span></h3>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-4 col-12">
-                                    <nav>
-                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                            <button class="nav-link active" id="nav-grid-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav-grid" type="button" role="tab"
-                                                aria-controls="nav-grid" aria-selected="true"><i
-                                                    class="lni lni-grid-alt"></i></button>
-                                            <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav-list" type="button" role="tab"
-                                                aria-controls="nav-list" aria-selected="false"><i
-                                                    class="lni lni-list"></i></button>
-                                        </div>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
-                                aria-labelledby="nav-grid-tab">
-                                <div class="row">
-                                    <?php $num = 1;     
+
+             <div class="col-lg-12 col-12">
+                 <div class="product-grids-head">
+                     <div class="product-grid-topbar">
+                         <div class="row align-items-center">
+                             <div class="col-lg-7 col-md-8 col-12">
+                                 <div class="product-sorting">
+                                     <label for="sorting">Sort by:</label>
+                                     <select class="form-control" id="sorting">
+                                         <option>Popularity</option>
+                                         <option>Low - High Price</option>
+                                         <option>High - Low Price</option>
+                                         <option>Average Rating</option>
+                                         <option>A - Z Order</option>
+                                         <option>Z - A Order</option>
+                                     </select>
+                                     <h3 class="total-show-product">Showing: <span>1 - 12 items</span></h3>
+                                 </div>
+                             </div>
+                             <div class="col-lg-5 col-md-4 col-12">
+                                 <nav>
+                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                         <button class="nav-link active" id="nav-grid-tab" data-bs-toggle="tab"
+                                             data-bs-target="#nav-grid" type="button" role="tab"
+                                             aria-controls="nav-grid" aria-selected="true"><i
+                                                 class="lni lni-grid-alt"></i></button>
+                                         <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab"
+                                             data-bs-target="#nav-list" type="button" role="tab"
+                                             aria-controls="nav-list" aria-selected="false"><i
+                                                 class="lni lni-list"></i></button>
+                                     </div>
+                                 </nav>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="tab-content" id="nav-tabContent">
+                         <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
+                             aria-labelledby="nav-grid-tab">
+                             <div class="row">
+                                 <?php $num = 1;     
                                     foreach ($product as $data) { ?>
-                                        <div class="col-lg-3 col-md-6 col-12">
-                                            <div class="single-product">
-                                                <div class="product-image">
-                                                        <?php if($data->is_customized == 0) {?>
-                                                            <img src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>"
-                                                            alt="#">
-                                                        <?php }else{?>
-                                                            <img src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
-                                                            <?php }?>
-                                                    <div class="button">
-                                                        <form action="<?=site_url('add_cart')?>" method="POST">
-                                                        <!-- <input type="hidden" name="uid" value=""> -->
-                                                            <input type="hidden" name="occasion"
-                                                                value="<?=$data->occasion;?>">
-                                                            <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
-                                                            <input type="hidden" name="price" value="<?=$data->price;?>">
-                                                            <input type="hidden" name="pid" value="<?=$data->id;?>">
-                                                            <!-- <input type="hidden" name="img" value="<?=$data->image;?>"> -->
-                                                            <button type="submit" class="btn"><i class="lni lni-cart"></i>
-                                                                Add to Cart</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <form action="<?=site_url('productdetails')?>" method="POST">
-                                                        <input type="hidden" name="prod_id" value="<?=$data->id;?>">
-                                                        <input type="submit" value="View" class="btn btn-outline-primary btn-rounded btn-sm" name="view" style="float:right">
-                                                    </form>
-                                                    <span class="category"> <?php echo $data->flavor; ?></span>
-                                                    <h4 class="title">
-                                                        <a href="product-grids.html"><?php echo $data->occasion; ?> Cake</a>
-                                                    </h4>
-                                                    <ul class="review">
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star"></i></li>
-                                                        <li><span>4.0 Review(s)</span></li>
-                                                    </ul>
-                                                    
-                                                    <div class="price">
-                                                        <span>&#8369 <?php echo $data->price; ?></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php }?>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
+                                 <div class="col-lg-3 col-md-6 col-12">
+                                     <div class="single-product">
+                                         <div class="product-image">
+                                             <?php if($data->is_customized == 0) {?>
+                                             <img src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>"
+                                                 alt="#">
+                                             <?php }else{?>
+                                             <img src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
+                                             <?php }?>
+                                             <div class="button">
+                                                 <form id="add-to-cart-forms" action="<?=site_url('add_cart')?>"
+                                                     method="POST">
+                                                     <!-- <input type="hidden" name="uid" value=""> -->
+                                                     <input type="hidden" name="occasion" value="<?=$data->occasion;?>">
+                                                     <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
+                                                     <input type="hidden" name="price" value="<?=$data->price;?>">
+                                                     <input type="hidden" name="pid" value="<?=$data->id;?>">
+                                                     <!-- <input type="hidden" name="img" value="<?=$data->image;?>"> -->
+                                                     <button type="submit" class="btn" onclick="confirmAddToCarts()"><i
+                                                             class="lni lni-cart"></i>
+                                                         Add to Cart</button>
+                                                 </form>
+                                             </div>
+                                         </div>
+                                         <div class="product-info">
+                                             <form action="<?=site_url('productdetails')?>" method="POST">
+                                                 <input type="hidden" name="prod_id" value="<?=$data->id;?>">
+                                                 <input type="submit" value="View"
+                                                     class="btn btn-outline-primary btn-rounded btn-sm" name="view"
+                                                     style="float:right">
+                                             </form>
+                                             <span class="category"> <?php echo $data->flavor; ?></span>
+                                             <h4 class="title">
+                                                 <a href="product-grids.html"><?php echo $data->occasion; ?> Cake</a>
+                                             </h4>
+                                             <ul class="review">
+                                                 <li><i class="lni lni-star-filled"></i></li>
+                                                 <li><i class="lni lni-star-filled"></i></li>
+                                                 <li><i class="lni lni-star-filled"></i></li>
+                                                 <li><i class="lni lni-star-filled"></i></li>
+                                                 <li><i class="lni lni-star"></i></li>
+                                                 <li><span>4.0 Review(s)</span></li>
+                                             </ul>
 
-                                    <div class="pagination left">
-                                        <ul class="pagination-list">
-                                            <li><a href="<?=site_url('1')?>">1</a></li>
-                                            <li class="active"><a href="<?=site_url('2')?>">2</a></li>
-                                            <li><a href="javascript:void(0)">3</a></li>
-                                            <li><a href="javascript:void(0)">4</a></li>
-                                            <li><a href="javascript:void(0)"><i class="lni lni-chevron-right"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                             <div class="price">
+                                                 <span>&#8369 <?php echo $data->price; ?></span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <?php }?>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="col-12">
 
-                                </div>
-                            </div>
-                        </div>
+                                 <div class="pagination left">
+                                     <ul class="pagination-list">
+                                         <li><a href="<?=site_url('1')?>">1</a></li>
+                                         <li class="active"><a href="<?=site_url('2')?>">2</a></li>
+                                         <li><a href="javascript:void(0)">3</a></li>
+                                         <li><a href="javascript:void(0)">4</a></li>
+                                         <li><a href="javascript:void(0)"><i class="lni lni-chevron-right"></i></a>
+                                         </li>
+                                     </ul>
+                                 </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <a href="#" class="scroll-top">
-        <i class="lni lni-chevron-up"></i>
-    </a>
+                             </div>
+                         </div>
+                     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="tools/user/js/bootstrap.min.js"></script>
-    <script src="tools/user/js/tiny-slider.js"></script>
-    <script src="tools/user/js/glightbox.min.js"></script>
-    <script src="tools/user/js/main.js"></script>
-</body>
+                 </div>
+             </div>
+         </div>
+     </div>
+     </div>
+ </section>
+ <a href="#" class="scroll-top">
+     <i class="lni lni-chevron-up"></i>
+ </a>
 
-</html>
+ <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+ <script src="tools/user/js/bootstrap.min.js"></script>
+ <script src="tools/user/js/tiny-slider.js"></script>
+ <script src="tools/user/js/glightbox.min.js"></script>
+ <script src="tools/user/js/main.js"></script>
+ <script src="<?=base_url()?>/tools/admin/assets/js/jquery-3.6.0.min.js"></script>
+ <script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+ <script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalerts.min.js"></script>
+
+ <script>
+function confirmAddToCarts() {
+
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Successfully added to cart!',
+        showConfirmButton: false,
+
+        timer: 1500
+    })
+    document.getElementById('add-to-cart-forms').submit();
+
+
+}
+ </script>
+
+
+ </body>
+
+ </html>
