@@ -47,9 +47,12 @@
       <div class="row">
 
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="weeksolds">
             <div class="card-header">
-              <h5 class="card-title">Weekly Sold</h5>
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Weekly Sold</h5>
+                <button type="button" class="btn btn-info" id="printReportWeekSold">Print Report</button>
+              </div>
             </div>
             <div class="card-body">
              <div id="dailyChart"></div>
@@ -58,9 +61,12 @@
         </div>
 
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="yearlysolds">
             <div class="card-header">
-              <h5 class="card-title">Yearly Sold</h5>
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Yearly Sold</h5>
+                <button type="button" class="btn btn-info" id="printReportYearlySold">Print Report</button>
+              </div>
             </div>
             <div class="card-body">
              <div id="yearlyChart"></div>
@@ -69,9 +75,12 @@
         </div>
 
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="MS">
             <div class="card-header">
-              <h5 class="card-title">Bar Chart</h5>
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Bar Chart</h5>
+                <button type="button" class="btn btn-info" id="printReportMonthlySales">Print Report</button>
+              </div>
             </div>
             <div class="card-body">
               <div id="monthlyChart" class="chart-set"></div>
@@ -80,9 +89,12 @@
         </div>
 
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="TBG">
             <div class="card-header">
+              <div class="d-flex justify-content-between">
               <h5 class="card-title">Top Barangay</h5>
+                <button type="button" class="btn btn-info" id="printReportTopBG">Print Report</button>
+              </div>
             </div>
             <div class="card-body">
              <div id="brgy_chart"></div>
@@ -95,7 +107,7 @@
   </div>
 </div>
 
-<div class="searchpart">
+<!-- <div class="searchpart">
   <div class="searchcontent">
     <div class="searchhead">
       <h3>Search </h3>
@@ -125,7 +137,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <script src="<?=base_url()?>/tools/admin/assets/js/jquery-3.6.0.min.js"></script>
@@ -372,6 +384,51 @@
 
         var chart = new ApexCharts(document.querySelector("#monthlyChart"), options);
         chart.render();
+    </script>
+
+    <script>
+      $(document).ready(function(){
+
+        $("#printReportWeekSold").click(function() {
+          $("#printReportWeekSold").hide();
+          const printContents = document.getElementById("weeksolds").innerHTML;
+          const originalContents = document.body.innerHTML;
+          document.body.innerHTML = printContents;
+          window.print();
+          document.body.innerHTML = originalContents;
+        });
+
+        $("#printReportYearlySold").click(function() {
+          $("#printReportYearlySold").hide();
+          const printContents = document.getElementById("yearlysolds").innerHTML;
+          const originalContents = document.body.innerHTML;
+          document.body.innerHTML = printContents;
+          window.print();
+          document.body.innerHTML = originalContents;
+        });
+
+        $("#printReportMontlySales").click(function() {
+          $("#printReportMontlySales").hide();
+          const printContents = document.getElementById("MS").innerHTML;
+          const originalContents = document.body.innerHTML;
+          document.body.innerHTML = printContents;
+          window.print();
+          document.body.innerHTML = originalContents;
+        });
+
+        $("#printReportTopBG").click(function() {
+          $("#printReportTopBG").hide();
+          const printContents = document.getElementById("TBG").innerHTML;
+          const originalContents = document.body.innerHTML;
+          document.body.innerHTML = printContents;
+          window.print();
+          document.body.innerHTML = originalContents;
+        });
+
+        window.addEventListener("afterprint", (event) => {
+          window.location.reload();
+        });
+      })
     </script>
 </body>
 </html>
