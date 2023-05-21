@@ -143,17 +143,17 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="single-form form-default">
-                                                <label>Payment Method</label>
+                                                <label>Payment Method</label><br>
+                                                    <input type="radio" name="payment" id="box1" value="Downpayment" required>
+                                                    <label for="box1">Down Payment</label>
+                                                    <input type="radio" name="payment" id="box2" value="Fullpayment" required>
+                                                    <label for="box2">Full Payment</label>
                                                 <div class="select-items">
                                                     <select type="payment_method" id="payment_method" name="payment_method" class="form-control" required>
                                                         <option value="" disabled selected>select</option>
                                                         <option value="COD">COD</option>
                                                         <option value="Gcash">Gcash</option>
                                                     </select>
-                                                    <input type="radio" name="payment" id="box1" value="Downpayment" required>
-                                                    <label for="box1">Down Payment</label>
-                                                    <input type="radio" name="payment" id="box2" value="Fullpayment" required>
-                                                    <label for="box2">Full Payment</label>
                                                 </div>
                                             </div>
                                         </div>
