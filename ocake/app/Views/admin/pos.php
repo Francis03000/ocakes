@@ -207,7 +207,7 @@
                                 <div class="btn-pos">
                                     <ul>
                                         <li>
-                                            <a class="btn" data-bs-toggle="modal" id="calcuT" ><img
+                                            <a class="btn" data-bs-toggle="modal" id="calcuT"><img
                                                     src="<?=base_url()?>/tools/admin/assets/img/icons/transcation.svg"
                                                     alt="img" class="me-1" />
                                                 Calculator</a>
@@ -229,7 +229,7 @@
         </div>
     </div>
 
-<div class="modal fade" id="calculator" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="calculator" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -505,8 +505,6 @@
                             <div class="col-lg-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label>Date</label>
-                                    <!-- <input type="date" class="form-control" id="datepicker"
-                                         name="date_pickup_or_deliver"> -->
                                     <input class="form-control" type="date" id="date_pickup_or_deliver"
                                         name="date_pickup_or_deliver" />
                                 </div>
@@ -596,7 +594,7 @@
                     <div class="modal-body" id="receipt_modal">
 
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="card">
                                     <div class="card-header">
                                         <h3>Bill To</h3>
@@ -1341,37 +1339,39 @@ $(document).ready(function() {
         });
     });
 
-    $("#calcuT").click(function(){
+    //CALCULATOR script
+    $("#calcuT").click(function() {
         $("#calculator").modal('show');
-        //CALCULATOR script
 
-    const display = document.querySelector(".calculatortotal h4");
+        const display = document.querySelector(".calculatortotal h4");
+        const buttons = document.querySelectorAll(".calculator-set ul li a");
+        let total = 0;
+        let display_is_Zero = true;
 
+        buttons.forEach((button) => {
+            button.addEventListener("click", buttonClick);
+        });
 
-    const buttons = document.querySelectorAll(".calculator-set ul li a");
+        function buttonClick() {
+            if (display_is_Zero) {
+                display.innerText = "";
+                display_is_Zero = false;
+            }
 
-
-    let total = 0;
-
-
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const value = button.innerText;
+            const value = this.innerText;
 
             if (!isNaN(value) || value === ".") {
                 display.innerText += value;
             } else if (value === "+" || value === "-" || value === "*" || value === "/") {
-                display.innerText +=  value ;
+                display.innerText += value;
             } else if (value === "CLEAR") {
-
-                display.innerText = "";
-                if (display.innerText === "") {
-                    display.innerText = "0";
-                }
+                display.innerText = "0";
+                display_is_Zero = true;
             } else if (value === "x") {
                 display.innerText = display.innerText.slice(0, -1);
                 if (display.innerText === "") {
                     display.innerText = "0";
+                    display_is_Zero = true;
                 }
             } else if (value === "=") {
                 try {
@@ -1381,23 +1381,22 @@ $(document).ready(function() {
                     display.innerText = "Error";
                 }
             }
+        }
+
+        $('#calculator').on('hidden.bs.modal', function() {
+            buttons.forEach((button) => {
+                button.removeEventListener("click", buttonClick);
+            });
+            display.innerText = "0";
+            display_is_Zero = true;
         });
     });
-    });
+
+
+
+
+
+
 
 });
 </script>
-
-<!-- <script>
-        let DateToday=new Date();
-        let month=DateToday.getMonth()+1;
-        let day=DateToday.getDate()+3;
-        let year=DateToday.getFullYear();
-        if(month<10)
-            month='0'+month.toString();
-        if(day<10)
-            day='0'+day.toString();
-        let Today=year+'-'+month+'-'+day;
-        let maxdate=year+1+'-'+month+'-'+day;
-        document.getElementById('datepicker').setAttribute("min",Today);
-</script> -->
