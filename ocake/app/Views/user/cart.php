@@ -25,96 +25,36 @@
   crossorigin="anonymous"></script>
 
 <div class="shopping-cart section">
-<form method="get" action= "<?=site_url('checkout')?>" > 
     <div class="container">
-        <div class="cart-list-head">
-
-            <div class="cart-list-title">
-                <div class="row text-center">
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <input type="checkbox" name="" value="">
-                    </div>
-                    <div class="col-lg-3 col-md-1 col-12">
-                        <p>Product</p>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-12">
-                        <p>Description</p>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-12">
-                        <p>Price</p>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-12">
-                        <p>Quantity</p>
-                    </div>
-                    <!-- <div class="col-lg-2 col-md-2 col-12">
-                        <p>Subtotal</p>
-                    </div> -->
-                    <div class="col-lg-2 col-md-2 col-12">
-                        <p>Remove</p>
-                    </div>
-                </div>
-            </div>
-            
-             
-            <?php foreach ($cartData as $data) {?>
-                <div class="cart-single-list text-center">
-                    <div class="row align-items-center">
-                        <div class="col-lg-1 col-md-2 col-12">
-                            <input type="checkbox" name="cart_product[]" value="<?php echo $data->cart_id?>">
-                        </div>
-                        <div class="col-lg-3 col-md-1 col-12">
-                            <div class="product-image ">
-                                <a href="<?= site_url('productdetail') ?>">
-                                    <?php if($data->is_customized == 0) {?>
-                                        <span><img style="height:100px;" src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>"></span>
-                                    <?php }else{?>
-                                        <img style="height:100px;" src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
-                                    <?php }?>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-12">
-                            <h5 class="product-name">
-                            <a href="<?= site_url('productgrid') ?>"><?php echo $data->occasion;?> Cake</a>
-                            </h5>
-                            <p class="product-des">
-                                <span><em>Flavor:</em> <?php echo $data->flavor; ?></span>
-                                <span><em>Unit Price:</em> <p id='price'><?php echo '&#8369;' . number_format ($data->price); ?></p></span>
-                                <!-- <span><em>Color:</em> Black</span> -->
-                            </p>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-12">
-                            <p id='total'> <?php echo '&#8369;' . number_format ($data->price); ?></p>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-12">
-                            <div >
-                            <!-- <input type="number" style="width: 80px;" class="form-control" min="1" size="10" value="<?//= $data->quantity ?>"> -->
-                            <!-- <span class="btn btn-lg dec" prod_id="'.$order->prod_id.'">-</span>
-								<input type="text" type="text" min="1" class="product-quantity text-center qty cart-qty" 
-										prod_id="'.$order->prod_id.'" id="qty-'.$order->prod_id.'" 
-										update_id="'.$order->order_info_id.'" value="'.$order->order_qty.'" 
-										style="border:none;background:transparent;" readonly="">
-							<span class="btn btn-lg inc" prod_id="'.$order->prod_id.'">+</span> -->
-                            <input type="button" onclick="decrementValue()" style="width: 20px;" value="-"/>
-                            <input class='quan' id="number" type="text" name="quantity" value="1" maxlength="2" max="10" style="width: 50px; text-align:center"/>
-                            <input type="button" onclick="incrementValue()" style="width: 20px;" value="+"/>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-2 col-md-2 col-12">
-                            <p><?//php echo '&#8369; ' . $data->price * $data->quantity . '.00' ?></p>
-                        </div> -->
-                        <div class="col-lg-2 col-md-2 col-12">
-                             <a style="color:red; margin-right:5px" class="text-center"
-                                 href="<?php echo site_url('cart/delete_cart/' . $data->cart_id); ?>">
-                                <i class="fas fa-trash"></i>
-                            </a>
-                            <!-- <a class="remove-item" href="javascript:void(0)"><i class="lni lni-close"></i></a> -->
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-
-            
+       <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="text-align: center; vertical-align: middle;"><input type="checkbox" name="selectAll" id="selectAll"></th>
+                        <th style="text-align: center; vertical-align: middle;">Product Image</th>
+                        <th style="text-align: center; vertical-align: middle;">Product Description</th>
+                        <th style="text-align: center; vertical-align: middle;">Quantity</th>
+                        <th style="text-align: center; vertical-align: middle;">Subtotal</th>
+                        <th style="text-align: center; vertical-align: middle;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-bodys">
+                    <!-- <tr>
+                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" name="selectAll" id="selectAll"></td>
+                        <td style="text-align: center; vertical-align: middle;"><img style="height:100px; width:100px" src="tools/uploads/ocake_logo2.gif" alt="Logo"></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <p>Name : CAKE 101</p>
+                            <p>Flavor : CAKE 101</p>
+                            <p>Unit Price : CAKE 101</p>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle;"><input type="number" name="quantity" id="quantity"></td>
+                        <td style="text-align: center; vertical-align: middle;">101</td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
         </div>
         <div class="row">
             <div class="col-12">
@@ -150,57 +90,112 @@
             </div>
         </div>
     </div>
-</form>
 </div>
 
 <a href="#" class="scroll-top">
     <i class="lni lni-chevron-up"></i>
 </a>
-<script>
-    $(document).ready(function () {
-        $('#number').on('input', function(e){
-            var num = $('#number').val()
-            if (num == ''){
-                num = 0
-            }
-            var price = ($('#price').html())
-            price = price.substring(1, price.length)
-            total = parseInt(num) * parseInt(price)
-            $('#total').text("P"+total)
-        });
-    });
-    function incrementValue(){
-        var value = parseInt(document.getElementById('number').value,10);
-        value = isNaN(value) ? 0 : value;
-        if(value<10){
-            value++;
-            document.getElementById('number').value = value;
-        }
-    }
-    function decrementValue(){
-        var value = parseInt(document.getElementById('number').value,10);
-        value = isNaN(value) ? 0 : value;
-        if(value>1){
-            value--;
-            document.getElementById('number').value = value;
-        }
-    } 
-</script>
-
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="tools/user/js/bootstrap.min.js"></script>
 <script src="tools/user/js/tiny-slider.js"></script>
 <script src="tools/user/js/glightbox.min.js"></script>
 <script src="tools/user/js/order.js"></script>
-<!-- <script src="tools/user/js/main.js"></script>
-<script src="tools/user/js/order.js"></script>
-<script src="tools/user/bootstrap.min.js"></script>
-<script src="tools/user/owl.carousel.min.js"></script>
-<script src="tools/user/slick.min.js"></script>
-<script src="tools/user/waypoints.min.js"></script> -->
-
-<?//php echo view('admin/include/photo-script'); ?>
-<?//php echo view('admin/include/script'); ?>
 </body>
-
 </html>
+
+<script>
+    $(document).ready(function(){
+
+        let arrayCart = ["checkbox","image","product_description","quantity","subtotal"]
+        initData();
+        function initData(){
+            var totalamount = 0;
+            $.ajax({
+                url: '<?= base_url('user/cart/cart-user-detail') ?>',
+                method: 'get',
+                dataType: 'json',
+                success: function(response) {
+                    let product_container = $("#cart-bodys");
+                    response.forEach((product) => {
+                        let tabrow = $("<tr>");
+                        const attriMap = new Map(Object.entries(product));
+                        arrayCart.forEach((attri, i) => {
+                            if (attri != "subtotal" && attri != "checkbox" && attri != "image" && attri!="product_description" && attri != "quantity") {
+                                $("<td>", {
+                                    class: "text-wrap",
+                                    style:"text-align: center; vertical-align: middle;",
+                                    html: attriMap.get(attri),
+                                }).appendTo(tabrow);
+                            }else if (attri == "checkbox") {
+                                let td = $("<td>", {
+                                    style:"text-align: center; vertical-align: middle;",
+                                    class: "text-wrap",
+                                });
+                                $("<input>",{
+                                    type:"checkbox",
+                                    "data-id":product.cart_id,
+                                    id:"selectedCartOrder",
+                                }).appendTo(td);
+                                td.appendTo(tabrow);
+                            }else if (attri == "quantity") {
+                                let td = $("<td>", {
+                                    style:"text-align: center; vertical-align: middle;",
+                                    class: "text-wrap",
+                                });
+                                $("<input>",{
+                                    type:"number",
+                                    style:"text-align: center;",
+                                    "data-id":product.cart_id,
+                                    value:product.quantity,
+                                    id:"quantityOrder",
+                                }).appendTo(td);
+                                td.appendTo(tabrow);
+                            }else if (attri == "image") {
+                                let td = $("<td>", {
+                                    style:"text-align: center; vertical-align: middle;",
+                                    class: "text-wrap",
+                                });
+                                $("<img>",{
+                                    style:"height:100px; width:100px",
+                                    src:"tools/uploads/ocake_logo2.gif",
+                                }).appendTo(td);
+                                td.appendTo(tabrow);
+                            }else if (attri == "product_description") {
+                                let td = $("<td>", {
+                                    style:"text-align: center; vertical-align: middle;",
+                                    class: "text-wrap",
+                                });
+                                $("<p>",{
+                                    html:"Product name : " + product.product_name,
+                                }).appendTo(td);
+                                $("<p>",{
+                                    html:"Flavor : " + product.flavor,
+                                }).appendTo(td);
+                                $("<p>",{
+                                    html:"Occasions : " + product.occasion,
+                                }).appendTo(td);
+                                $("<p>",{
+                                    html:"Unit Price : " + product.price,
+                                }).appendTo(td);
+                                td.appendTo(tabrow);
+                            } else if (attri == "subtotal") {
+                                $("<td>", {
+                                    class: "text-wrap",
+                                    style:"text-align: center; vertical-align: middle;",
+                                    html:parseFloat(attriMap.get("total_price")),
+                                }).appendTo(tabrow);
+                                // totalamount += parseFloat(attriMap.get("total_price"));
+                            }
+                            product_container.append(tabrow);
+                        });
+                    });
+                }
+            });
+        }
+
+        $("body").on("click","#quantityOrder",function(e){
+            alert($(e.currentTarget).data("id"));
+            alert($(e.currentTarget).val());
+        });
+    })
+</script>
