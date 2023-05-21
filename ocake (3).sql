@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 19, 2023 at 03:29 PM
--- Server version: 8.0.31
--- PHP Version: 8.2.0
+-- Host: 127.0.0.1
+-- Generation Time: May 21, 2023 at 01:29 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,13 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `address`
 --
 
-DROP TABLE IF EXISTS `address`;
-CREATE TABLE IF NOT EXISTS `address` (
-  `add_id` int NOT NULL AUTO_INCREMENT,
-  `barangay` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fee` int NOT NULL,
-  PRIMARY KEY (`add_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `address` (
+  `add_id` int(11) NOT NULL,
+  `barangay` varchar(200) NOT NULL,
+  `fee` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `address`
@@ -117,16 +115,14 @@ INSERT INTO `address` (`add_id`, `barangay`, `fee`) VALUES
 -- Table structure for table `add_ons`
 --
 
-DROP TABLE IF EXISTS `add_ons`;
-CREATE TABLE IF NOT EXISTS `add_ons` (
-  `add_ons_id` int NOT NULL AUTO_INCREMENT,
-  `image` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantity` int NOT NULL,
-  `description` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` int NOT NULL,
-  `addons_status` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`add_ons_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `add_ons` (
+  `add_ons_id` int(11) NOT NULL,
+  `image` varchar(200) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `price` int(11) NOT NULL,
+  `addons_status` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `add_ons`
@@ -151,18 +147,16 @@ INSERT INTO `add_ons` (`add_ons_id`, `image`, `quantity`, `description`, `price`
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `profile_pic` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `firstname` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `verification_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `verification_validity_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `profile_pic` varchar(200) NOT NULL,
+  `firstname` varchar(250) NOT NULL,
+  `lastname` varchar(200) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `verification_code` varchar(255) DEFAULT NULL,
+  `verification_validity_date` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `admin`
@@ -177,25 +171,23 @@ INSERT INTO `admin` (`id`, `profile_pic`, `firstname`, `lastname`, `email`, `pas
 -- Table structure for table `auth`
 --
 
-DROP TABLE IF EXISTS `auth`;
-CREATE TABLE IF NOT EXISTS `auth` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `profile` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'pink_user.png',
-  `firstnamee` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mobile` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `activation_key` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `activation_status` int NOT NULL DEFAULT '0',
-  `recovery_key` text COLLATE utf8mb4_unicode_ci,
-  `recovery_status` int NOT NULL DEFAULT '0',
+CREATE TABLE `auth` (
+  `id` int(11) NOT NULL,
+  `profile` varchar(50) NOT NULL DEFAULT 'pink_user.png',
+  `firstnamee` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `mobile` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` text NOT NULL,
+  `activation_key` text NOT NULL,
+  `activation_status` int(11) NOT NULL DEFAULT 0,
+  `recovery_key` text DEFAULT NULL,
+  `recovery_status` int(11) NOT NULL DEFAULT 0,
   `recovery_expiration` datetime DEFAULT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `auth`
@@ -214,25 +206,23 @@ INSERT INTO `auth` (`id`, `profile`, `firstnamee`, `username`, `lastname`, `mobi
 -- Table structure for table `biller_details`
 --
 
-DROP TABLE IF EXISTS `biller_details`;
-CREATE TABLE IF NOT EXISTS `biller_details` (
-  `biller_id` int NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
-  `firstname` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mobile` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `municipality` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `barangay` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `street` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `delivery_method` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `time` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payment_method` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`biller_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `biller_details` (
+  `biller_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `firstname` varchar(200) NOT NULL,
+  `lastname` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `mobile` varchar(200) NOT NULL,
+  `municipality` varchar(200) NOT NULL,
+  `barangay` varchar(200) NOT NULL,
+  `street` varchar(200) NOT NULL,
+  `delivery_method` varchar(200) NOT NULL,
+  `date` varchar(200) NOT NULL,
+  `time` varchar(200) NOT NULL,
+  `payment_method` varchar(200) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `biller_details`
@@ -360,7 +350,19 @@ INSERT INTO `biller_details` (`biller_id`, `user_id`, `firstname`, `lastname`, `
 (119, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Del Pillar', 'Sitio Masagana', 'Home Delivery', '2023-05-14 00:00:00', '00:00:00', 'COD', '2023-05-10 03:47:34', '2023-05-10 03:47:34'),
 (120, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Aurora', 'Sitio Masagana', 'Home Delivery', '2023-05-20 00:00:00', '00:00:00', 'COD', '2023-05-10 03:57:56', '2023-05-10 03:57:56'),
 (121, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Del Pillar', 'Masagana', 'Home Delivery', '2023-05-22', '08:00', 'COD', '2023-05-18 12:07:31', '2023-05-18 12:07:31'),
-(122, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Dao', 'hahaha', 'Pickup on Demand Delivery', '2023-05-24', '13:20', 'COD', '2023-05-19 15:17:49', '2023-05-19 15:17:49');
+(122, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Dao', 'hahaha', 'Pickup on Demand Delivery', '2023-05-24', '13:20', 'COD', '2023-05-19 15:17:49', '2023-05-19 15:17:49'),
+(123, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Apitong', 'bago general tinio ne', 'Pickup on Demand Delivery', '2023-05-22', '11:49', 'COD', '2023-05-19 15:49:19', '2023-05-19 15:49:19'),
+(124, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Dao', 'bago general tinio ne', 'Pickup on Demand Delivery', '2023-05-22', '11:56', 'COD', '2023-05-19 15:57:48', '2023-05-19 15:57:48'),
+(125, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Caburo', 'asdasd', 'Home Delivery', '2023-05-25', '08:12', 'COD', '2023-05-21 09:13:19', '2023-05-21 09:13:19'),
+(126, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Estrella', 'bago general tinio ne', 'Pickup on Demand Delivery', '2023-05-25', '17:23', 'COD', '2023-05-21 09:19:35', '2023-05-21 09:19:35'),
+(127, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Del Pillar', 'Amaia Series block 2 lot 15', 'Pickup on Demand Delivery', '2023-05-25', '22:29', 'COD', '2023-05-21 09:26:14', '2023-05-21 09:26:14'),
+(128, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', '', 'Purok Sagingan Nazareth General Tinio NE', 'Home Delivery', '2023-05-24', '10:10', 'COD', '2023-05-21 10:07:15', '2023-05-21 10:07:15'),
+(129, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', '', 'bago general tinio ne', 'Home Delivery', '2023-05-24', '08:13', 'COD', '2023-05-21 10:10:05', '2023-05-21 10:10:05'),
+(130, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', '', 'bago general tinio ne', 'Pickup on Demand Delivery', '2023-05-24', '09:14', 'COD', '2023-05-21 10:15:09', '2023-05-21 10:15:09'),
+(131, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', '', 'bago general tinio ne', 'Home Delivery', '2023-05-25', '10:20', 'Gcash', '2023-05-21 10:16:43', '2023-05-21 10:16:43'),
+(132, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Balite', 'bago general tinio ne', 'Home Delivery', '2023-05-25', '10:27', 'COD', '2023-05-21 10:23:45', '2023-05-21 10:23:45'),
+(133, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Antipolo', 'Maganda', 'Pickup on Demand Delivery', '2023-05-24', '07:11', 'Gcash', '2023-05-21 11:09:16', '2023-05-21 11:09:16'),
+(134, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Apitong', 'Maganda', 'Home Delivery', '2023-05-25', '09:25', 'COD', '2023-05-21 11:25:51', '2023-05-21 11:25:51');
 
 -- --------------------------------------------------------
 
@@ -368,42 +370,39 @@ INSERT INTO `biller_details` (`biller_id`, `user_id`, `firstname`, `lastname`, `
 -- Table structure for table `cart`
 --
 
-DROP TABLE IF EXISTS `cart`;
-CREATE TABLE IF NOT EXISTS `cart` (
-  `cart_id` int NOT NULL AUTO_INCREMENT,
-  `occasion` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `flavor` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `cart` (
+  `cart_id` int(11) NOT NULL,
+  `occasion` varchar(200) NOT NULL,
+  `flavor` varchar(200) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `quantity` int NOT NULL,
+  `quantity` int(11) NOT NULL,
   `total_price` decimal(10,2) NOT NULL,
-  `product_id` int NOT NULL,
-  `user_id` int NOT NULL,
-  `is_check` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `order_code` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rated` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`cart_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=182 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `product_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `is_check` varchar(200) NOT NULL,
+  `order_code` varchar(200) NOT NULL,
+  `rated` varchar(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`cart_id`, `occasion`, `flavor`, `price`, `quantity`, `total_price`, `product_id`, `user_id`, `is_check`, `order_code`, `rated`, `created_at`, `updated_at`) VALUES
-(148, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 39, '', '202305026623', 'no', '2023-05-02 02:34:09', '2023-05-06 05:12:29'),
-(150, 'Christmas', 'Mocha', '400.00', 1, '400.00', 32, 39, '', '20230502EB82', 'no', '2023-05-02 02:53:06', '2023-05-06 05:12:29'),
-(152, 'Birthday', 'Avocado', '450.00', 1, '450.00', 16, 39, '', '20230501FB3E', 'no', '2023-05-01 10:42:17', '2023-05-06 05:12:29'),
-(161, 'New Year', 'Blue Velvet', '300.00', 1, '300.00', 48, 20, '', '20230506F33A', 'yes', '2023-05-06 05:15:01', '2023-05-06 07:31:44'),
-(162, 'Halloween', 'Orange', '300.00', 1, '300.00', 43, 20, '', '20230506EA53', 'yes', '2023-05-06 05:15:54', '2023-05-10 03:42:16'),
-(163, 'Birthday', 'Strawberry', '350.00', 1, '350.00', 12, 20, '', '20230506858D', 'yes', '2023-05-06 05:28:50', '2023-05-06 07:10:20'),
-(167, 'Christmas', 'Cookies & Cream', '300.00', 1, '300.00', 33, 20, '', '202305075EC4', '', '2023-05-07 02:44:58', '2023-05-07 02:45:29'),
-(168, 'Christening', 'Vanilla', '350.00', 1, '350.00', 22, 20, '', '20230510271D', '', '2023-05-07 07:52:14', '2023-05-10 03:12:33'),
-(169, 'Christening', 'Avocado', '450.00', 1, '450.00', 26, 20, '', '20230510497D', '', '2023-05-10 03:46:34', '2023-05-10 03:47:34'),
-(172, 'Birthday', 'Strawberry', '350.00', 1, '350.00', 12, 20, '', '20230518131A', '', '2023-05-18 11:40:07', '2023-05-18 11:59:38'),
-(173, 'Birthday', 'Vanilla', '300.00', 1, '300.00', 14, 20, '', '20230518BF04', '', '2023-05-18 12:06:05', '2023-05-18 12:07:31'),
-(174, 'Customized', 'Vanilla', '310.00', 1, '310.00', 161, 20, '', '20230519C2ED', '', '2023-05-18 12:48:14', '2023-05-19 15:17:48'),
-(181, 'Christening', 'Strawberry', '500.00', 1, '500.00', 18, 20, '', '20230519C2ED', '', '2023-05-19 15:16:57', '2023-05-19 15:17:48');
+(187, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 20, '0', '20230521EC02', '', '2023-05-21 09:18:40', '2023-05-21 09:22:10'),
+(188, 'Birthday', 'Ube', '400.00', 1, '400.00', 11, 20, '0', '20230521EC02', '', '2023-05-21 09:18:48', '2023-05-21 09:22:14'),
+(189, 'Christening', 'Avocado', '450.00', 1, '450.00', 16, 20, '1', '202305219009', '', '2023-05-21 09:21:43', '2023-05-21 09:26:14'),
+(190, 'Christmas', 'Avocado', '450.00', 1, '450.00', 26, 20, '1', '202305219009', '', '2023-05-21 09:22:03', '2023-05-21 09:26:14'),
+(191, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 20, '1', '2023052100F4', '', '2023-05-21 09:32:52', '2023-05-21 10:07:15'),
+(192, 'Birthday', 'Chocolate', '300.00', 1, '300.00', 8, 20, '1', '202305217DE9', '', '2023-05-21 10:09:27', '2023-05-21 10:10:05'),
+(193, 'Christening', 'Vanilla', '300.00', 1, '300.00', 17, 20, '1', '202305211911', '', '2023-05-21 10:11:27', '2023-05-21 10:15:09'),
+(194, 'Birthday', 'Red Velvet', '400.00', 1, '400.00', 10, 20, '1', '20230521D5CD', '', '2023-05-21 10:16:06', '2023-05-21 10:16:43'),
+(195, 'New Year', 'Mocha', '350.00', 1, '350.00', 46, 20, '1', '202305217A81', '', '2023-05-21 10:18:26', '2023-05-21 10:23:45'),
+(196, 'Christening', 'Strawberry', '500.00', 1, '500.00', 18, 20, '1', '2023052122E5', '', '2023-05-21 10:48:40', '2023-05-21 11:09:16'),
+(197, 'Wedding', 'Vanilla', '300.00', 1, '300.00', 72, 20, '1', '20230521268E', '', '2023-05-21 11:24:05', '2023-05-21 11:25:51'),
+(198, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 20, '1', '', '', '2023-05-21 11:26:16', '2023-05-21 11:26:22');
 
 -- --------------------------------------------------------
 
@@ -411,16 +410,14 @@ INSERT INTO `cart` (`cart_id`, `occasion`, `flavor`, `price`, `quantity`, `total
 -- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE IF NOT EXISTS `category` (
-  `category_id` int NOT NULL AUTO_INCREMENT,
-  `cat_image` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `category` (
+  `category_id` int(11) NOT NULL,
+  `cat_image` varchar(200) NOT NULL,
+  `category_name` varchar(200) NOT NULL,
+  `status` varchar(200) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `category`
@@ -442,59 +439,37 @@ INSERT INTO `category` (`category_id`, `cat_image`, `category_name`, `status`, `
 -- Table structure for table `checkout`
 --
 
-DROP TABLE IF EXISTS `checkout`;
-CREATE TABLE IF NOT EXISTS `checkout` (
-  `checkout_id` int NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
-  `biller_id` int NOT NULL,
+CREATE TABLE `checkout` (
+  `checkout_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `biller_id` int(11) NOT NULL,
   `total_price` decimal(10,2) NOT NULL,
-  `downpayment` int NOT NULL,
-  `shipping_fee` int NOT NULL,
-  `balance` int NOT NULL,
-  `refund` int NOT NULL,
-  `items` int NOT NULL,
-  `order_code` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `stat` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Pending',
-  `reason` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payment` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`checkout_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `downpayment` int(11) NOT NULL,
+  `shipping_fee` int(11) NOT NULL,
+  `balance` int(11) NOT NULL,
+  `refund` int(11) NOT NULL,
+  `items` int(11) NOT NULL,
+  `order_code` varchar(200) NOT NULL,
+  `stat` varchar(200) NOT NULL DEFAULT 'Pending',
+  `reason` longtext NOT NULL,
+  `image` varchar(200) NOT NULL,
+  `payment` varchar(50) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `checkout`
 --
 
 INSERT INTO `checkout` (`checkout_id`, `user_id`, `biller_id`, `total_price`, `downpayment`, `shipping_fee`, `balance`, `refund`, `items`, `order_code`, `stat`, `reason`, `image`, `payment`, `created_at`) VALUES
-(10, 21, 17, '600.00', 0, 0, 0, 0, 2, '2023011520D5', 'Processing', '', '', '', '2023-01-15 11:12:48'),
-(12, 24, 19, '500.00', 0, 0, 0, 0, 1, '20230119AB73', 'Delivered', '', '', '', '2023-01-19 10:20:00'),
-(13, 25, 20, '800.00', 0, 0, 0, 0, 2, '20230119A875', 'Completed', '', '', '', '2023-01-19 10:41:38'),
-(14, 22, 21, '1290.00', 0, 0, 0, 0, 1, '202301199023', 'Pending', '', '', '', '2023-01-19 11:33:44'),
-(15, 26, 0, '400.00', 0, 0, 0, 0, 1, '2023021811A7', 'Pending', '', '', '', '2023-02-18 06:42:16'),
-(16, 26, 22, '400.00', 0, 0, 0, 0, 1, '202302186637', 'Shipped', '', '', '', '2023-02-18 06:54:15'),
-(23, 21, 57, '300.00', 150, 0, 200, 0, 1, '20230329DDED', 'Pending', '', '', 'Downpayment', '2023-03-29 14:33:32'),
-(25, 21, 79, '350.00', 175, 0, 225, 0, 1, '202304018AB6', 'Pending', '', 'Denim midi-skirt.png', 'Downpayment', '2023-04-01 14:24:20'),
-(26, 21, 88, '300.00', 150, 0, 200, 0, 1, '202304019579', 'Delivered', '', 'Denim Mini Skirt.png', 'Downpayment', '2023-04-01 15:48:19'),
-(27, 21, 89, '400.00', 200, 0, 250, 0, 1, '202304018000', 'Completed', '', 'Bohoo Long Sleeve Oversized.png', 'Downpayment', '2023-04-01 15:49:47'),
-(28, 21, 90, '350.00', 175, 0, 225, 0, 1, '202304021E49', 'Completed', '', 'Layered Tutu.png', 'Downpayment', '2023-04-10 13:03:29'),
-(30, 27, 98, '690.00', 345, 0, 395, 0, 1, '202304153BF7', 'Pending', '', '336646125_584831723669264_3324298248148676463_n.jpg', 'Downpayment', '2023-04-16 04:23:39'),
-(31, 27, 99, '350.00', 175, 0, 225, 0, 1, '2023041662C7', 'Pending', '', '336646125_584831723669264_3324298248148676463_n.jpg', 'Downpayment', '2023-04-16 05:01:41'),
-(32, 27, 100, '300.00', 150, 0, 200, 0, 1, '20230416FB48', 'Completed', '', '336646125_584831723669264_3324298248148676463_n.jpg', 'Fullpayment', '2023-04-16 07:40:28'),
-(33, 35, 101, '350.00', 175, 0, 225, 0, 1, '20230422988C', 'Completed', '', 'user.png', 'Fullpayment', '2024-04-22 01:02:45'),
-(34, 35, 101, '350.00', 175, 0, 225, 0, 1, '202304229834', 'Completed', '', 'user.png', 'Fullpayment', '2025-04-22 01:02:45'),
-(35, 35, 101, '350.00', 175, 0, 225, 0, 1, '2023042265466', 'Completed', '', 'user.png', 'Fullpayment', '2025-04-22 01:02:45'),
-(37, 39, 103, '350.00', 175, 0, 225, 175, 1, '202305026623', 'Cancelled', 'Changed of mind', '02.png', 'Downpayment', '2023-05-02 02:35:44'),
-(39, 39, 105, '400.00', 200, 0, 250, 0, 1, '20230502EB82', 'Completed', '', '111111111111.png', 'Fullpayment', '2023-05-02 02:53:47'),
-(40, 39, 106, '450.00', 225, 0, 275, 0, 1, '20230501FB3E', 'Pending', '', '3F2 Bueno Khristine.jpg', 'Downpayment', '2023-05-01 10:50:35'),
-(46, 20, 112, '300.00', 150, 0, 200, 0, 1, '20230506F33A', 'Completed', '', '123.png', 'Downpayment', '2023-05-06 05:15:37'),
-(47, 20, 113, '300.00', 150, 0, 200, 0, 1, '20230506EA53', 'Completed', '', '05.png', 'Downpayment', '2023-05-06 05:16:27'),
-(48, 20, 114, '350.00', 175, 0, 225, 0, 1, '20230506858D', 'Completed', '', '12.png', 'Downpayment', '2023-05-06 05:29:22'),
-(51, 20, 117, '300.00', 150, 0, 200, 0, 1, '202305075EC4', 'Pending', '', '04.png', 'Downpayment', '2023-05-07 02:45:29'),
-(52, 20, 118, '350.00', 175, 0, 245, 0, 1, '20230510271D', 'Confirmed', '', '01.png', 'Downpayment', '2023-05-10 03:12:33'),
-(53, 20, 119, '450.00', 225, 0, 300, 0, 1, '20230510497D', 'Pending', '', '04.png', 'Downpayment', '2023-05-10 03:47:34'),
-(55, 20, 121, '300.00', 150, 75, 225, 0, 1, '20230518BF04', 'Pending', '', '04.png', 'Downpayment', '2023-05-18 12:07:31'),
-(56, 20, 122, '810.00', 405, 80, 485, 0, 2, '20230519C2ED', 'Pending', '', '04.png', 'Downpayment', '2023-05-19 15:17:51');
+(60, 20, 126, '750.00', 375, 65, 440, 0, 2, '20230521EC02', 'Pending', '', 'bg4.jpg', 'Downpayment', '2023-05-21 09:19:35'),
+(61, 20, 127, '900.00', 450, 75, 525, 0, 2, '202305219009', 'Pending', '', 'a1.png', 'Fullpayment', '2023-05-21 09:26:14'),
+(62, 20, 129, '300.00', 350, 0, 0, 0, 1, '202305217DE9', 'Pending', '', 'a2.png', 'Fullpayment', '2023-05-21 10:10:05'),
+(63, 20, 130, '300.00', 150, 0, 215, 0, 1, '202305211911', 'Pending', '', 'about.jpg', 'Downpayment', '2023-05-21 10:15:09'),
+(64, 20, 131, '400.00', 200, 0, 250, 0, 1, '20230521D5CD', 'Pending', '', 'bg4.jpg', 'Downpayment', '2023-05-21 10:16:43'),
+(65, 20, 132, '350.00', 175, 80, 255, 0, 1, '202305217A81', 'Pending', '', 'about.jpg', 'Downpayment', '2023-05-21 10:23:45'),
+(66, 20, 133, '500.00', 500, 0, 0, 0, 1, '2023052122E5', 'Pending', '', 'bg4.jpg', 'Fullpayment', '2023-05-21 11:09:16'),
+(67, 20, 134, '300.00', 395, 95, 0, 0, 1, '20230521268E', 'Pending', '', 'a1.png', 'Fullpayment', '2023-05-21 11:25:51');
 
 -- --------------------------------------------------------
 
@@ -502,18 +477,16 @@ INSERT INTO `checkout` (`checkout_id`, `user_id`, `biller_id`, `total_price`, `d
 -- Table structure for table `customers`
 --
 
-DROP TABLE IF EXISTS `customers`;
-CREATE TABLE IF NOT EXISTS `customers` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `customer_fname` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `customer_mname` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `customer_lname` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `customer_address` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `customer_contact` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `customer_email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `customer_country` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `customers` (
+  `id` int(11) NOT NULL,
+  `customer_fname` varchar(255) NOT NULL,
+  `customer_mname` varchar(255) NOT NULL,
+  `customer_lname` varchar(255) NOT NULL,
+  `customer_address` varchar(255) NOT NULL,
+  `customer_contact` varchar(255) NOT NULL,
+  `customer_email` varchar(255) NOT NULL,
+  `customer_country` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customers`
@@ -534,14 +507,13 @@ INSERT INTO `customers` (`id`, `customer_fname`, `customer_mname`, `customer_lna
 -- Table structure for table `email_settings`
 --
 
-DROP TABLE IF EXISTS `email_settings`;
-CREATE TABLE IF NOT EXISTS `email_settings` (
-  `smtp_host` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `smtp_username` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `smtp_password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `smtp_secure` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `smtp_port` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `smtp_charset` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL
+CREATE TABLE `email_settings` (
+  `smtp_host` varchar(100) NOT NULL,
+  `smtp_username` varchar(100) NOT NULL,
+  `smtp_password` varchar(100) NOT NULL,
+  `smtp_secure` varchar(10) NOT NULL,
+  `smtp_port` varchar(10) NOT NULL,
+  `smtp_charset` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -557,15 +529,13 @@ INSERT INTO `email_settings` (`smtp_host`, `smtp_username`, `smtp_password`, `sm
 -- Table structure for table `feedback`
 --
 
-DROP TABLE IF EXISTS `feedback`;
-CREATE TABLE IF NOT EXISTS `feedback` (
-  `feedback_id` int NOT NULL AUTO_INCREMENT,
-  `feedback` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rate` int NOT NULL,
-  `user_id` int NOT NULL,
-  `prod_id` int NOT NULL,
-  PRIMARY KEY (`feedback_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `feedback` (
+  `feedback_id` int(11) NOT NULL,
+  `feedback` text NOT NULL,
+  `rate` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `prod_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `feedback`
@@ -590,14 +560,12 @@ INSERT INTO `feedback` (`feedback_id`, `feedback`, `rate`, `user_id`, `prod_id`)
 -- Table structure for table `flavor`
 --
 
-DROP TABLE IF EXISTS `flavor`;
-CREATE TABLE IF NOT EXISTS `flavor` (
-  `flavor_id` int NOT NULL AUTO_INCREMENT,
-  `flavor_image` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `flavor` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `flavor_status` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`flavor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `flavor` (
+  `flavor_id` int(11) NOT NULL,
+  `flavor_image` varchar(200) NOT NULL,
+  `flavor` varchar(200) NOT NULL,
+  `flavor_status` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `flavor`
@@ -620,16 +588,13 @@ INSERT INTO `flavor` (`flavor_id`, `flavor_image`, `flavor`, `flavor_status`) VA
 -- Table structure for table `invoice_cart`
 --
 
-DROP TABLE IF EXISTS `invoice_cart`;
-CREATE TABLE IF NOT EXISTS `invoice_cart` (
-  `invid` int NOT NULL AUTO_INCREMENT,
-  `invoice_number` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
-  `product_id` int NOT NULL,
-  `quantity` int NOT NULL,
-  `totalAmount` double NOT NULL,
-  PRIMARY KEY (`invid`),
-  KEY `f_p_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `invoice_cart` (
+  `invid` int(11) NOT NULL,
+  `invoice_number` varchar(10) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `totalAmount` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `invoice_cart`
@@ -653,25 +618,22 @@ INSERT INTO `invoice_cart` (`invid`, `invoice_number`, `product_id`, `quantity`,
 -- Table structure for table `pos`
 --
 
-DROP TABLE IF EXISTS `pos`;
-CREATE TABLE IF NOT EXISTS `pos` (
-  `pos_id` int NOT NULL AUTO_INCREMENT,
-  `inv_num` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `customer_id` int NOT NULL,
+CREATE TABLE `pos` (
+  `pos_id` int(11) NOT NULL,
+  `inv_num` varchar(255) NOT NULL,
+  `customer_id` int(11) NOT NULL,
   `totalAmount` double NOT NULL,
   `payable` double NOT NULL,
   `change` double NOT NULL,
-  `remarks` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pre_order_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `isPickup` int DEFAULT '0',
-  `time_pickup_or_deliver` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `date_pickup_or_deliver` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` int NOT NULL DEFAULT '0',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`pos_id`),
-  KEY `pos_cus_id_f` (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `remarks` longtext NOT NULL,
+  `pre_order_address` varchar(255) DEFAULT NULL,
+  `isPickup` int(11) DEFAULT 0,
+  `time_pickup_or_deliver` varchar(255) DEFAULT NULL,
+  `date_pickup_or_deliver` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pos`
@@ -688,27 +650,24 @@ INSERT INTO `pos` (`pos_id`, `inv_num`, `customer_id`, `totalAmount`, `payable`,
 -- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `product`;
-CREATE TABLE IF NOT EXISTS `product` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `product_code` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `cat_id` int NOT NULL,
+CREATE TABLE `product` (
+  `id` int(11) NOT NULL,
+  `product_code` varchar(30) DEFAULT NULL,
+  `cat_id` int(11) NOT NULL,
   `image` longblob NOT NULL,
-  `occasion` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `product_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `flavor` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `occasion` varchar(100) NOT NULL,
+  `product_name` varchar(200) NOT NULL,
+  `flavor` varchar(100) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `stock` int NOT NULL,
-  `status` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `availability` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `is_customized` int NOT NULL DEFAULT '0',
-  `userid` int NOT NULL DEFAULT '0',
-  `message` longtext COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `product_code` (`product_code`)
-) ENGINE=InnoDB AUTO_INCREMENT=168 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `stock` int(11) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `availability` varchar(200) NOT NULL,
+  `is_customized` int(11) NOT NULL DEFAULT 0,
+  `userid` int(11) NOT NULL DEFAULT 0,
+  `message` longtext DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `product`
@@ -860,29 +819,27 @@ INSERT INTO `product` (`id`, `product_code`, `cat_id`, `image`, `occasion`, `pro
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `profile` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'pink_user.png',
-  `firstname` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mcp` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `brgy` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `age` int NOT NULL,
-  `gender` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mobile` varchar(13) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `birthdate` int NOT NULL,
-  `birthmonth` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `birthyear` int NOT NULL,
-  `email` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `confirm_password` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `verification_code` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `verification_validity_date` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `is_verified` int NOT NULL DEFAULT '0',
-  `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `profile` varchar(200) NOT NULL DEFAULT 'pink_user.png',
+  `firstname` varchar(200) NOT NULL,
+  `lastname` varchar(200) NOT NULL,
+  `mcp` varchar(100) NOT NULL,
+  `brgy` varchar(100) NOT NULL,
+  `age` int(11) NOT NULL,
+  `gender` varchar(200) NOT NULL,
+  `mobile` varchar(13) NOT NULL,
+  `birthdate` int(11) NOT NULL,
+  `birthmonth` varchar(50) NOT NULL,
+  `birthyear` int(11) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `confirm_password` varchar(50) NOT NULL,
+  `verification_code` varchar(200) NOT NULL,
+  `verification_validity_date` varchar(60) DEFAULT NULL,
+  `is_verified` int(11) NOT NULL DEFAULT 0,
+  `create_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -902,6 +859,197 @@ INSERT INTO `users` (`id`, `profile`, `firstname`, `lastname`, `mcp`, `brgy`, `a
 (43, 'pink_user.png', 'qwe', 'bueno', '', '', 0, '', '45687566', 0, '', 0, 'santos@gmail.com', '$2y$10$W.P/H6tlT0mN8h64xMEKCutQXoSWGwWQpdcjJEG3AA0SoaZ4OMI9C', '', '', NULL, 0, '2023-05-02 12:31:28'),
 (44, 'pink_user.png', 'jc', 'jc', '', '', 0, '', '09878767656', 0, '', 0, 'jc@gmail.com', '$2y$10$BFZ076xa.OFGGKRyYdBAvOW.FV50X2SldMk4jNe5Jyq0aHB.CZEAC', '', '', NULL, 0, '2023-05-02 12:34:38'),
 (45, 'pink_user.png', 'dan', 'dan', 'Naujan', 'Estrella', 23, 'Male', '09878767656', 0, '', 0, 'dan@gmail.com', '\n$2y$10$WTBWHo7qOd0kX3PPhUSdLe/AICk0wipOnOmaNX2UXTW3CouVYyUVG', '\n$2y$10$WTBWHo7qOd0kX3PPhUSdLe/AICk0wipOnOmaNX2UXT', '563024', '2023-05-02 09:45:07 pm', 0, '2023-05-02 13:39:46');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `address`
+--
+ALTER TABLE `address`
+  ADD PRIMARY KEY (`add_id`);
+
+--
+-- Indexes for table `add_ons`
+--
+ALTER TABLE `add_ons`
+  ADD PRIMARY KEY (`add_ons_id`);
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `auth`
+--
+ALTER TABLE `auth`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `biller_details`
+--
+ALTER TABLE `biller_details`
+  ADD PRIMARY KEY (`biller_id`);
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`cart_id`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `checkout`
+--
+ALTER TABLE `checkout`
+  ADD PRIMARY KEY (`checkout_id`);
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`feedback_id`);
+
+--
+-- Indexes for table `flavor`
+--
+ALTER TABLE `flavor`
+  ADD PRIMARY KEY (`flavor_id`);
+
+--
+-- Indexes for table `invoice_cart`
+--
+ALTER TABLE `invoice_cart`
+  ADD PRIMARY KEY (`invid`),
+  ADD KEY `f_p_id` (`product_id`);
+
+--
+-- Indexes for table `pos`
+--
+ALTER TABLE `pos`
+  ADD PRIMARY KEY (`pos_id`),
+  ADD KEY `pos_cus_id_f` (`customer_id`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `product_code` (`product_code`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `address`
+--
+ALTER TABLE `address`
+  MODIFY `add_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
+--
+-- AUTO_INCREMENT for table `add_ons`
+--
+ALTER TABLE `add_ons`
+  MODIFY `add_ons_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `auth`
+--
+ALTER TABLE `auth`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `biller_details`
+--
+ALTER TABLE `biller_details`
+  MODIFY `biller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `checkout`
+--
+ALTER TABLE `checkout`
+  MODIFY `checkout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `flavor`
+--
+ALTER TABLE `flavor`
+  MODIFY `flavor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `invoice_cart`
+--
+ALTER TABLE `invoice_cart`
+  MODIFY `invid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=212;
+
+--
+-- AUTO_INCREMENT for table `pos`
+--
+ALTER TABLE `pos`
+  MODIFY `pos_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- Constraints for dumped tables
