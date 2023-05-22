@@ -275,7 +275,7 @@ class User extends BaseController
         $data['cartData'] = $model->getCartData($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -375,6 +375,7 @@ class User extends BaseController
             $model->insert([
                 'user_id' => $_SESSION['user_id'],
                 'occasion' => $this->request->getVar('occasion'),
+                'is_check' => 1,
                 'flavor' => $this->request->getVar('flavor'),
                 'total_price' => $this->request->getVar('price'), 
                 'price' => $this->request->getVar('price'),
@@ -412,7 +413,7 @@ class User extends BaseController
         $data['cartData'] = $model->getCartData($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -441,7 +442,7 @@ class User extends BaseController
         $data['cartData'] = $model->getCartData($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -480,7 +481,7 @@ class User extends BaseController
         $data['subtotal'] = $totalprice;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -511,7 +512,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -542,7 +543,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -573,7 +574,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -604,7 +605,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -635,7 +636,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -666,7 +667,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -697,7 +698,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -728,7 +729,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -764,7 +765,7 @@ class User extends BaseController
         $data['subtotal'] = $totalprice;
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -813,7 +814,7 @@ class User extends BaseController
         $data['Refund'] = $totalrefund;
         
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -924,7 +925,7 @@ class User extends BaseController
         $model = new Cart_m();
         $user_model = new Personal_m();
         $add_model = new Address_model();
-        // $count_data['count_data']= $model->count_data();
+        // $count_datas['count_datas']= $model->count_datas();
         $data['cartData'] = $model->getCartData($id);
         $data['userData'] = $user_model->fetchPersonal($id);
         $data['address'] = $add_model->fetchAddress();
@@ -940,7 +941,7 @@ class User extends BaseController
         $data['Balance'] = $balance;
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -988,8 +989,11 @@ class User extends BaseController
             $random = $today .$rand;
 
            #update cart data    
-           $cart_model = new Cart_m();       
-            $update_cart = $cart_model->cart_update($random,$id);
+            $cart_model = new Cart_m();   
+            $name = $this->request->getVar('cart_id');
+            foreach( $name as $key => $n ) {
+              $update_cart = $cart_model->cart_update($random,$id,$n);
+            }
 
             if($update_cart == true){
                 #insert biller data 
@@ -1063,7 +1067,7 @@ class User extends BaseController
         // $data['status']= $model_order->getOrders($id, $order_code);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1091,7 +1095,7 @@ class User extends BaseController
         $data['cartData'] = $model->getCartData($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1121,7 +1125,7 @@ class User extends BaseController
         $data['cartData'] = $model->getCartData($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1150,7 +1154,7 @@ class User extends BaseController
         $data['cartData'] = $model->getCartData($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1185,7 +1189,7 @@ class User extends BaseController
         $data['feedback'] = $model_feedback->fetchFeedback($prod_id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1227,7 +1231,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#s
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1282,7 +1286,7 @@ class User extends BaseController
         $data['occasion'] = $occasion;
 
         #count cart items#
-        $cart = $model_cart->count_data($id);
+        $cart = $model_cart->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1324,7 +1328,7 @@ class User extends BaseController
         // $data['status']= $model_order->getDelivered($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1362,7 +1366,7 @@ class User extends BaseController
         $data['status']= $model_order->getToReceived($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1401,7 +1405,7 @@ class User extends BaseController
         $data['status']= $model_order->getCompleted($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1442,7 +1446,7 @@ class User extends BaseController
         $data['status']= $model_order->getCancelled($id);
 
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
@@ -1471,7 +1475,7 @@ class User extends BaseController
         $user_model = new Personal_m();
         $data['userData'] = $user_model->fetchPersonal($id);
         #count cart items#
-        $cart = $model->count_data($id);
+        $cart = $model->count_datas($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }

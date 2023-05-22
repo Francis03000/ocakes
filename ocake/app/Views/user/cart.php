@@ -75,6 +75,8 @@
 <script src="tools/user/js/tiny-slider.js"></script>
 <script src="tools/user/js/glightbox.min.js"></script>
 <script src="tools/user/js/order.js"></script>
+<script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+<script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalerts.min.js"></script>
 </body>
 </html>
 
@@ -83,6 +85,7 @@
 
         let arrayCart = ["checkbox","image","product_description","quantity","subtotal","deleteAction"]
         let model = [];
+        let modelid = [];
         initData();
         function initData(){
             $("#cart-bodys").empty();
@@ -96,6 +99,7 @@
                     let product_container = $("#cart-bodys");
                     response.forEach((product,m) => {
                         model.push(product);
+                        modelid.push(product.cart_id);
                         let tabrow = $("<tr>");
                         const attriMap = new Map(Object.entries(product));
                         arrayCart.forEach((attri, i) => {

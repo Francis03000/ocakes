@@ -202,7 +202,7 @@
                                         <div class="dropdown-cart-header">
                                             
                                             <span><?php echo $cart_count;?> 
-                                            <?php if ($cart_count > 1){
+                                            <?php if ($cart_count >= 1){
                                                 echo "Items";
                                             }else{
                                                 echo "Item";

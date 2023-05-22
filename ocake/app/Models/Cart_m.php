@@ -16,7 +16,7 @@ class Cart_m extends Model
                         ->select('*')
                         ->join('product as p','p.id=c.product_id')
                         ->where('c.user_id', $id)
-                        ->where('order_code', "")
+                        ->where('order_code', "","OR",'is_check', "1")
                         ->get()->getResult();
     }
 
@@ -31,9 +31,10 @@ class Cart_m extends Model
     }
 
     //--------------- UPDATE CART ---------------//        December 30,2022
-    public function cart_update($code, $id){
+    public function cart_update($code, $id,$cart_id){
         // return "hi";
         $update = $this->set('order_code', $code)
+                        ->where('cart_id', $cart_id)
                         ->where('user_id', $id)
                         ->where('order_code', "")
                         ->update();
@@ -87,6 +88,15 @@ class Cart_m extends Model
                     ->select('Count(cart_id) as count')
                     ->where('user_id', $id)
                     ->where('order_code', "")
+                    ->where('is_check', "1")
+                    ->get()->getResult();
+    }
+
+    public function count_datas($id){
+        return $this->db->table('cart')
+                    ->select('Count(cart_id) as count')
+                    ->where('user_id', $id)
+                    ->where('order_code', "","OR",'is_check', "0")
                     ->get()->getResult();
     }
 
