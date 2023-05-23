@@ -1464,7 +1464,7 @@ class User extends BaseController
         }
     }
 
-    //----=---- FETCH PROFILE DATA ----=---------//              February 02,2023
+    //----=---- FETCH PROFILE DATA --------------//              February 02,2023
     public function user_profile(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
         $id = $_SESSION['user_id'];
@@ -1496,7 +1496,7 @@ class User extends BaseController
         }
     }
 
-    //---------- UPDATE PROFILE DATA ------=-----//              February 05,2023
+    //---------- UPDATE PROFILE DATA ------------//              February 05,2023
     public function profile_update($id){
         /*this will validate inputs */
         $val = $this->validate([   
@@ -1546,6 +1546,38 @@ class User extends BaseController
            return redirect()->to(base_url('profile'));   
        }
       
+    }
+
+     //----=---- FETCH PRIVACY DATA -------------//              February 02,2023
+     public function user_privacy(){
+        if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
+        $id = $_SESSION['user_id'];
+        $model_product = new Product_model();
+        $model = new Cart_m();
+        $add_model = new Address_model();
+        $data['address'] = $add_model->fetchAddress();
+        $data['productData'] = $model_product->fetchProduct();
+        $data['cartData'] = $model->getCartData($id);
+        $user_model = new Personal_m();
+        $data['userData'] = $user_model->fetchPersonal($id);
+        #count cart items#
+        $cart = $model->count_datas($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
+        
+        return view('user/include/header', $data)
+            . view('user/user_privacy')
+            . view('user/include/footer', $data);
+        }else{
+            return $this->response->redirect(site_url('/signin'));
+        }
     }
 
     //update quantity of order 	FEB 09								

@@ -38,12 +38,12 @@
                 <div class="card shadow-sm">
                 <div class="card-header bg-transparent text-center">
                     <!-- <img class="profile_img" src="https://source.unsplash.com/600x300/?student" alt="student dp"> -->
-                    <img class="profile_img" style=" border:#00ED01 10px solid" src="http://localhost/ocake/tools/uploads/<?php echo $data->profile;?>" alt="student dp">
-                    <h3><?php echo $data->firstname;?> <?php echo $data->lastname;?></h3><br>
+                    <img class="profile_img" style="border:#000000 10px solid" src="http://localhost/ocake/tools/uploads/privacy_logo1.png" alt="student dp">
+                    <h3>Privacy Settings</h3><br>
                 </div>
                 <div class="card-body">
-                    <div class="profile" style="background-color:#cda808; border-radius:5px;">
-                        <a href="<?=site_url('profile')?>"style="color:#ffffff;background-color:transparent" class="btn pr-1" role="button"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>  Personal Information</a> 
+                    <div class="profile">
+                        <a href="<?=site_url('profile')?>"style="background-color:transparent" class="btn pr-1" role="button"><i class="fas fa-user fa-sm fa-fw mr-2 text-black-400"></i>  Personal Information</a> 
                     </div>
                     <!-- <div class="profile" >
                         <a href="<?=site_url('')?>" class="btn pr-1" style="background-color:transparent" role="button"><i class="fas fa-list fa-sm fa-fw mr-2 text-black-400"></i>  Orders</a> 
@@ -51,8 +51,8 @@
                     <div class="profile">
                         <a href="<?=site_url('')?>" class="btn pr-1" style="background-color:transparent" role="button"><i class="fas fa-birthday-cake mr-2 text-black-400"></i>  Cake Design</a> 
                     </div> -->
-                    <div class="profile">
-                        <a href="<?=site_url('privacy')?>" class="btn pr-1" style="background-color:transparent" role="button"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-black-400"></i></i>  Privacy</a> 
+                    <div class="profile" style="background-color:#cda808; border-radius:5px;">
+                        <a href="#" class="btn pr-1" style="color:#ffffff; background-color:transparent" role="button"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i></i>  Privacy</a> 
                     </div>
                 </div>
                 </div>
@@ -61,7 +61,7 @@
         <div class="col-lg-7">
             <div class="card shadow-sm">
             <div class="card-header bg-transparent border-0">
-                <h5 class="mb-0"><i class="far fa-clone pr-1"></i> Personal Information 
+                <h5 class="mb-0"><i class="far fa-clone pr-1"></i> Privacy 
                     <button class="" type="button" style="justify-content:center; color:green; border:none; background:none; float:right"
                         data-toggle="modal" data-target="#profileModal<?php echo $data->id;?>">
                         <i class='far fa-edit'></i>
@@ -73,7 +73,7 @@
                     <div class="col-lg-4">
                         <div class="card-header bg-transparent text-center">
                             <!-- <img class="profile_img" src="https://source.unsplash.com/600x300/?student" alt="student dp"> -->
-                            <img class="profile_img" src="http://localhost/ocake/tools/uploads/<?php echo $data->profile;?>" alt="student dp">
+                            <img class="profile_img" src="http://localhost/ocake/tools/uploads/privacy_logo1.png" alt="student dp">
                         </div>
                         <div class="text-center">
                             <p></p>
@@ -85,56 +85,25 @@
                     <div class="col-lg-8">
                         <table class="table table-bordered">
                         <tr>
-                            <th width="30%">First name</th>
+                            <th width="30%">E-mail</th>
                             <td width="2%">:</td>
-                            <td><?php echo $data->firstname;?></td>
+                            <td><?php echo $data->email;?></td>
                         </tr>
                         <tr>
-                            <th width="30%">Last name</th>
+                            <th width="30%">Password</th>
                             <td width="2%">:</td>
-                            <td><?php echo $data->lastname;?></td>
-                        </tr>
-                        <!-- <tr>
-                            <th width="30%">Age</th>
-                            <td width="2%">:</td>
-                            <td><?//php echo $data->age;?></td>
-                        </tr> -->
-                        <tr>
-                            <th width="30%">Address</th>
-                            <td width="2%">:</td>
-                            <td><?php echo $data->brgy;?>, <?php echo $data->mcp;?></td>
+                            <td><?php echo "********";?></td>
                         </tr>
                         <tr>
-                            <th width="30%">Gender</th>
+                            <th width="30%">Confirmed Password</th>
                             <td width="2%">:</td>
-                            <td><?php echo $data->gender;?></td>
+                            <td><?php echo "********";?></td>
                         </tr>
-                        <tr>
-                            <th width="30%">Phone Number</th>
-                            <td width="2%">:</td>
-                            <td><?php echo $data->mobile;?></td>
-                        </tr>
-                        <!-- <tr>
-                            <th width="30%">Address</th>
-                            <td width="2%">:</td>
-                            <td></td>
-                        </tr> -->
                         </table>
                     </div>
                 </div>
             </div>
             </div>
-            <!-- <div style="height: 26px"></div>
-            <div class="card shadow-sm">
-                <div class="card-header bg-transparent border-0">
-                    <h3 class="mb-0"><i class="far fa-clone pr-1"></i> Other Information</h3>
-                </div>
-                <div class="card-body pt-0">
-                    <p>
-
-                    </p>
-                </div>
-            </div> -->
         </div>
         <div class="col-lg-1">
         </div>
@@ -146,7 +115,7 @@
                                                                 <!-- Modal content-->
                                                                 <div class="modal-content" style="width:600px">
                                                                     <div class="modal-header" style="background-color:#0d0e0f">
-                                                                        <h4 class="modal-title font-weight-bold" style="color:#cda808">Your Profile</h4>
+                                                                        <h4 class="modal-title font-weight-bold" style="color:#cda808">Edit Privacy</h4>
                                                                         <button type="button" class="close" style="border:none; background-color:#0d0e0f; color:#cda808; font-size:25px"
                                                                             data-dismiss="modal">&times;</button>
                                                                     </div>
@@ -168,51 +137,36 @@
                                                                                                         <span id="alertMsg"></span>
                                                                                                     </div>
                                                                                                     <div class="card-header bg-transparent text-center">
-                                                                                                        <img class="mb-3" style="justify-content:center" id="ajaxImgUpload"
+                                                                                                        <img class="mb-3" style="justify-content:center; border:#000000 10px solid" id="ajaxImgUpload"
                                                                                                             alt="Preview Image"
-                                                                                                            src="http://localhost/ocake/tools/uploads/<?php echo $data->profile;?>"
+                                                                                                            src="http://localhost/ocake/tools/uploads/privacy_logo1.png"
                                                                                                             height='72%' width='72%' />
+
+                                                                                                            <h3>Privacy Settings</h3><br>
                                                                                                     
-                                                                                                        <input type="file" name="image"
+                                                                                                        <!-- <input type="file" name="image"
                                                                                                             multiple="true" id="finput"
                                                                                                             onchange="onFileUpload(this);"
-                                                                                                            class="form-control form-control-lg " accept="image/*">
+                                                                                                            class="form-control form-control-lg " accept="image/*"> -->
                                                                                                     </div>
                                                                                                 </div>
                                                                                         </div>
                                                                                         <div class="col-lg-6 col-12">
                                                                                             <div class="info-body custom-responsive-margin">
-                                                                                                <span><b>First Name:</b> </span> <input type="text" class="form-control " id="firstname"
-                                                                                                    name="firstname" value="<?php echo $data->firstname?>"><br>
+                                                                                                <span><b>E-mail:</b> </span> <input type="text" class="form-control " id="firstname"
+                                                                                                    name="firstname" value="<?php echo $data->email?>"><br>
                                                                                             </div>
                                                                                             <div class="info-body custom-responsive-margin">
-                                                                                                <span><b>Last Name:</b> </span> <input type="text" class="form-control " id="lastname"
-                                                                                                    name="lastname" value="<?php echo $data->lastname?>"><br>
-                                                                                            </div>
-                                                                                            <!-- <div class="info-body custom-responsive-margin">
-                                                                                                <span><b>Age:</b> </span> <input type="text" class="form-control " id="age"
-                                                                                                    name="age" value="<?//php echo $data->age?>"><br>
-                                                                                            </div> -->
-                                                                                            <div class="info-body custom-responsive-margin">
-                                                                                                <span><b>Municipality:</b> </span> <input type="text" class="form-control " id="age"
-                                                                                                    name="mcp" value="<?php echo $data->mcp?>"><br>
+                                                                                                <span><b>Old Password:</b> </span> <input type="text" class="form-control " id="lastname"
+                                                                                                    name="lastname" value=""><br>
                                                                                             </div>
                                                                                             <div class="info-body custom-responsive-margin">
-                                                                                                <label>Address</label>
-                                                                                                <select class="form-control" type="text" id="barangay" name="brgy">
-                                                                                                    <option value="barangay"><?php echo $data->brgy;?></option>
-                                                                                                    <?php foreach($address as $add){?>
-                                                                                                    <option value="<?php echo $add->barangay;?>"><?php echo $add->barangay;?></option>
-                                                                                                    <?php }?>
-                                                                                                </select>
+                                                                                                <span><b>New Password:</b> </span> <input type="text" class="form-control " id="lastname"
+                                                                                                    name="lastname" value=""><br>
                                                                                             </div>
                                                                                             <div class="info-body custom-responsive-margin">
-                                                                                                <span><b>Gender:</b> </span> <input type="text" class="form-control " id="gender"
-                                                                                                    name="gender" value="<?php echo $data->gender?>"><br>
-                                                                                            </div>
-                                                                                            <div class="info-body custom-responsive-margin">
-                                                                                                <span><b>Mobile:</b> </span> <input type="text" class="form-control " id="mobile"
-                                                                                                    name="mobile" value="<?php echo $data->mobile?>"><br>
+                                                                                                <span><b>Confirm New Password:</b> </span> <input type="text" class="form-control " id="lastname"
+                                                                                                    name="lastname" value=""><br>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>

@@ -37,12 +37,14 @@ class Cart_m extends Model
                         ->where('cart_id', $cart_id)
                         ->where('user_id', $id)
                         ->where('order_code', "")
+                        ->where('is_check', "1")
                         ->update();
         if($update)
             return true;
         else
             return false;
     }
+
     public function no_rate($rated, $id,$cart_id){
         // return "hi";
         $update = $this->db->table('cart as c')->set('rated', $rated)
@@ -55,6 +57,7 @@ class Cart_m extends Model
         else
             return false;
     }
+
     public function rated($rated, $id,$cart_id){
         // return "hi";
         $update = $this->db->table('cart as c')->set('rated', $rated)
