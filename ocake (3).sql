@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2023 at 01:29 PM
+-- Generation Time: May 23, 2023 at 04:22 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -121,6 +121,7 @@ CREATE TABLE `add_ons` (
   `quantity` int(11) NOT NULL,
   `description` varchar(200) NOT NULL,
   `price` int(11) NOT NULL,
+  `add_cat` int(11) DEFAULT NULL,
   `addons_status` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -128,18 +129,20 @@ CREATE TABLE `add_ons` (
 -- Dumping data for table `add_ons`
 --
 
-INSERT INTO `add_ons` (`add_ons_id`, `image`, `quantity`, `description`, `price`, `addons_status`) VALUES
-(8, '1671882061649.png', 20, 'Strawberry', 190, 'Available'),
-(9, '1671882028150.png', 20, 'Strawberry', 10, 'Unavailable'),
-(10, '1671881950863.png', 20, 'Strawberry', 10, 'Available'),
-(11, '1671881997154.png', 20, 'Strawberry', 90, 'Available'),
-(12, '1671882048981.png', 20, 'Strawberry/icecrem', 100, 'Available'),
-(13, '1671882076449.png', 20, 'Cherry', 10, 'Available'),
-(14, '1671882091270.png', 20, 'Cherry', 20, 'Available'),
-(15, '1671882113111.png', 20, 'Mango(1 slice)', 10, 'Available'),
-(16, '1671882134591.png', 20, 'Mango(2 slice)', 20, 'Available'),
-(17, '1671881978759.png', 20, 'Strawberry syrup', 10, 'Available'),
-(18, '1671881964718.png', 20, 'Chocolate syrup', 10, 'Available');
+INSERT INTO `add_ons` (`add_ons_id`, `image`, `quantity`, `description`, `price`, `add_cat`, `addons_status`) VALUES
+(8, '1671882061649.png', 20, 'Strawberry', 190, 1, 'Available'),
+(9, '1671882028150.png', 20, 'Strawberry', 10, 1, 'Available'),
+(10, '1671881950863.png', 20, 'Strawberry', 10, 1, 'Available'),
+(11, '1671881997154.png', 20, 'Strawberry', 90, 1, 'Available'),
+(12, '1671882048981.png', 20, 'Strawberry/icecrem', 100, 1, 'Available'),
+(13, '1671882076449.png', 20, 'Cherry', 10, 1, 'Available'),
+(14, '1671882091270.png', 20, 'Cherry', 20, 1, 'Available'),
+(15, '1671882113111.png', 20, 'Mango(1 slice)', 10, 1, 'Available'),
+(16, '1671882134591.png', 20, 'Mango(2 slice)', 20, 1, 'Available'),
+(17, '1671881978759.png', 20, 'Strawberry syrup', 10, 1, 'Available'),
+(18, '1671881964718.png', 20, 'Chocolate syrup', 10, 1, 'Available'),
+(21, 'about.jpg', 20, 'Kandila', 10, 2, 'Available'),
+(22, 'a2.png', 20, 'Icing', 1000, 3, 'Available');
 
 -- --------------------------------------------------------
 
@@ -362,7 +365,13 @@ INSERT INTO `biller_details` (`biller_id`, `user_id`, `firstname`, `lastname`, `
 (131, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', '', 'bago general tinio ne', 'Home Delivery', '2023-05-25', '10:20', 'Gcash', '2023-05-21 10:16:43', '2023-05-21 10:16:43'),
 (132, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Balite', 'bago general tinio ne', 'Home Delivery', '2023-05-25', '10:27', 'COD', '2023-05-21 10:23:45', '2023-05-21 10:23:45'),
 (133, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Antipolo', 'Maganda', 'Pickup on Demand Delivery', '2023-05-24', '07:11', 'Gcash', '2023-05-21 11:09:16', '2023-05-21 11:09:16'),
-(134, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Apitong', 'Maganda', 'Home Delivery', '2023-05-25', '09:25', 'COD', '2023-05-21 11:25:51', '2023-05-21 11:25:51');
+(134, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Apitong', 'Maganda', 'Home Delivery', '2023-05-25', '09:25', 'COD', '2023-05-21 11:25:51', '2023-05-21 11:25:51'),
+(135, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Del Pillar', 'bago general tinio ne', 'Home Delivery', '2023-05-23', '11:45', 'Gcash', '2023-05-21 15:43:59', '2023-05-21 17:57:41'),
+(136, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '09222222222', 'Naujan', 'Antipolo', 'Maganda', 'Pickup on Demand Delivery', '2023-05-24', '23:58', 'Gcash', '2023-05-21 15:55:19', '2023-05-21 15:55:19'),
+(137, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '+09222222222', 'Naujan', 'Antipolo', 'Maganda', 'Pickup on Demand Delivery', '2023-05-25', '10:26', 'Gcash', '2023-05-22 14:25:28', '2023-05-22 14:25:28'),
+(138, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '+09222222222', 'Naujan', 'Antipolo', 'Maganda', 'Pickup on Demand Delivery', '2023-05-25', '10:58', 'Gcash', '2023-05-22 14:58:07', '2023-05-22 14:58:07'),
+(139, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '+09222222222', 'Naujan', 'Antipolo', 'Maganda', 'Pickup on Demand Delivery', '2023-05-26', '18:28', 'Gcash', '2023-05-22 19:26:06', '2023-05-22 19:26:06'),
+(140, 20, 'Jechel', 'Ramirez', 'ramirezjechel23@gmail.com', '+09222222222', 'Naujan', 'Antipolo', 'Maganda', 'Pickup on Demand Delivery', '2023-05-26', '17:40', 'Gcash', '2023-05-22 19:39:01', '2023-05-22 19:39:01');
 
 -- --------------------------------------------------------
 
@@ -391,18 +400,13 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`cart_id`, `occasion`, `flavor`, `price`, `quantity`, `total_price`, `product_id`, `user_id`, `is_check`, `order_code`, `rated`, `created_at`, `updated_at`) VALUES
-(187, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 20, '0', '20230521EC02', '', '2023-05-21 09:18:40', '2023-05-21 09:22:10'),
-(188, 'Birthday', 'Ube', '400.00', 1, '400.00', 11, 20, '0', '20230521EC02', '', '2023-05-21 09:18:48', '2023-05-21 09:22:14'),
-(189, 'Christening', 'Avocado', '450.00', 1, '450.00', 16, 20, '1', '202305219009', '', '2023-05-21 09:21:43', '2023-05-21 09:26:14'),
-(190, 'Christmas', 'Avocado', '450.00', 1, '450.00', 26, 20, '1', '202305219009', '', '2023-05-21 09:22:03', '2023-05-21 09:26:14'),
-(191, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 20, '1', '2023052100F4', '', '2023-05-21 09:32:52', '2023-05-21 10:07:15'),
-(192, 'Birthday', 'Chocolate', '300.00', 1, '300.00', 8, 20, '1', '202305217DE9', '', '2023-05-21 10:09:27', '2023-05-21 10:10:05'),
-(193, 'Christening', 'Vanilla', '300.00', 1, '300.00', 17, 20, '1', '202305211911', '', '2023-05-21 10:11:27', '2023-05-21 10:15:09'),
-(194, 'Birthday', 'Red Velvet', '400.00', 1, '400.00', 10, 20, '1', '20230521D5CD', '', '2023-05-21 10:16:06', '2023-05-21 10:16:43'),
-(195, 'New Year', 'Mocha', '350.00', 1, '350.00', 46, 20, '1', '202305217A81', '', '2023-05-21 10:18:26', '2023-05-21 10:23:45'),
-(196, 'Christening', 'Strawberry', '500.00', 1, '500.00', 18, 20, '1', '2023052122E5', '', '2023-05-21 10:48:40', '2023-05-21 11:09:16'),
-(197, 'Wedding', 'Vanilla', '300.00', 1, '300.00', 72, 20, '1', '20230521268E', '', '2023-05-21 11:24:05', '2023-05-21 11:25:51'),
-(198, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 20, '1', '', '', '2023-05-21 11:26:16', '2023-05-21 11:26:22');
+(210, 'Birthday', 'Chocolate', '300.00', 1, '300.00', 8, 20, '1', '2023052338F9', '', '2023-05-22 19:31:18', '2023-05-22 19:39:01'),
+(211, 'Valentine', 'Strawberry', '300.00', 2, '600.00', 59, 20, '1', '2023052338F9', '', '2023-05-22 19:31:33', '2023-05-22 19:39:01'),
+(212, 'Halloween', 'Strawberry', '300.00', 1, '300.00', 35, 20, '1', '', '', '2023-05-22 19:31:45', '2023-05-22 20:19:15'),
+(213, 'Birthday', 'Mango', '350.00', 1, '350.00', 9, 20, '1', '', '', '2023-05-22 19:45:33', '2023-05-22 20:19:15'),
+(214, 'Halloween', 'Pineapple', '350.00', 1, '350.00', 34, 20, '1', '', '', '2023-05-22 19:46:50', '2023-05-22 20:02:17'),
+(215, 'Wedding', 'Strawberry', '300.00', 1, '300.00', 71, 20, '1', '', '', '2023-05-22 19:49:21', '2023-05-22 20:29:55'),
+(216, 'Christmas', 'Avocado', '450.00', 1, '450.00', 26, 20, '1', '', '', '2023-05-22 19:50:35', '2023-05-22 20:29:55');
 
 -- --------------------------------------------------------
 
@@ -462,14 +466,7 @@ CREATE TABLE `checkout` (
 --
 
 INSERT INTO `checkout` (`checkout_id`, `user_id`, `biller_id`, `total_price`, `downpayment`, `shipping_fee`, `balance`, `refund`, `items`, `order_code`, `stat`, `reason`, `image`, `payment`, `created_at`) VALUES
-(60, 20, 126, '750.00', 375, 65, 440, 0, 2, '20230521EC02', 'Pending', '', 'bg4.jpg', 'Downpayment', '2023-05-21 09:19:35'),
-(61, 20, 127, '900.00', 450, 75, 525, 0, 2, '202305219009', 'Pending', '', 'a1.png', 'Fullpayment', '2023-05-21 09:26:14'),
-(62, 20, 129, '300.00', 350, 0, 0, 0, 1, '202305217DE9', 'Pending', '', 'a2.png', 'Fullpayment', '2023-05-21 10:10:05'),
-(63, 20, 130, '300.00', 150, 0, 215, 0, 1, '202305211911', 'Pending', '', 'about.jpg', 'Downpayment', '2023-05-21 10:15:09'),
-(64, 20, 131, '400.00', 200, 0, 250, 0, 1, '20230521D5CD', 'Pending', '', 'bg4.jpg', 'Downpayment', '2023-05-21 10:16:43'),
-(65, 20, 132, '350.00', 175, 80, 255, 0, 1, '202305217A81', 'Pending', '', 'about.jpg', 'Downpayment', '2023-05-21 10:23:45'),
-(66, 20, 133, '500.00', 500, 0, 0, 0, 1, '2023052122E5', 'Pending', '', 'bg4.jpg', 'Fullpayment', '2023-05-21 11:09:16'),
-(67, 20, 134, '300.00', 395, 95, 0, 0, 1, '20230521268E', 'Pending', '', 'a1.png', 'Fullpayment', '2023-05-21 11:25:51');
+(73, 20, 140, '900.00', 450, 0, 450, 0, 2, '2023052338F9', 'Pending', '', 'bg4.jpg', 'Downpayment', '2023-05-22 19:39:01');
 
 -- --------------------------------------------------------
 
@@ -971,7 +968,7 @@ ALTER TABLE `address`
 -- AUTO_INCREMENT for table `add_ons`
 --
 ALTER TABLE `add_ons`
-  MODIFY `add_ons_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `add_ons_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `admin`
@@ -989,13 +986,13 @@ ALTER TABLE `auth`
 -- AUTO_INCREMENT for table `biller_details`
 --
 ALTER TABLE `biller_details`
-  MODIFY `biller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `biller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -1007,7 +1004,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `checkout`
 --
 ALTER TABLE `checkout`
-  MODIFY `checkout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `checkout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `customers`
