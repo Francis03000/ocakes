@@ -138,6 +138,7 @@ $routes->get('/passwordResetSuccessful', 'User::passwordResetSuccessful');
 $routes->get('/home', 'User::home');
 $routes->get('/profile', 'User::user_profile');
 $routes->post('/profile', 'User::user_profile');
+$routes->match(['get','post'], "/privacy", "User::user_privacy");
 $routes->post('/user/update_profile/(:any)', 'User::profile_update/$1/$2');
 $routes->get('/userforgotpassword', 'User::userforgotpassword');
 $routes->get('/about', 'User::about');

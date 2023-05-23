@@ -20,3 +20,39 @@ in APPPATH\Views\admin\addonslist.php on line 328.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 11:13:20 --> Undefined array key "brgy"
+in APPPATH\Views\admin\dashboard.php on line 427.
+ 1 APPPATH\Views\admin\dashboard.php(427): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "brgy"', 'APPPATH\\Views\\admin\\dashboard.php', 427)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(300): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 11:54:38 --> Undefined array key "admin_id"
+in APPPATH\Controllers\Admin.php on line 821.
+ 1 APPPATH\Controllers\Admin.php(821): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "admin_id"', 'APPPATH\\Controllers\\Admin.php', 821)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->saleslist()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 11:59:40 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 263.
+ 1 APPPATH\Controllers\User.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 263)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 12:52:27 --> Undefined variable $address
+in APPPATH\Views\user\user_privacy.php on line 204.
+ 1 APPPATH\Views\user\user_privacy.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $address', 'APPPATH\\Views\\user\\user_privacy.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\user_privacy.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/user_privacy', [], true)
+ 5 APPPATH\Controllers\User.php(1576): view('user/user_privacy')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->user_privacy()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

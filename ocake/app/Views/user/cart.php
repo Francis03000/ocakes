@@ -33,6 +33,7 @@
                         <th style="text-align: center; vertical-align: middle;"><input type="checkbox" name="selectAll" id="selectAll"></th>
                         <th style="text-align: center; vertical-align: middle;">Product Image</th>
                         <th style="text-align: center; vertical-align: middle;">Product Description</th>
+                        <th style="text-align: center; vertical-align: middle;">Unit Price</th>
                         <th style="text-align: center; vertical-align: middle;">Quantity</th>
                         <th style="text-align: center; vertical-align: middle;">Subtotal</th>
                         <th style="text-align: center; vertical-align: middle;">Actions</th>
@@ -83,7 +84,7 @@
 <script>
     $(document).ready(function(){
 
-        let arrayCart = ["checkbox","image","product_description","quantity","subtotal","deleteAction"]
+        let arrayCart = ["checkbox","image","product_description","unit_price","quantity","subtotal","deleteAction"]
         let model = [];
         let modelid = [];
         initData();
@@ -103,7 +104,7 @@
                         let tabrow = $("<tr>");
                         const attriMap = new Map(Object.entries(product));
                         arrayCart.forEach((attri, i) => {
-                            if (attri != "subtotal" && attri != "deleteAction" && attri != "checkbox" && attri != "image" && attri!="product_description" && attri != "quantity") {
+                            if (attri != "subtotal" && attri != "deleteAction" && attri != "checkbox" && attri != "image" && attri!="product_description" && attri!="unit_price" && attri != "quantity") {
                                 $("<td>", {
                                     class: "text-wrap",
                                     style:"text-align: center; vertical-align: middle;",
@@ -130,6 +131,7 @@
                                     class:"btn btn-danger btn-sm",
                                     "data-id":product.cart_id,
                                     "data-index":m,
+                                    style:"background-color:#cda808; border-color:#cda808",
                                     id:"minusqt",
                                 });
 
@@ -141,7 +143,7 @@
                                 
                                 $("<input>",{
                                     type:"number",
-                                    style:"text-align: center;",
+                                    style:"text-align: center; width:15%; margin:2%",
                                     min:"1",
                                     value:product.quantity,
                                     id:"quantityOrder-"+product.cart_id,
@@ -150,6 +152,7 @@
                                     class:"btn btn-danger btn-sm",
                                     "data-id":product.cart_id,
                                     "data-index":m,
+                                    style:"background-color:#cda808; border-color:#cda808",
                                     id:"addqt",
                                 });
                                 $("<i>",{
@@ -176,6 +179,7 @@
                                 let btn = $("<button>",{
                                     class:"btn btn-danger btn-sm",
                                     "data-id":product.cart_id,
+                                    style:"background-color:#cda808; border-color:#cda808",
                                     id:"cartProductRemove",
                                 });
 
@@ -199,8 +203,17 @@
                                 $("<p>",{
                                     html:"Occasions : " + product.occasion,
                                 }).appendTo(td);
+                                // $("<p>",{
+                                //     html:"Unit Price : " + product.price,
+                                // }).appendTo(td);
+                                td.appendTo(tabrow);
+                            }else if (attri == "unit_price") {
+                                let td = $("<td>", {
+                                    style:"text-align: center; vertical-align: middle;",
+                                    class: "text-wrap",
+                                });
                                 $("<p>",{
-                                    html:"Unit Price : " + product.price,
+                                    html: product.price,
                                 }).appendTo(td);
                                 td.appendTo(tabrow);
                             } else if (attri == "subtotal") {
@@ -298,7 +311,7 @@
                             totalamount+=parseFloat(totals.total_price);
                         }
                     });
-                    $("#pinakatotal").html(totalamount);
+                    $("#pinakatotal").html("&#8369;" + totalamount);
                 }
             });
         }
