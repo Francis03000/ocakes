@@ -1024,6 +1024,7 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(response) {
                 if (response.length == 0) {
+                    alert("add");
                     $.ajax({
                         url: '<?= base_url('admin/pos/selectProd') ?>',
                         method: 'post',
@@ -1051,6 +1052,7 @@ $(document).ready(function() {
                         }
                     });
                 } else {
+                    alert("update");
                     var newquantity = parseInt(response[0].quantity);
                     var newtotal = parseFloat(response[0].totalAmount);
                     var newproduct_id = parseFloat(response[0].product_id);
