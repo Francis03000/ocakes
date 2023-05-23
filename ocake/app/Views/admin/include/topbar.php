@@ -57,9 +57,51 @@
         </li>
 
         <li class="nav-item dropdown">
+            <?php
+                
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $database = "ocake";
+
+                $conn = new mysqli($servername, $username, $password, $database);
+
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+
+                $currentDate = date("Y-m-d");
+                $deliveryTomorrow = date("Y-m-d", strtotime("+1 day", strtotime($currentDate)));
+
+                $sql = "SELECT * FROM checkout LEFT JOIN biller_details ON checkout.biller_id = biller_details.biller_id WHERE stat != 'Completed'";
+                $result = $conn->query($sql);
+
+                $count = 0;
+                $notificationMessages = '';
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $datePickupOrDeliver = $row['date'];
+                        $custName = $row['firstname'] . " " . $row['lastname'];
+                        $ordercode = $row['order_code'];
+
+                        if ($datePickupOrDeliver == $deliveryTomorrow) {
+                            $notificationMessages .= '<li class="notification-message"><b>' . $custName . '</b> order will arrive tomorrow. Ordercode <b>' . $ordercode . ' <br> <i style="font-size: 11px; "  > '.$currentDate.' </i></li>';
+                            $count++;
+                        }
+                    }
+                }
+                $conn->close();
+
+                
+
+                
+            ?>
             <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                 <img src="<?=base_url()?>/tools/admin/assets/img/icons/notification-bing.svg" alt="img" />
-                <span class="badge rounded-pill">!</span>
+
+                <span class="badge rounded-pill"><?php echo $count ?></span>
             </a>
             <div class="dropdown-menu notifications">
                 <div class="topnav-dropdown-header">
@@ -68,47 +110,7 @@
                 </div>
                 <div class="noti-content">
                     <ul class="notification-list">
-
-                        <?php
-                          // Establish a database connection
-                          $servername = "localhost";
-                          $username = "root";
-                          $password = "";
-                          $database = "ocake";
-
-                          $conn = new mysqli($servername, $username, $password, $database);
-
-                          if ($conn->connect_error) {
-                              die("Connection failed: " . $conn->connect_error);
-                          }
-
-                          $currentDate = date("Y-m-d");
-                          $deliveryTomorrow = date("Y-m-d", strtotime("+1 day", strtotime($currentDate)));
-
-                          $sql = "SELECT * FROM `checkout` LEFT JOIN biller_details ON checkout.biller_id = biller_details.biller_id WHERE stat != 'Completed' ";
-                          $result = $conn->query($sql);
-
-
-                          if ($result->num_rows > 0) {
-                              while ($row = $result->fetch_assoc()) {
-                                  $datePickupOrDeliver = $row['date'];
-                                  $custName = $row['firstname'] . " ".$row['lastname'];
-                                  $ordercode =$row['order_code'];
-
-                                  if ($datePickupOrDeliver == $deliveryTomorrow) {
-                                      echo '<li class="notification-message"><b>'. $custName . '</b> order will arrive tomorrow.  Ordercode <b>'.$ordercode.'</li>';
-                                  }
-
-                                  
-                              }
-                          } 
-
-                          $conn->close();
-                        ?>
-
-
-
-
+                        <?php echo $notificationMessages; ?>
                     </ul>
                 </div>
                 <div class="topnav-dropdown-footer">
