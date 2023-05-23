@@ -42,17 +42,17 @@
                     <h3><?php echo $data->firstname;?> <?php echo $data->lastname;?></h3><br>
                 </div>
                 <div class="card-body">
-                    <div class="profile" style="background-color:#d10f94; border-radius:5px;">
-                        <a href="<?=site_url('profile')?>"style="color:#ffffff;" class="btn pr-1" role="button"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>  Personal Information</a> 
+                    <div class="profile" style="background-color:#cda808; border-radius:5px;">
+                        <a href="<?=site_url('profile')?>"style="color:#ffffff;background-color:transparent" class="btn pr-1" role="button"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>  Personal Information</a> 
+                    </div>
+                    <!-- <div class="profile" >
+                        <a href="<?=site_url('')?>" class="btn pr-1" style="background-color:transparent" role="button"><i class="fas fa-list fa-sm fa-fw mr-2 text-black-400"></i>  Orders</a> 
                     </div>
                     <div class="profile">
-                        <a href="<?=site_url('orders')?>" class="btn pr-1" role="button"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>  Orders</a> 
-                    </div>
+                        <a href="<?=site_url('')?>" class="btn pr-1" style="background-color:transparent" role="button"><i class="fas fa-birthday-cake mr-2 text-black-400"></i>  Cake Design</a> 
+                    </div> -->
                     <div class="profile">
-                        <a href="<?=site_url('custom_design')?>" class="btn pr-1" role="button"><i class="fas fa-birthday-cake mr-2 text-gray-400"></i>  Cake Design</a> 
-                    </div>
-                    <div class="profile">
-                        <a href="<?=site_url('')?>" class="btn pr-1" role="button"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i></i>  Privacy</a> 
+                        <a href="#" class="btn pr-1" style="background-color:transparent" role="button"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-black-400"></i></i>  Privacy</a> 
                     </div>
                 </div>
                 </div>
@@ -94,10 +94,15 @@
                             <td width="2%">:</td>
                             <td><?php echo $data->lastname;?></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <th width="30%">Age</th>
                             <td width="2%">:</td>
-                            <td><?php echo $data->age;?></td>
+                            <td><?//php echo $data->age;?></td>
+                        </tr> -->
+                        <tr>
+                            <th width="30%">Address</th>
+                            <td width="2%">:</td>
+                            <td><?php echo $data->brgy;?>, <?php echo $data->mcp;?></td>
                         </tr>
                         <tr>
                             <th width="30%">Gender</th>
@@ -119,7 +124,7 @@
                 </div>
             </div>
             </div>
-            <div style="height: 26px"></div>
+            <!-- <div style="height: 26px"></div>
             <div class="card shadow-sm">
                 <div class="card-header bg-transparent border-0">
                     <h3 class="mb-0"><i class="far fa-clone pr-1"></i> Other Information</h3>
@@ -129,7 +134,7 @@
 
                     </p>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="col-lg-1">
         </div>
@@ -140,9 +145,9 @@
                                                             <div class="modal-dialog" >
                                                                 <!-- Modal content-->
                                                                 <div class="modal-content" style="width:600px">
-                                                                    <div class="modal-header">
-                                                                        <h4 class="modal-title">Your Profile</h4>
-                                                                        <button type="button" class="close" style="border:none; background-color:white; font-size:25px"
+                                                                    <div class="modal-header" style="background-color:#0d0e0f">
+                                                                        <h4 class="modal-title font-weight-bold" style="color:#cda808">Your Profile</h4>
+                                                                        <button type="button" class="close" style="border:none; background-color:#0d0e0f; color:#cda808; font-size:25px"
                                                                             data-dismiss="modal">&times;</button>
                                                                     </div>
                                                                     <div class="modal-body">
@@ -168,7 +173,7 @@
                                                                                                             src="http://localhost/ocake/tools/uploads/<?php echo $data->profile;?>"
                                                                                                             height='72%' width='72%' />
                                                                                                     
-                                                                                                        <input type="file" name="profile"
+                                                                                                        <input type="file" name="image"
                                                                                                             multiple="true" id="finput"
                                                                                                             onchange="onFileUpload(this);"
                                                                                                             class="form-control form-control-lg " accept="image/*">
@@ -184,9 +189,21 @@
                                                                                                 <span><b>Last Name:</b> </span> <input type="text" class="form-control " id="lastname"
                                                                                                     name="lastname" value="<?php echo $data->lastname?>"><br>
                                                                                             </div>
-                                                                                            <div class="info-body custom-responsive-margin">
+                                                                                            <!-- <div class="info-body custom-responsive-margin">
                                                                                                 <span><b>Age:</b> </span> <input type="text" class="form-control " id="age"
-                                                                                                    name="age" value="<?php echo $data->age?>"><br>
+                                                                                                    name="age" value="<?//php echo $data->age?>"><br>
+                                                                                            </div> -->
+                                                                                            <div class="info-body custom-responsive-margin">
+                                                                                                <span><b>Municipality:</b> </span> <input type="text" class="form-control " id="age"
+                                                                                                    name="mcp" value="<?php echo $data->mcp?>"><br>
+                                                                                            </div>
+                                                                                            <div class="info-body custom-responsive-margin">
+                                                                                                <select class="form-control" type="text" id="barangay" name="brgy">
+                                                                                                    <option value="barangay"><?php echo $data->brgy;?></option>
+                                                                                                    <?php foreach($address as $add){?>
+                                                                                                    <option value="<?php echo $add->barangay;?>"><?php echo $add->barangay;?></option>
+                                                                                                    <?php }?>
+                                                                                                </select>
                                                                                             </div>
                                                                                             <div class="info-body custom-responsive-margin">
                                                                                                 <span><b>Gender:</b> </span> <input type="text" class="form-control " id="gender"
@@ -203,7 +220,7 @@
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-secondary btn-lg"
                                                                                     data-dismiss="modal">Cancel</button>
-                                                                                    <input class="button btn btn-info btn-lg" style="float:right; color:#ffff"
+                                                                                    <input class="button btn btn-lg" style="float:right; color:#ffff; background-color:cda808; border-color:cda808"
                                                                                         type="submit" value="Update" name="submit">
                                                                             </div>
                                                                         </form>

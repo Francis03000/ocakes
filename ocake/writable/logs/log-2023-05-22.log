@@ -140,6 +140,7 @@ in APPPATH\Views\admin\addonslist.php on line 230.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< Updated upstream
 CRITICAL - 2023-05-22 22:57:31 --> Use of undefined constant newcart_id - assumed 'newcart_id' (this will throw an Error in a future version of PHP)
 in APPPATH\Controllers\User.php on line 997.
  1 APPPATH\Controllers\User.php(997): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant newcart_id - assumed \'newcart_id\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Controllers\\User.php', 997, [...])
@@ -175,3 +176,100 @@ in APPPATH\Controllers\User.php on line 993.
  3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+=======
+CRITICAL - 2023-05-22 12:50:35 --> Undefined property: stdClass::$add_cat
+in APPPATH\Views\admin\addonslist.php on line 328.
+ 1 APPPATH\Views\admin\addonslist.php(328): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$add_cat', 'APPPATH\\Views\\admin\\addonslist.php', 328)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(669): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 12:53:17 --> Undefined array key "brgy"
+in APPPATH\Views\admin\dashboard.php on line 427.
+ 1 APPPATH\Views\admin\dashboard.php(427): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "brgy"', 'APPPATH\\Views\\admin\\dashboard.php', 427)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(300): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 13:02:30 --> Undefined property: stdClass::$add_cat
+in APPPATH\Views\admin\addonslist.php on line 328.
+ 1 APPPATH\Views\admin\addonslist.php(328): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$add_cat', 'APPPATH\\Views\\admin\\addonslist.php', 328)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(669): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 19:18:43 --> Undefined property: stdClass::$image
+in APPPATH\Views\user\user_profile.php on line 41.
+ 1 APPPATH\Views\user\user_profile.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$image', 'APPPATH\\Views\\user\\user_profile.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\user_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/user_profile', [], true)
+ 5 APPPATH\Controllers\User.php(1486): view('user/user_profile')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->user_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 20:12:04 --> Invalid file: profile.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('profile.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('profile', [], true)
+ 3 APPPATH\Controllers\User.php(1508): view('profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->profile_update('20', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 20:22:00 --> Invalid file: profile.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('profile.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('profile', [], true)
+ 3 APPPATH\Controllers\User.php(1511): view('profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->profile_update('20', 'C:\\wamp64\\www\\ocake')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 20:22:04 --> Undefined property: stdClass::$gender
+in APPPATH\Views\user\user_profile.php on line 210.
+ 1 APPPATH\Views\user\user_profile.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$gender', 'APPPATH\\Views\\user\\user_profile.php', 210)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\user_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/user_profile', [], true)
+ 5 APPPATH\Controllers\User.php(1488): view('user/user_profile')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->user_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 20:22:14 --> Undefined property: stdClass::$gender
+in APPPATH\Views\user\user_profile.php on line 210.
+ 1 APPPATH\Views\user\user_profile.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$gender', 'APPPATH\\Views\\user\\user_profile.php', 210)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\user_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/user_profile', [], true)
+ 5 APPPATH\Controllers\User.php(1488): view('user/user_profile')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->user_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 20:23:49 --> Undefined property: stdClass::$brgy
+in APPPATH\Views\user\user_profile.php on line 204.
+ 1 APPPATH\Views\user\user_profile.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$brgy', 'APPPATH\\Views\\user\\user_profile.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\user_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/user_profile', [], true)
+ 5 APPPATH\Controllers\User.php(1488): view('user/user_profile')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->user_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> Stashed changes

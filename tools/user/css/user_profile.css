@@ -1,7 +1,7 @@
 body {
     background: #67B26F;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2112a9, #9a0b80);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #893aea, #ea46c9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #db7908, #d8b805);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e7a10a, #d5d838); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 0;
     margin: 0;
     
@@ -38,15 +38,15 @@ body {
 
 .profile:focus,
 .profile:hover {
-    color: #ea46c9;
+    color: #d8ec1c;
     text-decoration: none;
     border-radius:5px;
-    background-color: #f8abe2
+    background-color: #f1f393
 }
 
 .hover {
-    color: #ea46c9;
+    color: #d8ec1c;
     text-decoration: none;
     border-radius:5px;
-    background-color: #f8abe2
+    background-color: #f1f393
 }

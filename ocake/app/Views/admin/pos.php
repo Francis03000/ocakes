@@ -571,8 +571,8 @@
                             <div class="col" style="padding-right: 70px;">
                                 <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">OCAKES
                                 </h2>
-                                <p class="m-0">Address: General Tinio Nueva Ecija </p>
-                                <p class="m-0">City: Papaya</p>
+                                <p class="m-0">Address: General Tinio Barcenaga </p>
+                                <p class="m-0">Municipality: Naujan</p>
                                 <p class="m-0">Phone: 09261364720</p>
                             </div>
                             <div class="col">

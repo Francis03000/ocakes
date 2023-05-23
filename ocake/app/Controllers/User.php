@@ -1470,6 +1470,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $add_model = new Address_model();
+        $data['address'] = $add_model->fetchAddress();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
         $user_model = new Personal_m();
@@ -1500,7 +1502,8 @@ class User extends BaseController
         $val = $this->validate([   
             'firstname' => 'required',
             'lastname' => 'required',
-            'birthdate' => 'required',   
+            'mcp' => 'required', 
+            'brgy' => 'required',   
             'gender' => 'required',   
             'mobile' => 'required',         
         ]);
@@ -1519,7 +1522,8 @@ class User extends BaseController
                $data = array(
                     'firstname' => $this->request->getVar('firstname'),
                     'lastname' => $this->request->getVar('lastname'),
-                    'birthdate' => $this->request->getVar('birthdate'),
+                    'mcp' => $this->request->getVar('mcp'),
+                    'brgy' => $this->request->getVar('brgy'),
                     'gender' => $this->request->getVar('gender'),
                     'mobile' => "+".$this->request->getVar('mobile'),
                );
@@ -1531,7 +1535,8 @@ class User extends BaseController
                $data = array(
                     'firstname' => $this->request->getVar('firstname'),
                     'lastname' => $this->request->getVar('lastname'),
-                    'birthdate' => $this->request->getVar('birthdate'),
+                    'mcp' => $this->request->getVar('mcp'),
+                    'brgy' => $this->request->getVar('brgy'),
                     'gender' => $this->request->getVar('gender'),
                     'mobile' => "+".$this->request->getVar('mobile'),
                     'profile' =>  $imageFile->getClientName(), /*this will get the name of file input */
