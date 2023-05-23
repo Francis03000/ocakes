@@ -9,3 +9,14 @@ in APPPATH\Views\user\order_details.php on line 162.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 09:37:02 --> Undefined property: stdClass::$add_cat
+in APPPATH\Views\admin\addonslist.php on line 328.
+ 1 APPPATH\Views\admin\addonslist.php(328): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$add_cat', 'APPPATH\\Views\\admin\\addonslist.php', 328)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\addonslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/addonslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(669): view('admin/addonslist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->addonslist()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
