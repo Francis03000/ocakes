@@ -305,11 +305,12 @@ const resizeAddons = function () {
 
 window.onload = function () {
   // initialize all functions.
-  move("draggable");
-  displayLayerCount();
-  listOfLayer();
-  createBaseLayer();
-  loadColorPicker();
+  // move("draggable");
+  // displayLayerCount();
+  // listOfLayer();
+  // createBaseLayer();
+  // loadColorPicker();
+  initData();
 };
 const add = document.querySelector("#addLayer");
 const remove = document.querySelector("#removeLayer");
@@ -859,3 +860,39 @@ saveButton.addEventListener("click", () => {
     }
   );
 });
+const initData = function () {
+  $("#draggable-container").empty();
+  var url = window.location.origin + "/ocake/customization-all-ads";
+  $.get(url, function (response) {
+    let adds_container = $("#draggable-container");
+    response.forEach((adds, mk) => {
+      let tabrow = $("<div>", {
+        class: "draggable",
+        "data-index": adds.add_cat,
+        "data-id": adds.add_ons_id,
+        "data-name": adds.description,
+        "data-price": adds.price,
+        "data-src": "http://localhost/ocake/tools/uploads/" + adds.image,
+      });
+      if (parseInt($("#add_cat").val()) == parseInt(adds.add_cat)) {
+        $("<img>", {
+          id: "addon" + adds.add_ons_id,
+          style: "width:50px; height:50px",
+          src: "http://localhost/ocake/tools/uploads/" + adds.image,
+          alt: "",
+        }).appendTo(tabrow);
+      }
+      adds_container.append(tabrow);
+
+      // // alert(response.length);
+      // alert(mk);
+      if (mk == response.length - 1) {
+        move("draggable");
+        displayLayerCount();
+        listOfLayer();
+        createBaseLayer();
+        loadColorPicker();
+      }
+    });
+  });
+};

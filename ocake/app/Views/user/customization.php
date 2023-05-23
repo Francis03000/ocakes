@@ -73,7 +73,7 @@
                         <option value="3">Icing</option>
                     </select>
                 </div>
-                 <div class="tool-container d-flex flex-wrap" id="draggable-container">
+                 <div class="tool-container d-flex flex-wrap kev" id="draggable-container">
                     
                 </div>
             </div>
@@ -190,38 +190,6 @@
 
 <script>
     $(document).ready(function(){
-        initData();
-        function initData(){
-
-            $("#draggable-container").empty();
-            $.ajax({
-            url: '<?= base_url('customization-all-ads') ?>',
-            method: 'get',
-            dataType: 'json',
-            success: function(response) {
-                let adds_container = $("#draggable-container");
-                response.forEach((adds) => {
-                    let tabrow = $("<div>",{
-                            class:"draggable",
-                            "data-id":adds.add_ons_id,
-                            "data-name":adds.description,
-                            "data-price":adds.price,
-                            "data-src":"http://localhost/ocake/tools/uploads/"+adds.image,
-                        });
-                    if(parseInt($("#add_cat").val())==parseInt(adds.add_cat)){
-                        $("<img>",{
-                            id:"addon"+adds.add_ons_id,
-                            style:"width:50px; height:50px",
-                            src:"http://localhost/ocake/tools/uploads/"+adds.image,
-                        }).appendTo(tabrow);
-                    }
-                    adds_container.append(tabrow);
-                });
-                
-            }
-            });
-        }
-
         $("#add_cat").change(function(){
             initData();
         })
