@@ -256,6 +256,18 @@ class Checkout_model extends Model
 					->get()->getResult();
     }
 
+    public function trendingProduct(){
+        return $this->db->table('checkout')
+                    ->join('cart as c', 'c.order_code = checkout.order_code', 'left')
+                    ->join('product', 'product.id = c.product_id', 'left')
+                    ->select('*,count(product_id) as total')
+                    ->where('stat',"Completed")
+                    ->groupBy('product_id')
+                    ->orderBy('total', 'desc')
+                    ->limit(12)
+					->get()->getResult();
+    }
+
     public function mostBarangay(){
         $res = $this->db->table('checkout')
                     ->join('biller_details as bd', 'bd.biller_id = checkout.biller_id', 'left')

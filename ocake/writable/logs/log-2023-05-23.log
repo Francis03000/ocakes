@@ -56,6 +56,7 @@ in APPPATH\Views\user\user_privacy.php on line 204.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< Updated upstream
 CRITICAL - 2023-05-23 14:27:35 --> Undefined index: brgy
 in APPPATH\Views\admin\dashboard.php on line 427.
  1 APPPATH\Views\admin\dashboard.php(427): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: brgy', 'APPPATH\\Views\\admin\\dashboard.php', 427, [...])
@@ -102,3 +103,39 @@ in SYSTEMPATH\BaseModel.php on line 1598.
  6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
  7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+=======
+CRITICAL - 2023-05-23 21:48:00 --> Undefined array key "admin_id"
+in APPPATH\Controllers\Admin.php on line 821.
+ 1 APPPATH\Controllers\Admin.php(821): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "admin_id"', 'APPPATH\\Controllers\\Admin.php', 821)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->saleslist()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 21:49:27 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 1052.
+ 1 APPPATH\Controllers\User.php(1052): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 1052)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->userOrders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 22:32:34 --> Undefined variable $category
+in APPPATH\Views\admin\productlist.php on line 125.
+ 1 APPPATH\Views\admin\productlist.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\admin\\productlist.php', 125)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\productlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/productlist', [], true)
+ 5 APPPATH\Controllers\User.php(876): view('admin/productlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->add_rate()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 22:59:56 --> syntax error, unexpected token "}"
+in APPPATH\Views\user\productdetails.php on line 225.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/productdetails', [], true)
+ 3 APPPATH\Controllers\User.php(1225): view('user/productdetails')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->productdetails()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> Stashed changes

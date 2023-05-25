@@ -184,12 +184,12 @@
                                 </h3>
                             </div>
                             <div class="navbar-cart">
-                                <div class="wishlist">
+                                <!-- <div class="wishlist">
                                     <a href="javascript:void(0)">
                                         <i class="lni lni-heart"></i>
                                         <span class="total-items">0</span>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div class="cart-items">
                                
                                     <a href="javascript:void(0)" class="main-btn">

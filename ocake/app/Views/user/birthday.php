@@ -157,10 +157,11 @@
 
              <div class="col-lg-12 col-12">
                  <div class="product-grids-head">
-                     <div class="product-grid-topbar">
+                 <div class="product-grid-topbar">
                          <div class="row align-items-center">
                              <div class="col-lg-7 col-md-8 col-12">
-                                 <div class="product-sorting">
+                                <p><?php echo $occasion?> Cakes</p>
+                                 <!-- <div class="product-sorting">
                                      <label for="sorting">Sort by:</label>
                                      <select class="form-control" id="sorting">
                                          <option>Popularity</option>
@@ -171,7 +172,7 @@
                                          <option>Z - A Order</option>
                                      </select>
                                      <h3 class="total-show-product">Showing: <span>1 - 12 items</span></h3>
-                                 </div>
+                                 </div> -->
                              </div>
                              <div class="col-lg-5 col-md-4 col-12">
                                  <nav>
@@ -180,10 +181,10 @@
                                              data-bs-target="#nav-grid" type="button" role="tab"
                                              aria-controls="nav-grid" aria-selected="true"><i
                                                  class="lni lni-grid-alt"></i></button>
-                                         <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab"
+                                         <!-- <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab"
                                              data-bs-target="#nav-list" type="button" role="tab"
                                              aria-controls="nav-list" aria-selected="false"><i
-                                                 class="lni lni-list"></i></button>
+                                                 class="lni lni-list"></i></button> -->
                                      </div>
                                  </nav>
                              </div>
@@ -248,9 +249,8 @@
                                  <?php }?>
                              </div>
                          </div>
-                         <div class="row">
+                         <!-- <div class="row">
                              <div class="col-12">
-
                                  <div class="pagination left">
                                      <ul class="pagination-list">
                                          <li><a href="<?=site_url('1')?>">1</a></li>
@@ -261,9 +261,8 @@
                                          </li>
                                      </ul>
                                  </div>
-
                              </div>
-                         </div>
+                         </div> -->
                      </div>
 
                  </div>

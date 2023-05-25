@@ -249,7 +249,7 @@
                                                 <!-- Modal content-->
                                                 <div class="modal-content">
                                                     <div class="modal-header" style="background-color:#0d0e0f">
-                                                        <h6 class="modal-title font-weight-bold">Did you already received your order/s?</h6>
+                                                        <h6 class="modal-title font-weight-bold" style="color:#cda808">Did you already received your order/s?</h6>
                                                         <button type="button" class="close" style="border:none; background-color:#0d0e0f; color:#cda808; font-size:25px"
                                                             data-dismiss="modal">&times;</button>
                                                     </div>
@@ -306,7 +306,7 @@
                                                 <!-- Modal content-->
                                                 <div class="modal-content">
                                                     <div class="modal-header" style="background-color:#0d0e0f">
-                                                        <h6 class="modal-title font-weight-bold">Are you sure you want to cancel your order?</h6>
+                                                        <h6 class="modal-title font-weight-bold" style="color:#cda808">Are you sure you want to cancel your order?</h6>
                                                         <button type="button" class="close" style="border:none; background-color:#0d0e0f; color:#cda808; font-size:25px"
                                                             data-dismiss="modal">&times;</button>
                                                     </div>

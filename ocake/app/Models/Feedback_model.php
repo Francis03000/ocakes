@@ -5,7 +5,7 @@ class Feedback_model extends Model
 {
     protected $table = 'feedback';
     protected $primaryKey = 'feedback_id';
-    protected $allowedFields = ['feedback', 'rate', 'user_id', 'prod_id'];
+    protected $allowedFields = ['feedback_image', 'feedback', 'rate', 'user_id', 'prod_id'];
 
     //----------------- FETCH CATEGORY ----------------//    December 18,2022        ***USED
     public function fetchFeedback($prod_id) {

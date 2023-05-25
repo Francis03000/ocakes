@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ERROR - 2023-05-24 08:55:39 --> mysqli_sql_exception: Unknown column 'product_id' in 'where clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
 Stack trace:
 #0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
@@ -220,3 +221,19 @@ in APPPATH\Controllers\User.php on line 985.
  2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
  3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+=======
+CRITICAL - 2023-05-24 23:21:31 --> Undefined array key "admin_id"
+in APPPATH\Controllers\Admin.php on line 821.
+ 1 APPPATH\Controllers\Admin.php(821): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "admin_id"', 'APPPATH\\Controllers\\Admin.php', 821)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->saleslist()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 23:22:25 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 793.
+ 1 APPPATH\Controllers\User.php(793): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 793)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> Stashed changes

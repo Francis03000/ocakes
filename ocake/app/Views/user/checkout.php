@@ -140,17 +140,25 @@
                                     aria-expanded="false" aria-controls="collapsefive">Payment Info</h6>
                                 <section class="checkout-steps-form-content collapse" id="collapsefive"
                                     aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                    <!-- <div class="row">
+                                        <div class="col-md-6"><br>
                                             <input type="radio" name="payment" id="box1" value="Downpayment" required>
                                             <label for="box1">Down Payment</label>
                                             <input type="radio" name="payment" id="box2" value="Fullpayment" required>
                                             <label for="box2">Full Payment</label>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="row">
+                                 
                                         <div class="col-md-6">
                                             <div class="single-form form-default">
+                                            <label>Payment Method</label><br>
+
+                                                <input type="radio" name="payment" id="box1" value="Downpayment" required>
+                                                <label for="box1">Down Payment</label>
+                                                <input type="radio" name="payment" id="box2" value="Fullpayment" required>
+                                                <label for="box2">Full Payment</label>
+
                                                 <div class="select-items">
                                                     <select type="payment_method" id="payment_method" name="payment_method" class="form-control" required>
                                                         <option value="" disabled selected>select</option>
@@ -164,6 +172,13 @@
                                         <div class="col-md-6">
                                             <div class="single-form form-default">
                                                 <label>Proof of Payment</label>
+                                                <label style="margin-left:1%">Please upload a screenshot as a proof of payment.</label>
+                                                <!-- <div class="container">
+                                                    <div class="mb-2">
+                                                        <input type="file" name="image" multiple="true" id="finput" 
+                                                            class="form-control form-control-lg" accept=".jpg,.jpeg,.png" onchange="validateFileType()" required>
+                                                    </div>
+                                                </div> -->
                                                 <div class="select-items">
                                                 <input type="button" class="form-control" data-toggle="modal" data-target="#Modal1" style="background-color:#none; border-color:#e6e6e6;" value="+ Add " id="proof" required>
                                                 
@@ -172,12 +187,12 @@
                                                             <!-- Modal content-->
                                                             <div class="modal-content">
                                                                 <div class="modal-header" style="background-color:#0d0e0f">
-                                                                    <h6 class="modal-title font-weight-bold">Proof of Payment</h6>
+                                                                    <h6 class="modal-title font-weight-bold" style="color:#cda808">Proof of Payment</h6>
                                                                     <button type="button" class="close" style="border:none; background-color:#0d0e0f; color:#cda808; font-size:25px"
                                                                         data-dismiss="modal">&times;</button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <p style="color:#0e0d0f">Please upload a screenshot as a proof of payment.</p>
+                                                                    <!-- <p style="color:#0e0d0f">Please upload a screenshot as a proof of payment.</p> -->
                                                                     <div class="mb-2 text-center">
                                                                         <div class="container mt-2">
                                                                             <div id="alertMessage" class="alert alert-warning mb-3" style="display: none">
@@ -190,7 +205,6 @@
                                                                                 <input type="file" name="image" multiple="true" id="finput" 
                                                                                     class="form-control form-control-lg" accept=".jpg,.jpeg,.png" onchange="validateFileType()" required>
                                                                             </div>
-                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -219,7 +233,7 @@
                                         <input type="hidden" id="dphide" name="downpayment">
                                         <input type="hidden" id="bl" name="balance">
                                         <input type="hidden" value="<?php echo $cart_count;?> " name="items">
-                                        <input type="hidden" value="Antipolo" id="barangay" name="barangay">
+                                        <input type="hidden" value="Barcenaga" id="barangay" name="barangay">
                                         <input type="hidden"  id="shipping_fee" name="shipping_fee">
                                     </div>
                                 </section>
@@ -295,8 +309,8 @@
                             <h5 class="title" style="color:red">REMINDER:</h5>
                             <div class="total-payable">
                                 <div >
-                                    <p class="value">~ A customized cake should be ordered one day before the scheduled delivery date.</p><br>
-                                    <p class="value">~ Ordering over 2 cakes at a time need to make initial payment.</p>
+                                    <p class="value">~ Any kind of cake should be ordered two days before the scheduled delivery date.</p><br>
+                                    <p class="value">~ Ordering cake/s needs 50% initial payment.</p>
                                 </div>
                             </div>
                             
@@ -311,7 +325,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header" style="background-color:#0d0e0f">
-                <h6 class="modal-title font-weight-bold">Scan QR Code</h6>
+                <h6 class="modal-title font-weight-bold" style="color:#cda808">Please scan the QR code.</h6>
                 <button type="button" class="close" style="border:none; background-color:#0d0e0f; color:#cda808; font-size:25px"
                     data-dismiss="modal">&times;</button>
             </div>
@@ -482,9 +496,9 @@
         
         $("#delivery_method").change(function(){
             if($("#delivery_method").val()==="Pickup on Demand Delivery"){
-                $('#mySelect').val("Antipolo,90").attr("selected", "selected");
+                $('#mySelect').val("Barcenaga,30").attr("selected", "selected");
                 $('#mySelect').attr("disabled", true); 
-                $('#st').attr("readonly", true).val("Maganda"); 
+                $('#st').attr("readonly", true).val("Green Village"); 
                 $("#balance").html(parseFloat($("#myDown").html())+parseFloat($("#demo").html()));
                 document.getElementById("shipping_fee").value = 0;
                 $("#box1").attr("disabled", false); 

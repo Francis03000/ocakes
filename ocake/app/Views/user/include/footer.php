@@ -13,7 +13,7 @@
                          </div>
                      </div>
                      <div class="col-lg-9 col-md-8 col-12">
-                         <div class="footer-newsletter">
+                         <div class="footer-newsletter" style="margin-top:10%">
                              <h4 class="title">
                                  Subscribe to our Newsletter
                                  <span>Get all the latest information, Sales and Offers.</span>
@@ -122,8 +122,10 @@
                      </div>
                      <div class="col-lg-4 col-12">
                          <div class="copyright">
-                             <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
-                                     target="_blank">GrayGrids</a></p>
+                             <!-- <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
+                                     target="_blank">GrayGrids</a></p> -->
+                                <p>Designed and Developed by<a href="#" rel="nofollow"
+                                     target="_blank">Ocake Team</a></p>
                          </div>
                      </div>
                      <div class="col-lg-4 col-12">

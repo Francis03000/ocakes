@@ -69,13 +69,13 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-info">
-                            <h2 class="title"><?php echo $data->occasion; ?> Cake</h2>
+                            <h2 class="title" style="color:#081828"><?php echo $data->occasion; ?> Cake</h2>
+                            <h2 class="price">&#8369 <?php echo $data->price; ?><span></span></h2>
                             <p class="category"><i class="lni lni-tag"></i> Flavor:<a href="javascript:void(0)"><?php echo $data->flavor; ?></a></p>
-                            <h3 class="price">&#8369 <?php echo $data->price; ?><span></span></h3>
                             <p class="info-text"></p>
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="form-group quantity">
+                                    <!-- <div class="form-group quantity">
                                         <label for="color">Quantity</label>
                                         <select class="form-control">
                                             <option>1</option>
@@ -84,7 +84,7 @@
                                             <option>4</option>
                                             <option>5</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="col-lg-3 col-md-4 col-12">
                                     <div class="form-group quantity">
@@ -214,7 +214,8 @@
                                                 <div class="comment-area">
                                                     <?php echo $data->feedback;?>
                                                     <!-- <textarea class="form-control" placeholder="what is your view?" rows="4"></textarea> -->
-                                                </div>
+                                                </div><br>
+                                                
                                                 <!-- <div class="comment-btns mt-2">
                                                     <div class="row">
                                                         <div class="col-6">
@@ -230,6 +231,15 @@
                                                     </div>
                                                 </div> -->
                                             </div>
+                                        </div>
+                                        <div class="comment-area" style="margin-left:18%; margin-bottom:3%">
+                                                    <?php if(empty($data->feedback_image)){
+                                                        echo '
+                                                        ';
+                                                    }else{
+                                                        echo "<img src='http://localhost/ocake/tools/uploads/$data->feedback_image' width='100' height='100'>";
+                                                
+                                                    }?>
                                         </div>
                                     </div>
                                 </div>

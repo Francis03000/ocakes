@@ -252,7 +252,9 @@ class User extends BaseController
     //--------------- LANDING PAGE --------------//              November 26, 2022
     public function landingpage(){
         $model_product = new Product_model();
+        $checkout_model = new Checkout_model();
         $data['productData'] = $model_product->fetchProduct();
+        $data['trend'] = $checkout_model->trendingProduct();
         return view('user/landing_page', $data);
     }
 
@@ -286,6 +288,8 @@ class User extends BaseController
             $data['order_count']= $o->count;
         }
        
+        $data['trend'] = $model_order->trendingProduct(); 
+
         return view('user/include/header', $data)
             . view('user/index')
             . view('user/include/footer', $data);
@@ -868,25 +872,47 @@ class User extends BaseController
             $id = $_SESSION['user_id']; 
             helper(['form', 'url']);
             $val = $this->validate([
-                            
+                'feedback' => 'required',
+                'rate' => 'required',
             ]);
         
-            $feedback_model = new Feedback_model();
-            $qty ='1';
-            // var_dump($_SESSION['user_id']);
-            $datum=$feedback_model->insert([
-                'feedback' => $this->request->getVar('feedback'),
-                'rate' => $this->request->getVar('rate'),
-                'user_id' => $this->request->getVar('user_id'),
-                'prod_id' => $this->request->getVar('prod_id'),
-            ]);   
-            
-            $rate="yes";
-            $cart_model = new Cart_m();
-            $cart_id = $this->request->getVar('cart_id'); 
-            $update_cart = $cart_model->rated($rate,$id, $cart_id); 
-            //var_dump($update_cart, $datum);
-            return redirect('to_rate');  
+            if (!$val) {
+                $data['validation']  = $this->validator;
+                echo "hello";
+            }else{
+        
+                $feedback_model = new Feedback_model();
+                $qty ='1';
+                /*this will read the file from input */
+                $imageFile = $this->request->getFile('feedback_image');
+        
+                if($imageFile == ""){
+                    
+                    $datum=$feedback_model->insert([
+                        'feedback' => $this->request->getVar('feedback'),
+                        'rate' => $this->request->getVar('rate'),
+                        'user_id' => $this->request->getVar('user_id'),
+                        'prod_id' => $this->request->getVar('prod_id'),
+                    ]);   
+                }else{
+                    /*this will upload file to folder */
+                    $imageFile->move('tools/uploads/');
+
+                    $datum=$feedback_model->insert([
+                        'feedback' => $this->request->getVar('feedback'),
+                        'rate' => $this->request->getVar('rate'),
+                        'user_id' => $this->request->getVar('user_id'),
+                        'prod_id' => $this->request->getVar('prod_id'),
+                        'feedback_image' =>  $imageFile->getClientName(), 
+                    ]); 
+                }
+                    $rate="yes";
+                    $cart_model = new Cart_m();
+                    $cart_id = $this->request->getVar('cart_id'); 
+                    $update_cart = $cart_model->rated($rate,$id, $cart_id); 
+                    // var_dump($update_cart, $datum);
+                    return redirect('to_rate');  
+            }
         }else{
             return $this->response->redirect(site_url('signin'));
         }                        

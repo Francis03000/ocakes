@@ -139,7 +139,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header"  style="background-color:#0d0e0f">
-                    <h5 class="modal-title">How would you like our product?</h5>
+                    <h5 class="modal-title" style="color:#cda808">How would you like our product?</h5>
                     <button type="button" class="modal-close" style="border:none; background-color:#0d0e0f; color:#cda808; font-size:25px" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                     <div class="modal-body">
@@ -153,16 +153,16 @@
                                                         <?php }else{?>
                                                     <img style="height:160px" src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
                                                 <?php }?><br>
-                                            </div>
-                                                        <span><b>Ocassion:</b> <?php echo $data->occasion; ?> Cake</span><br>
-                                                        <span><b>Flavor:</b> <?php echo $data->flavor; ?> Flavor</span><br>
-                                                        <span><b>Price:</b> <?php echo '&#8369;' . number_format ($data->price); ?></span><br>
-                                                        <span><b>Quantity:</b> x<?php echo $data->quantity; ?></span><br>
-                                                        <?php if($data->is_customized == 1) {?>
-                                                        <span><b>Message:</b> <?php echo $data->message; ?> </span>
-                                                        <?php }else{?>
-                                                            <p> </p>
-                                                        <?php }?><br>
+                                            </div><br>
+                                                <span><b>Ocassion:</b> <?php echo $data->occasion; ?> Cake</span><br>
+                                                <span><b>Flavor:</b> <?php echo $data->flavor; ?> Flavor</span><br>
+                                                <span><b>Price:</b> <?php echo '&#8369;' . number_format ($data->price); ?></span><br>
+                                                <span><b>Quantity:</b> x<?php echo $data->quantity; ?></span><br>
+                                                  <?php if($data->is_customized == 1) {?>
+                                                <span><b>Message:</b> <?php echo $data->message; ?> </span>
+                                                  <?php }else{?>
+                                                 <p> </p>
+                                                  <?php }?><br>
                                         </div>
                                         <div class="col-lg-8 col-12">
                                             <form class="mt-2" name="form"
@@ -192,7 +192,19 @@
                                                             placeholder="What's your feedback?"></textarea>
                                                         </div>
                                                         <?//php }?>
-                                                    </div>
+                                                        <label> Upload Image</label>
+                                                            <div class="container ">
+                                                                <div id="alertMessage" class="alert alert-warning mb-3" style="display: none">
+                                                                    <span id="alertMsg"></span>
+                                                                </div>
+                                                                <div class="d-grid text-center" style="">
+                                                                    <img class="mb-3" id="ajaxImgUpload" alt="" src="" />
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <input type="file" name="feedback_image" multiple="true" id="finput" onchange="onFileUpload(this);"
+                                                                        class="form-control" style="width:" accept="image/*">
+                                                                </div>
+                                                            </div>
                                                         <input type="hidden" value="<?php echo $data->user_id;?>" name="user_id">
                                                         <input type="hidden" value="<?php echo $data->id;?>" name="prod_id">
                                                         <input type="hidden" value="<?php echo $data->cart_id;?>" name="cart_id">
@@ -215,7 +227,7 @@
 <a href="#" class="scroll-top">
     <i class="lni lni-chevron-up"></i>
 </a>
-
+<?php echo view('admin/include/photo-script'); ?>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="tools/user/js/bootstrap.min.js"></script>
 <script src="tools/user/js/tiny-slider.js"></script>

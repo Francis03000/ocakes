@@ -151,12 +151,12 @@
                                 </h3>
                             </div>
                             <div class="navbar-cart">
-                                <div class="wishlist">
+                                <!-- <div class="wishlist">
                                     <a href="javascript:void(0)">
                                         <i class="lni lni-heart"></i>
                                         <span class="total-items">0</span>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div class="cart-items">
 
                                     <a href="javascript:void(0)" class="main-btn">
@@ -323,7 +323,7 @@
                                     </h2>
                                     <h3 color="white"><span>Now Only</span> ₱300.00</h3>
                                     <div class="button">
-                                        <a href="product-grids.html" class="btn">Shop Now</a>
+                                        <a href="<?=site_url('birthday')?>" class="btn">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -338,7 +338,7 @@
                                     incididunt ut labore et dolore magna aliqua.</p> -->
                                     <h3 color="white"><span>Combo Only:</span> ₱590.00</h3>
                                     <div class="button">
-                                        <a href="product-grids.html" class="btn">Shop Now</a>
+                                        <a href="<?=site_url('birthday')?>" class="btn">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -358,7 +358,7 @@
                                         <span>Blue Velvet Flavor</span>
                                         Birthday Cake
                                     </h2>
-                                    <h3>₱259.99</h3>
+                                    <h3 style="color:#fff">₱259.99</h3>
                                 </div>
                             </div>
                             <!-- End Small Banner -->
@@ -370,7 +370,7 @@
                                     <h2>Weekly Sale!</h2>
                                     <p>Saving up to 50% off all online store items this week.</p>
                                     <div class="button">
-                                        <a class="btn" href="product-grids.html">Shop Now</a>
+                                        <a class="btn" href="<?=site_url('birthday')?>">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -396,7 +396,7 @@
                 </div>
             </div>
             <div class="row">
-                <?php foreach($productData as $data){?>
+                <?php foreach($trend as $data){?>
                 <div class="col-lg-3 col-md- col-12">
                     <!-- Start Single Product -->
                     <div class="single-product">
@@ -422,6 +422,12 @@
                             </div>
                         </div>
                         <div class="product-info">
+                            <form action="<?=site_url('productdetails')?>" method="POST">
+                                <input type="hidden" name="prod_id" value="<?=$data->id;?>">
+                                <input type="submit" value="View"
+                                    class="btn btn-outline-primary btn-rounded btn-sm" name="view"
+                                    style="float:right">
+                            </form>
                             <span class="category" style="color:#0d0e0f"><?php echo $data->flavor;?></span>
                             <h4 class="title">
                                 <a href="<?=site_url('productgrid')?>"><?php echo $data->occasion;?></a>
@@ -448,7 +454,7 @@
     <!-- End Trending Product Area -->
 
     <!-- Start Call Action Area -->
-    <section class="call-action section">
+    <!-- <section class="call-action section">
         <div class="container">
             <div class="row ">
                 <div class="col-lg-8 offset-lg-2 col-12">
@@ -466,7 +472,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Call Action Area -->
 
 
@@ -478,9 +484,9 @@
                     <div class="single-banner" style="background-image:url('tools/user/images/banner/banner-1-bg.png')">
                         <div class="content">
                             <h2>Christmas Cake</h2>
-                            <p>Space Gray Aluminum Case with <br>Black/Volt Real Sport Band </p>
+                            <p style="color:#fff">Vanilla Flavor<br>for only ₱559.00 </p>
                             <div class="button">
-                                <a href="<?=site_url('productgrid')?>" class="btn">View Details</a>
+                                <a href="<?=site_url('christmas')?>" class="btn">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -490,10 +496,9 @@
                         style="background-image:url('tools/user/images/banner/banner-2-bg.png')">
                         <div class="content">
                             <h2>New Year Cake</h2>
-                            <p>Lorem ipsum dolor sit amet, <br>eiusmod tempor
-                                incididunt ut labore.</p>
+                            <p style="color:#fff">Chocolate Flavor<br>for only ₱599.00 </p>
                             <div class="button">
-                                <a href="<?=site_url('productgrid')?>" class="btn">Shop Now</a>
+                                <a href="<?=site_url('newyear')?>" class="btn">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -524,7 +529,7 @@
                     </div>
                     <div class="media-body">
                         <h5>24/7 Support.</h5>
-                        <span>Live Chat Or Call.</span>
+                        <span>Chat Or Call.</span>
                     </div>
                 </li>
                 <!-- Support 24/7 -->
@@ -567,7 +572,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-8 col-12">
-                            <div class="footer-newsletter">
+                            <div class="footer-newsletter" style="margin-top:10%">
                                 <h4 class="title">
                                     Subscribe to our Newsletter
                                     <span>Get all the latest information, Sales and Offers.</span>
@@ -676,8 +681,10 @@
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
-                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
-                                        target="_blank">GrayGrids</a></p>
+                                <!-- <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
+                                        target="_blank">GrayGrids</a></p> -->
+                                <p>Designed and Developed by<a href="#" rel="nofollow"
+                                     target="_blank">Ocake Team</a></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">

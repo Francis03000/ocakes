@@ -30,7 +30,7 @@ var Tawk_API = Tawk_API || {},
                                  </h2>
                                  <h3><span>Now Only</span> ₱320.99</h3>
                                  <div class="button">
-                                     <a href="product-grids.html" class="btn">Shop Now</a>
+                                     <a href="<?=site_url('birthday')?>" class="btn">Shop Now</a>
                                  </div>
                              </div>
                          </div>
@@ -45,7 +45,7 @@ var Tawk_API = Tawk_API || {},
                                      incididunt ut labore et dolore magna aliqua.</p> -->
                                  <h3><span>Combo Only:</span> ₱590.00</h3>
                                  <div class="button">
-                                     <a href="product-grids.html" class="btn">Shop Now</a>
+                                     <a href="<?=site_url('birthday')?>" class="btn">Shop Now</a>
                                  </div>
                              </div>
                          </div>
@@ -64,7 +64,7 @@ var Tawk_API = Tawk_API || {},
                                      <span>Blue Velvet Flavor</span>
                                      Birthday Cake
                                  </h2>
-                                 <h3>₱259.99</h3>
+                                 <h3 style="color:#fff">₱259.99</h3>
                              </div>
                          </div>
                          <!-- End Small Banner -->
@@ -76,7 +76,7 @@ var Tawk_API = Tawk_API || {},
                                  <h2>Weekly Sale!</h2>
                                  <p>Saving up to 50% off all online store items this week.</p>
                                  <div class="button">
-                                     <a class="btn" href="product-grids.html">Shop Now</a>
+                                     <a class="btn" href="<?=site_url('birthday')?>">Shop Now</a>
                                  </div>
                              </div>
                          </div>
@@ -102,7 +102,7 @@ var Tawk_API = Tawk_API || {},
              </div>
          </div>
          <div class="row">
-             <?php foreach($productData as $data){?>
+             <?php foreach($trend as $data){?>
              <div class="col-lg-3 col-md- col-12">
                  <!-- Start Single Product -->
                  <div class="single-product">
@@ -128,6 +128,12 @@ var Tawk_API = Tawk_API || {},
                          </div>
                      </div>
                      <div class="product-info">
+                            <form action="<?=site_url('productdetails')?>" method="POST">
+                                <input type="hidden" name="prod_id" value="<?=$data->id;?>">
+                                <input type="submit" value="View"
+                                    class="btn btn-outline-primary btn-rounded btn-sm" name="view"
+                                    style="float:right">
+                            </form>
                          <span class="category" style="color:#0d0e0f"><?php echo $data->flavor;?></span>
                          <h4 class="title">
                              <a href="<?=site_url('productgrid')?>"><?php echo $data->occasion;?></a>
@@ -154,7 +160,7 @@ var Tawk_API = Tawk_API || {},
  <!-- End Trending Product Area -->
 
  <!-- Start Call Action Area -->
- <section class="call-action section">
+ <!-- <section class="call-action section">
      <div class="container">
          <div class="row ">
              <div class="col-lg-8 offset-lg-2 col-12">
@@ -172,7 +178,7 @@ var Tawk_API = Tawk_API || {},
              </div>
          </div>
      </div>
- </section>
+ </section> -->
  <!-- End Call Action Area -->
 
 
@@ -184,9 +190,9 @@ var Tawk_API = Tawk_API || {},
                  <div class="single-banner" style="background-image:url('tools/user/images/banner/banner-1-bg.png')">
                      <div class="content">
                          <h2>Christmas Cake</h2>
-                         <p>Space Gray Aluminum Case with <br>Black/Volt Real Sport Band </p>
+                         <p style="color:#fff">Vanilla Flavor<br>for only ₱559.00 </p>
                          <div class="button">
-                             <a href="<?=site_url('productgrid')?>" class="btn">View Details</a>
+                             <a href="<?=site_url('christmas')?>" class="btn">Shop Now</a>
                          </div>
                      </div>
                  </div>
@@ -196,10 +202,9 @@ var Tawk_API = Tawk_API || {},
                      style="background-image:url('tools/user/images/banner/banner-2-bg.png')">
                      <div class="content">
                          <h2>New Year Cake</h2>
-                         <p>Lorem ipsum dolor sit amet, <br>eiusmod tempor
-                             incididunt ut labore.</p>
+                         <p style="color:#fff">Chocolate Flavor<br>for only ₱599.00 </p>
                          <div class="button">
-                             <a href="<?=site_url('productgrid')?>" class="btn">Shop Now</a>
+                             <a href="<?=site_url('newyear')?>" class="btn">Shop Now</a>
                          </div>
                      </div>
                  </div>
@@ -230,7 +235,7 @@ var Tawk_API = Tawk_API || {},
                  </div>
                  <div class="media-body">
                      <h5>24/7 Support.</h5>
-                     <span>Live Chat Or Call.</span>
+                     <span>Chat Or Call.</span>
                  </div>
              </li>
              <!-- Support 24/7 -->
