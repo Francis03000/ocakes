@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 class Product_model extends Model{
     protected $table = 'product';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['product_code','image', 'cat_id', 'occasion', 'product_name', 'flavor', 'price', 'stock', 'status','availability', 'is_customized', 'userid', 'message'];
+    protected $allowedFields = ['product_code','image', 'cat_id', 'occasion', 'product_name', 'flavor', 'price', 'stock', 'status','availability', 'is_customized','have_add_ons', 'userid', 'message'];
 
   # ------ FETCH ALL PRODUCT ----#        ***USED
   public function fetchProduct() {
@@ -173,6 +173,7 @@ class Product_model extends Model{
       'price' => $price,
       'is_customized' => 1,
       'userid' => $user_id,
+      'have_add_ons' => '{"12":1,"14":1}',
 		];
 
       $result = $this->insert($data);

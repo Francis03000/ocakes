@@ -53,6 +53,17 @@ class CartController extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function cartUpdateCheckout1()
+    {
+        // $cart_id = $this->request->getPost('cart_id');
+        $cartModel = new Cart_m();
+        $data = [
+            'is_check' => $this->request->getPost('is_check'),
+        ];
+        $cartModel->where("cart_id >","0")->set($data)->update();
+        return $this->response->setJSON($cartModel);
+    }
+
     public function deleteData(){
         $cart_id=$this->request->getPost('cart_id');
         $cartModel = new Cart_m();

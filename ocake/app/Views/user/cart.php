@@ -30,7 +30,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="text-align: center; vertical-align: middle;"><input type="checkbox" name="selectAll" id="selectAll"></th>
+                        <th style="text-align: center; vertical-align: middle;"><input type="checkbox" name="selectAll" id="selectAll" checked></th>
                         <th style="text-align: center; vertical-align: middle;">Product Image</th>
                         <th style="text-align: center; vertical-align: middle;">Product Description</th>
                         <th style="text-align: center; vertical-align: middle;">Unit Price</th>
@@ -87,7 +87,7 @@
         let arrayCart = ["checkbox","image","product_description","unit_price","quantity","subtotal","deleteAction"]
         let model = [];
         let modelid = [];
-        initData();
+        // initData();
         function initData(){
             $("#cart-bodys").empty();
             model = [];
@@ -166,10 +166,17 @@
                                     style:"text-align: center; vertical-align: middle;",
                                     class: "text-wrap",
                                 });
-                                $("<img>",{
+                                if(product.is_customized==1){
+                                    $("<img>",{
+                                    style:"height:100px; width:100px",
+                                    src: product.image,
+                                    }).appendTo(td);
+                                }else{
+                                    $("<img>",{
                                     style:"height:100px; width:100px",
                                     src:"tools/uploads/"+product.image,
-                                }).appendTo(td);
+                                    }).appendTo(td);
+                                }
                                 td.appendTo(tabrow);
                             }else if (attri == "deleteAction") {
                                 let td = $("<td>", {
@@ -260,6 +267,42 @@
 
             
         });
+
+        if($("#selectAll").is(":checked")){
+            $.ajax({
+                url: '<?= base_url('user/cart/cart-update-checkout1') ?>',
+                method: 'post',
+                data:{cart_id:"",is_check:1},
+                dataType: 'json',
+                success: function(response) {
+                    initData();
+                }
+            });
+        }
+
+        $("#selectAll").click(function(e){
+            if($(e.currentTarget).is(":checked")){
+                $.ajax({
+                    url: '<?= base_url('user/cart/cart-update-checkout1') ?>',
+                    method: 'post',
+                    data:{cart_id:"",is_check:1},
+                    dataType: 'json',
+                    success: function(response) {
+                        initData();
+                    }
+                });
+            }else{
+                $.ajax({
+                    url: '<?= base_url('user/cart/cart-update-checkout1') ?>',
+                    method: 'post',
+                    data:{cart_id:"",is_check:0},
+                    dataType: 'json',
+                    success: function(response) {
+                        initData();
+                    }
+                });
+            }
+        })
 
         $("body").on("click","#addqt",function(e){
             var id = $(e.currentTarget).data("id");

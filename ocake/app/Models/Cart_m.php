@@ -16,7 +16,7 @@ class Cart_m extends Model
                         ->select('*')
                         ->join('product as p','p.id=c.product_id')
                         ->where('c.user_id', $id)
-                        ->where('order_code', "","OR",'is_check', "1")
+                        ->where('order_code', "","AND",'is_check', "1")
                         ->get()->getResult();
     }
 

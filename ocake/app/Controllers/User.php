@@ -972,7 +972,7 @@ class User extends BaseController
     //---------------- PLACE ORDER --------------//              December 28,2022 --> January 02, 2023
     public function placeorder(){ 
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){     
-            $id = $_SESSION['user_id'];                 
+            $id = $_SESSION['user_id'];    
             helper(['form', 'url']);
         
             $val = $this->validate([ 
@@ -994,6 +994,8 @@ class User extends BaseController
             foreach( $name as $key => $n ) {
               $update_cart = $cart_model->cart_update($random,$id,$n);
             }
+
+
 
             if($update_cart == true){
                 #insert biller data 
@@ -1038,6 +1040,28 @@ class User extends BaseController
                             'image' =>  $imageFile->getClientName(), /*this will get the name of file input */
                         );             
                         $insert_checkout= $checkout_model->save_checkout($datum);
+
+                        $productModel = new Product_model();   
+                        $name = $this->request->getVar('product_id');
+                        foreach( $name as $key => $n ) {
+                            // echo $key . " hell ". $n;
+                            $data = $productModel->select("have_add_ons")->where('id',$n)->get()->getResult();
+                            // var_dump($data);
+                            $configval = json_encode($data[0]->have_add_ons);
+                            $configval1 = json_decode($configval);
+                            $configval2 = json_decode($configval1);
+                            // echo $configval2;
+                            foreach( $configval2 as $keys => $ns ) {
+                                echo $keys . " hell ". $ns;
+                                $modeladds = new AddOns_model();
+                                $datas = $modeladds->where('add_ons_id',$keys)->get()->getResult();
+                                $newqt = $datas[0]->quantity - $ns;
+                                $datam = [
+                                    'quantity' => $newqt,
+                                ];
+                                $modeladds->addons_update($datam,$keys);
+                            }
+                        }
                         return redirect('orders'); 
                     } 
             } 

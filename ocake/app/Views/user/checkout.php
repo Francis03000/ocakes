@@ -415,11 +415,19 @@
                         const attriMap = new Map(Object.entries(product));
                         arrayCart.forEach((attri, i) => {
                             if (attri == "image") {
-                                $("<img>",{
+                                if(product.is_customized==1){
+                                    $("<img>",{
+                                    style:"height:40px",
+                                    src:product.image,
+                                    alt:product.flavor,
+                                    }).appendTo(tabrow);
+                                }else{
+                                    $("<img>",{
                                     style:"height:40px",
                                     src:"tools/uploads/"+product.image,
                                     alt:product.flavor,
-                                }).appendTo(tabrow);
+                                    }).appendTo(tabrow);
+                                }
                             }else if (attri == "occasion") {
                                 let span1 = $("<span>");
                                 $("<p>",{

@@ -188,6 +188,7 @@ $routes->group('user', static function ($routes) {
     $routes->get('cart/cart-user-detail', 'CartController::index');
     $routes->post('cart/cart-update', 'CartController::cartUpdate');
     $routes->post('cart/cart-update-checkout', 'CartController::cartUpdateCheckout');
+    $routes->post('cart/cart-update-checkout1', 'CartController::cartUpdateCheckout1');
     $routes->post('cart/cart-delete', 'CartController::deleteData');
 });
 $routes->group('check', static function ($routes) {

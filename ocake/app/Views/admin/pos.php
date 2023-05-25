@@ -118,7 +118,7 @@
                             <div class="orderid">
                                 <h4>Order List</h4>
                                 <h5 id="invoiceNumber">Transaction id : #<?php echo $finalcode; ?></h5>
-                                <input type="hidden" id="invoiceNumberId" value="<?php echo $finalcode; ?>">
+                                <input type="text" id="invoiceNumberId" value="<?php echo $finalcode; ?>">
                             </div>
                         </div>
                         <div class="card card-order">
@@ -1032,19 +1032,20 @@ $(document).ready(function() {
                             p_id: product_id
                         },
                         dataType: 'json',
-                        success: function(response) {
+                        success: function(responsesss) {
+                            alert(product_id);
                             let dataA = {
                                 invoice_number: invoicenum,
                                 product_id: product_id,
                                 quantity: 1,
-                                totalAmount: response[0].price
+                                totalAmount: responsesss[0].price
                             }
                             $.ajax({
                                 url: '<?= base_url('admin/pos/addtoinvoice') ?>',
                                 method: 'post',
                                 data: dataA,
                                 dataType: 'json',
-                                success: function(responses) {
+                                success: function(responsessssss) {
                                     $("#prod_list").empty();
                                     initTableInvoice();
                                 }
@@ -1052,10 +1053,10 @@ $(document).ready(function() {
                         }
                     });
                 } else {
-                    alert("update");
                     var newquantity = parseInt(response[0].quantity);
                     var newtotal = parseFloat(response[0].totalAmount);
                     var newproduct_id = parseFloat(response[0].product_id);
+
                     $.ajax({
                         url: '<?= base_url('admin/pos/selectProd') ?>',
                         method: 'post',
@@ -1065,7 +1066,7 @@ $(document).ready(function() {
                         dataType: 'json',
                         success: function(responses) {
                             let dataA = {
-                                id: response[0].id,
+                                id: response[0].invid,
                                 invoice_number: invoicenum,
                                 product_id: newproduct_id,
                                 quantity: newquantity + 1,
@@ -1077,7 +1078,7 @@ $(document).ready(function() {
                                 method: 'post',
                                 data: dataA,
                                 dataType: 'json',
-                                success: function(response) {
+                                success: function(response1) {
                                     $("#prod_list").empty();
                                     initTableInvoice();
                                 }

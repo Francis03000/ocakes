@@ -707,6 +707,7 @@ const addItemToPriceTable = function (array) {
   const priceTable = document.querySelector("#price_table");
   console.log("added");
   priceTable.innerHTML = "";
+  let kulog = [];
   if (array.length != 0) {
     for (var x = 0; x < array.length; x++) {
       let mainDiv = document.createElement("div");
@@ -743,6 +744,11 @@ const addItemToPriceTable = function (array) {
         "₱" + (array[x]["price"] * array[x]["qty"]).toFixed(2)
       );
 
+      var newid = array[x]["id"];
+      var newquant = array[x]["qty"];
+      var obts = {};
+      obts[newid] = newquant;
+      kulog.push(obts);
       div2_inner1.appendChild(addon_image);
 
       addon_name.appendChild(addon_name_val);
@@ -761,6 +767,8 @@ const addItemToPriceTable = function (array) {
   } else {
     priceTable.innerHTML = "";
   }
+
+  console.log(kulog);
 };
 
 const updateCakeAmount = function () {
