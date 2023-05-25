@@ -91,10 +91,18 @@ class Cart_m extends Model
                     ->select('Count(cart_id) as count')
                     ->where('user_id', $id)
                     ->where('order_code', "")
-                    ->where('is_check', "1")
+                    ->where('is_check', "0")
                     ->get()->getResult();
     }
 
+    public function count_order($id){
+        return $this->db->table('cart')
+                    ->select('Count(cart_id) as count')
+                    ->where('user_id', $id)
+                    ->where('order_code',"")
+                    ->where('is_check', "1")
+                    ->get()->getResult();
+    }
     public function count_datas($id){
         return $this->db->table('cart')
                     ->select('Count(cart_id) as count')

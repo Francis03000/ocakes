@@ -10,7 +10,7 @@
     <meta name="author" content="Dreamguys - Bootstrap Admin Template" />
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>Dreams Pos admin template</title>
+    <title>Walk-In Transaction</title>
     <script src="https://kit.fontawesome.com/8494b77c9c.js" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="<?=base_url()?>/tools/admin/assets/img/favicon.png" />
@@ -118,7 +118,7 @@
                             <div class="orderid">
                                 <h4>Order List</h4>
                                 <h5 id="invoiceNumber">Transaction id : #<?php echo $finalcode; ?></h5>
-                                <input type="text" id="invoiceNumberId" value="<?php echo $finalcode; ?>">
+                                <input type="hidden" id="invoiceNumberId" value="<?php echo $finalcode; ?>">
                             </div>
                         </div>
                         <div class="card card-order">
@@ -489,7 +489,7 @@
                                 <div class="form-group">
                                     <label>Shop Address</label>
                                     <input type="text" id="shop_address" name="shop_address" readonly
-                                        value="General Tinio Nueva Ecija" />
+                                        value="Green Village, Barcenaga, Naujan" />
                                 </div>
                             </div>
                         </div>
@@ -571,7 +571,7 @@
                             <div class="col" style="padding-right: 70px;">
                                 <h2 class="fw-medium m-0" style="font-family: Lucida Handwriting; color: #FF1493">OCAKES
                                 </h2>
-                                <p class="m-0">Address: General Tinio Barcenaga </p>
+                                <p class="m-0">Address: Green Village Barcenaga </p>
                                 <p class="m-0">Municipality: Naujan</p>
                                 <p class="m-0">Phone: 09261364720</p>
                             </div>
@@ -1024,7 +1024,7 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(response) {
                 if (response.length == 0) {
-                    alert("add");
+                    alert("Product succesfully added to cart.");
                     $.ajax({
                         url: '<?= base_url('admin/pos/selectProd') ?>',
                         method: 'post',
@@ -1033,7 +1033,7 @@ $(document).ready(function() {
                         },
                         dataType: 'json',
                         success: function(responsesss) {
-                            alert(product_id);
+                            // alert(product_id);
                             let dataA = {
                                 invoice_number: invoicenum,
                                 product_id: product_id,
@@ -1209,7 +1209,7 @@ $(document).ready(function() {
             Swal.fire({
                 position: "center",
                 icon: "warning",
-                title: "Kulang Bayad Mo!",
+                title: "Your payment is not enough.",
                 showConfirmButton: false,
                 timer: 1500,
             });

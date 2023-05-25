@@ -230,9 +230,10 @@
                                             </div>
                                         </div>
                                         <input type="hidden" id="tp5" name="total_prices">
+                                        
                                         <input type="hidden" id="dphide" name="downpayment">
                                         <input type="hidden" id="bl" name="balance">
-                                        <input type="hidden" value="<?php echo $cart_count;?> " name="items">
+                                        <input type="hidden" value="<?php echo $cart_prod;?> " name="items">
                                         <input type="hidden" value="Barcenaga" id="barangay" name="barangay">
                                         <input type="hidden"  id="shipping_fee" name="shipping_fee">
                                     </div>
@@ -292,6 +293,7 @@
                                 <form>
                                     <?php foreach($cartData as $data){?>
                                         <input type="hidden" name="cart_id[]" value="<?=$data->cart_id?>">
+                                        <input type="hidden" id="" value="<?php echo $data->order_code;?> " name="order_code">
                                         <input type="hidden" name="product_id[]" value="<?=$data->product_id?>">
                                         <input type="hidden" name="occasion[]" value="<?=$data->occasion?>">
                                         <input type="hidden" name="flavor[]" value="<?=$data->flavor?>">
