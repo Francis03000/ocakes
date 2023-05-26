@@ -868,6 +868,7 @@ saveButton.addEventListener("click", () => {
     }
   );
 });
+var listOfLayerCalled = false;
 const initData = function () {
   $("#draggable-container").empty();
   var url = window.location.origin + "/ocake/customization-all-ads";
@@ -897,7 +898,11 @@ const initData = function () {
       if (mk == response.length - 1) {
         move("draggable");
         displayLayerCount();
-        listOfLayer();
+        if (!listOfLayerCalled) {
+          listOfLayer();
+          // Update the flag variable
+          listOfLayerCalled = true;
+        }
         createBaseLayer();
         loadColorPicker();
       }
