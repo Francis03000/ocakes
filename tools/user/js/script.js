@@ -869,6 +869,8 @@ saveButton.addEventListener("click", () => {
   );
 });
 var listOfLayerCalled = false;
+// var createBaseLayerCalled = false;
+createBaseLayer();
 const initData = function () {
   $("#draggable-container").empty();
   var url = window.location.origin + "/ocake/customization-all-ads";
@@ -900,10 +902,13 @@ const initData = function () {
         displayLayerCount();
         if (!listOfLayerCalled) {
           listOfLayer();
-          // Update the flag variable
           listOfLayerCalled = true;
         }
-        createBaseLayer();
+        
+        // if (!createBaseLayerCalled) {
+        //   createBaseLayerCalled = false;
+        // }
+
         loadColorPicker();
       }
     });
