@@ -18,6 +18,13 @@ class Feedback_model extends Model
         ->get()->getResult();
     }
 
+    // public function total_rating($prod_id){
+    //     return $this->db->table('feedback')
+	// 				->select('Sum(rate) as total')
+    //                 ->where('prod_id',$prod_id)
+	// 				->get()->getResult();
+    // }
+
     //---------------- DELETE CATEGORY ---------------//     November 28,2022     ***USED
     public function cat_delete($id){
         // return $this->delete(['id' => $id]);

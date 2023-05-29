@@ -14,4 +14,10 @@ class CustomersModel extends Model
     public function getFullname(){
         return $this->customer_fname . " " .$this->customer_mname . " " .$this->customer_lname; 
     }
+
+	public function count_customers(){
+		return $this->db->table('customers')
+					->select('Count(id) as count')
+					->get()->getResult();
+	}
 }

@@ -18,7 +18,7 @@
     </a>
 
     <ul class="nav user-menu">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <div class="top-nav-search">
                 <a href="javascript:void(0);" class="responsive-search">
                     <i class="fa fa-search"></i>
@@ -34,9 +34,9 @@
                             alt="img" /></a>
                 </form>
             </div>
-        </li>
+        </li> -->
 
-        <li class="nav-item dropdown has-arrow flag-nav">
+        <!-- <li class="nav-item dropdown has-arrow flag-nav">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
                 <img src="<?=base_url()?>/tools/admin/assets/img/flags/us1.png" alt="" height="20" />
             </a>
@@ -54,7 +54,7 @@
                     <img src="<?=base_url()?>/tools/admin/assets/img/flags/de.png" alt="" height="16" /> German
                 </a>
             </div>
-        </li>
+        </li> -->
 
         <li class="nav-item dropdown">
             <?php
@@ -87,7 +87,7 @@
                         $ordercode = $row['order_code'];
 
                         if ($datePickupOrDeliver == $deliveryTomorrow) {
-                            $notificationMessages .= '<li class="notification-message"><b>' . $custName . '</b> order will arrive tomorrow. Ordercode <b>' . $ordercode . ' <br> <i style="font-size: 11px; "  > '.$currentDate.' </i></li>';
+                            $notificationMessages .= '<li class="notification-message" style="background-color:#ffffb7; margin:10px; padding:10px 10px 0px 10px;"><b>' . $custName . '</b> order will be delivered tomorrow. Ordercode <b>' . $ordercode . ' <br> <i style="font-size: 11px; margin-left:80%"  > '.$currentDate.' </i></li>';
                             $count++;
                         }
                     }
@@ -104,43 +104,46 @@
                 <span class="badge rounded-pill"><?php echo $count ?></span>
             </a>
             <div class="dropdown-menu notifications">
-                <div class="topnav-dropdown-header">
-                    <span class="notification-title">Notifications</span>
-                    <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                <div class="topnav-dropdown-header" style="background-color:#cda808">
+                    <span class="notification-title" style="color:#fff"><b>Notifications</b></span>
+                    <!-- <a href="javascript:void(0)" class="clear-noti"> Clear All </a> -->
                 </div>
                 <div class="noti-content">
                     <ul class="notification-list">
                         <?php echo $notificationMessages; ?>
                     </ul>
                 </div>
-                <div class="topnav-dropdown-footer">
-                    <a href="activities.html">View all Notifications</a>
+                <div class="topnav-dropdown-footer" style="background-color:#cda808;">
+                    <a href="#" style="color:#fff;">View all Notifications</a>
+                    <!-- <a href="activities.html">View all Notifications</a> -->
                 </div>
             </div>
         </li>
 
         <li class="nav-item dropdown has-arrow main-drop">
             <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
-                <span class="user-img"><img src="<?=base_url()?>/tools/admin/assets/img/profiles/avator1.jpg" alt="" />
-                    <span class="status online"></span></span>
+                <span class="user-img"><img style="margin:5%" src="<?=base_url()?>/tools/admin/assets/img/profiles/avator1.jpg" alt="" />
+                    <span style="bottom:10px" class="status online"></span></span>
             </a>
             <div class="dropdown-menu menu-drop-user">
                 <div class="profilename">
                     <div class="profileset">
                         <span class="user-img">
-                            <img src="<?=base_url()?>/tools/admin/assets/img/profiles/avator1.jpg" alt="" />
+                            <img style="margin:5%" src="<?=base_url()?>/tools/admin/assets/img/profiles/avator1.jpg" alt="" />
                             <span class="status online"></span>
                         </span>
                         <div class="profilesets">
-                            <h6>John Doe</h6>
+                            <h6>Kelly's Cake</h6>
                             <h5>Admin</h5>
                         </div>
                     </div>
                     <hr class="m-0" />
-                    <a class="dropdown-item" href="profile.html">
+                    <a class="dropdown-item" href="#">
+                    <!-- <a class="dropdown-item" href="profile.html"> -->
                         <i class="me-2" data-feather="user"></i> My Profile
                     </a>
-                    <a class="dropdown-item" href="generalsettings.html">
+                    <a class="dropdown-item" href="#">
+                    <!-- <a class="dropdown-item" href="generalsettings.html"> -->
                         <i class="me-2" data-feather="settings"></i>Settings
                     </a>
                     <hr class="m-0" />

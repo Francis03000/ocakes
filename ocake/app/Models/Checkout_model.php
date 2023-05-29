@@ -126,11 +126,16 @@ class Checkout_model extends Model
     }
    
     //--------------------- UPDATE CHECKOUT DATA --------------------//       January 03, 2023   ***USED
-    public function checkout_update($data,$id){
-        $this->set('stat',$data)
+     public function checkout_update($data,$id){
+        $result = $this->db->table('checkout')
             ->where('checkout_id', $id)
+            ->set ($data)
             ->update();
-    }
+
+        if ($result) {
+            return true;
+        }
+    }   
    
 
     //--------------------- DELETE CHECKOUT DATA --------------------//       January 03, 2023
@@ -350,6 +355,12 @@ class Checkout_model extends Model
         }
         return $data;
     }
+
+    // public function date($user_id){
+    //     $res = $this->db->table('biller_details')
+    //             ->raw('SELECT date, Count(biller_id) FROM `biller_details` WHERE user_id = 20 GROUP by date having count('biller') = 5;')
+    //     return $res;
+    // }
 
 }
 ?>

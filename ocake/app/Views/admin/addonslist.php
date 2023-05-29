@@ -137,7 +137,7 @@
                   </div>
                 </div>
                 <div class="wordset">
-                  <ul>
+                  <!-- <ul>
                     <li>
                       <a
                         data-bs-toggle="tooltip"
@@ -162,7 +162,7 @@
                         ><img src="<?=base_url()?>/tools/admin/assets/img/icons/printer.svg" alt="img"
                       /></a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
 
@@ -210,12 +210,12 @@
                 <table class="table datanew">
                   <thead>
                     <tr>
-                      <th>
+                      <!-- <th>
                         <label class="checkboxs">
                           <input type="checkbox" id="select-all" />
                           <span class="checkmarks"></span>
                         </label>
-                      </th>
+                      </th> -->
                       <!-- <th>#</th> -->
                       <!-- <th>AddOns Image</th> -->
                       <th>AddOns</th>
@@ -229,12 +229,12 @@
                     <?php $num = 1;
                       foreach($addons as $data){?>
                         <tr>
-                          <td>
+                          <!-- <td>
                               <label class="checkboxs">
                               <input type="checkbox" />
                               <span class="checkmarks"></span>
                               </label>
-                          </td>
+                          </td> -->
                           <!-- <td> <?//php echo $num++; ?></td> -->
                           <td class="productimgname">
                               <a href="javascript:void(0);" class="product-img">

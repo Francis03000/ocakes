@@ -19,7 +19,7 @@ class Category_model extends Model
                         ->get()->getResult();
         }
     }
-
+    
     //---------------- DELETE CATEGORY ---------------//     November 28,2022     ***USED
     public function cat_delete($id){
         // return $this->delete(['id' => $id]);

@@ -48,18 +48,18 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-top">
-                            <div class="search-set">
-                                <div class="search-path">
-                                    <a class="btn btn-filter" id="filter_search">
+                            <div class="search-set" style="margin-left:1%">
+                                <div class="search-path" >
+                                    <a class="btn btn-filter" style="background-color:#cda808;" id="filter_search">
                                     <img src="<?=base_url()?>/tools/admin/assets/img/icons/filter.svg" alt="img">
                                     <span><img src="<?=base_url()?>/tools/admin/assets/img/icons/closes.svg" alt="img"></span>
                                 </a>
                             </div>
-                            <div class="search-input">
-                                <a class="btn btn-searchset"><img src="<?=base_url()?>/tools/admin/assets/img/icons/search-white.svg" alt="img"></a>
+                            <div class="search-input" >
+                                <a class="btn btn-searchset" ><img src="<?=base_url()?>/tools/admin/assets/img/icons/search-white.svg" alt="img"></a>
                             </div>
                         </div>
-                        <div class="wordset">
+                        <!-- <div class="wordset">
                             <ul>
                                 <li>
                                     <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img src="<?=base_url()?>/tools/admin/assets/img/icons/pdf.svg" alt="img"></a>
@@ -71,7 +71,7 @@
                                 <a data-bs-toggle="tooltip" data-bs-placement="top" title="print"><img src="<?=base_url()?>/tools/admin/assets/img/icons/printer.svg" alt="img"></a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="card" id="filter_inputs">
@@ -108,12 +108,12 @@
                         <table class="table  datanew">
                             <thead>
                                 <tr>
-                                    <th>
+                                    <!-- <th>
                                         <label class="checkboxs">
                                         <input type="checkbox" id="select-all">
                                         <span class="checkmarks"></span>
                                         </label>
-                                    </th>
+                                    </th> -->
                                     <th>Order Code</th>
                                     <th>Customer Name</th>
                                     <!-- <th>Date</th> -->
@@ -133,12 +133,12 @@
                                 <?php $num = 1;
                                     foreach($sales as $data){?>
                                 <tr>
-                                    <td>
+                                    <!-- <td>
                                         <label class="checkboxs">
                                         <input type="checkbox">
                                         <span class="checkmarks"></span>
                                         </label>
-                                    </td>
+                                    </td> -->
                                     <td><?=$data->order_code;?></td>
                                     <td><?=$data->firstname;?> <?=$data->lastname;?></td>
                                     <td><?=$data->items;?>
@@ -195,7 +195,7 @@
                                                 <li>
                                                 <a href="javascript:void(0);" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#showpayment<?php echo $data->checkout_id;?>"><img src="<?=base_url()?>/tools/admin/assets/img/icons/dollar-square.svg" class="me-2" alt="img">Show Payments</a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                 <a href="javascript:void(0);" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#createpayment"><img src="<?=base_url()?>/tools/admin/assets/img/icons/plus-circle.svg" class="me-2" alt="img">Create Payment</a>
                                                 </li>
                                                 <li>
@@ -203,7 +203,7 @@
                                                 </li>
                                                 <li>
                                                 <a href="javascript:void(0);" class="dropdown-item confirm-text"><img src="<?=base_url()?>/tools/admin/assets/img/icons/delete1.svg" class="me-2" alt="img">Delete Sale</a>
-                                                </li>
+                                                </li> -->
                                         </ul>
                                     </td>
                                     
@@ -223,9 +223,9 @@
     <div class="modal fade" id="detailModal<?php echo $data->checkout_id;?>" tabindex="-1" aria-labelledby="detailModal<?php echo $data->checkout_id;?>" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Sale Detail</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-header" style="background-color:#cda808">
+                    <h5 class="modal-title" style="color:#fff">Sale Detail</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="border:none; color:#fff;">×</span></button>
                 </div>
                     <div class="modal-body">
                         <div class="table-responsive">
@@ -233,24 +233,25 @@
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <div class="info-body custom-responsive-margin">
-                                        <span><b>Name:</b> </span><?php echo $data->firstname?> <?php echo $data->lastname?><br>
-                                        <span><b>Order ID:</b> </span><?php echo $data->order_code?><br>
-                                        <span><b>Contact:</b> </span><?php echo $data->mobile?><br>
-                                        <span><b>Purchased Items:</b> </span><?php echo $data->items?><br>
-                                        <span><b>Proof of Payment:</b> </span><br><img style="height:160px" src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="image"><br>
+                                        <span><b>Name:</b> </span><br><input disabled class="form-control" value="<?php echo $data->firstname?> <?php echo $data->lastname?>">
+                                        <span><b>Order ID:</b> </span><br><input disabled class="form-control" value="<?php echo $data->order_code?>">
+                                        <span><b>Contact:</b> </span><br><input disabled class="form-control" value="<?php echo $data->mobile?>">
+                                        <span><b>Purchased Items:</b> </span><br><input disabled class="form-control" value="<?php echo $data->items?>">
+                                        <span><b>Total Price:</b> </span><input disabled class="form-control" value="<?php echo '&#8369;' . number_format ($data->total_price)?>">
+                                        <span><b>Down Payment:</b> <input disabled class="form-control" value="<?php echo '&#8369;' . number_format ($data->downpayment)?>">
+                                        
+                                        <!-- <span><b>Proof of Payment:</b> </span><br><img style="height:160px" src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="image"><br> -->
                                         <!-- <span><b>Reference Number:</b> </span><?//php echo $data->reference?><br> -->
                                         <!-- <span><b>Refund:</b> </span><?//php echo'&#8369;' . number_format ($data->refund)?><br> -->
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="info-body custom-responsive-margin">
-                                        <span><b>Total Price:</b> </span><?php echo '&#8369;' . number_format ($data->total_price)?><br>
-                                        <span><b>Down Payment:</b> <?php echo '&#8369;' . number_format ($data->downpayment)?></span><br>
-                                        <span><b>Balance:</b><?php echo '&#8369;' . number_format ($data->balance)?> </span><br>
-                                        <span><b>Payment Method:</b> </span><?php echo $data->payment_method?><br>
-                                        <span><b>Delivery Method:</b> </span><?php echo $data->delivery_method?><br>
-                                        <span><b>Scheduled Delivery Date:</b> </span><?php echo $data->date?> </span><?php echo $data->time;?><br>
-                                        <span><b>Address:</b> </span><?php echo $data->street?>, <?php echo $data->barangay?>, <?php echo $data->municipality?><br>
+                                        <span><b>Balance:</b><input disabled class="form-control" value="<?php echo '&#8369;' . number_format ($data->balance)?>">
+                                        <span><b>Payment Method:</b> </span><input disabled class="form-control" value="<?php echo $data->payment_method?>">
+                                        <span><b>Delivery Method:</b> </span><input disabled class="form-control" value="<?php echo $data->delivery_method?>">
+                                        <span><b>Scheduled Delivery Date:</b> </span><input disabled class="form-control" value="<?php echo $data->date?> <?php echo $data->time;?>">
+                                        <span><b>Address:</b> </span><input disabled class="form-control" value="<?php echo $data->street?>, <?php echo $data->barangay?>, <?php echo $data->municipality?>">
                                     </div>                                                     
                                 </div>
                             </div>
@@ -291,11 +292,11 @@
 
     <!-- Update Status Modal--->
     <div class="modal fade" id="editModal<?php echo $data->checkout_id;?>" tabindex="-1" aria-labelledby="editModal<?php echo $data->checkout_id;?>" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered"  style="width:500px">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Update Status</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-header" style="background-color:#cda808">
+                    <h5 class="modal-title" style="color:#fff">Update Status</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="border:none; color:#fff;">×</span></button>
                 </div>
                     <div class="modal-body">
                         <!-- <div class="table-responsive"> -->
@@ -304,7 +305,7 @@
                             <?php if(session('success')){ echo session('success');}else{ echo session('error');}?>
                             <div class="row">
                                 <input type="hidden" name="checkout_id" value="<?php echo $data->checkout_id?>">
-                                <label for="stat">Status:</label><br>
+                                <label for="stat"><h4>Status:</h4></label><br>
                                     <select name="stat" class="form-control" id="stat">
                                         <option
                                             <?php if($data->stat == "Pending"){ echo "selected"; }?>
@@ -333,8 +334,8 @@
                                                                     
                             <div class="modal-footer" style="justify-content:right">
                                 <button type="button" class="btn btn-secondary btn-lg"
-                                    data-dismiss="modal">Cancel</button>
-                                    <input class="btn btn-success btn-lg" type="submit" value="Update" name="submit" style="width:100px">
+                                    data-dismiss="modal" style="height:50px;">Cancel</button>
+                                    <input class="btn btn-success btn-lg" style="background-color:#cda808; border-color:#cda808; height:50px" type="submit" value="Update" name="submit" style="width:100px">
                             </div>
                         </form>
                         <!-- </div> -->
@@ -345,18 +346,27 @@
     </div>
 
     <div class="modal fade" id="showpayment<?php echo $data->checkout_id;?>" tabindex="-1" aria-labelledby="showpayment<?php echo $data->checkout_id;?>" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered" style="width:700px">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Show Payments</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-header" style="background-color:#cda808">
+                    <h5 class="modal-title" style="color:#fff">Show Payments</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="border:none; color:#fff;">×</span></button>
                 </div>
                     <div class="modal-body">
                         <div class="table-responsive">
-                        <span><b>Proof of Payment:</b> </span><br>
+                        <!-- <span><b>Proof of Payment:</b> </span><br> -->
+                        <div class="row">
+                            <div class="col-4" style="">
+                                <span><b>Total Price:</b><br><input disabled class="form-control" value="<?php echo '&#8369;' . number_format ($data->total_price)?>"><br>
+                                <span><b>Down Payment:</b> <br><input disabled class="form-control" value="<?php echo '&#8369;' . number_format ($data->downpayment)?>"><br>
+                                <span><b>Balance:</b> <br><input disabled class="form-control" value="<?php echo '&#8369;' . number_format ($data->balance)?>"><br>
+                                </div>
+                            
+                            <div class="col-8">
                             <div class="text-center">
                                 <img  src="http://localhost/ocake/tools/uploads/<?php echo $data->image;?>" alt="image"><br>
                             </div>
+                            </div></div>
                         </div>
                     </div>
                 </div>
@@ -367,9 +377,9 @@
     <div class="modal fade" id="createpayment" tabindex="-1" aria-labelledby="createpayment" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Create Payment</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-header" style="background-color:#cda808">
+                    <h5 class="modal-title" style="color:#fff">Create Payment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="border:none; color:#fff;">×</span></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -431,9 +441,9 @@
     <div class="modal fade" id="editpayment" tabindex="-1" aria-labelledby="editpayment" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Payment</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-header" style="background-color:#cda808">
+                    <h5 class="modal-title" style="color:#fff">Edit Payment</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="border:none; color:#fff;">×</span></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">

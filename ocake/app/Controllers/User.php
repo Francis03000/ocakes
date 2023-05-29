@@ -10,6 +10,7 @@ use App\Models\Checkout_model;
 use App\Models\AddOns_model;
 use App\Models\Flavor_model;
 use App\Models\Feedback_model;
+use App\Models\Category_model;
 
 use App\library\Email; //Initialize email library.
 
@@ -36,8 +37,8 @@ class User extends BaseController
         $val = $this->validate([   
             'firstname' => 'required',
             'lastname' => 'required',
-            'mcp' => 'required',
-            'brgy' => 'required',
+            // 'mcp' => 'required',
+            // 'brgy' => 'required',
             'birthdate' => 'required',   
             'gender' => 'required',   
             'mobile' => 'required|numeric|max_length[13]',    
@@ -63,8 +64,8 @@ class User extends BaseController
             $personal_m->insert([
                 'firstname' => $this->request->getVar('firstname'),
                 'lastname' => $this->request->getVar('lastname'),
-                'mcp' => $this->request->getVar('mcp'),
-                'brgy' => $this->request->getVar('brgy'),
+                // 'mcp' => $this->request->getVar('mcp'),
+                // 'brgy' => $this->request->getVar('brgy'),
                 'birthdate' => $this->request->getVar('birthdate'),
                 'gender' => $this->request->getVar('gender'),
                 'mobile' => "+".$this->request->getVar('mobile'),
@@ -131,7 +132,9 @@ class User extends BaseController
             }
             return $this->response->redirect(site_url('home'));
         }else{
-            $data['msg']='invalid';
+            $model = new Address_model();
+            $data['address'] = $model->fetchAddress();
+            $data['msg']='Invalid Account';
             return view('user/auth/signlog', $data);    
         }
     }
@@ -253,6 +256,8 @@ class User extends BaseController
     public function landingpage(){
         $model_product = new Product_model();
         $checkout_model = new Checkout_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['trend'] = $checkout_model->trendingProduct();
         return view('user/landing_page', $data);
@@ -273,6 +278,8 @@ class User extends BaseController
 
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
 
@@ -413,6 +420,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct($id);
         $data['cartData'] = $model->getCartData($id);
 
@@ -442,6 +451,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
 
@@ -471,6 +482,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_cart = new Cart_m();
         $model = new Product_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Birthday";
         // $data['cartData']= $model->getCartData();
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
@@ -510,9 +523,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Birthday";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='Birthday' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -526,6 +542,17 @@ class User extends BaseController
         foreach($order as $o){
             $data['order_count']= $o->count;
         }
+       
+     
+        // $feedback_model = new Feedback_model();
+        // $prod_id = $this->request->getVar('pid');
+        // $pending = $feedback_model->total_rating($prod_id);
+        // foreach($pending as $p){
+        //     $data['rate']= $p->total;
+        // }
+
+        // $prod_id = $this->request->getVar('prod_id');
+        // $data['rate'] = $feedback_model->total_rating($prod_id); 
 
         return view('user/include/header', $data)
             . view('user/birthday')
@@ -541,9 +568,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Christening";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='Christening' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -572,9 +602,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Christmas";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='Christmas' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -603,9 +636,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Graduation";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='Graduation' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -634,9 +670,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Halloween";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='Halloween' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -665,9 +704,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "New Year";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='New Year' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -696,9 +738,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Valentine";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='Valentine' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -727,9 +772,12 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Wedding";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->where("occasion='Wedding' AND status='Available'")->get()->getResult();
+        // $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
 
         #count cart items#
@@ -758,6 +806,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
        
@@ -793,6 +843,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $model_order = new Checkout_model();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
@@ -812,10 +864,19 @@ class User extends BaseController
 
         $refund = $model_order->get($id, $order_code);
         $totalrefund = 0;
+        $seventy_percent = 0;
+        $fifty_percent = 0;
         foreach ($refund as $price) {
             $totalrefund = $price->downpayment / 2;
+            $minus_ship = $price->downpayment - $price->shipping_fee;
+            $into_four = $minus_ship / 4;
+            $seventy_percent = $into_four * 3 + $price->shipping_fee;
+            $fifty_percent = $into_four * 2 + $price->shipping_fee;
         }
         $data['Refund'] = $totalrefund;
+        $data['Minus_ship'] = $minus_ship;
+        $data['Seventy'] = $seventy_percent;
+        $data['Fifty'] = $fifty_percent;
         
         #count cart items#
         $cart = $model->count_data($id);
@@ -921,6 +982,7 @@ class User extends BaseController
     
     //------------ UPDATE CANCEL ORDER ----------//              December 21,2022 --> January 03,2023
     public function cancel_order($id){
+        
         $val = $this->validate([
         'cancel_status' => 'required',
         'reason' => 'required',
@@ -928,16 +990,17 @@ class User extends BaseController
         ]);
     
         $model = new Checkout_model();
-    
+        
         if (!$val) {
             $data['validation']  = $this->validator;
             echo view('orders', $data);
         }else{
-            $cancel=$data = array(
+            $data = array(
                 'stat' => $this->request->getVar('cancel_status'),
                 'reason' => $this->request->getVar('reason'),
                 'refund' => $this->request->getVar('refund'),
-             );              
+             );     
+        // $id = $this->request->getPost('id');         
         $model->checkout_update($data,$id);
         //var_dump($cancel);
         return redirect()->to(base_url('cancelledorder'));   
@@ -951,6 +1014,8 @@ class User extends BaseController
         $model = new Cart_m();
         $user_model = new Personal_m();
         $add_model = new Address_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         // $count_data['count_data']= $model->count_data();
         $data['cartData'] = $model->getCartData($id);
         $data['userData'] = $user_model->fetchPersonal($id);
@@ -983,7 +1048,7 @@ class User extends BaseController
         foreach($order as $o){
             $data['order_count']= $o->count;
         }
-
+        // SELECT date, Count(biller_id) FROM `biller_details` WHERE user_id = 20 GROUP by date having count('biller') = 5;
        // $name = $_GET['cart_product'];
 
         //foreach($name as $data){
@@ -1108,6 +1173,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
         $total = $model->getCartData($id);
@@ -1147,6 +1214,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
 
@@ -1177,6 +1246,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
 
@@ -1206,6 +1277,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
 
@@ -1236,7 +1309,8 @@ class User extends BaseController
         $model_product = new Product_model();
         $model_feedback = new Feedback_model();
         $model = new Cart_m();
-        
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
 
@@ -1278,6 +1352,8 @@ class User extends BaseController
         $model_cart = new Cart_m();
         $model_addons = new AddOns_model();
         $model_flavor = new Flavor_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "customization";
         $data['cartData'] = $model_cart->getCartData($id);
         $datum['custom_addons']= $model_addons->fetchAddOns();
@@ -1336,6 +1412,8 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $occasion = "Customized";
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getCustomized($occasion,$id); /*connect to model function */
@@ -1368,6 +1446,8 @@ class User extends BaseController
         $model_product = new Product_model();
         $model = new Cart_m();
         $model_order = new Checkout_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['product']= $model_product->getProduct();
         $data['details']= $model_order->getDetails();
         $data['productData'] = $model_product->fetchProduct();
@@ -1408,6 +1488,8 @@ class User extends BaseController
         $model_product = new Product_model();
         $model = new Cart_m();
         $model_order = new Checkout_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
         $data['details']= $model_order->getDetails();
@@ -1447,6 +1529,8 @@ class User extends BaseController
         $model_product = new Product_model();
         $model = new Cart_m();
         $model_order = new Checkout_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
         $data['details']= $model_order->getDetails();
@@ -1486,6 +1570,8 @@ class User extends BaseController
         $model_product = new Product_model();
         $model = new Cart_m();
         $model_order = new Checkout_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $order_code = $this->request->getVar('details');
         $data['details']= $model_order->getDetails();
         $data['order']= $model_order->fetchCheckoutData($id,$order_code);
@@ -1527,6 +1613,8 @@ class User extends BaseController
         $model_product = new Product_model();
         $model = new Cart_m();
         $add_model = new Address_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['address'] = $add_model->fetchAddress();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
@@ -1611,6 +1699,8 @@ class User extends BaseController
         $model_product = new Product_model();
         $model = new Cart_m();
         $add_model = new Address_model();
+        $category_model = new Category_model();
+        $data['category'] = $category_model->where('status','Available')->get()->getResult();
         $data['address'] = $add_model->fetchAddress();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);

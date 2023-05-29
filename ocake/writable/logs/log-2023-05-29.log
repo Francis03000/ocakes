@@ -1,0 +1,49 @@
+ERROR - 2023-05-29 10:33:19 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\PosController.php(180): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-29 11:00:07 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 270.
+ 1 APPPATH\Controllers\User.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 270)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:01:40 --> syntax error, unexpected identifier "biller", expecting ")"
+in APPPATH\Models\Checkout_model.php on line 361.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Checkout_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Checkout_model')
+ 3 APPPATH\Controllers\User.php(1046): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Checkout_model')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:01:56 --> syntax error, unexpected identifier "biller", expecting ")"
+in APPPATH\Models\Checkout_model.php on line 361.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Checkout_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Checkout_model')
+ 3 APPPATH\Controllers\User.php(292): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Checkout_model')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:02:07 --> syntax error, unexpected identifier "biller", expecting ")"
+in APPPATH\Models\Checkout_model.php on line 361.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Checkout_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Checkout_model')
+ 3 APPPATH\Controllers\User.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Checkout_model')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->landingpage()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

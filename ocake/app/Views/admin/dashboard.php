@@ -109,7 +109,7 @@
                         }else{
                            echo "Customer";
                         }?></h4>
-                  <h5>Customers</h5>
+                  <h5>Online Customers</h5>
                 </div>
                 <div class="dash-imgs">
                   <i data-feather="user"></i>
@@ -120,8 +120,13 @@
             <div class="col-lg-3 col-sm-6 col-12 d-flex">
               <div class="dash-count das1">
                 <div class="dash-counts">
-                  <h4>100</h4>
-                  <h5>Suppliers</h5>
+                  <h4><?php echo $customers_count;?> 
+                        <?php if ($customers_count > 1){
+                           echo "Customers";
+                        }else{
+                           echo "Customer";
+                        }?></h4>
+                  <h5>Walk-In Customers</h5>
                 </div>
                 <div class="dash-imgs">
                   <i data-feather="user-check"></i>
@@ -322,7 +327,7 @@
               </div>
             </div>
           </div>
-          <div class="card mb-0">
+          <!-- <div class="card mb-0">
             <div class="card-body">
               <h4 class="card-title">Expired Products</h4>
               <div class="table-responsive dataview">
@@ -406,7 +411,7 @@
                 </table>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

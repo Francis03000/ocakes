@@ -107,6 +107,8 @@ $routes->group('admin', static function ($routes) {
     $routes->post('pos/invoicebillpos', 'PosController::invoiceBillingPos');
     $routes->post('pos/deleteinvoice', 'PosController::deleteData');
     $routes->get('pos/invoicebillposhistory', 'PosController::invoiceBillingPosHistory');
+    $routes->get('pos/invoicebillposhistory1', 'PosController::invoiceBillingPosHistory1');
+    $routes->get('pos/invoicebillposhistory0', 'PosController::invoiceBillingPosHistory0');
     $routes->post('pos/upstatus', 'PosController::updateTransStat');
 });
 
@@ -169,7 +171,7 @@ $routes->get('/christmas', 'User::getChristmas');
 $routes->get('/halloween', 'User::getHalloween');
 $routes->get('/valentine', 'User::getValentine');
 $routes->get('/graduation', 'User::getGrad');
-$routes->get('/newyear', 'User::getNewYear');
+$routes->get('/new year', 'User::getNewYear');
 $routes->get('/wedding', 'User::getWedding');
 # customization #
 $routes->post('/save_design', 'User::saveFinalDesign');

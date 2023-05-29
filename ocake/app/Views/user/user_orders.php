@@ -47,12 +47,12 @@
                                             <p>Items</p>
                                         </h5>
                                     </div>
-                                    <div class="col-lg-1 col-md-2 col-12">
+                                    <div class="col-lg-2 col-md-2 col-12">
                                         <h5 class="product-name">
-                                            <p>Price</p>
+                                            <p>Price to Pay</p>
                                         </h5>
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-12">
+                                    <div class="col-lg-1 col-md-2 col-12">
                                         <p></p>
                                     </div>
                                     <div class="col-lg-1 col-md-1 col-12">
@@ -96,10 +96,10 @@
                                                 }?>
                                             </p>
                                         </div>
-                                        <div class="col-lg-1 col-md-2 col-12">
-                                            <p><?php echo '&#8369;' . number_format ($data->total_price); ?></p>
-                                        </div>
                                         <div class="col-lg-2 col-md-2 col-12">
+                                            <p><?php echo '&#8369;' . number_format ($data->balance); ?></p>
+                                        </div>
+                                        <div class="col-lg-1 col-md-2 col-12">
                                         </div>
                                         <div class="col-lg-1 col-md-1 col-12"> 
                                         </div>

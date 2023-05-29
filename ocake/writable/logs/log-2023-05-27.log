@@ -1,0 +1,267 @@
+CRITICAL - 2023-05-27 14:00:00 --> Undefined array key "admin_id"
+in APPPATH\Controllers\Admin.php on line 821.
+ 1 APPPATH\Controllers\Admin.php(821): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "admin_id"', 'APPPATH\\Controllers\\Admin.php', 821)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->saleslist()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 14:25:00 --> Implicit conversion from float 254664.99999999997 to int loses precision
+in APPPATH\Views\admin\pos.php on line 46.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Implicit conversion from float 254664.99999999997 to int loses precision', 'APPPATH\\Views\\admin\\pos.php', 46)
+ 2 APPPATH\Views\admin\pos.php(46): srand(254664.99999999997)
+ 3 APPPATH\Views\admin\pos.php(62): createRandomPassword()
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 7 APPPATH\Controllers\PosController.php(142): view('admin/pos', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 15:07:42 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 265.
+ 1 APPPATH\Controllers\User.php(265): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 265)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-27 17:17:07 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`pos`, CONSTRAINT `pos_cus_id_f` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\PosController.php(165): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->storeTransaction()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-27 17:47:10 --> Implicit conversion from float 255485.00000000003 to int loses precision
+in APPPATH\Views\admin\pos.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Implicit conversion from float 255485.00000000003 to int loses precision', 'APPPATH\\Views\\admin\\pos.php', 43)
+ 2 APPPATH\Views\admin\pos.php(43): srand(255485.00000000003)
+ 3 APPPATH\Views\admin\pos.php(59): createRandomPassword()
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 7 APPPATH\Controllers\PosController.php(142): view('admin/pos', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:27:19 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:31:41 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:31:52 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:32:24 --> Implicit conversion from float 513569.00000000006 to int loses precision
+in APPPATH\Views\admin\pos.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Implicit conversion from float 513569.00000000006 to int loses precision', 'APPPATH\\Views\\admin\\pos.php', 43)
+ 2 APPPATH\Views\admin\pos.php(43): srand(513569.00000000006)
+ 3 APPPATH\Views\admin\pos.php(59): createRandomPassword()
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 7 APPPATH\Controllers\PosController.php(151): view('admin/pos', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:32:38 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:34:09 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:36:02 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:36:16 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:36:21 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:37:38 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:37:42 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:39:23 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:39:34 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:39:43 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 19:42:49 --> Undefined variable $data
+in APPPATH\Controllers\PosController.php on line 108.
+ 1 APPPATH\Controllers\PosController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\PosController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 20:01:39 --> Implicit conversion from float 506438.00000000006 to int loses precision
+in APPPATH\Views\admin\pos.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Implicit conversion from float 506438.00000000006 to int loses precision', 'APPPATH\\Views\\admin\\pos.php', 43)
+ 2 APPPATH\Views\admin\pos.php(43): srand(506438.00000000006)
+ 3 APPPATH\Views\admin\pos.php(59): createRandomPassword()
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pos.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pos', [], true)
+ 7 APPPATH\Controllers\PosController.php(160): view('admin/pos', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 21:05:37 --> Undefined variable $posModel
+in APPPATH\Controllers\PosController.php on line 114.
+ 1 APPPATH\Controllers\PosController.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $posModel', 'APPPATH\\Controllers\\PosController.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 21:06:26 --> Undefined variable $posModel
+in APPPATH\Controllers\PosController.php on line 114.
+ 1 APPPATH\Controllers\PosController.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $posModel', 'APPPATH\\Controllers\\PosController.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 21:07:36 --> Undefined variable $posModel
+in APPPATH\Controllers\PosController.php on line 114.
+ 1 APPPATH\Controllers\PosController.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $posModel', 'APPPATH\\Controllers\\PosController.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 21:07:48 --> Undefined variable $posModel
+in APPPATH\Controllers\PosController.php on line 114.
+ 1 APPPATH\Controllers\PosController.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $posModel', 'APPPATH\\Controllers\\PosController.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 21:08:15 --> Undefined variable $posModel
+in APPPATH\Controllers\PosController.php on line 114.
+ 1 APPPATH\Controllers\PosController.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $posModel', 'APPPATH\\Controllers\\PosController.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 21:50:37 --> syntax error, unexpected single-quoted string "OR"
+in APPPATH\Controllers\PosController.php on line 95.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\PosController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PosController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PosController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\PosController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-27 22:15:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND `status` = '2' OR `status` = '3'' at line 5 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\PosController.php(114): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-27 22:15:05 --> Call to a member function getResult() on bool
+in APPPATH\Controllers\PosController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-27 22:15:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND `status` = '2' OR `status` = '3'' at line 5 in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\PosController.php(114): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-27 22:15:14 --> Call to a member function getResult() on bool
+in APPPATH\Controllers\PosController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PosController->invoiceBillingPosHistory0()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PosController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-27 23:18:06 --> Class "App\Controllers\CustomersModel" not found
+in APPPATH\Controllers\Admin.php on line 241.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard1()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

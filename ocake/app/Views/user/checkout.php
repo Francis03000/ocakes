@@ -350,6 +350,16 @@
 <script src="<?=base_url()?>/tools/admin/assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
 <script>
+    $('#datepicker').change(function(){
+        var date= $('#datepicker').val();
+        max_date = '2023-5-12'
+        if str(date) == max_date{
+            alert('max order')
+        }
+    })
+</script>
+
+<script>
     function myFunction(){
         // var x = parseInt(document.getElementById("mySelect").value);
         // document.getElementById("demo").innerHTML = '&#8369;'+ x;

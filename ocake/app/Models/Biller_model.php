@@ -25,5 +25,19 @@ class Biller_model extends Model{
         }
     }
 
+    // public function date(){
+    //     $res = $this->db->table('biller_details')
+    //                     ->select
+    //     //         ->raw('SELECT date, Count(biller_id) FROM `biller_details` WHERE user_id = 20 GROUP by date having count('biller') = 5;')
+    //     return $res;
+    // }
+
+    // public function count_products($id){
+	// 	return $this->db->table('biller_details')
+	// 				          ->select('Count(biller_id) as count')
+    //                 ->where('userid', $id)
+    //                 ->get()->getResult();
+	// }
+
     
 }

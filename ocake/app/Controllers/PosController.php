@@ -93,11 +93,26 @@ class PosController extends BaseController
         if($preord==0){
             $data = $posModel->join('customers as cus','cus.id=customer_id')->where('isPickup','0')->get()->getResult();
         }else if($preord==1){
-            $data = $posModel->join('customers as cus','cus.id=customer_id')->where('isPickup','1')->get()->getResult();
+            $data = $posModel->join('customers as cus','cus.id=customer_id')->where('isPickup','1')->orWhere('isPickup','2')->get()->getResult();
         }
         
         return $this->response->setJSON($data);
     }
+
+    public function invoiceBillingPosHistory1(){
+        $posModel = new PosModel();
+        
+            $data = $posModel->join('customers as cus','cus.id=customer_id')->where('status','5')->get()->getResult();
+    
+        return $this->response->setJSON($data);
+    }
+
+    public function invoiceBillingPosHistory0(){
+        $posModel = new PosModel();
+            $data = $posModel->join('customers as cus','cus.id=customer_id')->where("status='2' OR status='3'")->get()->getResult();
+        return $this->response->setJSON($data);
+    }
+    
 
     public function addToInvoice()
     {
@@ -159,7 +174,7 @@ class PosController extends BaseController
                 'isPickup' => $this->request->getPost('isPickup'),
                 'time_pickup_or_deliver' => $this->request->getPost('time_pickup_or_deliver'),
                 'date_pickup_or_deliver' => $this->request->getPost('date_pickup_or_deliver'),
-                'status' => 1,
+                'status' => 2,
             ];
             
             $posModel->insert($data);

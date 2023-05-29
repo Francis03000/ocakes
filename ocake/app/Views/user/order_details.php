@@ -317,28 +317,66 @@
                                                             <?php if(session('success')){ echo session('success');}else{ echo session('error');}?>
                                                             <div class="mb-3">
                                                                 <div class="sub-total-price" style="color:#0d0e0f">
-                                                                    <?php if($data->stat == "Pending"){
-                                                                            echo '<p>Your order is currently <b>PENDING</b>. If you cancel, your <b>DOWNPAYMENT</b> will be <b>REFUNDED.</b><p>';
+                                                                    <?php if($data->payment == "Downpayment"){
+                                                                        if($data->stat == "Pending"){
+                                                                            echo '<p>Your order is currently <b>PENDING</b>. If you cancel, your <b>DOWNPAYMENT</b> will be <b>REFUNDED.</b><p><br>';
                                                                         }elseif($data->stat == "Confirmed"){
-                                                                            echo 'Your order was already <b>CONFIRMED</b>. If you cancel, your <b>DOWNPAYMENT</b> will be <b>REFUNDED</b> in <b>HALF.</b><p>';
+                                                                            echo 'Your order was already <b>CONFIRMED</b>. If you cancel, your <b>DOWNPAYMENT</b> will be <b>REFUNDED</b> in <b>HALF.</b><p><br>';
                                                                         }elseif($data->stat == "Processing"){
-                                                                            echo "<p>Your order was in <b>PROCESS</b>. If you cancel, your <b>DOWNPAYMENT</b> will <b>NOT</b> be <b>REFUNDED.</b></p>";
+                                                                            echo "<p>Your order is in <b>PROCESS</b>. If you cancel, your <b>DOWNPAYMENT</b> will <b>NOT</b> be <b>REFUNDED.</b></p><br>";
+                                                                        }
+                                                                    }elseif($data->payment == "Fullpayment"){
+                                                                        if($data->stat == "Pending"){
+                                                                            echo '<p>Your order is currently <b>PENDING</b>. If you cancel, your <b>FULLPAYMENT</b> will be <b>REFUNDED.</b><p><br>';
+                                                                        }elseif($data->stat == "Confirmed"){
+                                                                            echo 'Your order was already <b>CONFIRMED</b>. If you cancel, <b>75%</b> of your <b>ORDER AMOUNT</b> will be <b>REFUNDED plus the shipping fee.</b><p><br>';
+                                                                        }elseif($data->stat == "Processing"){
+                                                                            echo "<p>Your order is in <b>PROCESS</b>. If you cancel, <b>50%</b> of your <b>ORDER AMOUNT</b> will be <b>REFUNDED plus the shipping fee.</b></p><br>";
+                                                                        }
                                                                     }?>
 
-                                                                    <?php if($data->stat == "Pending"){
+                                                                    <?php if($data->payment == "Downpayment"){
+                                                                        if($data->stat == "Pending"){
+                                                                            echo "DOWNPAYMENT: &#8369 $data->downpayment <br>";
                                                                             echo "REFUND: &#8369 $data->downpayment";
                                                                         }elseif($data->stat == "Confirmed"){
+                                                                            echo "DOWNPAYMENT: &#8369 $data->downpayment <br>";
                                                                             echo "REFUND: &#8369 $Refund";
                                                                         }elseif($data->stat == "Processing"){
+                                                                            echo "DOWNPAYMENT: &#8369 $data->downpayment <br>";
                                                                             echo "REFUND: &#8369 0";
+                                                                        }
+                                                                    }elseif($data->payment == "Fullpayment"){
+                                                                        if($data->stat == "Pending"){
+                                                                            echo "FULLPAYMENT: &#8369 $data->downpayment <br>";
+                                                                            echo "REFUND: &#8369 $data->downpayment";
+                                                                        }elseif($data->stat == "Confirmed"){
+                                                                            echo "ORDER AMOUNT: &#8369 $Minus_ship <br>";
+                                                                            echo "SHIPPING FEE: &#8369 $data->shipping_fee <br>";
+                                                                            echo "REFUND: &#8369 $Seventy";
+                                                                        }elseif($data->stat == "Processing"){
+                                                                            echo "ORDER AMOUNT: &#8369 $Minus_ship <br>";
+                                                                            echo "SHIPPING FEE: &#8369 $data->shipping_fee <br>";
+                                                                            echo "REFUND: &#8369 $Fifty";
+                                                                        }
                                                                     }?>
 
-                                                                    <?php if($data->stat == "Pending"){
+                                                                    <?php if($data->payment == "Downpayment"){
+                                                                        if($data->stat == "Pending"){
                                                                             echo "<input type='hidden' name='refund' value='$data->downpayment'>";
                                                                         }elseif($data->stat == "Confirmed"){
                                                                             echo "<input type='hidden' name='refund' value='$Refund'>";
                                                                         }elseif($data->stat == "Processing"){
                                                                             echo '<input type="hidden" name="refund" value="0">';;
+                                                                        }
+                                                                    }elseif($data->payment == "Fullpayment"){
+                                                                        if($data->stat == "Pending"){
+                                                                            echo "<input type='hidden' name='refund' value='$data->downpayment'>";
+                                                                        }elseif($data->stat == "Confirmed"){
+                                                                            echo "<input type='hidden' name='refund' value='$Seventy'>";
+                                                                        }elseif($data->stat == "Processing"){
+                                                                            echo "<input type='hidden'name='refund' value='$Fifty'>";
+                                                                        }
                                                                     }?>
 
 
@@ -371,6 +409,7 @@
                                                                     </div>
                                                                     <?//php }?> -->
                                                                 </div>
+                                                                <input type="hidden" value="<?php echo $data->checkout_id;?>" name="id">
                                                                 <input type="hidden" value="Cancelled" name="cancel_status">
                                                                 <input class="button btn btn-danger" style="float:right"
                                                                 type="submit" value="Submit" name="submit">

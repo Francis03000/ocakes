@@ -222,7 +222,7 @@
                                          </div>
                                          <div class="product-info">
                                              <form action="<?=site_url('productdetails')?>" method="POST">
-                                                 <input type="hidden" name="prod_id" value="<?=$data->id;?>">
+                                                 <input type="hidden" name="prod_id" id="prod_id" value="<?=$data->id;?>">
                                                  <input type="submit" value="View"
                                                      class="btn btn-outline-primary btn-rounded btn-sm" name="view"
                                                      style="float:right">
@@ -243,6 +243,11 @@
                                              <div class="price">
                                                  <span>&#8369 <?php echo $data->price; ?></span>
                                              </div>
+                                             <?//php foreach ($rate as $data) { ?>
+                                                <!-- <div class="price">
+                                                 <span><?//=$rate?></span>
+                                                </div> -->
+                                             <?//php }?>
                                          </div>
                                      </div>
                                  </div>

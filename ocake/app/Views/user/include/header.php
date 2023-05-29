@@ -292,14 +292,17 @@
                                 <li><a href="<?=site_url('productgrid')?>">Shop <i
                                             class="lni lni-chevron-right"></i></a>
                                     <ul class="inner-sub-category">
-                                        <li><a href="<?=site_url('birthday')?>">Birthday</a></li>
+                                     <?php foreach ($category as $data) {?>
+                                            <li class="nav-item"><a href="<?=site_url(strtolower($data->category_name))?>"><?php echo $data->category_name;?></a></li>
+                                        <!-- <li><a href="<?=site_url('birthday')?>">Birthday</a></li>
                                         <li><a href="<?=site_url('christening')?>">Christening</a></li>
                                         <li><a href="<?=site_url('wedding')?>">Wedding</a></li>
                                         <li><a href="<?=site_url('graduation')?>">Graduation</a></li>
                                         <li><a href="<?=site_url('valentine')?>">Valentine</a></li>
                                         <li><a href="<?=site_url('halloween')?>">Halloween</a></li>
                                         <li><a href="<?=site_url('christmas')?>">Christmas</a></li>
-                                        <li><a href="<?=site_url('newyear')?>">New Year</a></li>
+                                        <li><a href="<?=site_url('new year')?>">New Year</a></li> -->
+                                        <?php }?>
                                         <!--<li><a href="product-grids.html">Batteries</a></li>
                                     <li><a href="product-grids.html">Cables & Adapters</a></li>-->
                                     </ul>
@@ -340,14 +343,16 @@
                                             aria-expanded="false" aria-label="Toggle navigation">Shop</a>
 
                                         <ul class="sub-menu collapse" id="submenu-1-3">
-                                            <li class="nav-item"><a href="<?=site_url('birthday')?>">Birthday</a></li>
-                                            <li class="nav-item"><a href="<?=site_url('christening')?>">Christening</a></li>
+                                        <?php foreach ($category as $data) {?>
+                                            <li class="nav-item"><a href="<?=site_url(strtolower($data->category_name))?>"><?php echo $data->category_name;?></a></li>
+                                            <!-- <li class="nav-item"><a href="<?=site_url('christening')?>">Christening</a></li>
                                             <li class="nav-item"><a href="<?=site_url('wedding')?>">Wedding</a></li>
                                             <li class="nav-item"><a href="<?=site_url('graduation')?>">Graduation</a></li>
                                             <li class="nav-item"><a href="<?=site_url('valentine')?>">Valentine</a></li>
                                             <li class="nav-item"><a href="<?=site_url('halloween')?>">Halloween</a></li>
                                             <li class="nav-item"><a href="<?=site_url('christmas')?>">Christmas</a></li>
-                                            <li class="nav-item"><a href="<?=site_url('newyear')?>">New Year</a></li>
+                                            <li class="nav-item"><a href="<?=site_url('new year')?>">New Year</a></li> -->
+                                            <?php }?>
                                         </ul>
                                     </li>
                                     <li class="nav-item">

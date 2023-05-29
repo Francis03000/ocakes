@@ -77,11 +77,11 @@
                                 <h4>Categories</h4>
                                 <h6>Manage your purchases</h6>
                             </div>
-                            <div class="d-flex justify-content-end">
+                            <div class="d-flex justify-content-end" >
                                 <div class="col-lg-12">
                                     <div class="select-split">
-                                        <div class="select-group w-100">
-                                            <select class="select" id="product_availability"
+                                        <div class="select-group w-100" style="padding-right:40%">
+                                            <select class="select" style="padding-right:40px" id="product_availability"
                                                 name="product_availability">
                                                 <option value="0">All Products</option>
                                                 <option value="1">Ready Made</option>
@@ -315,9 +315,9 @@
     <div class="modal fade" id="recents" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Recent Transactions</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-header" style="background-color:#0d0e0f">
+                    <h5 class="modal-title" style="color:#cda808">Recent Transactions</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border:none; color:#cda808">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -344,6 +344,7 @@
                                             <th>Invoice Number</th>
                                             <th>Customer Fullname</th>
                                             <th>Total Amount Purchase</th>
+                                            <th>Status</th>
                                             <th>Transaction Date</th>
                                         </tr>
                                     </thead>
@@ -353,21 +354,83 @@
                         </div>
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                             aria-labelledby="pills-profile-tab">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Invoice Number</th>
-                                            <th>Customer Fullname</th>
-                                            <th>Total Amount Purchase</th>
-                                            <th>Status</th>
-                                            <th>Transaction Date</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="transhispreord"></tbody>
-                                </table>
-                            </div>
+
+                                <ul class="nav nav-pills mb-3" id="pills-tab" style="margin-left:80%" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home1-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home1" type="button" role="tab" aria-controls="pills-home1"
+                                            aria-selected="true">All</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile0-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile0" type="button" role="tab" aria-controls="pills-profile0"
+                                            aria-selected="false">OnProcess</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile1-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile1" type="button" role="tab" aria-controls="pills-profile1"
+                                            aria-selected="false">Done</button>
+                                    </li>
+
+                                </ul>
+
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home1" role="tabpanel"
+                                        aria-labelledby="pills-home1-tab">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Invoice Number</th>
+                                                        <th>Customer Fullname</th>
+                                                        <th>Total Amount Purchase</th>
+                                                        <th>Status</th>
+                                                        <th>Transaction Date</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="transhispreord"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile0" role="tabpanel"
+                                        aria-labelledby="pills-profile0-tab">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Invoice Number</th>
+                                                        <th>Customer Fullname</th>
+                                                        <th>Total Amount Purchase</th>
+                                                        <th>Status</th>
+                                                        <th>Transaction Date</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="transhispreord0"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile1" role="tabpanel"
+                                        aria-labelledby="pills-profile1-tab">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Invoice Number</th>
+                                                        <th>Customer Fullname</th>
+                                                        <th>Total Amount Purchase</th>
+                                                        <th>Status</th>
+                                                        <th>Transaction Date</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="transhispreord1"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
                         </div>
                     </div>
                 </div>
@@ -397,9 +460,9 @@
     <div class="modal fade" id="create" tabindex="-1" aria-labelledby="create" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" style="background-color:#cda808">
                     <h5 class="modal-title">Add Customer</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border:none; color:#000000;">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -453,7 +516,7 @@
                         </div>
                     </form>
                     <div class="col-lg-12">
-                        <a class="btn btn-submit me-2" id="addCustomer">Submit</a>
+                        <a class="btn btn-submit me-2" id="addCustomer" style="color:#000000;">Submit</a>
                         <a class="btn btn-cancel" data-bs-dismiss="modal">Cancel</a>
                     </div>
                 </div>
@@ -464,9 +527,9 @@
     <div class="modal fade" id="preorder" tabindex="-1" aria-labelledby="preorder" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" style="background-color:#cda808">
                     <h5 class="modal-title">Pre Order Detail</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border:none; color:#000000;">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -477,7 +540,7 @@
                                 <div class="form-group">
                                     <label>Choose Mode of Transaction</label>
                                     <select name="modeoftransaction" id="modeoftransaction" class="select">
-                                        <option value="0">Choose</option>
+                                        <option disabled selected value="0">Choose</option>
                                         <option value="1">Pick Up</option>
                                         <option value="2">Deliver</option>
                                     </select>
@@ -519,7 +582,7 @@
                         </div>
                     </form>
                     <div class="col-lg-12">
-                        <a class="btn btn-submit me-2" id="proc">Proceed</a>
+                        <a class="btn btn-submit me-2" id="proc" style="color:#000000;">Proceed</a>
                     </div>
                 </div>
             </div>
@@ -527,11 +590,11 @@
     </div>
 
     <div class="modal fade" id="upstat" tabindex="-1" aria-labelledby="upstat" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width:500px">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" style="background-color:#cda808">
                     <h5 class="modal-title">Update Transaction Status</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border:none; color:#000000;">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -543,16 +606,18 @@
                                 <div class="form-group">
                                     <label>Choose Status</label>
                                     <select name="modeoftransaction" id="transstat" class="select">
-                                        <option value="0">Choose</option>
-                                        <option value="1">Done</option>
-                                        <option value="2">Pending / OnProcess</option>
+                                        <option disabled selected value="0">Choose</option>
+                                        <option value="2">Confirmed</option>
+                                        <option value="3">Processing</option>
+                                        <option value="4">Shipped</option>
+                                        <option value="5">Delivered</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </form>
                     <div class="col-lg-12">
-                        <a class="btn btn-submit me-2" id="upstatus">Update</a>
+                        <a class="btn btn-submit me-2" style="float:right; color:#000000;Add" id="upstatus">Update</a>
                     </div>
                 </div>
             </div>
@@ -741,7 +806,21 @@ $(document).ready(function() {
                                     attriMap.get("customer_mname") + " " +
                                     attriMap.get("customer_lname"),
                             }).appendTo(tabrow);
-                        } else if (attri !== "status" && attri !== "act") {
+                        } else if (attri === "status") {
+
+                            let tds = $("<td>", {
+                                class: "text-wrap",
+                            });
+
+                            if (attriMap.get("status") === "1") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-success">Done</span>'
+                                );
+
+                                tds.appendTo(tabrow);
+                            }
+                        } else if (attri !== "act") {
                             $("<td>", {
                                 class: "text-wrap",
                                 html: attriMap.get(attri),
@@ -757,6 +836,13 @@ $(document).ready(function() {
     $("#pills-profile-tab").click(function() {
         initTransHistories();
     })
+    $("#pills-profile0-tab").click(function() {
+        initTransHistories0();
+    })
+    $("#pills-profile1-tab").click(function() {
+        initTransHistories1();
+    })
+    
 
     function initTransHistories() {
         let tablename = $("#transhispreord").empty();
@@ -786,18 +872,34 @@ $(document).ready(function() {
                                 class: "text-wrap",
                             });
 
-                            if (attriMap.get("status") === "1") {
+                            if (attriMap.get("status") === "2") {
 
                                 tds.append(
-                                    '<span class="badge rounded-pill bg-success">Done</span>'
+                                    '<span class="badge rounded-pill bg-primary">Confirmed</span>'
                                 );
 
                                 tds.appendTo(tabrow);
 
-                            } else if (attriMap.get("status") === "2") {
+                            } else if (attriMap.get("status") === "3") {
 
                                 tds.append(
-                                    '<span class="badge rounded-pill bg-warning">Pending / OnProcess</span>'
+                                    '<span class="badge rounded-pill bg-warning">Processing</span>'
+                                );
+
+                                tds.appendTo(tabrow);
+
+                            } else if (attriMap.get("status") === "4") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-info">Shipped</span>'
+                                );
+
+                            tds.appendTo(tabrow);
+
+                            }else if (attriMap.get("status") === "5") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-success">Done</span>'
                                 );
 
                                 tds.appendTo(tabrow);
@@ -809,9 +911,89 @@ $(document).ready(function() {
                                 class: "text-wrap",
                             });
                             actbtn.append(
-                                '<button type="button" class="btn btn-primary btn-sm" id="updateStatusBtn" data-id="' +
-                                history.pos_id +
-                                '"><i class="fa fa-pencil"></i></button>');
+                                '<img type="button" src="<?=base_url()?>/tools/admin/assets/img/icons/edit.svg" class="me-2 btn" alt="img" id="updateStatusBtn" data-id="' +
+                                history.pos_id + '">');
+                                // '<button type="button" class="btn btn-primary btn-sm" id="updateStatusBtn" data-id="' +
+                                // history.pos_id +
+                                // '"><i class="fa fa-pencil"></i></button>');
+                            actbtn.appendTo(tabrow);
+                        } else {
+                            $("<td>", {
+                                class: "text-wrap",
+                                html: attriMap.get(attri),
+                            }).appendTo(tabrow);
+                        }
+                        tablename.append(tabrow);
+                    });
+                });
+            }
+        });
+    }
+    
+    function initTransHistories0() {
+        let tablename = $("#transhispreord0").empty();
+        $.ajax({
+            url: '<?= base_url('admin/pos/invoicebillposhistory0') ?>',
+            method: 'get',
+            data: {
+                isPickup: 1
+            },
+            dataType: 'json',
+            success: function(response) {
+
+                response.forEach((history) => {
+                    let tabrow = $("<tr>");
+                    const attriMap = new Map(Object.entries(history));
+                    attriTrans.forEach((attri, i) => {
+                        if (attri === "fullName") {
+                            $("<td>", {
+                                class: "text-wrap",
+                                html: attriMap.get("customer_fname") + " " +
+                                    attriMap.get("customer_mname") + " " +
+                                    attriMap.get("customer_lname"),
+                            }).appendTo(tabrow);
+                        } else if (attri === "status") {
+
+                            let tds = $("<td>", {
+                                class: "text-wrap",
+                            });
+
+                            if (attriMap.get("status") === "2") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-primary">Confirmed</span>'
+                                );
+
+                                tds.appendTo(tabrow);
+
+                            } else if (attriMap.get("status") === "3") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-warning">Processing</span>'
+                                );
+
+                                tds.appendTo(tabrow);
+
+                            } else if (attriMap.get("status") === "4") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-info">Shipped</span>'
+                                );
+
+                            tds.appendTo(tabrow);
+
+                            }
+
+                        } else if (attri === "act") {
+                            let actbtn = $("<td>", {
+                                class: "text-wrap",
+                            });
+                            actbtn.append(
+                                '<img type="button" src="<?=base_url()?>/tools/admin/assets/img/icons/edit.svg" class="me-2 btn" alt="img" id="updateStatusBtn" data-id="' +
+                                history.pos_id + '">');
+                                // '<button type="button" class="btn btn-primary btn-sm" id="updateStatusBtn" data-id="' +
+                                // history.pos_id +
+                                // '"><i class="fa fa-pencil"></i></button>');
                             actbtn.appendTo(tabrow);
                         } else {
                             $("<td>", {
@@ -826,6 +1008,67 @@ $(document).ready(function() {
         });
     }
 
+    function initTransHistories1() {
+       let tablename = $("#transhispreord1").empty();
+        $.ajax({
+            url: '<?= base_url('admin/pos/invoicebillposhistory1') ?>',
+            method: 'get',
+            data: {
+                status: 1
+            },
+            dataType: 'json',
+            success: function(response) {
+
+                response.forEach((history) => {
+                    let tabrow = $("<tr>");
+                    const attriMap = new Map(Object.entries(history));
+                    attriTrans.forEach((attri, i) => {
+                        if (attri === "fullName") {
+                            $("<td>", {
+                                class: "text-wrap",
+                                html: attriMap.get("customer_fname") + " " +
+                                    attriMap.get("customer_mname") + " " +
+                                    attriMap.get("customer_lname"),
+                            }).appendTo(tabrow);
+                        } else if (attri === "status") {
+
+                            let tds = $("<td>", {
+                                class: "text-wrap",
+                            });
+
+                            if (attriMap.get("status") === "5") {
+
+                                tds.append(
+                                    '<span class="badge rounded-pill bg-success">Done</span>'
+                                );
+
+                                tds.appendTo(tabrow);
+
+                            }
+
+                        } else if (attri === "act") {
+                            let actbtn = $("<td>", {
+                                class: "text-wrap",
+                            });
+                            actbtn.append(
+                                '<img type="button" src="<?=base_url()?>/tools/admin/assets/img/icons/edit.svg" class="me-2 btn" alt="img" id="updateStatusBtn" data-id="' +
+                                history.pos_id + '">');
+                                // '<button type="button" class="btn btn-primary btn-sm" id="updateStatusBtn" data-id="' +
+                                // history.pos_id +
+                                // '"><i class="fa fa-pencil"></i></button>');
+                            actbtn.appendTo(tabrow);
+                        } else {
+                            $("<td>", {
+                                class: "text-wrap",
+                                html: attriMap.get(attri),
+                            }).appendTo(tabrow);
+                        }
+                        tablename.append(tabrow);
+                    });
+                });
+            }
+        });
+    }
 
     $("body").on("click", "#updateStatusBtn", (e) => {
         $("#transid").val($(e.currentTarget).data("id"));
@@ -843,6 +1086,8 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(response) {
                 initTransHistories();
+                initTransHistories0();
+                initTransHistories1();
                 $("#upstat").modal('hide');
             }
         });
@@ -877,7 +1122,8 @@ $(document).ready(function() {
                         '<div class="productsetcontent">' +
                         '<h5>' + product.occasion + ' Cake</h5>' +
                         '<h4>' + product.flavor + '</h4>' +
-                        '<h6>' + product.price + '</h6>' +
+                        '<h6 style="color:green">' + '&#8369;'+ product.price + '</h6>' +
+                        '<h6>' + "Stock:" + product.stock + '</h6>' +
                         '</div>' +
                         '</div>' +
                         '</div>' +
@@ -1098,7 +1344,7 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(response) {
                 let optionData = $("#customer_id");
-                optionData.append('<option>Choose Customer</option>');
+                optionData.append('<option disabled selected>Choose Customer</option>');
 
                 response.forEach((customer) => {
 

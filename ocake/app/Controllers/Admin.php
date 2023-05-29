@@ -8,6 +8,7 @@ use App\Models\Product_model;
 use App\Models\AddOns_model;
 use App\Models\Flavor_model;
 use App\Models\Category_model;
+use App\Models\CustomersModel;
 
 class Admin extends BaseController
 {   
@@ -235,6 +236,13 @@ class Admin extends BaseController
              $users = $model->count_users();
              foreach($users as $u){
                  $data['users_count']= $u->count;
+             }
+
+             #count customers#
+             $model = new CustomersModel();
+             $users = $model->count_customers();
+             foreach($users as $cu){
+                 $data['customers_count']= $cu->count;
              }
  
               #count earnings#
@@ -787,27 +795,12 @@ class Admin extends BaseController
             $model = new Product_model();
             $id = $this->request->getVar('cat');
             $data['pro']= $model->getProduct();
-            $data['prod']= $model->getProductData();
-            // $Bday = "Birthday";
-            // $Wedding = "Wedding";
-            // $Graduation = "Graduation";
-            // $Christening = "Christening";
-            // $Valentine = "Valentine";
-            // $Halloween = "Halloween";
-            // $Christmas = "Christmas";
-            // $NewYear = "New Year";
-            // $data['bday']= $model->getBDay($Bday);
-            // $data['wedding']= $model->getWedding($Wedding); 
-            // $data['graduation']= $model->getWedding($Graduation); 
-            // $data['christening']= $model->getWedding($Christening); 
-            // $data['valentine']= $model->getWedding($Valentine); 
-            // $data['halloween']= $model->getWedding($Halloween); 
-            // $data['xmas']= $model->getWedding($Christmas); 
-            // $data['newyear']= $model->getWedding($NewYear); 
+            $data['prod']= $model->getProductData(); 
             $data['product']= $model->getProduct();
 
             $category_model = new Category_model();
-            $data['category']= $category_model->fetchCategory();
+            $data['category'] = $category_model->where('status','Available')->get()->getResult();
+            // $data['category']= $category_model->fetchCategory();
             return view('admin/pos', $data);
         }else{
             return redirect()->to(base_url('/admin'));

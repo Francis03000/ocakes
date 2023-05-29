@@ -48,10 +48,11 @@
 
         <div class="col-md-6">
           <div class="card" id="weeksolds">
-            <div class="card-header">
+            <div class="card-header" style="background-color:#0d0e0f;">
               <div class="d-flex justify-content-between">
-                <h5 class="card-title">Weekly Sold</h5>
-                <button type="button" class="btn btn-info" id="printReportWeekSold">Print Report</button>
+                <h5 class="card-title" style="color:#fff">Weekly Sold</h5>
+                <a type="button" class="btn"><img  id="printReportWeekSold" src="<?=base_url()?>/tools/admin/assets/img/icons/pdf.svg" alt="img"></a>
+                <!-- <button type="button" class="btn btn-info" id="printReportWeekSold">Print Report</button> -->
               </div>
             </div>
             <div class="card-body">
@@ -62,10 +63,11 @@
 
         <div class="col-md-6">
           <div class="card" id="yearlysolds">
-            <div class="card-header">
+            <div class="card-header" style="background-color:#0d0e0f;">
               <div class="d-flex justify-content-between">
-                <h5 class="card-title">Yearly Sold</h5>
-                <button type="button" class="btn btn-info" id="printReportYearlySold">Print Report</button>
+                <h5 class="card-title" style="color:#fff">Yearly Sold</h5>
+                <a type="button" class="btn"><img  id="printReportYearlySold" src="<?=base_url()?>/tools/admin/assets/img/icons/pdf.svg" alt="img"></a>
+                <!-- <button type="button" class="btn btn-info" id="printReportYearlySold">Print Report</button> -->
               </div>
             </div>
             <div class="card-body">
@@ -76,10 +78,11 @@
 
         <div class="col-md-6">
           <div class="card" id="MS">
-            <div class="card-header">
+            <div class="card-header" style="background-color:#0d0e0f;">
               <div class="d-flex justify-content-between">
-                <h5 class="card-title">Bar Chart</h5>
-                <button type="button" class="btn btn-info" id="printReportMonthlySales">Print Report</button>
+                <h5 class="card-title" style="color:#fff">Bar Chart</h5>
+                <a type="button" class="btn"><img  id="printReportMonthlySales" src="<?=base_url()?>/tools/admin/assets/img/icons/pdf.svg" alt="img"></a>
+                <!-- <button type="button" class="btn btn-info" id="printReportMonthlySales">Print Report</button> -->
               </div>
             </div>
             <div class="card-body">
@@ -90,10 +93,11 @@
 
         <div class="col-md-6">
           <div class="card" id="TBG">
-            <div class="card-header">
+            <div class="card-header" style="background-color:#0d0e0f;">
               <div class="d-flex justify-content-between">
-              <h5 class="card-title">Top Barangay</h5>
-                <button type="button" class="btn btn-info" id="printReportTopBG">Print Report</button>
+              <h5 class="card-title" style="color:#fff">Top Barangay</h5>
+              <a type="button" class="btn"><img  id="printReportTopBG" src="<?=base_url()?>/tools/admin/assets/img/icons/pdf.svg" alt="img"></a>
+                <!-- <button type="button" class="btn btn-info" id="printReportTopBG">Print Report</button> -->
               </div>
             </div>
             <div class="card-body">

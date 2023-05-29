@@ -1,0 +1,540 @@
+CRITICAL - 2023-05-28 11:25:33 --> Undefined array key "user_id"
+in APPPATH\Controllers\User.php on line 265.
+ 1 APPPATH\Controllers\User.php(265): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'APPPATH\\Controllers\\User.php', 265)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 14:50:12 --> Undefined variable $minus_ship
+in APPPATH\Controllers\User.php on line 825.
+ 1 APPPATH\Controllers\User.php(825): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $minus_ship', 'APPPATH\\Controllers\\User.php', 825)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->orderdetails()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-28 15:00:04 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(950): App\Models\Checkout_model->checkout_update(Array, '93')
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-05-28 15:01:14 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(950): App\Models\Checkout_model->checkout_update(Array, '93')
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-05-28 15:07:58 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(950): App\Models\Checkout_model->checkout_update(Array, '93')
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-28 15:10:00 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\User.php(950): App\Models\Checkout_model->checkout_update([...], '93')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', 'C:\\wamp64\\www\\ocake')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-28 15:10:47 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(950): App\Models\Checkout_model->checkout_update(Array, '93')
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-05-28 15:13:43 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(950): App\Models\Checkout_model->checkout_update(Array, '93')
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-28 15:22:59 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(952): App\Models\Checkout_model->checkout_update(Array, '93')
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-28 15:25:06 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(952): App\Models\Checkout_model->checkout_update(Array, '93')
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-05-28 17:59:50 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `checkou...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `checkou...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `checkou...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `checkou...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\ocake\ocake\app\Models\Checkout_model.php(132): CodeIgniter\Model->update()
+#8 C:\wamp64\www\ocake\ocake\app\Controllers\User.php(952): App\Models\Checkout_model->checkout_update(Array, '93')
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->cancel_order('93', '')
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-28 18:29:02 --> Too few arguments to function App\Models\Feedback_model::total_rating(), 0 passed in C:\wamp64\www\ocake\ocake\app\Controllers\User.php on line 531 and exactly 1 expected
+in APPPATH\Models\Feedback_model.php on line 21.
+ 1 APPPATH\Controllers\User.php(531): App\Models\Feedback_model->total_rating()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 18:37:57 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 4 APPPATH\Controllers\User.php(534): view('user/birthday')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 18:39:07 --> syntax error, unexpected token "/"
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 3 APPPATH\Controllers\User.php(534): view('user/birthday')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 18:39:27 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 4 APPPATH\Controllers\User.php(534): view('user/birthday')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 18:39:44 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 4 APPPATH\Controllers\User.php(534): view('user/birthday')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 18:59:19 --> Undefined variable $rate
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 APPPATH\Views\user\birthday.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rate', 'APPPATH\\Views\\user\\birthday.php', 248)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(566): view('user/birthday')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getChristening()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:08:22 --> Cannot use object of type stdClass as array
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 4 APPPATH\Controllers\User.php(535): view('user/birthday')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:09:23 --> Attempt to read property "total" on array
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 APPPATH\Views\user\birthday.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "total" on array', 'APPPATH\\Views\\user\\birthday.php', 248)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(535): view('user/birthday')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:26:59 --> Undefined variable $prod_id
+in APPPATH\Controllers\User.php on line 531.
+ 1 APPPATH\Controllers\User.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prod_id', 'APPPATH\\Controllers\\User.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:30:18 --> Too few arguments to function App\Controllers\User::getBDay(), 0 passed in C:\wamp64\www\ocake\ocake\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\User.php on line 508.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:33:49 --> Undefined variable $prod_id
+in APPPATH\Controllers\User.php on line 531.
+ 1 APPPATH\Controllers\User.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prod_id', 'APPPATH\\Controllers\\User.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:34:42 --> Undefined variable $prod_id
+in APPPATH\Controllers\User.php on line 531.
+ 1 APPPATH\Controllers\User.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prod_id', 'APPPATH\\Controllers\\User.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:34:58 --> Undefined variable $prod_id
+in APPPATH\Controllers\User.php on line 531.
+ 1 APPPATH\Controllers\User.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prod_id', 'APPPATH\\Controllers\\User.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:35:03 --> Undefined variable $prod_id
+in APPPATH\Controllers\User.php on line 531.
+ 1 APPPATH\Controllers\User.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prod_id', 'APPPATH\\Controllers\\User.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:35:17 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT Sum(rate) as total
+FROM `feedback`
+WHERE `prod_id` = :prod_id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT Sum(rate) as total
+FROM `feedback`
+WHERE `prod_id` = :prod_id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT Sum(rate) as total
+FROM `feedback`
+WHERE `prod_id` = :prod_id:', [...], false)
+ 6 APPPATH\Models\Feedback_model.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\User.php(533): App\Models\Feedback_model->total_rating(Object(CodeIgniter\Database\MySQLi\Result))
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:58:04 --> Array to string conversion
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 APPPATH\Views\user\birthday.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\birthday.php', 248)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(535): view('user/birthday')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 19:58:28 --> Array to string conversion
+in APPPATH\Views\user\birthday.php on line 248.
+ 1 APPPATH\Views\user\birthday.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\birthday.php', 248)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(535): view('user/birthday')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 20:00:08 --> Undefined variable $pid
+in APPPATH\Controllers\User.php on line 532.
+ 1 APPPATH\Controllers\User.php(532): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pid', 'APPPATH\\Controllers\\User.php', 532)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 21:39:18 --> Class "App\Controllers\Category_model" not found
+in APPPATH\Controllers\User.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 21:39:49 --> Undefined variable $prod_id
+in APPPATH\Controllers\User.php on line 533.
+ 1 APPPATH\Controllers\User.php(533): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prod_id', 'APPPATH\\Controllers\\User.php', 533)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 21:45:09 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 343.
+ 1 APPPATH\Views\user\include\header.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(763): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 21:51:51 --> Class "App\Controllers\Category_model" not found
+in APPPATH\Controllers\User.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 21:55:08 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 343.
+ 1 APPPATH\Views\user\include\header.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(761): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:00:02 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 343.
+ 1 APPPATH\Views\user\include\header.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(762): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:00:15 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 343.
+ 1 APPPATH\Views\user\include\header.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(762): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:01:08 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 343.
+ 1 APPPATH\Views\user\include\header.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(762): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:04:29 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 343.
+ 1 APPPATH\Views\user\include\header.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(762): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:21:16 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 295.
+ 1 APPPATH\Views\user\include\header.php(295): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 295)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(1340): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-28 22:37:57 --> mysqli_sql_exception: Duplicate entry '1122' for key 'product.product_code' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(458): App\Models\Product_model->prod_update(Array, '9')
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('9', '')
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-28 22:38:40 --> mysqli_sql_exception: Duplicate entry '1122' for key 'product.product_code' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Product_model.php(159): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(458): App\Models\Product_model->prod_update(Array, '9')
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->update_product('9', '')
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-28 22:49:33 --> Undefined variable $category
+in APPPATH\Views\user\include\header.php on line 343.
+ 1 APPPATH\Views\user\include\header.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\user\\include\\header.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(294): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->home()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:49:41 --> Undefined property: stdClass::$occasion
+in APPPATH\Views\user\include\header.php on line 344.
+ 1 APPPATH\Views\user\include\header.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$occasion', 'APPPATH\\Views\\user\\include\\header.php', 344)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/include/header', [], true)
+ 5 APPPATH\Controllers\User.php(547): view('user/include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:13:07 --> Undefined variable $occasion
+in APPPATH\Controllers\User.php on line 711.
+ 1 APPPATH\Controllers\User.php(711): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $occasion', 'APPPATH\\Controllers\\User.php', 711)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getNewYear()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:15:56 --> Undefined variable $occasion
+in APPPATH\Controllers\User.php on line 779.
+ 1 APPPATH\Controllers\User.php(779): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $occasion', 'APPPATH\\Controllers\\User.php', 779)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:16:40 --> Undefined variable $occasion
+in APPPATH\Controllers\User.php on line 779.
+ 1 APPPATH\Controllers\User.php(779): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $occasion', 'APPPATH\\Controllers\\User.php', 779)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:16:43 --> Undefined variable $occasion
+in APPPATH\Controllers\User.php on line 779.
+ 1 APPPATH\Controllers\User.php(779): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $occasion', 'APPPATH\\Controllers\\User.php', 779)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getWedding()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:40:42 --> Undefined variable $address
+in APPPATH\Views\user\auth\signlog.php on line 85.
+ 1 APPPATH\Views\user\auth\signlog.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $address', 'APPPATH\\Views\\user\\auth\\signlog.php', 85)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\signlog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/signlog', [], true)
+ 5 APPPATH\Controllers\User.php(136): view('user/auth/signlog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:41:54 --> Undefined variable $address
+in APPPATH\Views\user\auth\signlog.php on line 85.
+ 1 APPPATH\Views\user\auth\signlog.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $address', 'APPPATH\\Views\\user\\auth\\signlog.php', 85)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\signlog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/signlog', [], true)
+ 5 APPPATH\Controllers\User.php(136): view('user/auth/signlog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:42:01 --> Undefined variable $address
+in APPPATH\Views\user\auth\signlog.php on line 85.
+ 1 APPPATH\Views\user\auth\signlog.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $address', 'APPPATH\\Views\\user\\auth\\signlog.php', 85)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\signlog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/signlog', [], true)
+ 5 APPPATH\Controllers\User.php(136): view('user/auth/signlog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:43:12 --> Undefined variable $address
+in APPPATH\Views\user\auth\signlog.php on line 85.
+ 1 APPPATH\Views\user\auth\signlog.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $address', 'APPPATH\\Views\\user\\auth\\signlog.php', 85)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\signlog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/signlog', [], true)
+ 5 APPPATH\Controllers\User.php(137): view('user/auth/signlog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:43:20 --> Undefined variable $address
+in APPPATH\Views\user\auth\signlog.php on line 85.
+ 1 APPPATH\Views\user\auth\signlog.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $address', 'APPPATH\\Views\\user\\auth\\signlog.php', 85)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\auth\\signlog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/auth/signlog', [], true)
+ 5 APPPATH\Controllers\User.php(137): view('user/auth/signlog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

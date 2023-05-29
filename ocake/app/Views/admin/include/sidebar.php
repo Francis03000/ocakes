@@ -38,7 +38,7 @@
                 </a>
                 <ul>
                   <li><a href="<?=site_url('admin/saleslist')?>">Sales List</a></li>
-                  <li><a href="<?=site_url('admin/pos')?>">POS</a></li>
+                  <li><a href="<?=site_url('admin/pos')?>">Add Sales</a></li>
                   <!-- <li><a href="pos.html">New Sales</a></li>
                   <li><a href="salesreturnlists.html">Sales Return List</a></li>
                   <li>
@@ -49,7 +49,7 @@
 
               <li>
                 <a href="<?=site_url('admin/visualization')?>">
-                    <i data-feather="bar-chart-2"></i><span> Visualization</span>
+                    <i style="color:#637381 "data-feather="bar-chart-2"></i><span> Visualization</span>
                 </a>
               </li>
 

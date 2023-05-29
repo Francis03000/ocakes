@@ -69,23 +69,24 @@ button:hover {
     <div class="container" id="container">
 
         <div class="form-container sign-up-container">
-            <?= isset($msg)? $msg:''?>
+            
             <form id="regForm" method="post" action="<?=site_url('save') ?>">
-                <h1 style="margin-bottom:30px">Create Account</h1>
+                <h1 style="margin-bottom:10px">Create Account</h1>
+                <!-- <b style="color:#AA4A44"><?//= isset($msg)? $msg:''?></b> -->
                 <div class="tab">
                     <input type="text" id="firstname" oninput="validateInput(this, 'letters')" name="firstname"
                         pattern="[A-Za-z]+" placeholder="firstname" required>
                     <input type="text" id="lastname" oninput="validateInput(this, 'letters')" name="lastname"
                         pattern="[A-Za-z]+" placeholder="lastname" required>
 
-                    <input type="text" id="municipality" oninput="this.className = ''" name="mcp"
+                    <!-- <input type="text" id="municipality" oninput="this.className = ''" name="mcp"
                         placeholder="municipality" value="Naujan" required>
                     <select type="text" id="barangay" name="brgy" placeholder="barangay" required>
                         <option value="barangay">barangay</option>
-                        <?php foreach($address as $data){?>
-                        <option value="<?php echo $data->barangay;?>"><?php echo $data->barangay;?></option>
-                        <?php }?>
-                    </select>
+                        <?//php foreach($address as $data){?>
+                        <option value="<?//php echo $data->barangay;?>"><?//php echo $data->barangay;?></option>
+                        <?//php }?>
+                    </select> -->
                 </div>
                 <div class="tab">
 
@@ -96,7 +97,7 @@ button:hover {
                     </select>
                     <input type="text" id="mobile" oninput="validateInput(this, 'numbers')" name="mobile"
                         pattern="[0-9]*" title="Please input numbers only" inputmode="numeric" maxlength="13"
-                        value="639" required
+                        value="+639" required
                         onkeydown="if (this.value.length <= 3) return event.key !== 'Delete' && event.key !== 'Backspace';"
                         onpaste="if (this.value.length <= 3) return false;"
                         oncut="if (this.value.length <= 3) return false;">
@@ -137,7 +138,7 @@ button:hover {
                     </div>
                 </div>
                 <!-- Circles which indicates the steps of the form: -->
-                <div style="text-align:center;margin-top:40px;">
+                <div style="text-align:center;margin-top:30px;">
                     <span class="step"></span>
                     <span class="step"></span>
                     <span class="step"></span>
@@ -149,8 +150,9 @@ button:hover {
         <div class="form-container sign-in-container">
             <form method="post" action="<?=site_url('login') ?>">
                 <h1>Sign In</h1>
-                <?= isset($msg)? $msg:''?>
+                
                 <div class="social-container">
+                    <b style="color:#AA4A44; "><?= isset($msg)? $msg:''?></b>
                     <!-- <a href="#" class="social"><i class="fa fa-facebook"></i></a>
                     <a href="#" class="social"><i class="fa fa-google"></i></a>
                     <a href="#" class="social"><i class="fa fa-linkedin"></i></a> -->
